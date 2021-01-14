@@ -3,10 +3,13 @@ import ReactDOM from "react-dom"
 import "./index.css"
 import { AppMenu } from "./components/AppMenu"
 import reportWebVitals from "./reportWebVitals"
+import { Container } from "@material-ui/core"
 
 ReactDOM.render(
   <React.StrictMode>
-    <AppMenu />
+    <Container maxWidth='md'>
+      <AppMenu />
+    </Container>
   </React.StrictMode>,
   document.getElementById("root")
 )
