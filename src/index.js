@@ -7,9 +7,7 @@ import { Container } from "@material-ui/core"
 
 ReactDOM.render(
   <React.StrictMode>
-    <Container maxWidth='md'>
-      <AppMenu />
-    </Container>
+    <AppMenu />
   </React.StrictMode>,
   document.getElementById("root")
 )

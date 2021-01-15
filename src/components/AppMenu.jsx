@@ -6,6 +6,7 @@ import Typography from "@material-ui/core/Typography"
 import Button from "@material-ui/core/Button"
 import IconButton from "@material-ui/core/IconButton"
 import MenuIcon from "@material-ui/icons/Menu"
+import { Menu, MenuItem, Container, Box, Link } from "@material-ui/core"
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
@@ -13,9 +14,7 @@ const useStyles = makeStyles((theme) => ({
   menuButton: {
     marginRight: theme.spacing(2),
   },
-  title: {
-    flexGrow: 1,
-  },
+  title: {},
   appbar: {
     boxShadow: theme.shadows[0],
     flexGrow: 1,
@@ -24,12 +23,27 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "Fira Sans",
     fontSize: 100,
   },
+  boxInAppBar: {
+    justifyContent: "flex-end",
+    alignItems: "center",
+    flexDirection: "row",
+    flexWrap: "nowwrap",
+  },
 }))
 
 const loggedIN = () => {
   const menu = ["Home", "SwiftUI", "Flutter", "Web", "React Native"]
   const e = menu.map((e) => (
-    <Typography style={{ flexGrow: 1 }}>{e}</Typography>
+    <Link
+      component='button'
+      color='inherit'
+      variant='body2'
+      onClick={() => {
+        console.info("I'm a button.")
+      }}
+    >
+      <Typography style={{ flexGrow: 1 }}>{e}</Typography>
+    </Link>
   ))
   return e
 }
@@ -37,7 +51,16 @@ const loggedIN = () => {
 const NotloggedIn = () => {
   const menu = ["Sign In"]
   const e = menu.map((e) => (
-    <Typography style={{ flexGrow: 1 }}>{e}</Typography>
+    <Link
+      component='button'
+      color='inherit'
+      variant='body2'
+      onClick={() => {
+        console.info("I'm a button.")
+      }}
+    >
+      <Typography style={{ flexGrow: 1 }}>{e}</Typography>
+    </Link>
   ))
   return e
 }
@@ -50,13 +73,17 @@ export const AppMenu = (props) => {
     <div className={classes.root}>
       <AppBar
         position='static'
-        color='transparent'
+        color='primary'
         className={[classes.appbar, classes.appBarItem]}
       >
-        <Toolbar>
-          <Svg />
-          {loggedIn ? loggedIN() : NotloggedIn()}
-        </Toolbar>
+        <Container>
+          <Toolbar>
+            <Svg />
+            <Box className={classes.boxInAppBar}>
+              {loggedIn ? loggedIN() : NotloggedIn()}
+            </Box>
+          </Toolbar>
+        </Container>
       </AppBar>
     </div>
   )
