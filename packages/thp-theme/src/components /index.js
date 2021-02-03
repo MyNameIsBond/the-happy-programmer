@@ -21,12 +21,9 @@ const Root = ({ state }) => {
   );
 };
 
-const Container = styled.div`
-  background: red;
-`;
+const Container = styled.div``;
 
 const NaBar = styled.nav`
-  background: green;
   padding: 2em;
 `;
 
@@ -37,6 +34,26 @@ const globalStyles = css`
     max-width: 90em;
     padding-right: 10px;
     padding-left: 10px;
+    background: var(--background-colour);
+  }
+  p {
+    color: var(--text-colour);
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --background-colour: #f8f8f8;
+      --text-colour: #242424;
+      --accent-colour: #9a61d7;
+      --secondary-colour: #ff6584;
+    }
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-colour: #242424;
+      --text-colour: #f8f8f8;
+    }
   }
 `;
 
