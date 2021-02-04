@@ -28,6 +28,9 @@ const NaBar = styled.nav`
 `;
 
 const globalStyles = css`
+  html {
+    font-family: "Roboto Mono", monospace;
+  }
   body {
     margin-right: auto;
     margin-left: auto;

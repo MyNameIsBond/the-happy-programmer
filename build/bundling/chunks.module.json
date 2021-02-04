@@ -2,16 +2,45 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "82c8e1fa652b5b0e7db6",
+  "hash": "04fe6a256f9f1b5a3a13",
   "publicPath": "/static/",
   "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
   "assetsByChunkName": {
-    "the-happy-programmer": "the-happy-programmer.module.js"
+    "the-happy-programmer": [
+      "the-happy-programmer.module.js",
+      "the-happy-programmer.3d6f934623727ea84b2d.hot-update.js"
+    ]
   },
   "assets": [
     {
+      "name": "3d6f934623727ea84b2d.hot-update.json",
+      "size": 62,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "the-happy-programmer.3d6f934623727ea84b2d.hot-update.js",
+      "size": 14217,
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "chunkNames": [
+        "the-happy-programmer"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "the-happy-programmer.module.js",
-      "size": 5554275,
+      "size": 4967685,
       "chunks": [
         "the-happy-programmer"
       ],
@@ -19,8 +48,7 @@
         "the-happy-programmer"
       ],
       "info": {},
-      "emitted": true,
-      "isOverSizeLimit": true
+      "emitted": false
     }
   ],
   "filteredAssets": 0,
@@ -30,7 +58,8 @@
         "the-happy-programmer"
       ],
       "assets": [
-        "the-happy-programmer.module.js"
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.3d6f934623727ea84b2d.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -42,7 +71,8 @@
         "the-happy-programmer"
       ],
       "assets": [
-        "the-happy-programmer.module.js"
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.3d6f934623727ea84b2d.hot-update.js"
       ],
       "children": {},
       "childAssets": {}

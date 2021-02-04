@@ -21,7 +21,6 @@ export const Link = ({ href, actions, children }) => {
 const LinkStyle = css`
   text-decoration: none;
   color: var(--text-colour);
-
   @media only screen and (max-width: 600px) {
     color: red;
   }
