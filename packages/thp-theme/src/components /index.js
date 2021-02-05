@@ -29,7 +29,7 @@ const NaBar = styled.nav`
 
 const globalStyles = css`
   html {
-    font-family: "Roboto Mono", monospace;
+    font-family: "Roboto", monospace;
   }
   body {
     margin-right: auto;
