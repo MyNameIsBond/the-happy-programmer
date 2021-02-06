@@ -10,7 +10,7 @@ const Root = ({ state }) => {
         <NaBar>
           <nav>
             <Link href="/">Home</Link>
-            <Link href="/category/swiftui/">SwiftUI</Link>
+            <Link href="/category/swiftui/"> SwiftUI</Link>
             <Link href="/category/flutter/">Flutter</Link>
             <Link href="/category/web/">Web</Link>
             <Link href="/category/react-native/">React Native</Link>
