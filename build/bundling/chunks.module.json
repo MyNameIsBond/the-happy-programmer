@@ -2,16 +2,45 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "8e97d4909b44ff51f2ec",
+  "hash": "c2f5d277b6b479eb1dd5",
   "publicPath": "/static/",
   "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
   "assetsByChunkName": {
-    "the-happy-programmer": "the-happy-programmer.module.js"
+    "the-happy-programmer": [
+      "the-happy-programmer.module.js",
+      "the-happy-programmer.986a7eef8d650a397151.hot-update.js"
+    ]
   },
   "assets": [
     {
+      "name": "986a7eef8d650a397151.hot-update.json",
+      "size": 62,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "the-happy-programmer.986a7eef8d650a397151.hot-update.js",
+      "size": 9349,
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "chunkNames": [
+        "the-happy-programmer"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "the-happy-programmer.module.js",
-      "size": 4968511,
+      "size": 5032156,
       "chunks": [
         "the-happy-programmer"
       ],
@@ -19,8 +48,7 @@
         "the-happy-programmer"
       ],
       "info": {},
-      "emitted": true,
-      "isOverSizeLimit": true
+      "emitted": false
     }
   ],
   "filteredAssets": 0,
@@ -30,7 +58,8 @@
         "the-happy-programmer"
       ],
       "assets": [
-        "the-happy-programmer.module.js"
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.986a7eef8d650a397151.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -42,7 +71,8 @@
         "the-happy-programmer"
       ],
       "assets": [
-        "the-happy-programmer.module.js"
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.986a7eef8d650a397151.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
