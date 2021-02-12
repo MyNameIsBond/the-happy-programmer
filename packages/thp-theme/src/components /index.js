@@ -1,6 +1,6 @@
 import { connect, Global, Head, styled, css } from "frontity";
 import React from "react";
-import Link from "./Link";
+
 import Link from "@frontity/components/link";
 import { globalStyles } from "./style/global-style";
 
@@ -8,25 +8,15 @@ const Root = ({ state }) => {
   return (
     <>
       <Global styles={globalStyles} />
-      <Container>
-        <NaBar>
-          <nav>
-            <Link href="/">Home</Link>
-            <Link href="/category/swiftui/"> SwiftUI</Link>
-            <Link href="/category/flutter/">Flutter</Link>
-            <Link href="/category/web/">Web</Link>
-            <Link href="/category/react-native/">React Native</Link>
-          </nav>
-        </NaBar>
-      </Container>
+      <nav>
+        <Link link="/">Home</Link>
+        <Link link="/category/swiftui/"> SwiftUI</Link>
+        <Link link="/category/flutter/">Flutter</Link>
+        <Link link="/category/web/">Web</Link>
+        <Link link="/category/react-native/">React Native</Link>
+      </nav>
     </>
   );
 };
-
-const Container = styled.div``;
-
-const NaBar = styled.nav`
-  padding: 2em;
-`;
 
 export default connect(Root);
