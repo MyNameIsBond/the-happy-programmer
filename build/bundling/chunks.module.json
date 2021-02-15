@@ -2,7 +2,7 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "ed0e998e30b9334cd09d",
+  "hash": "35cad51ce702b369ca42",
   "publicPath": "/static/",
   "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
   "assetsByChunkName": {
@@ -11,7 +11,7 @@
   "assets": [
     {
       "name": "the-happy-programmer.module.js",
-      "size": 5027851,
+      "size": 5027215,
       "chunks": [
         "the-happy-programmer"
       ],
