@@ -11,7 +11,7 @@ const Root = ({ state }) => {
       <nav>
         <Link link="/">Home</Link>
         <Link link="/category/swiftui/"> SwiftUI</Link>
-        <Link link="/category/web/">We b</Link>
+        <Link link="/category/web/">Web</Link>
       </nav>
     </>
   );
