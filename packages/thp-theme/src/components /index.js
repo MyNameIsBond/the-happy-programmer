@@ -10,8 +10,8 @@ const Root = ({ state }) => {
       <Global styles={globalStyles} />
       <nav>
         <Link link="/">Home</Link>
-        <Link link="/category/swiftui/"> SwiftUI</Link>
-        <Link link="/category/web/">W eb</Link>
+        <Link link="/category/swiftui/">SwiftUI</Link>
+        <Link link="/category/web/">Web</Link>
       </nav>
     </>
   );
