@@ -8,6 +8,10 @@
   ],
   "license": "Apache-2.0",
   "dependencies": {
+    "@frontity/components": "^1.7.1",
+    "@frontity/head-tags": "^1.1.1",
+    "@frontity/html2react": "^1.6.1",
+    "@frontity/yoast": "^2.1.1",
     "frontity": "^1.14.1"
   }
 }

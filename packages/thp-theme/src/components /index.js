@@ -1,6 +1,5 @@
 import { connect, Global, Head, styled, css } from "frontity";
 import React from "react";
-
 import Link from "@frontity/components/link";
 import { globalStyles } from "./style/global-style";
 
@@ -8,8 +7,10 @@ const Root = ({ state }) => {
   return (
     <>
       <Head>
-        <title>My First Frontity Theme</title>
-        <meta name="description" content="web and mobile courses" />
+        <title>{state.frontity.title}</title>
+        <meta name="description" content={state.frontity.description} />
+        <html lang="en" />
+        <link rel="canonical" href={state.router.link} />
       </Head>
       <Global styles={globalStyles} />
       <nav>
