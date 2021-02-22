@@ -3,9 +3,11 @@ import { css } from "frontity";
 const globalStyles = css`
   @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap");
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
   html {
     font-family: "Roboto Mono", monospace;
   }
+
   body {
     margin-right: auto;
     margin-left: auto;
@@ -14,12 +16,15 @@ const globalStyles = css`
     padding-left: 10px;
     background: var(--background-colour);
   }
+
   nav {
     font-family: "Roboto", sans-serif;
   }
+
   p {
     color: var(--text-colour);
   }
+
   h1,
   h2,
   h3,

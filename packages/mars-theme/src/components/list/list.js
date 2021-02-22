@@ -1,5 +1,6 @@
 import React from "react";
 import { connect, styled, decode } from "frontity";
+
 import Item from "./list-item";
 import Pagination from "./pagination";
 
