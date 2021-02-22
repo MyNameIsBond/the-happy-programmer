@@ -20,6 +20,17 @@ const globalStyles = css`
   p {
     color: var(--text-colour);
   }
+  h1,
+  h2,
+  h3,
+  h4,
+  a {
+    color: var(--text-colour);
+  }
+
+  a {
+    text-decoration: none;
+  }
 
   @media (prefers-color-scheme: light) {
     :root {
