@@ -6,6 +6,12 @@ const settings = {
       title: "The Happy Programmer",
       description: "Mobile and web free courses",
     },
+    theme: {
+      menu: [
+        ["Home", "/"],
+        ["SwiftUI", "/category/swiftui/"],
+      ],
+    },
   },
   packages: [
     {

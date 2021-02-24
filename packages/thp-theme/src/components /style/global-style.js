@@ -9,6 +9,7 @@ const globalStyles = css`
   }
 
   body {
+    margin: 0;
     margin-right: auto;
     margin-left: auto;
     max-width: 90em;
@@ -35,6 +36,9 @@ const globalStyles = css`
 
   a {
     text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
   }
 
   @media (prefers-color-scheme: light) {
