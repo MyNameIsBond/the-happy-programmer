@@ -21,7 +21,5 @@ const Nav = ({ state }) => {
 export default connect(Nav);
 
 const NavContainer = styled.nav`
-  margin: 0 !important;
   padding: 1em;
-  background: red;
 `;
