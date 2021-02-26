@@ -1,5 +1,3 @@
-import React from "react";
-import { connect, styled, css } from "frontity";
 const Logo = () => {
   return (
     <>
@@ -20,29 +18,20 @@ const Logo = () => {
             y2="1.331"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="0" stop-color="#c668e6" />
-            <stop offset="1" stop-color="#7e2be7" />
+            <stop offset="0" stopColor="#c668e6" />
+            <stop offset="1" stopColor="#7e2be7" />
           </linearGradient>
         </defs>
         <g id="Group_56" data-name="Group 56" transform="translate(-316 -352)">
-          <g
-            id="Group_47"
-            data-name="Group 47"
-            transform="translate(17 -2)"
-            css={css`
-              :hover {
-                color: pink;
-              }
-            `}
-          >
+          <g id="Group_47" data-name="Group 47" transform="translate(17 -2)">
             <text
               id="THE_HAPPY_PROGRAMMER"
               data-name="THE HAPPY PROGRAMMER"
               transform="translate(657 399)"
-              font-size="101"
-              font-family="SFProText-Black, SF Pro Text"
-              font-weight="800"
-              letter-spacing="-0.062em"
+              fontSize="101"
+              fontFamily="SFProText-Black, SF Pro Text"
+              fontWeight="800"
+              letterSpacing="-0.062em"
             >
               <tspan x="0" y="96">
                 THE HAPPY{" "}
@@ -68,9 +57,10 @@ const Logo = () => {
                     transform="translate(496 494)"
                     fill="none"
                     stroke="#000"
-                    stroke-width="56"
+                    strokeWidth="56"
                   >
                     <circle cx="158.5" cy="158.5" r="158.5" stroke="none" />
+
                     <circle cx="158.5" cy="158.5" r="130.5" fill="none" />
                   </g>
                 </g>
@@ -90,10 +80,4 @@ const Logo = () => {
   );
 };
 
-const LogoStyle = styled.css`
-  :hover {
-    fill: white;
-  }
-`;
-
-export default connect(Logo);
+export default Logo;

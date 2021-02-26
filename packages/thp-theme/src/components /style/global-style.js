@@ -27,9 +27,6 @@ const globalStyles = css`
   h4,
   a {
     color: var(--text-colour);
-  }
-
-  a {
     text-decoration: none;
   }
   a:hover {
@@ -47,16 +44,6 @@ const globalStyles = css`
   }
 
   @media (prefers-color-scheme: light) {
-    :root {
-      --background-colour: #f8f8f8;
-      --text-colour: #242424;
-      --accent-colour: #9a61d7;
-      --secondary-colour: #ff6584;
-      --breakpoint-sm: 576px;
-      --breakpoint-md: 768px;
-      --breakpoint-lg: 992px;
-      --breakpoint-xl: 1200px;
-    }
   }
 
   @media (prefers-color-scheme: dark) {
