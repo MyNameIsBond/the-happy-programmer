@@ -34,7 +34,7 @@ const globalStyles = css`
   }
   :root {
     --background-colour: #f8f8f8;
-    --text-colour: #242424;
+    --text-colour: #404040;
     --accent-colour: #9a61d7;
     --secondary-colour: #ff6584;
     --breakpoint-sm: 576px;
