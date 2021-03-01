@@ -46,9 +46,9 @@ const NavContainer = styled.nav`
 `;
 
 const LogoContainer = styled.css`
-  fill: var(--text-colour);
+  fill: black;
   circle:nth-child(2) {
-    stroke: var(--text-colour);
+    stroke: black;
   }
 
   svg:hover {
