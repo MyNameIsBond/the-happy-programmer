@@ -16,8 +16,13 @@ const Nav = ({ state, actions }) => {
         </LogoContainer>
         <MenuStyle>
           {state.theme.menu.map(([name, link]) => {
+            const isCurrentPage = state.router.link === link;
             return (
-              <Link key={name} link={link}>
+              <Link
+                key={name}
+                link={link}
+                aria-current={isCurrentPage ? "page" : undefined}
+              >
                 {name}
               </Link>
             );
@@ -32,8 +37,33 @@ export default connect(Nav);
 
 const MenuStyle = styled.div`
   a {
-    padding: 0em 1.5em;
+    margin: 0em 1.5em;
     font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s;
+  }
+  a:hover {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s;
+  }
+  a[aria-current="page"]:after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    border-radius: 100px;
+    height: 3px;
+    bottom: -6px;
+    margin: 0 auto;
+    left: 0;
+    width: 40%;
+    background: var(--accent-colour);
+    -o-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
   }
 `;
 
