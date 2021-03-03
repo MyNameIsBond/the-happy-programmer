@@ -34,7 +34,7 @@ const globalStyles = css`
   }
   :root {
     --background-colour: #f8f8f8;
-    --text-colour: #404040;
+    --text-colour: #535353;
     --accent-colour: #9a61d7;
     --secondary-colour: #ff6584;
     --hover-nav-colour: #1c1c1c;
