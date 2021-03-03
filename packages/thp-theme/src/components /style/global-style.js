@@ -37,19 +37,20 @@ const globalStyles = css`
     --text-colour: #404040;
     --accent-colour: #9a61d7;
     --secondary-colour: #ff6584;
+    --hover-nav-colour: #1c1c1c;
+    --logo-Colour: black;
     --breakpoint-sm: 576px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
   }
 
-  @media (prefers-color-scheme: light) {
-  }
-
   @media (prefers-color-scheme: dark) {
     :root {
+      --logo-Colour: white;
       --background-colour: #242424;
       --text-colour: #f8f8f8;
+      --hover-nav-colour: #bcbcbc;
     }
   }
 `;

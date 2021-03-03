@@ -1,13 +1,31 @@
 import React from "react";
-import { connect, style } from "frontity";
-
+import { connect, styled } from "frontity";
+import { default as svgHome } from "./constants/svgHome.svg";
 const Home = ({ state }) => {
   return (
     <>
-      <h1>Hello From the Other side</h1>
-      <h1>Hello From the Other side</h1>
+      <NavContainer>
+        <img src={svgHome} />
+        <HeaderDescription>Hello From the Other side</HeaderDescription>
+        <p></p>
+      </NavContainer>
     </>
   );
 };
+
+const NavContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 4em;
+  img {
+    width: 80%;
+    height: auto;
+  }
+`;
+
+const HeaderDescription = styled.h1`
+  padding-top: 1em;
+`;
 
 export default connect(Home);

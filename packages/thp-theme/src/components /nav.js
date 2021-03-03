@@ -45,9 +45,10 @@ const MenuStyle = styled.div`
   }
   a:hover {
     text-decoration: none;
-    color: black;
+    color: var(--hover-nav-colour);
     transition: 0.3s;
   }
+
   a[aria-current="page"]:after {
     content: "";
     display: inline-block;
@@ -76,9 +77,9 @@ const NavContainer = styled.nav`
 `;
 
 const LogoContainer = styled.css`
-  fill: black;
+  fill: var(--logo-Colour);
   circle:nth-child(2) {
-    stroke: black;
+    stroke: var(--logo-Colour);
   }
 
   svg:hover {

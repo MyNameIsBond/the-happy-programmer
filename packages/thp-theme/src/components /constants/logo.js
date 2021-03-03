@@ -7,7 +7,6 @@ const Logo = () => {
         width="205"
         height="55"
         viewBox="0 0 1184 317"
-        className="lol"
       >
         <defs>
           <linearGradient
