@@ -13,6 +13,7 @@ const Home = ({ state }) => {
           1500s, when an unknown printer took a galley of type and scrambled it
           to make a type specimen book.
         </p>
+
         <input
           type="text"
           id="fname"
@@ -24,6 +25,8 @@ const Home = ({ state }) => {
     </>
   );
 };
+
+const Subcribe = styled.div``;
 
 const NavContainer = styled.div`
   display: flex;
