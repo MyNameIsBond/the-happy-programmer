@@ -14,13 +14,24 @@ const Home = ({ state }) => {
           to make a type specimen book.
         </p>
         <Subcribe>
-          <input type="text" id="email" name="email" placeholder="@"></input>
+          <input
+            type="text"
+            id="email"
+            placeholder="example@email.com"
+            name="email"
+          ></input>
           <button>Subscribe</button>
         </Subcribe>
       </NavContainer>
+
+      <LessonContainer>
+        <div>Everything About Mobile AND WEB</div>
+      </LessonContainer>
     </>
   );
 };
+
+// ------------------Landing Page------------------
 
 const Subcribe = styled.div`
   display: flex;
@@ -31,26 +42,40 @@ const Subcribe = styled.div`
   width: 100%;
   padding: 1.5em 1em 0em 1em;
   input {
+    width: 40%;
     padding: 1em 1em;
-    border-radius: 0.5em;
+    border-radius: 0.3em;
     margin: 0em 0.5em;
     border-style: none;
     font-size: 20px;
     box-shadow: 0px 1px 4em lightgray;
+    color: var(--text-colour);
+  }
+  input::placeholder {
+    color: lightgray;
+    opacity: 1; /* Firefox */
+    font-weight: light;
   }
   button {
     padding: 1em 1em;
-    border-radius: 0.5em;
+    border-radius: 0.3em;
     text-transform: uppercase;
     font-size: 20px;
     background: var(--accent-colour);
-    color: white;
+    color: #f8f8f8;
     border-style: none;
+    margin-left: 0.3em;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+  }
+  button:hover {
+    cursor: pointer;
     box-shadow: 0px 1px 4em lightgray;
   }
 `;
 
 const NavContainer = styled.div`
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,6 +95,13 @@ const NavContainer = styled.div`
 
 const HeaderDescription = styled.h1`
   padding-top: 1em;
+`;
+
+// ------------------Landing Page------------------
+
+const LessonContainer = styled.div`
+  display: block;
+  background: gray;
 `;
 
 export default connect(Home);
