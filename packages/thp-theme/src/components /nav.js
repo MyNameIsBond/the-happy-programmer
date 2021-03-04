@@ -58,7 +58,7 @@ const MenuStyle = styled.div`
     bottom: -6px;
     margin: 0 auto;
     left: 0;
-    width: 40%;
+    width: 60%;
     background: var(--accent-colour);
     -o-transition: 0.3s;
     -ms-transition: 0.3s;
