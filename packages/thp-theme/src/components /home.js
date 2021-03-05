@@ -23,7 +23,6 @@ const Home = ({ state }) => {
           <button>Subscribe</button>
         </Subcribe>
       </NavContainer>
-
       <LessonContainer>
         <p>Everything about Mobile and Web</p>
         <h2>What you can learn here</h2>
@@ -48,20 +47,21 @@ const Subcribe = styled.div`
     border-radius: 0.3em;
     margin: 0em 0.5em;
     border-style: none;
-    font-size: 20px;
-    box-shadow: 0px 1px 4em lightgray;
+    font-size: 1rem;
+    box-shadow: var(--hover-shadow);
     color: var(--text-colour);
   }
   input::placeholder {
     color: lightgray;
     opacity: 1; /* Firefox */
-    font-weight: light;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
   }
   button {
     padding: 1em 1em;
     border-radius: 0.3em;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 1rem;
     background: var(--accent-colour);
     color: #f8f8f8;
     border-style: none;
@@ -71,7 +71,7 @@ const Subcribe = styled.div`
   }
   button:hover {
     cursor: pointer;
-    box-shadow: 0px 1px 4em lightgray;
+    box-shadow: var(--hover-shadow);
   }
 `;
 
@@ -86,28 +86,32 @@ const NavContainer = styled.div`
   }
   p {
     margin-block-start: 0em;
+    font-weight: light;
     padding: 0em 1em;
     line-height: 32.39px;
     text-align: center;
-    font-weight: 400;
+    font-weight: 300;
   }
 `;
 
 const HeaderDescription = styled.h1`
   padding-top: 1em;
+  text-align: center;
 `;
 
 // ------------------Landing Page------------------
 
 const LessonContainer = styled.div`
+  width: 100%;
   margin-top: 30%;
-  display: block;
   background: var(--secondary-background-colour);
   > p {
     text-transform: uppercase;
   }
 `;
 
-const DescriptionPanel = styled.div``;
+const DescriptionPanel = styled.div`
+  text-align: center;
+`;
 
 export default connect(Home);

@@ -37,6 +37,8 @@ export default connect(Nav);
 
 const MenuStyle = styled.div`
   a {
+    letter-spacing: 0.00938em;
+
     margin: 0em 1.5em;
     font-size: 14px;
     font-weight: 500;
