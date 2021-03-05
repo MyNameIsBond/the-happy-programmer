@@ -25,7 +25,8 @@ const Home = ({ state }) => {
       </NavContainer>
 
       <LessonContainer>
-        <div>Everything About Mobile AND WEB</div>
+        <p>Everything about Mobile and Web</p>
+        <h2>What you can learn here</h2>
       </LessonContainer>
     </>
   );
@@ -75,7 +76,6 @@ const Subcribe = styled.div`
 `;
 
 const NavContainer = styled.div`
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -100,8 +100,14 @@ const HeaderDescription = styled.h1`
 // ------------------Landing Page------------------
 
 const LessonContainer = styled.div`
+  margin-top: 30%;
   display: block;
-  background: gray;
+  background: var(--secondary-background-colour);
+  > p {
+    text-transform: uppercase;
+  }
 `;
+
+const DescriptionPanel = styled.div``;
 
 export default connect(Home);

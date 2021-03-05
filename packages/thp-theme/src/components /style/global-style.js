@@ -37,6 +37,7 @@ const globalStyles = css`
     --text-colour: #535353;
     --accent-colour: #9a61d7;
     --secondary-colour: #ff6584;
+    --secondary-background-colour: #f2f2f2;
     --hover-nav-colour: #1c1c1c;
     --logo-Colour: black;
     --breakpoint-sm: 576px;
@@ -51,6 +52,7 @@ const globalStyles = css`
       --background-colour: #242424;
       --text-colour: #f8f8f8;
       --hover-nav-colour: #bcbcbc;
+      --secondary-background-colour: #333333;
     }
   }
 `;
