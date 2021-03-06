@@ -1,17 +1,17 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import { default as svgHome } from "./constants/svgHome.svg";
+import Link from "@frontity/components/link";
 const Home = ({ state }) => {
   return (
     <>
       <NavContainer>
         <img src={svgHome} />
-        <HeaderDescription>Hello From the Other side</HeaderDescription>
+        <HeaderDescription>SwiftUI and Flutter Blog</HeaderDescription>
         <p>
-          This is simply dummy text of the printing and typesetting industry.
-          Lorem Ipsum has been the industry’s standard dummy text ever since the
-          1500s, when an unknown printer took a galley of type and scrambled it
-          to make a type specimen book.
+          Programming blog focused on{" "}
+          <Link link={"/category/swiftui/"}>iOS</Link>, Flutter and React
+          Native. You can also find courses in mobile development.
         </p>
         <Subcribe>
           <input

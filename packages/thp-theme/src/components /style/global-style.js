@@ -28,8 +28,7 @@ const globalStyles = css`
   h1,
   h2,
   h3,
-  h4,
-  {
+  h4 {
     font-weight: 500;
     display: block;
   }
@@ -37,11 +36,15 @@ const globalStyles = css`
   h1,
   h2,
   h3,
-  h4,
-  a {
+  h4 {
     color: var(--text-colour);
     text-decoration: none;
-    letter-spacing: 0em;
+    letter-spacing: 0.00938rem;
+  }
+  a {
+    color: var(--secondary-colour);
+    text-decoration: none;
+    letter-spacing: 0.00938rem;
   }
   h1 {
     font-size: 3.052rem;
@@ -65,7 +68,7 @@ const globalStyles = css`
 
   button {
     font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    letter-spacing: 0.02857em
+    letter-spacing: 0.02857rem;
     font-weight: 400;
   }
 
