@@ -35,6 +35,13 @@ const Home = ({ state }) => {
           </DescriptionPanel>
         ))}
       </LessonContainer>
+      {homeConstants.coursesContainer.map(([icon, title, desc, link]) => (
+        <CourseDiv key={title}>
+          <img src={icon} />
+          <h2>{title}</h2>
+          <p>{desc}</p>
+        </CourseDiv>
+      ))}
     </>
   );
 };
@@ -139,6 +146,14 @@ const DescriptionPanel = styled.div`
   h4 {
     margin-block-end: 0em;
   }
+`;
+
+// ------------------Courses Container------------------
+
+const CourseDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export default connect(Home);

@@ -3,6 +3,11 @@ import { css } from "frontity";
 const globalStyles = css`
   @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
   html {
     font-family: "Roboto", sans-serif;
   }
