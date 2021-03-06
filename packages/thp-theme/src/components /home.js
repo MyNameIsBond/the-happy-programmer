@@ -1,6 +1,10 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import { default as svgHome } from "./constants/svgHome.svg";
+import { default as swiftUI } from "./constants/swiftuiIcon.svg";
+import { default as flutter } from "./constants/flutterIcon.svg";
+import { default as reactNative } from "./constants/reactNativeIcon.svg";
+import { default as js } from "./constants/JSIcon.svg";
 import Link from "@frontity/components/link";
 const Home = ({ state }) => {
   return (
@@ -10,7 +14,7 @@ const Home = ({ state }) => {
         <HeaderDescription>SwiftUI and Flutter Blog</HeaderDescription>
         <p>
           Programming blog focused on{" "}
-          <Link link={"/category/swiftui/"}>iOS</Link>, Flutter and React
+          <Link link={"/category/swiftui/"}>SwiftUI</Link>, Flutter and React
           Native. You can also find courses in mobile development.
         </p>
         <Subcribe>
@@ -26,6 +30,11 @@ const Home = ({ state }) => {
       <LessonContainer>
         <p>Everything about Mobile and Web</p>
         <h2>What you can learn here</h2>
+        <DescriptionPanel>
+          <img src={swiftUI} />
+          <h4>SwiftUI</h4>
+          <p>SwiftUI complete posts and tutorials</p>
+        </DescriptionPanel>
       </LessonContainer>
     </>
   );
@@ -105,13 +114,25 @@ const LessonContainer = styled.div`
   width: 100%;
   margin-top: 30%;
   background: var(--secondary-background-colour);
+  padding: 4em 0em 2em 0em;
   > p {
     text-transform: uppercase;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 500;
+    margin-block-end: 0.5em;
+  }
+  h2 {
+    text-align: center;
+    margin-block-start: 0em;
   }
 `;
 
 const DescriptionPanel = styled.div`
   text-align: center;
+  p {
+    font-weight: 300;
+  }
 `;
 
 export default connect(Home);
