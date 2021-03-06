@@ -23,6 +23,7 @@ const globalStyles = css`
   p {
     color: var(--text-colour);
     font-size: 1rem;
+    line-height: 2.024rem;
     letter-spacing: 0.00938em;
   }
   h1,

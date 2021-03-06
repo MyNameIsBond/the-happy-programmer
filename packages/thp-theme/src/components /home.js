@@ -1,17 +1,14 @@
 import React from "react";
 import { connect, styled } from "frontity";
-import { default as svgHome } from "./constants/svgHome.svg";
-import { default as swiftUI } from "./constants/swiftuiIcon.svg";
-import { default as flutter } from "./constants/flutterIcon.svg";
-import { default as reactNative } from "./constants/reactNativeIcon.svg";
-import { default as js } from "./constants/JSIcon.svg";
+
 import Link from "@frontity/components/link";
+import { homeConstants } from "./constants/constants-string";
 const Home = ({ state }) => {
   return (
     <>
       <NavContainer>
-        <img src={svgHome} />
-        <HeaderDescription>SwiftUI and Flutter Blog</HeaderDescription>
+        <img src={homeConstants.homeSvg} />
+        <HeaderDescription>{homeConstants.mainHeader}</HeaderDescription>
         <p>
           Programming blog focused on{" "}
           <Link link={"/category/swiftui/"}>SwiftUI</Link>, Flutter and React
@@ -28,13 +25,15 @@ const Home = ({ state }) => {
         </Subcribe>
       </NavContainer>
       <LessonContainer>
-        <p>Everything about Mobile and Web</p>
-        <h2>What you can learn here</h2>
-        <DescriptionPanel>
-          <img src={swiftUI} />
-          <h4>SwiftUI</h4>
-          <p>SwiftUI complete posts and tutorials</p>
-        </DescriptionPanel>
+        <p>{homeConstants.header}</p>
+        <h3>{homeConstants.subheader}</h3>
+        {homeConstants.lessonContainer.map(([icon, title, desc]) => (
+          <DescriptionPanel key={title}>
+            <img src={icon} />
+            <h4>{title}</h4>
+            <p>{desc}</p>
+          </DescriptionPanel>
+        ))}
       </LessonContainer>
     </>
   );
@@ -97,7 +96,6 @@ const NavContainer = styled.div`
     margin-block-start: 0em;
     font-weight: light;
     padding: 0em 1em;
-    line-height: 32.39px;
     text-align: center;
     font-weight: 300;
   }
@@ -115,23 +113,31 @@ const LessonContainer = styled.div`
   margin-top: 30%;
   background: var(--secondary-background-colour);
   padding: 4em 0em 2em 0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   > p {
     text-transform: uppercase;
     text-align: center;
     font-size: 0.8em;
     font-weight: 500;
-    margin-block-end: 0.5em;
+    margin-block-end: 0em;
   }
-  h2 {
+  > h3 {
     text-align: center;
     margin-block-start: 0em;
   }
 `;
 
 const DescriptionPanel = styled.div`
+  padding: 1em 0em;
+  width: 30%;
   text-align: center;
   p {
     font-weight: 300;
+  }
+  h4 {
+    margin-block-end: 0em;
   }
 `;
 
