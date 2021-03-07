@@ -45,15 +45,11 @@ const SecondaryButton = styled.button`
     cursor: pointer;
     box-shadow: var(--hover-shadow);
   }
-  button:disabled,
-  button[disabled] {
-    border: 1px solid #999999;
-    background-color: #cccccc;
-    color: #666666;
-  }
-  button:hover:disabled,
-  button:hover:[disabled] {
-    cursor: grab;
+  &:disabled {
+    cursor: default;
+    border: 1px solid var(--disabled-components);
+    box-shadow: none;
+    color: var(--disabled-text);
   }
 `;
 

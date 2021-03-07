@@ -2,13 +2,27 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "b536a1a45cbcadc34ffc",
+  "hash": "86894745deabe8629993",
   "publicPath": "/static/",
   "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
   "assetsByChunkName": {
-    "the-happy-programmer": "the-happy-programmer.module.js"
+    "the-happy-programmer": [
+      "the-happy-programmer.module.js",
+      "the-happy-programmer.9d795cfcce8f8a665d1b.hot-update.js"
+    ]
   },
   "assets": [
+    {
+      "name": "9d795cfcce8f8a665d1b.hot-update.json",
+      "size": 62,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
     {
       "name": "images/JSIcon.svg",
       "size": 999,
@@ -100,8 +114,23 @@
       "emitted": false
     },
     {
+      "name": "the-happy-programmer.9d795cfcce8f8a665d1b.hot-update.js",
+      "size": 87456,
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "chunkNames": [
+        "the-happy-programmer"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "the-happy-programmer.module.js",
-      "size": 6401789,
+      "size": 6430314,
       "chunks": [
         "the-happy-programmer"
       ],
@@ -109,8 +138,7 @@
         "the-happy-programmer"
       ],
       "info": {},
-      "emitted": true,
-      "isOverSizeLimit": true
+      "emitted": false
     }
   ],
   "filteredAssets": 0,
@@ -120,7 +148,8 @@
         "the-happy-programmer"
       ],
       "assets": [
-        "the-happy-programmer.module.js"
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.9d795cfcce8f8a665d1b.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -132,7 +161,8 @@
         "the-happy-programmer"
       ],
       "assets": [
-        "the-happy-programmer.module.js"
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.9d795cfcce8f8a665d1b.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -141,17 +171,18 @@
   "chunks": [
     {
       "id": "the-happy-programmer",
-      "rendered": false,
+      "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 1619710,
+      "size": 1645208,
       "names": [
         "the-happy-programmer"
       ],
       "files": [
-        "the-happy-programmer.module.js"
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.9d795cfcce8f8a665d1b.hot-update.js"
       ],
-      "hash": "14302ee415ce7bf646b1",
+      "hash": "822fb5cb7db936f4e743",
       "siblings": [],
       "parents": [],
       "children": [],

@@ -87,6 +87,8 @@ const globalStyles = css`
     --accent-colour: #9a61d7;
     --secondary-colour: #ff6584;
     --secondary-background-colour: #f2f2f2;
+    --disabled-components: #a0a0a0;
+    --disabled-text: #777777;
     --hover-nav-colour: #1c1c1c;
     --hover-shadow: 0px 1px 1px lightgray;
     --logo-Colour: black;
@@ -98,6 +100,7 @@ const globalStyles = css`
 
   @media (prefers-color-scheme: dark) {
     :root {
+      --disabled-text: #a0a0a0;
       --hover-shadow: 0px 1px 1px black;
       --logo-Colour: white;
       --background-colour: #242424;

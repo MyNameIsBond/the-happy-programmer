@@ -9,6 +9,8 @@ import { default as flutterMobile } from "./flutterMobile.svg";
 import { default as webIcon } from "./webIcon.svg";
 
 const homeConstants = {
+  userImage:
+    "https://thehappyprogrammer.com/wp-content/uploads/2021/03/IMG_0918-2.jpg",
   homeSvg: svgHome,
   mainHeader: "SwiftUI and Flutter Blog",
   header: "EVERYTHING ABOUT MOBILE AND WEB",
@@ -54,6 +56,11 @@ const homeConstants = {
       true,
     ],
   ],
+  AuthorInfo: {
+    title: "My Name Is Tony",
+    description:
+      "I have developed numerous of iOS and Android apps. I have participated in many open course projects. An experienced developer in web development, enterprise and mobile development. Enthusiastic about programming and technology.",
+  },
 };
 
 export { homeConstants };

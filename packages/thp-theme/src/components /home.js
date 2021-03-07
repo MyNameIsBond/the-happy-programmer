@@ -44,11 +44,20 @@ const Home = ({ state }) => {
             <p>{desc}</p>
             <ButtonContainer>
               <Primary>Subcribe</Primary>
-              <Secondary disabled={disabled}>Read More</Secondary>
+              <Secondary disabled={disabled}>
+                {disabled ? "Coming Soon..." : "Read More"}
+              </Secondary>
             </ButtonContainer>
           </CourseDiv>
         )
       )}
+      <AuthorContainer>
+        <AuthorAvatar>
+          <img src={homeConstants.userImage} />
+        </AuthorAvatar>
+        <h2>{homeConstants.AuthorInfo.title}</h2>
+        <p>{homeConstants.AuthorInfo.description}</p>
+      </AuthorContainer>
     </>
   );
 };
@@ -95,7 +104,6 @@ const NavContainer = styled.div`
   }
   p {
     margin-block-start: 0em;
-    font-weight: light;
     padding: 0em 1em;
     text-align: center;
     font-weight: 300;
@@ -146,7 +154,7 @@ const DescriptionPanel = styled.div`
 
 const ButtonContainer = styled.div`
   justify-content: center;
-  padding: 3em 0em;
+  padding: 3em 0em 6em 0em;
   width: 100%;
   display: flex;
   button {
@@ -165,10 +173,45 @@ const CourseDiv = styled.div`
   }
   h2 {
     margin-block-end: 0em;
-    margin-block-start: 1em;
+    margin-block-start: 1.5em;
   }
   p {
     font-weight: 300;
+  }
+`;
+
+// ------------------Author Container------------------
+
+const AuthorAvatar = styled.div`
+  height: 200px;
+  width: 200px;
+  border-radius: 100%;
+  overflow: hidden;
+
+  img {
+    position: relative;
+    object-fit: cover;
+    left: -35px;
+    width: auto;
+    height: 100%;
+  }
+`;
+
+const AuthorContainer = styled.div`
+  display: flex;
+  padding: 2em 2em;
+  flex-direction: column;
+  align-items: center;
+
+  background: var(--secondary-background-colour);
+  p {
+    text-align: center;
+    font-weight: 300;
+  }
+  h2 {
+    text-align: center;
+    margin-block-start: 1.5em;
+    margin-block-end: 0.5em;
   }
 `;
 
