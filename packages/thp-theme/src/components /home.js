@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, styled } from "frontity";
+import { connect, styled, css } from "frontity";
 
 import Link from "@frontity/components/link";
 import { homeConstants } from "./constants/constants-string";
@@ -12,7 +12,8 @@ const Home = ({ state }) => {
         <p>
           Programming blog focused on{" "}
           <Link link={"/category/swiftui/"}>SwiftUI</Link>, Flutter and React
-          Native. You can also find courses in mobile development.
+          Native. You can also find courses in mobile development. Clones of
+          famous websites and Apps. Subscribe to get notified for new content.
         </p>
         <Subcribe>
           <input
@@ -35,13 +36,15 @@ const Home = ({ state }) => {
           </DescriptionPanel>
         ))}
       </LessonContainer>
-      {homeConstants.coursesContainer.map(([icon, title, desc, link]) => (
-        <CourseDiv key={title}>
-          <img src={icon} />
-          <h2>{title}</h2>
-          <p>{desc}</p>
-        </CourseDiv>
-      ))}
+      {homeConstants.coursesContainer.map(
+        ([icon, title, desc, link, width]) => (
+          <CourseDiv key={title}>
+            <img src={icon} width={width} />
+            <h2>{title}</h2>
+            <p>{desc}</p>
+          </CourseDiv>
+        )
+      )}
     </>
   );
 };
@@ -154,6 +157,7 @@ const CourseDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 3em;
 `;
 
 export default connect(Home);

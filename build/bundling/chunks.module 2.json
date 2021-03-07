@@ -1,0 +1,204 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.46.0",
+  "hash": "6460dabee51f436eb724",
+  "publicPath": "/static/",
+  "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
+  "assetsByChunkName": {
+    "the-happy-programmer": [
+      "the-happy-programmer.module.js",
+      "the-happy-programmer.f71e4e10ec9dbd366535.hot-update.js"
+    ]
+  },
+  "assets": [
+    {
+      "name": "f71e4e10ec9dbd366535.hot-update.json",
+      "size": 62,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/JSIcon.svg",
+      "size": 999,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/JSIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/flutterIcon.svg",
+      "size": 353,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/flutterIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/flutterMobile.svg",
+      "size": 4189,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/flutterMobile.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/reactNativeIcon.svg",
+      "size": 3433,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/reactNativeIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/reactNativeMobile.svg",
+      "size": 4236,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/reactNativeMobile.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/svgHome.svg",
+      "size": 15638,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/svgHome.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/swiftuiIcon.svg",
+      "size": 791,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/swiftuiIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/swiftuiMobile.svg",
+      "size": 2221,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/swiftuiMobile.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/webIcon.svg",
+      "size": 2264,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/webIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "the-happy-programmer.f71e4e10ec9dbd366535.hot-update.js",
+      "size": 49100,
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "chunkNames": [
+        "the-happy-programmer"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "the-happy-programmer.module.js",
+      "size": 6378869,
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "chunkNames": [
+        "the-happy-programmer"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "the-happy-programmer": {
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "assets": [
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.f71e4e10ec9dbd366535.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "the-happy-programmer": {
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "assets": [
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.f71e4e10ec9dbd366535.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "chunks": [
+    {
+      "id": "the-happy-programmer",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 1602230,
+      "names": [
+        "the-happy-programmer"
+      ],
+      "files": [
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.f71e4e10ec9dbd366535.hot-update.js"
+      ],
+      "hash": "006fb1f4c608b415356c",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [],
+      "filteredModules": 0,
+      "origins": []
+    }
+  ],
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 2,
+      "debug": false
+    }
+  },
+  "children": [],
+  "generator": "loadable-components"
+}
