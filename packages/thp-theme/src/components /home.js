@@ -1,6 +1,6 @@
 import React from "react";
-import { connect, styled, css } from "frontity";
-
+import { connect, styled } from "frontity";
+import { Primary, Secondary } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
 import { homeConstants } from "./constants/constants-string";
 const Home = ({ state }) => {
@@ -22,7 +22,7 @@ const Home = ({ state }) => {
             placeholder="example@email.com"
             name="email"
           ></input>
-          <button>Subscribe</button>
+          <Primary>Subscribe</Primary>
         </Subcribe>
       </NavContainer>
       <LessonContainer>
@@ -37,11 +37,15 @@ const Home = ({ state }) => {
         ))}
       </LessonContainer>
       {homeConstants.coursesContainer.map(
-        ([icon, title, desc, link, width]) => (
+        ([icon, title, desc, link, width, disabled]) => (
           <CourseDiv key={title}>
             <img src={icon} width={width} />
             <h2>{title}</h2>
             <p>{desc}</p>
+            <ButtonContainer>
+              <Primary>Subcribe</Primary>
+              <Secondary disabled={disabled}>Read More</Secondary>
+            </ButtonContainer>
           </CourseDiv>
         )
       )}
@@ -59,6 +63,9 @@ const Subcribe = styled.div`
   align-content: cetner;
   width: 100%;
   padding: 1.5em 1em 0em 1em;
+  button {
+    padding: 1rem 1rem;
+  }
   input {
     width: 40%;
     padding: 1em 1em;
@@ -74,22 +81,6 @@ const Subcribe = styled.div`
     opacity: 1; /* Firefox */
     font-family: "Roboto", sans-serif;
     font-weight: 300;
-  }
-  button {
-    padding: 1em 1em;
-    border-radius: 0.3em;
-    text-transform: uppercase;
-    font-size: 1rem;
-    background: var(--accent-colour);
-    color: #f8f8f8;
-    border-style: none;
-    margin-left: 0.3em;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-  }
-  button:hover {
-    cursor: pointer;
-    box-shadow: var(--hover-shadow);
   }
 `;
 
@@ -153,11 +144,32 @@ const DescriptionPanel = styled.div`
 
 // ------------------Courses Container------------------
 
+const ButtonContainer = styled.div`
+  justify-content: center;
+  padding: 3em 0em;
+  width: 100%;
+  display: flex;
+  button {
+    margin: 0em 1em;
+  }
+`;
+
 const CourseDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3em;
+  margin: 3em 3em 4em 3em;
+  h2,
+  p {
+    text-align: center;
+  }
+  h2 {
+    margin-block-end: 0em;
+    margin-block-start: 1em;
+  }
+  p {
+    font-weight: 300;
+  }
 `;
 
 export default connect(Home);
