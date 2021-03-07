@@ -57,6 +57,14 @@ const Home = ({ state }) => {
         </AuthorAvatar>
         <h2>{homeConstants.AuthorInfo.title}</h2>
         <p>{homeConstants.AuthorInfo.description}</p>
+        <SocialContainer>
+          {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
+            <a href={link} key={link} target="_blank">
+              <img src={icon} />
+            </a>
+          ))}
+        </SocialContainer>
+        <Secondary>Read More</Secondary>
       </AuthorContainer>
     </>
   );
@@ -212,6 +220,20 @@ const AuthorContainer = styled.div`
     text-align: center;
     margin-block-start: 1.5em;
     margin-block-end: 0.5em;
+  }
+  button {
+    margin: 2em 0em;
+  }
+`;
+
+const SocialContainer = styled.div`
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: center;
+
+  a {
+    padding: 3em 2em;
   }
 `;
 

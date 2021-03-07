@@ -7,6 +7,10 @@ import { default as swiftuiMobile } from "./swiftuiMobile.svg";
 import { default as reactNativeMobile } from "./reactNativeMobile.svg";
 import { default as flutterMobile } from "./flutterMobile.svg";
 import { default as webIcon } from "./webIcon.svg";
+import { default as patreonIcon } from "./patreonIcon.svg";
+import { default as facebookIcon } from "./facebookIcon.svg";
+import { default as youtubeIcon } from "./youtubeIcon.svg";
+import { default as twitterIcon } from "./twitterIcon.svg";
 
 const homeConstants = {
   userImage:
@@ -60,6 +64,15 @@ const homeConstants = {
     title: "My Name Is Tony",
     description:
       "I have developed numerous of iOS and Android apps. I have participated in many open course projects. An experienced developer in web development, enterprise and mobile development. Enthusiastic about programming and technology.",
+    socials: [
+      [patreonIcon, "https://www.patreon.com/thehappyprogrammer"],
+      [
+        facebookIcon,
+        "https://www.facebook.com/The-Happy-Programmer-106178104593013",
+      ],
+      [twitterIcon, "https://twitter.com/happy_prog"],
+      [youtubeIcon, "https://www.youtube.com/channel/UC6iG4M34lttUcEFUdSVsGVA"],
+    ],
   },
 };
 
