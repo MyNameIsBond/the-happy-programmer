@@ -231,9 +231,10 @@ const SocialContainer = styled.div`
   width: 100%;
   flex-direction: row;
   justify-content: center;
+  align-items: baseline;
 
   a {
-    padding: 3em 2em;
+    margin: 3em 2em;
   }
 `;
 
