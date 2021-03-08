@@ -10,7 +10,6 @@ const globalStyles = css`
   html {
     font-family: "Roboto", sans-serif;
   }
-
   body {
     margin: 0;
     margin-right: auto;
@@ -55,7 +54,6 @@ const globalStyles = css`
   h3 {
     font-size: 1.953rem;
   }
-
   h4 {
     font-size: 1.563rem;
   }
@@ -86,7 +84,10 @@ const globalStyles = css`
     --hover-nav-colour: #1c1c1c;
     --hover-shadow: 0px 1px 1px lightgray;
     --logo-Colour: black;
-    --breakpoint-sm: 576px;
+    // Footer Style
+    --footer-background: #242424;
+    --footer-text: #f8f8f8;
+    --breakpoint-sm: 550px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
@@ -101,6 +102,9 @@ const globalStyles = css`
       --text-colour: #f8f8f8;
       --hover-nav-colour: #bcbcbc;
       --secondary-background-colour: #333333;
+      // Footer
+      --footer-background: #f8f8f8;
+      --footer-text: #535353;
     }
   }
 `;

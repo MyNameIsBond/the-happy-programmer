@@ -3,6 +3,7 @@ import { connect, styled } from "frontity";
 import { Primary, Secondary } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
 import { homeConstants } from "./constants/constants-string";
+import { Footer } from "./footer";
 const Home = ({ state }) => {
   return (
     <>
@@ -66,6 +67,7 @@ const Home = ({ state }) => {
         </SocialContainer>
         <Secondary>Read More</Secondary>
       </AuthorContainer>
+      <Footer />
     </>
   );
 };
@@ -234,6 +236,9 @@ const SocialContainer = styled.div`
   align-items: baseline;
   a {
     margin: 3em 2em;
+    @media screen and (max-width: 550px) {
+      margin: 3em 1em;
+    }
   }
 `;
 

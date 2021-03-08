@@ -38,8 +38,8 @@ const SecondaryButton = styled.button`
   background: none;
   text-transform: uppercase;
   color: var(--text-colour);
-  -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
 
   &:hover {
     cursor: pointer;

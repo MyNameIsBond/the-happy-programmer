@@ -74,7 +74,13 @@ const homeConstants = {
       [youtubeIcon, "https://www.youtube.com/channel/UC6iG4M34lttUcEFUdSVsGVA"],
     ],
   },
-  footer: {},
+  footer: {
+    contact: "Contact us",
+    country: "Coventry, UK",
+    email: "thehappyprogrammer1@gmail.com",
+    subscribe:
+      "Enter your email address to subscribe to this blog and receive notifications",
+  },
 };
 
 export { homeConstants };
