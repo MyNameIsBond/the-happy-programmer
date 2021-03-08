@@ -76,6 +76,12 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 350px) {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 `;
 
 const LogoContainer = styled.css`

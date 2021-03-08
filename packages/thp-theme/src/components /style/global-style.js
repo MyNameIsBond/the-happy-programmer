@@ -7,22 +7,16 @@ const globalStyles = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
   html {
     font-family: "Roboto", sans-serif;
   }
+
   body {
-    font-family: "Roboto", sans-serif;
     margin: 0;
     margin-right: auto;
     margin-left: auto;
     max-width: 90em;
     background: var(--background-colour);
-    overflow-x: hidden;
-  }
-
-  nav {
-    font-family: "Roboto", sans-serif;
   }
 
   p {

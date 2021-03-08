@@ -78,7 +78,7 @@ const Subcribe = styled.div`
   align-items: center;
   justify-content: center;
   align-content: cetner;
-  width: 100%;
+  width: 90%;
   padding: 1.5em 1em 0em 1em;
   button {
     padding: 1rem 1rem;
@@ -232,7 +232,6 @@ const SocialContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
-
   a {
     margin: 3em 2em;
   }

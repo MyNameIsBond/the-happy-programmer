@@ -32,7 +32,7 @@ const homeConstants = {
       "SwiftUI Tutorials",
       "SwiftUI is being examined in depth to teach you how you can create stunning designs and teach you how to create professional and clean code. SwiftUI tutorials will cover macOS, iPadOS, watchOS and iOS.",
       "/category/swiftui/",
-      "50%",
+      "40%",
       false,
     ],
     [
@@ -40,7 +40,7 @@ const homeConstants = {
       "React Native Tutorials",
       "React has great capabilities is a very known cross-platform framework in JavaScrip. React Native can cover both mobile environments. Hot animation tutorials coming up. Also, clones from big famous Apps made in React Native.",
       "",
-      "50%",
+      "40%",
       true,
     ],
     [
@@ -48,7 +48,7 @@ const homeConstants = {
       "Flutter Tutorials",
       "Flutter is a cross-platform framework, with a single codebase you can create apps for Android, iOS, macOS, Windows, and Web. In Flutter we will cover the whole range Flutter provides and teach you the key components of Flutter and Dart.",
       "",
-      "50%",
+      "40%",
       true,
     ],
     [
@@ -56,7 +56,7 @@ const homeConstants = {
       "Web Tutorials",
       "On the web, we will cover mostly ReactJS. We will clone websites and teach you how to go from zero to hero, how to understand crucial concepts, and deploy.",
       "",
-      "100%",
+      "90%",
       true,
     ],
   ],
@@ -74,6 +74,7 @@ const homeConstants = {
       [youtubeIcon, "https://www.youtube.com/channel/UC6iG4M34lttUcEFUdSVsGVA"],
     ],
   },
+  footer: {},
 };
 
 export { homeConstants };

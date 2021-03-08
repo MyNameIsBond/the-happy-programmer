@@ -36,8 +36,10 @@ const NavContainer = styled.nav`
   margin: 0;
   overflow-x: auto;
 
-  @media screen and (max-width: 560px) {
-    display: none;
+  @media screen and (min-width: 550px) {
+    background-color: red;
+    display: flex;
+    flex-direction: column;
   }
 `;
 
