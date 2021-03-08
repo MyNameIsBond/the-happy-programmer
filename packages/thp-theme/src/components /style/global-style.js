@@ -87,6 +87,7 @@ const globalStyles = css`
     // Footer Style
     --footer-background: #242424;
     --footer-text: #f8f8f8;
+    --footer-logo-Colour: white;
     --breakpoint-sm: 550px;
     --breakpoint-md: 768px;
     --breakpoint-lg: 992px;
@@ -103,6 +104,7 @@ const globalStyles = css`
       --hover-nav-colour: #bcbcbc;
       --secondary-background-colour: #333333;
       // Footer
+      --footer-logo-Colour: black;
       --footer-background: #f8f8f8;
       --footer-text: #535353;
     }
