@@ -7,7 +7,8 @@ const Secondary = ({ children, disabled }) => (
 );
 
 const PrimaryButton = styled.button`
-  min-width: 64px;
+  white-space: normal;
+  display: inline;
   box-sizing: border-box;
   padding: 10px 20px;
   border-radius: 0.2em;
@@ -27,7 +28,6 @@ const PrimaryButton = styled.button`
 `;
 
 const SecondaryButton = styled.button`
-  min-width: 64px;
   box-sizing: border-box;
   padding: 10px 20px;
   border-radius: 0.2em;

@@ -36,6 +36,13 @@ const Nav = ({ state, actions }) => {
 export default connect(Nav);
 
 const MenuStyle = styled.div`
+  @media screen and (max-width: 450px) {
+    padding: 1em 0em;
+    margin: 0.5em 0em;
+    background-color: var(--secondary-background-colour);
+    width: 100%;
+  }
+
   a {
     letter-spacing: 0.00938em;
     color: var(--text-colour);
@@ -71,16 +78,18 @@ const MenuStyle = styled.div`
 `;
 
 const NavContainer = styled.nav`
+  @media screen and (max-width: 450px) {
+    background: var(--secondary-background-colour);
+  }
   padding: 2em 1em 1em 2em;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media screen and (max-width: 350px) {
-    background-color: red;
+  @media screen and (max-width: 450px) {
     display: flex;
     flex-direction: column;
-    padding: 0;
+    padding: 1em 0em;
   }
 `;
 
