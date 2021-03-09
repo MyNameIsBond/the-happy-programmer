@@ -9,19 +9,21 @@ const Footer = () => (
       <Logo />
       <Socials>
         {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
-          <img key={icon} src={icon} to={link} />
+          <a key={link} href={link}>
+            <img src={icon} />
+          </a>
         ))}
       </Socials>
     </LogoSocials>
     <Credentials>
-      <p>{homeConstants.footer.contact}</p>
+      <HighlightedText>{homeConstants.footer.contact}</HighlightedText>
       <p>{homeConstants.footer.country}</p>
       <a href={`mailto:${homeConstants.footer.email}`}>
         {homeConstants.footer.email}
       </a>
     </Credentials>
     <Subscribe>
-      <p>Subscribe</p>
+      <HighlightedText>Subscribe</HighlightedText>
       <SubscribeText>{homeConstants.footer.subscribe}</SubscribeText>
     </Subscribe>
   </FooterContainer>
@@ -36,15 +38,17 @@ const Socials = styled.div`
   flex-direction: row;
   text-align: center;
   img {
-    padding: 2em 1em;
+    filter: brightness(0) invert(1);
+    height: 20px;
+    width: auto;
+  }
+  a {
+    margin: 2em 1em;
   }
 `;
 const Credentials = styled.div`
   padding: 4.5em 0em;
   text-align: center;
-  > p {
-    font-weight: 500;
-  }
 `;
 const Subscribe = styled.div`
   text-align: center;
@@ -57,11 +61,13 @@ const FooterContainer = styled.div`
   width: auto;
   padding: 4.5em 2em;
   background-color: var(--footer-background);
-  color: var(--footer-text);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  p {
+    color: var(--footer-text);
+  }
   svg {
     fill: var(--footer-logo-Colour);
     circle:nth-child(2) {
@@ -75,6 +81,10 @@ const FooterContainer = styled.div`
     font-family: SF Pro Text;
     cursor: pointer;
   }
+`;
+
+const HighlightedText = styled.p`
+  font-weight: 500;
 `;
 
 const LogoSocials = styled.div``;

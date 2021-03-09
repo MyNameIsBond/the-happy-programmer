@@ -23,6 +23,7 @@ const globalStyles = css`
     font-size: 1rem;
     line-height: 2.024rem;
     letter-spacing: 0.00938em;
+    font-weight: 300;
   }
   h1,
   h2,
@@ -86,7 +87,7 @@ const globalStyles = css`
     --logo-Colour: black;
     // Footer Style
     --footer-background: #242424;
-    --footer-text: #f8f8f8;
+    --footer-text: white;
     --footer-logo-Colour: white;
     --breakpoint-sm: 550px;
     --breakpoint-md: 768px;
