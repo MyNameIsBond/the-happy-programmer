@@ -5,12 +5,14 @@ import Logo from "./constants/logo";
 import { Primary } from "./reusableComponents/buttons";
 const Footer = () => (
   <FooterContainer>
-    <Socials>
+    <LogoSocials>
       <Logo />
-      {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
-        <img src={icon} to={link} />
-      ))}
-    </Socials>
+      <Socials>
+        {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
+          <img key={icon} src={icon} to={link} />
+        ))}
+      </Socials>
+    </LogoSocials>
     <Credentials>
       <p>{homeConstants.footer.contact}</p>
       <p>{homeConstants.footer.country}</p>
@@ -30,10 +32,19 @@ const SubscribeText = styled.p`
   word-wrap: break-word;
 `;
 const Socials = styled.div`
+  display: flex;
+  flex-direction: row;
   text-align: center;
+  img {
+    padding: 2em 1em;
+  }
 `;
 const Credentials = styled.div`
+  padding: 4.5em 0em;
   text-align: center;
+  > p {
+    font-weight: 500;
+  }
 `;
 const Subscribe = styled.div`
   text-align: center;
@@ -43,14 +54,14 @@ const Subscribe = styled.div`
 `;
 
 const FooterContainer = styled.div`
-  width: 100%;
-  padding: 2em;
+  width: auto;
+  padding: 4.5em 2em;
   background-color: var(--footer-background);
   color: var(--footer-text);
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  justify-content: space-around;
   svg {
     fill: var(--footer-logo-Colour);
     circle:nth-child(2) {
@@ -65,5 +76,7 @@ const FooterContainer = styled.div`
     cursor: pointer;
   }
 `;
+
+const LogoSocials = styled.div``;
 
 export { Footer };

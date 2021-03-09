@@ -16,7 +16,7 @@ const PrimaryButton = styled.button`
   font-size: 0.875rem;
   font-weight: 500;
   background: var(--accent-colour);
-  color: #f8f8f8;
+  color: white;
   border-style: none;
   margin-left: 0.3em;
   -webkit-transition-duration: 0.4s;

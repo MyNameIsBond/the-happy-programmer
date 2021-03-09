@@ -76,7 +76,7 @@ const globalStyles = css`
   :root {
     --background-colour: #f8f8f8;
     --text-colour: #535353;
-    --accent-colour: #9a61d7;
+    --accent-colour: #8241c7;
     --secondary-colour: #ff6584;
     --secondary-background-colour: #f2f2f2;
     --disabled-components: #a0a0a0;
@@ -103,7 +103,7 @@ const globalStyles = css`
       --text-colour: #f8f8f8;
       --hover-nav-colour: #bcbcbc;
       --secondary-background-colour: #333333;
-      // Footer
+      // Footer Style
       --footer-logo-Colour: black;
       --footer-background: #f8f8f8;
       --footer-text: #535353;
