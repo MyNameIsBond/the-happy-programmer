@@ -79,7 +79,7 @@ const homeConstants = {
     country: "Coventry, UK",
     email: "thehappyprogrammer1@gmail.com",
     subscribe:
-      "Enter your email address to subscribe to this blog and receive notifications",
+      "Enter your email address to subscribe for free to this blog and receive notifications",
   },
 };
 
