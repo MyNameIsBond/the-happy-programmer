@@ -8,3 +8,5 @@ export const SubscribeButton = ({ children }) => (
     <Primary>Subscribe</Primary>
   </>
 );
+
+const SubscribeContainer = styled.div``;
