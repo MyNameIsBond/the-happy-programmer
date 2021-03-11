@@ -2,8 +2,7 @@ import React from "react";
 import { homeConstants } from "./constants/constants-string";
 import { connect, styled } from "frontity";
 import Logo from "./constants/logo";
-import { Primary } from "./reusableComponents/buttons";
-import { MyInput } from "./reusableComponents/inputs";
+import { SubscribeButton } from "./reusableComponents/subscribe";
 const Footer = () => (
   <FooterContainer>
     <LogoSocials>
@@ -26,8 +25,7 @@ const Footer = () => (
     <Subscribe>
       <HighlightedText>Subscribe</HighlightedText>
       <SubscribeText>{homeConstants.footer.subscribe}</SubscribeText>
-      <Primary>Subscribe</Primary>
-      <MyInput placeholder={"email@exmaple.com"} />
+      <SubscribeButton />
     </Subscribe>
   </FooterContainer>
 );

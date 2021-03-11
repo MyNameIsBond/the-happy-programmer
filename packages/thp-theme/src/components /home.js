@@ -4,28 +4,33 @@ import { Primary, Secondary } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
 import { homeConstants } from "./constants/constants-string";
 import { Footer } from "./footer";
+import MainContainer from "./reusableComponents/container";
 const Home = ({ state }) => {
+  const breakpoints = state.theme.breakpoints;
   return (
     <>
-      <NavContainer>
-        <img src={homeConstants.homeSvg} />
-        <HeaderDescription>{homeConstants.mainHeader}</HeaderDescription>
-        <p>
-          Programming blog focused on{" "}
-          <Link link={"/category/swiftui/"}>SwiftUI</Link>, Flutter and React
-          Native. You can also find courses in mobile development. Clones of
-          famous websites and Apps. Subscribe to get notified for new content.
-        </p>
-        <Subcribe>
-          <input
-            type="text"
-            id="email"
-            placeholder="example@email.com"
-            name="email"
-          ></input>
-          <Primary>Subscribe</Primary>
-        </Subcribe>
-      </NavContainer>
+      <MainContainer breakpoints={breakpoints}>
+        <NavContainer>
+          <img src={homeConstants.homeSvg} />
+          <HeaderDescription>{homeConstants.mainHeader}</HeaderDescription>
+          <p>
+            Programming blog focused on{" "}
+            <Link link={"/category/swiftui/"}>SwiftUI</Link>, Flutter and React
+            Native. You can also find courses in mobile development. Clones of
+            famous websites and Apps. Subscribe to get notified for new content.
+          </p>
+          <Subcribe>
+            <input
+              type="text"
+              id="email"
+              placeholder="example@email.com"
+              name="email"
+            ></input>
+            <Primary>Subscribe</Primary>
+          </Subcribe>
+        </NavContainer>
+      </MainContainer>
+
       <LessonContainer>
         <p>{homeConstants.header}</p>
         <h3>{homeConstants.subheader}</h3>
@@ -58,7 +63,7 @@ const Home = ({ state }) => {
         </AuthorAvatar>
         <h2>{homeConstants.AuthorInfo.title}</h2>
         <p>{homeConstants.AuthorInfo.description}</p>
-        <SocialContainer>
+        <SocialContainer breakpoints={breakpoints}>
           {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
             <a href={link} key={link} target="_blank">
               <img src={icon} />
@@ -108,6 +113,7 @@ const NavContainer = styled.div`
   flex-direction: column;
   align-items: center;
   padding-top: 4em;
+  margin: auto;
   img {
     width: 80%;
     height: auto;
@@ -236,7 +242,7 @@ const SocialContainer = styled.div`
   align-items: baseline;
   a {
     margin: 3em 2em;
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: ${(props) => props.breakpoints.smallMobile}) {
       margin: 3em 1em;
     }
   }

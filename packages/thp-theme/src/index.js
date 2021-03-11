@@ -6,7 +6,14 @@ export default {
     theme: Root,
   },
   state: {
-    theme: {},
+    theme: {
+      breakpoints: {
+        smallMobile: "550px",
+        mobile: "768px",
+        tablet: "992px",
+        web: "1200px",
+      },
+    },
   },
   actions: {
     theme: {},
