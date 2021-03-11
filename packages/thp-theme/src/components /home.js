@@ -133,6 +133,17 @@ const NavContainer = styled.div`
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
     display: flex;
     flex-direction: row-reverse;
+    img {
+      width: 50%;
+      height: auto;
+    }
+
+    p {
+      margin-block-start: 0em;
+      padding: 0em 1em;
+      text-align: left;
+      font-weight: 300;
+    }
   }
 `;
 

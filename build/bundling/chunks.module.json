@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "b28f733a1b22b5fe2ce1",
+  "hash": "810492a1ae422fa6b103",
   "publicPath": "/static/",
   "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
   "assetsByChunkName": {
     "the-happy-programmer": [
       "the-happy-programmer.module.js",
-      "the-happy-programmer.b5b5fbeada468cf83cfa.hot-update.js"
+      "the-happy-programmer.a6b9138ef1efef739bad.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "b5b5fbeada468cf83cfa.hot-update.json",
+      "name": "a6b9138ef1efef739bad.hot-update.json",
       "size": 62,
       "chunks": [],
       "chunkNames": [],
@@ -154,8 +154,8 @@
       "emitted": false
     },
     {
-      "name": "the-happy-programmer.b5b5fbeada468cf83cfa.hot-update.js",
-      "size": 7705,
+      "name": "the-happy-programmer.a6b9138ef1efef739bad.hot-update.js",
+      "size": 128947,
       "chunks": [
         "the-happy-programmer"
       ],
@@ -170,7 +170,7 @@
     },
     {
       "name": "the-happy-programmer.module.js",
-      "size": 6534641,
+      "size": 6537670,
       "chunks": [
         "the-happy-programmer"
       ],
@@ -189,7 +189,7 @@
       ],
       "assets": [
         "the-happy-programmer.module.js",
-        "the-happy-programmer.b5b5fbeada468cf83cfa.hot-update.js"
+        "the-happy-programmer.a6b9138ef1efef739bad.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -202,7 +202,7 @@
       ],
       "assets": [
         "the-happy-programmer.module.js",
-        "the-happy-programmer.b5b5fbeada468cf83cfa.hot-update.js"
+        "the-happy-programmer.a6b9138ef1efef739bad.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -214,15 +214,15 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 1720913,
+      "size": 1723698,
       "names": [
         "the-happy-programmer"
       ],
       "files": [
         "the-happy-programmer.module.js",
-        "the-happy-programmer.b5b5fbeada468cf83cfa.hot-update.js"
+        "the-happy-programmer.a6b9138ef1efef739bad.hot-update.js"
       ],
-      "hash": "8182cde61402a0bbbb0d",
+      "hash": "0ac98bdcd702849f3000",
       "siblings": [],
       "parents": [],
       "children": [],
