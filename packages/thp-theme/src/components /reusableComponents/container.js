@@ -6,15 +6,17 @@ const MainContainer = styled.div`
   margin-left: auto;
   max-width: 90em;
   @media screen and (min-width: ${(props) => props.breakpoints.smallMobile}) {
-    max-width: 500px;
+    max-width: 31.25em;
   }
   @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
-    max-width: 650px;
+    max-width: 40.625em;
   }
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    // max-width: 55.75em;
+    max-width: 100%;
   }
   @media screen and (min-width: ${(props) => props.breakpoints.web}) {
-    background-color: green;
+    max-width: 90em;
   }
 `;
 

@@ -10,24 +10,27 @@ const Home = ({ state }) => {
   return (
     <>
       <MainContainer breakpoints={breakpoints}>
-        <NavContainer>
+        <NavContainer breakpoints={breakpoints}>
           <img src={homeConstants.homeSvg} />
-          <HeaderDescription>{homeConstants.mainHeader}</HeaderDescription>
-          <p>
-            Programming blog focused on{" "}
-            <Link link={"/category/swiftui/"}>SwiftUI</Link>, Flutter and React
-            Native. You can also find courses in mobile development. Clones of
-            famous websites and Apps. Subscribe to get notified for new content.
-          </p>
-          <Subcribe>
-            <input
-              type="text"
-              id="email"
-              placeholder="example@email.com"
-              name="email"
-            ></input>
-            <Primary>Subscribe</Primary>
-          </Subcribe>
+          <LandingCredentials breakpoints={breakpoints}>
+            <HeaderDescription>{homeConstants.mainHeader}</HeaderDescription>
+            <p>
+              Programming blog focused on{" "}
+              <Link link={"/category/swiftui/"}>SwiftUI</Link>, Flutter and
+              React Native. You can also find courses in mobile development.
+              Clones of famous websites and Apps. Subscribe to get notified for
+              new content.
+            </p>
+            <Subcribe>
+              <input
+                type="text"
+                id="email"
+                placeholder="example@email.com"
+                name="email"
+              ></input>
+              <Primary>Subscribe</Primary>
+            </Subcribe>
+          </LandingCredentials>
         </NavContainer>
       </MainContainer>
 
@@ -79,6 +82,8 @@ const Home = ({ state }) => {
 
 // ------------------Landing Page------------------
 
+const LandingCredentials = styled.div``;
+
 const Subcribe = styled.div`
   display: flex;
   flex-direction: row;
@@ -123,6 +128,11 @@ const NavContainer = styled.div`
     padding: 0em 1em;
     text-align: center;
     font-weight: 300;
+  }
+
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    display: flex;
+    flex-direction: row-reverse;
   }
 `;
 
