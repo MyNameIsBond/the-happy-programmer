@@ -177,10 +177,18 @@ const NavContainer = styled.div`
     }
 
     @media screen and (min-width: ${(props) => props.breakpoints.web}) {
+      overflow-x: initial;
+      img {
+        width: 60%;
+      }
+    }
+
+    @media screen and (min-width: ${(props) => props.breakpoints.bigWeb}) {
       img {
         position: relative;
         width: 60%;
         right: -5em;
+        transition: width 2s;
       }
     }
   }
