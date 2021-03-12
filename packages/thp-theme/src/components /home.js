@@ -5,6 +5,8 @@ import Link from "@frontity/components/link";
 import { homeConstants } from "./constants/constants-string";
 import { Footer } from "./footer";
 import { MainContainer, ContainerDiv } from "./reusableComponents/container";
+import LessonContent from "./Home/LessonContent";
+import CoursesContent from "./Home/CoursesContent";
 
 const Home = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
@@ -34,38 +36,8 @@ const Home = ({ state }) => {
           </LandingCredentials>
         </NavContainer>
       </MainContainer>
-      <LessonBackgroundContainer>
-        <ContainerDiv>
-          <LessonContainer breakpoints={breakpoints}>
-            <ParagraphLesson>{homeConstants.header}</ParagraphLesson>
-            <HeadingLesson>{homeConstants.subheader}</HeadingLesson>
-            <LessonContainerDiv breakpoints={breakpoints}>
-              {homeConstants.lessonContainer.map(([icon, title, desc]) => (
-                <DescriptionPanel breakpoints={breakpoints} key={title}>
-                  <img src={icon} />
-                  <h4>{title}</h4>
-                  <p>{desc}</p>
-                </DescriptionPanel>
-              ))}
-            </LessonContainerDiv>
-          </LessonContainer>
-        </ContainerDiv>
-      </LessonBackgroundContainer>
-      {homeConstants.coursesContainer.map(
-        ([icon, title, desc, link, width, disabled]) => (
-          <CourseDiv key={title}>
-            <img src={icon} width={width} />
-            <h2>{title}</h2>
-            <p>{desc}</p>
-            <ButtonContainer>
-              <Primary>Subcribe</Primary>
-              <Secondary disabled={disabled}>
-                {disabled ? "Coming Soon..." : "Read More"}
-              </Secondary>
-            </ButtonContainer>
-          </CourseDiv>
-        )
-      )}
+      <LessonContent />
+      <CoursesContent />
       <AuthorContainer>
         <AuthorAvatar>
           <img src={homeConstants.userImage} />
@@ -187,8 +159,7 @@ const NavContainer = styled.div`
       img {
         position: relative;
         width: 60%;
-        right: -5em;
-        transition: width 2s;
+        right: -6em;
       }
     }
   }
@@ -199,116 +170,7 @@ const HeaderDescription = styled.h1`
   text-align: center;
 `;
 
-// ------------------Landing Page------------------
-
-const LessonContainerDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  padding: 2em 0em;
-  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    justify-items: center;
-    align-items: center;
-  }
-
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
-  @media screen and (min-width: ${(props) => props.breakpoints.web}) {
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-`;
-
-const LessonContainer = styled.div`
-  margin-top: 30%;
-  padding: 4em 0em 2em 0em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`;
-
-const ParagraphLesson = styled.p`
-  text-transform: uppercase;
-  text-align: center;
-  font-size: 0.8em;
-  font-weight: 500;
-  margin-block-end: 0em;
-`;
-
-const HeadingLesson = styled.h3`
-  text-align: center;
-  margin-block-start: 0em;
-`;
-
-const LessonBackgroundContainer = styled.div`
-  width: 100%;
-  background: var(--secondary-background-colour);
-`;
-
-const DescriptionPanel = styled.div`
-  padding: 1em 0em;
-  width: 30%;
-  text-align: center;
-  p {
-    font-weight: 300;
-  }
-  h4 {
-    margin-block-end: 0em;
-  }
-  @media screen and (min-width: ${(props) => props.breakpoints.smallMobile}) {
-    width: 30%;
-  }
-  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
-    width: 60%;
-  }
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
-    width: 13%;
-  }
-  @media screen and (min-width: ${(props) => props.breakpoints.web}) {
-    width: 60%;
-  }
-`;
-
 // ------------------Courses Container------------------
-
-const ButtonContainer = styled.div`
-  justify-content: center;
-  padding: 3em 0em 6em 0em;
-  width: 100%;
-  display: flex;
-  button {
-    margin: 0em 1em;
-  }
-`;
-
-const CourseDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 3em 3em 4em 3em;
-  h2,
-  p {
-    text-align: center;
-  }
-  h2 {
-    margin-block-end: 0em;
-    margin-block-start: 1.5em;
-  }
-  p {
-    font-weight: 300;
-  }
-`;
 
 // ------------------Author Container------------------
 

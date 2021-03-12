@@ -12,7 +12,7 @@ export default {
         mobile: "768px",
         tablet: "992px",
         web: "1200px",
-        bigWeb: "1550px",
+        bigWeb: "1570px",
       },
     },
   },
