@@ -2,33 +2,35 @@ import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import Logo from "./constants/logo";
-
+import { ContainerDiv } from "./reusableComponents/container";
 const Nav = ({ state, actions }) => {
   return (
     <>
-      <NavContainer>
-        <LogoContainer
-          onClick={(e) => {
-            actions.router.set("/");
-          }}
-        >
-          <Logo />
-        </LogoContainer>
-        <MenuStyle>
-          {state.theme.menu.map(([name, link]) => {
-            const isCurrentPage = state.router.link === link;
-            return (
-              <Link
-                key={name}
-                link={link}
-                aria-current={isCurrentPage ? "page" : undefined}
-              >
-                {name}
-              </Link>
-            );
-          })}
-        </MenuStyle>
-      </NavContainer>
+      <ContainerDiv>
+        <NavContainer>
+          <LogoContainer
+            onClick={(e) => {
+              actions.router.set("/");
+            }}
+          >
+            <Logo />
+          </LogoContainer>
+          <MenuStyle>
+            {state.theme.menu.map(([name, link]) => {
+              const isCurrentPage = state.router.link === link;
+              return (
+                <Link
+                  key={name}
+                  link={link}
+                  aria-current={isCurrentPage ? "page" : undefined}
+                >
+                  {name}
+                </Link>
+              );
+            })}
+          </MenuStyle>
+        </NavContainer>
+      </ContainerDiv>
     </>
   );
 };

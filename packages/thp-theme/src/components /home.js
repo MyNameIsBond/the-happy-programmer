@@ -4,7 +4,8 @@ import { Primary, Secondary } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
 import { homeConstants } from "./constants/constants-string";
 import { Footer } from "./footer";
-import MainContainer from "./reusableComponents/container";
+import { MainContainer, ContainerDiv } from "./reusableComponents/container";
+
 const Home = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
   return (
@@ -33,20 +34,23 @@ const Home = ({ state }) => {
           </LandingCredentials>
         </NavContainer>
       </MainContainer>
-
-      <LessonContainer breakpoints={breakpoints}>
-        <p>{homeConstants.header}</p>
-        <h3>{homeConstants.subheader}</h3>
-        <LessonContainerDiv breakpoints={breakpoints}>
-          {homeConstants.lessonContainer.map(([icon, title, desc]) => (
-            <DescriptionPanel breakpoints={breakpoints} key={title}>
-              <img src={icon} />
-              <h4>{title}</h4>
-              <p>{desc}</p>
-            </DescriptionPanel>
-          ))}
-        </LessonContainerDiv>
-      </LessonContainer>
+      <LessonBackgroundContainer>
+        <ContainerDiv>
+          <LessonContainer breakpoints={breakpoints}>
+            <ParagraphLesson>{homeConstants.header}</ParagraphLesson>
+            <HeadingLesson>{homeConstants.subheader}</HeadingLesson>
+            <LessonContainerDiv breakpoints={breakpoints}>
+              {homeConstants.lessonContainer.map(([icon, title, desc]) => (
+                <DescriptionPanel breakpoints={breakpoints} key={title}>
+                  <img src={icon} />
+                  <h4>{title}</h4>
+                  <p>{desc}</p>
+                </DescriptionPanel>
+              ))}
+            </LessonContainerDiv>
+          </LessonContainer>
+        </ContainerDiv>
+      </LessonBackgroundContainer>
       {homeConstants.coursesContainer.map(
         ([icon, title, desc, link, width, disabled]) => (
           <CourseDiv key={title}>
@@ -219,24 +223,29 @@ const LessonContainerDiv = styled.div`
 `;
 
 const LessonContainer = styled.div`
-  width: 100%;
   margin-top: 30%;
-  background: var(--secondary-background-colour);
   padding: 4em 0em 2em 0em;
   display: flex;
   flex-direction: column;
   align-items: center;
-  > p {
-    text-transform: uppercase;
-    text-align: center;
-    font-size: 0.8em;
-    font-weight: 500;
-    margin-block-end: 0em;
-  }
-  > h3 {
-    text-align: center;
-    margin-block-start: 0em;
-  }
+`;
+
+const ParagraphLesson = styled.p`
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 500;
+  margin-block-end: 0em;
+`;
+
+const HeadingLesson = styled.h3`
+  text-align: center;
+  margin-block-start: 0em;
+`;
+
+const LessonBackgroundContainer = styled.div`
+  width: 100%;
+  background: var(--secondary-background-colour);
 `;
 
 const DescriptionPanel = styled.div`

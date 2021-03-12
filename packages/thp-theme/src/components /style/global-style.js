@@ -12,9 +12,6 @@ const globalStyles = css`
   }
   body {
     margin: 0;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: 90em;
     background: var(--background-colour);
   }
 

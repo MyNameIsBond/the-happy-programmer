@@ -1,4 +1,3 @@
-import React from "react";
 import { connect, styled } from "frontity";
 
 const MainContainer = styled.div`
@@ -20,11 +19,10 @@ const MainContainer = styled.div`
   }
 `;
 
-let NavContainer = styled.div`
+const ContainerDiv = styled.div`
   margin-right: auto;
   margin-left: auto;
   max-width: 90em;
-  background: var(--background-colour);
 `;
 
-export default connect(MainContainer);
+export { MainContainer, ContainerDiv };
