@@ -89,10 +89,6 @@ const globalStyles = css`
     --footer-background: #242424;
     --footer-text: white;
     --footer-logo-Colour: white;
-    --breakpoint-sm: 550px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -111,7 +107,5 @@ const globalStyles = css`
     }
   }
 `;
-
-const homeLearnEveything = {};
 
 export { globalStyles };

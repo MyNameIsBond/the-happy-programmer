@@ -21,7 +21,7 @@ const Home = ({ state }) => {
               Clones of famous websites and Apps. Subscribe to get notified for
               new content.
             </p>
-            <Subcribe>
+            <Subcribe breakpoints={breakpoints}>
               <input
                 type="text"
                 id="email"
@@ -34,16 +34,18 @@ const Home = ({ state }) => {
         </NavContainer>
       </MainContainer>
 
-      <LessonContainer>
+      <LessonContainer breakpoints={breakpoints}>
         <p>{homeConstants.header}</p>
         <h3>{homeConstants.subheader}</h3>
-        {homeConstants.lessonContainer.map(([icon, title, desc]) => (
-          <DescriptionPanel key={title}>
-            <img src={icon} />
-            <h4>{title}</h4>
-            <p>{desc}</p>
-          </DescriptionPanel>
-        ))}
+        <LessonContainerDiv breakpoints={breakpoints}>
+          {homeConstants.lessonContainer.map(([icon, title, desc]) => (
+            <DescriptionPanel breakpoints={breakpoints} key={title}>
+              <img src={icon} />
+              <h4>{title}</h4>
+              <p>{desc}</p>
+            </DescriptionPanel>
+          ))}
+        </LessonContainerDiv>
       </LessonContainer>
       {homeConstants.coursesContainer.map(
         ([icon, title, desc, link, width, disabled]) => (
@@ -82,14 +84,20 @@ const Home = ({ state }) => {
 
 // ------------------Landing Page------------------
 
-const LandingCredentials = styled.div``;
+const LandingCredentials = styled.div`
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    p {
+      max-width: 410px;
+    }
+  }
+`;
 
 const Subcribe = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  align-content: cetner;
+  align-content: center;
   width: 90%;
   padding: 1.5em 1em 0em 1em;
   button {
@@ -110,6 +118,16 @@ const Subcribe = styled.div`
     opacity: 1; /* Firefox */
     font-family: "Roboto", sans-serif;
     font-weight: 300;
+  }
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: flex-start;
+    text-aligh: left;
+    padding-left: 0;
+  }
+  input {
+    margin-left: 0;
   }
 `;
 
@@ -133,16 +151,33 @@ const NavContainer = styled.div`
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
     display: flex;
     flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    align-self: center;
+    padding: 4em 2em 0em 2em;
+
     img {
       width: 50%;
       height: auto;
     }
 
     p {
-      margin-block-start: 0em;
-      padding: 0em 1em;
       text-align: left;
       font-weight: 300;
+      padding: 0;
+    }
+
+    h1 {
+      text-align: left;
+      padding-top: 0;
+    }
+
+    @media screen and (min-width: ${(props) => props.breakpoints.web}) {
+      img {
+        position: relative;
+        width: 60%;
+        right: -5em;
+      }
     }
   }
 `;
@@ -153,6 +188,35 @@ const HeaderDescription = styled.h1`
 `;
 
 // ------------------Landing Page------------------
+
+const LessonContainerDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 2em 0em;
+  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    align-items: center;
+  }
+
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  @media screen and (min-width: ${(props) => props.breakpoints.web}) {
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+`;
 
 const LessonContainer = styled.div`
   width: 100%;
@@ -184,6 +248,18 @@ const DescriptionPanel = styled.div`
   }
   h4 {
     margin-block-end: 0em;
+  }
+  @media screen and (min-width: ${(props) => props.breakpoints.smallMobile}) {
+    width: 30%;
+  }
+  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+    width: 60%;
+  }
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    width: 13%;
+  }
+  @media screen and (min-width: ${(props) => props.breakpoints.web}) {
+    width: 60%;
   }
 `;
 
