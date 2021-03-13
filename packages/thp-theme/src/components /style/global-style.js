@@ -73,7 +73,7 @@ const globalStyles = css`
   }
   :root {
     --background-colour: #f8f8f8;
-    --text-colour: #535353;
+    --text-colour: #030303;
     --accent-colour: #8241c7;
     --secondary-colour: #ff6584;
     --secondary-background-colour: #f2f2f2;
@@ -84,15 +84,15 @@ const globalStyles = css`
     --logo-Colour: black;
     // Footer Style
     --footer-background: #242424;
-    --footer-text: white;
-    --footer-logo-Colour: white;
+    --footer-text: #ffffff;
+    --footer-logo-Colour: #ffffff;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
       --disabled-text: #a0a0a0;
       --hover-shadow: 0px 1px 1px black;
-      --logo-Colour: white;
+      --logo-Colour: #ffffff;
       --background-colour: #242424;
       --text-colour: #f8f8f8;
       --hover-nav-colour: #bcbcbc;
@@ -100,7 +100,7 @@ const globalStyles = css`
       // Footer Style
       --footer-logo-Colour: black;
       --footer-background: #f8f8f8;
-      --footer-text: #535353;
+      --footer-text: #030303;
     }
   }
 `;

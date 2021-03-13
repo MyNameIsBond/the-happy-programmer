@@ -53,7 +53,6 @@ const Home = ({ state }) => {
         </SocialContainer>
         <Secondary>Read More</Secondary>
       </AuthorContainer>
-      <Footer />
     </>
   );
 };
@@ -199,6 +198,7 @@ const AuthorContainer = styled.div`
   p {
     text-align: center;
     font-weight: 300;
+    max-width: 650px;
   }
   h2 {
     text-align: center;

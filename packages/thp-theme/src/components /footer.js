@@ -2,38 +2,49 @@ import React from "react";
 import { homeConstants } from "./constants/constants-string";
 import { connect, styled } from "frontity";
 import Logo from "./constants/logo";
-import { SubscribeButton } from "./reusableComponents/subscribe";
-const Footer = () => (
-  <FooterContainer>
-    <LogoSocials>
-      <Logo />
-      <Socials>
-        {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
-          <a key={link} href={link}>
-            <img src={icon} />
-          </a>
-        ))}
-      </Socials>
-    </LogoSocials>
-    <Credentials>
-      <HighlightedText>{homeConstants.footer.contact}</HighlightedText>
-      <p>{homeConstants.footer.country}</p>
-      <a href={`mailto:${homeConstants.footer.email}`}>
-        {homeConstants.footer.email}
-      </a>
-    </Credentials>
-    <Subscribe>
-      <HighlightedText>Subscribe</HighlightedText>
-      <SubscribeText>{homeConstants.footer.subscribe}</SubscribeText>
-      <SubscribeButton />
-    </Subscribe>
-  </FooterContainer>
-);
+import SubscribeButton from "./reusableComponents/subscribe";
+const Footer = ({ state }) => {
+  const breakpoints = state.theme.breakpoints;
 
+  return (
+    <FooterContainer breakpoints={breakpoints}>
+      <LogoSocials breakpoints={breakpoints}>
+        <Logo />
+        <Socials>
+          {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
+            <a key={link} href={link}>
+              <img src={icon} />
+            </a>
+          ))}
+        </Socials>
+      </LogoSocials>
+      <Credentials breakpoints={breakpoints}>
+        <HighlightedText>{homeConstants.footer.contact}</HighlightedText>
+        <p>{homeConstants.footer.country}</p>
+        <a href={`mailto:${homeConstants.footer.email}`}>
+          {homeConstants.footer.email}
+        </a>
+      </Credentials>
+      <Subscribe breakpoints={breakpoints}>
+        <HighlightedText>Subscribe</HighlightedText>
+        <SubscribeText breakpoints={breakpoints}>
+          {homeConstants.footer.subscribe}
+        </SubscribeText>
+        <SubscribeButton />
+      </Subscribe>
+    </FooterContainer>
+  );
+};
 const SubscribeText = styled.p`
   overflow-wrap: break-word;
   word-wrap: break-word;
+  max-width: 320px;
+
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    max-width: 300px;
+  }
 `;
+
 const Socials = styled.div`
   display: flex;
   flex-direction: row;
@@ -50,11 +61,19 @@ const Socials = styled.div`
 const Credentials = styled.div`
   padding: 4.5em 0em;
   text-align: center;
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    padding: 0em;
+    text-align: left;
+  }
 `;
 const Subscribe = styled.div`
   text-align: center;
   p {
     overflow-wrap: break-word;
+  }
+
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    text-align: left;
   }
 `;
 
@@ -66,6 +85,11 @@ const FooterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
   p {
     color: var(--footer-text);
   }
@@ -88,6 +112,16 @@ const HighlightedText = styled.p`
   font-weight: 500;
 `;
 
-const LogoSocials = styled.div``;
+const LogoSocials = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+`;
 
-export { Footer };
+export default connect(Footer);

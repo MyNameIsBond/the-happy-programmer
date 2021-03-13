@@ -31,7 +31,7 @@ const LessonContent = ({ state }) => {
 export default connect(LessonContent);
 
 const LessonContainer = styled.div`
-  margin-top: 30%;
+  margin-top: 15%;
   padding: 4em 0em 2em 0em;
   display: flex;
   flex-direction: column;

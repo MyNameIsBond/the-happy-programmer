@@ -14,7 +14,7 @@ import { default as twitterIcon } from "./twitterIcon.svg";
 
 const homeConstants = {
   userImage:
-    "https://thehappyprogrammer.com/wp-content/uploads/2021/03/IMG_0918-2.jpg",
+    "https://thehappyprogrammer.com/wp-content/uploads/2021/03/IMG_0918-2-1.jpg",
   homeSvg: svgHome,
   mainHeader: "SwiftUI and Flutter Blog",
   header: "EVERYTHING ABOUT MOBILE AND WEB",
