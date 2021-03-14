@@ -2,6 +2,8 @@ import React from "react";
 import { homeConstants } from "../constants/constants-string";
 import { connect, styled } from "frontity";
 import { Primary, Secondary } from "../reusableComponents/buttons";
+import { ContainerDiv } from "../reusableComponents/container";
+
 const CoursesContent = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
 
@@ -9,22 +11,31 @@ const CoursesContent = ({ state }) => {
     <>
       {homeConstants.coursesContainer.map(
         ([icon, title, desc, link, width, disabled]) => (
-          <CourseDiv key={title}>
-            <img src={icon} width={width} />
-            <h2>{title}</h2>
-            <p>{desc}</p>
-            <ButtonContainer>
-              <Primary>Subcribe</Primary>
-              <Secondary disabled={disabled}>
-                {disabled ? "Coming Soon..." : "Read More"}
-              </Secondary>
-            </ButtonContainer>
-          </CourseDiv>
+          <CoursesContainer key={title}>
+            <ContainerDiv>
+              <CourseDiv>
+                <img src={icon} width={width} />
+                <h2>{title}</h2>
+                <p>{desc}</p>
+                <ButtonContainer>
+                  <Primary>Subcribe</Primary>
+                  <Secondary disabled={disabled}>
+                    {disabled ? "Coming Soon..." : "Read More"}
+                  </Secondary>
+                </ButtonContainer>
+              </CourseDiv>
+            </ContainerDiv>
+          </CoursesContainer>
         )
       )}
     </>
   );
 };
+
+const CoursesContainer = styled.div`
+  backgroud-color: var(--secondary-colour);
+  width: 100%;
+`;
 
 const ButtonContainer = styled.div`
   justify-content: center;

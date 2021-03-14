@@ -3,38 +3,50 @@ import { homeConstants } from "./constants/constants-string";
 import { connect, styled } from "frontity";
 import Logo from "./constants/logo";
 import SubscribeButton from "./reusableComponents/subscribe";
+import { ContainerDiv } from "./reusableComponents/container";
+
 const Footer = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
 
   return (
-    <FooterContainer breakpoints={breakpoints}>
-      <LogoSocials breakpoints={breakpoints}>
-        <Logo />
-        <Socials>
-          {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
-            <a key={link} href={link}>
-              <img src={icon} />
+    <FooterContainerDiv>
+      <ContainerDiv>
+        <FooterContainer breakpoints={breakpoints}>
+          <LogoSocials breakpoints={breakpoints}>
+            <Logo />
+            <Socials>
+              {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
+                <a key={link} href={link}>
+                  <img src={icon} />
+                </a>
+              ))}
+            </Socials>
+          </LogoSocials>
+          <Credentials breakpoints={breakpoints}>
+            <HighlightedText>{homeConstants.footer.contact}</HighlightedText>
+            <p>{homeConstants.footer.country}</p>
+            <a href={`mailto:${homeConstants.footer.email}`}>
+              {homeConstants.footer.email}
             </a>
-          ))}
-        </Socials>
-      </LogoSocials>
-      <Credentials breakpoints={breakpoints}>
-        <HighlightedText>{homeConstants.footer.contact}</HighlightedText>
-        <p>{homeConstants.footer.country}</p>
-        <a href={`mailto:${homeConstants.footer.email}`}>
-          {homeConstants.footer.email}
-        </a>
-      </Credentials>
-      <Subscribe breakpoints={breakpoints}>
-        <HighlightedText>Subscribe</HighlightedText>
-        <SubscribeText breakpoints={breakpoints}>
-          {homeConstants.footer.subscribe}
-        </SubscribeText>
-        <SubscribeButton />
-      </Subscribe>
-    </FooterContainer>
+          </Credentials>
+          <Subscribe breakpoints={breakpoints}>
+            <HighlightedText>Subscribe</HighlightedText>
+            <SubscribeText breakpoints={breakpoints}>
+              {homeConstants.footer.subscribe}
+            </SubscribeText>
+            <SubscribeButton />
+          </Subscribe>
+        </FooterContainer>
+      </ContainerDiv>
+    </FooterContainerDiv>
   );
 };
+
+const FooterContainerDiv = styled.div`
+  background-color: var(--footer-background);
+  width: 100%;
+`;
+
 const SubscribeText = styled.p`
   overflow-wrap: break-word;
   word-wrap: break-word;
@@ -88,7 +100,7 @@ const FooterContainer = styled.div`
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
     flex-direction: row;
     align-items: flex-start;
-    justify-content: space-around;
+    justify-content: space-between;
   }
   p {
     color: var(--footer-text);
