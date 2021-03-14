@@ -10,19 +10,21 @@ const CoursesContent = ({ state }) => {
   return (
     <>
       {homeConstants.coursesContainer.map(
-        ([icon, title, desc, link, width, disabled]) => (
-          <CoursesContainer key={title}>
+        ([icon, title, desc, link, width, disabled, row]) => (
+          <CoursesContainer breakpoints={breakpoints} key={title}>
             <ContainerDiv>
-              <CourseDiv>
+              <CourseDiv breakpoints={breakpoints} row={row}>
                 <img src={icon} width={width} />
-                <h2>{title}</h2>
-                <p>{desc}</p>
-                <ButtonContainer>
-                  <Primary>Subcribe</Primary>
-                  <Secondary disabled={disabled}>
-                    {disabled ? "Coming Soon..." : "Read More"}
-                  </Secondary>
-                </ButtonContainer>
+                <CoursesCredentials breakpoints={breakpoints}>
+                  <h2>{title}</h2>
+                  <p>{desc}</p>
+                  <ButtonContainer breakpoints={breakpoints}>
+                    <Primary>Subcribe</Primary>
+                    <Secondary disabled={disabled}>
+                      {disabled ? "Coming Soon..." : "Read More"}
+                    </Secondary>
+                  </ButtonContainer>
+                </CoursesCredentials>
               </CourseDiv>
             </ContainerDiv>
           </CoursesContainer>
@@ -33,17 +35,41 @@ const CoursesContent = ({ state }) => {
 };
 
 const CoursesContainer = styled.div`
-  backgroud-color: var(--secondary-colour);
   width: 100%;
+  display: flex;
+  margin: 3em 0em;
+
+  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+    background-color: var(--secondary-background-colour);
+    margin: 8em 0em;
+  }
 `;
 
 const ButtonContainer = styled.div`
   justify-content: center;
-  padding: 3em 0em 6em 0em;
+  padding-top: 3em;
   width: 100%;
   display: flex;
+
   button {
     margin: 0em 1em;
+  }
+
+  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+    justify-content: flex-start;
+
+    button {
+      margin: 0em 2em 0em 0em;
+    }
+  }
+`;
+
+const CoursesCredentials = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+    align-items: flex-start;
   }
 `;
 
@@ -55,6 +81,7 @@ const CourseDiv = styled.div`
   h2,
   p {
     text-align: center;
+    max-width: 25em;
   }
   h2 {
     margin-block-end: 0em;
@@ -62,6 +89,19 @@ const CourseDiv = styled.div`
   }
   p {
     font-weight: 300;
+  }
+  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+    width: 100%;
+    flex-direction: ${(props) => props.row};
+    justify-content: space-between;
+    align-items: stretch;
+    h2,
+    p {
+      text-align: left;
+    }
+    img {
+      max-width: 200px;
+    }
   }
 `;
 

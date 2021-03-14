@@ -79,6 +79,7 @@ const Subcribe = styled.div`
     padding: 1rem 1rem;
   }
   input {
+    color: var(--input-text-colour);
     width: 40%;
     padding: 1em 1em;
     border-radius: 0.3em;
@@ -86,10 +87,9 @@ const Subcribe = styled.div`
     border-style: none;
     font-size: 1rem;
     box-shadow: var(--hover-shadow);
-    color: var(--text-colour);
   }
   input::placeholder {
-    color: lightgray;
+    color: var(--secondary-background-colour);
     opacity: 1; /* Firefox */
     font-family: "Roboto", sans-serif;
     font-weight: 300;

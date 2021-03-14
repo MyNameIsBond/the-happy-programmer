@@ -34,6 +34,7 @@ const homeConstants = {
       "/category/swiftui/",
       "40%",
       false,
+      "row",
     ],
     [
       reactNativeMobile,
@@ -42,6 +43,7 @@ const homeConstants = {
       "",
       "40%",
       true,
+      "row-reverse",
     ],
     [
       flutterMobile,
@@ -50,6 +52,7 @@ const homeConstants = {
       "",
       "40%",
       true,
+      "row",
     ],
     [
       webIcon,
@@ -58,6 +61,7 @@ const homeConstants = {
       "",
       "90%",
       true,
+      "row-reverse",
     ],
   ],
   AuthorInfo: {

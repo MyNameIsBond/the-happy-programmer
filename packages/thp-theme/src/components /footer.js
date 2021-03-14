@@ -62,7 +62,7 @@ const Socials = styled.div`
   flex-direction: row;
   text-align: center;
   img {
-    filter: brightness(0) invert(1);
+    filter: brightness(0) invert(0);
     height: 20px;
     width: auto;
   }

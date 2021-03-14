@@ -82,10 +82,12 @@ const globalStyles = css`
     --hover-nav-colour: #1c1c1c;
     --hover-shadow: 0px 1px 1px lightgray;
     --logo-Colour: black;
+    --input-text-colour: #030303;
     // Footer Style
     --footer-background: #242424;
     --footer-text: #ffffff;
     --footer-logo-Colour: #ffffff;
+    --footer-shadow: 0px 1px 1px lightgray;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -99,7 +101,7 @@ const globalStyles = css`
       --secondary-background-colour: #333333;
       // Footer Style
       --footer-logo-Colour: black;
-      --footer-background: #f8f8f8;
+      --footer-background: #e9e9e9;
       --footer-text: #030303;
     }
   }
