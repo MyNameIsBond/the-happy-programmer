@@ -94,7 +94,10 @@ const CourseDiv = styled.div`
     width: 100%;
     flex-direction: ${(props) => props.row};
     justify-content: space-between;
-    align-items: stretch;
+    align-items: center;
+    h2 {
+      margin-block-start: 0em;
+    }
     h2,
     p {
       text-align: left;
