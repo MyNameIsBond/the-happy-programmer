@@ -88,6 +88,7 @@ const globalStyles = css`
     --footer-text: #ffffff;
     --footer-logo-Colour: #ffffff;
     --footer-shadow: 0px 1px 1px lightgray;
+    --footer-social: brightness(0) invert(1);
   }
 
   @media (prefers-color-scheme: dark) {
@@ -103,6 +104,7 @@ const globalStyles = css`
       --footer-logo-Colour: black;
       --footer-background: #e9e9e9;
       --footer-text: #030303;
+      --footer-social: brightness(0) invert(0);
     }
   }
 `;

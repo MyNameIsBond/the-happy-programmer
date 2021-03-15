@@ -7,7 +7,7 @@ import { Footer } from "./footer";
 import { MainContainer, ContainerDiv } from "./reusableComponents/container";
 import LessonContent from "./Home/LessonContent";
 import CoursesContent from "./Home/CoursesContent";
-
+import { MyInput } from "./reusableComponents/inputs";
 const Home = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
   return (
@@ -25,12 +25,7 @@ const Home = ({ state }) => {
               new content.
             </p>
             <Subcribe breakpoints={breakpoints}>
-              <input
-                type="text"
-                id="email"
-                placeholder="example@email.com"
-                name="email"
-              ></input>
+              <MyInput placeholder={"example@email.com"} />
               <Primary>Subscribe</Primary>
             </Subcribe>
           </LandingCredentials>
@@ -78,22 +73,7 @@ const Subcribe = styled.div`
   button {
     padding: 1rem 1rem;
   }
-  input {
-    color: var(--input-text-colour);
-    width: 40%;
-    padding: 1em 1em;
-    border-radius: 0.3em;
-    margin: 0em 0.5em;
-    border-style: none;
-    font-size: 1rem;
-    box-shadow: var(--hover-shadow);
-  }
-  input::placeholder {
-    color: var(--secondary-background-colour);
-    opacity: 1; /* Firefox */
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-  }
+
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
     align-items: flex-start;
     justify-content: flex-start;

@@ -6,6 +6,7 @@ const MyInput = ({ children, placeholder }) => (
 );
 
 const InputStyle = styled.input`
+  color: var(--input-text-colour);
   width: 40%;
   padding: 1em 1em;
   border-radius: 0.3em;
@@ -13,9 +14,8 @@ const InputStyle = styled.input`
   border-style: none;
   font-size: 1rem;
   box-shadow: var(--hover-shadow);
-  color: var(--text-colour);
   &::placeholder {
-    color: lightgray;
+    color: #989898;
     opacity: 1;
     font-family: "Roboto", sans-serif;
     font-weight: 300;
