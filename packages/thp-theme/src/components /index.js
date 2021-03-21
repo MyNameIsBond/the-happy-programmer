@@ -4,7 +4,7 @@ import { globalStyles } from "./style/global-style";
 import Switch from "@frontity/components/switch";
 import Title from "./title";
 import Home from "./home";
-import SwiftUI from "./SwiftUI";
+import SwiftUI from "./Archive/SwiftUI";
 import Loading from "./Loading";
 import Nav from "./nav";
 import Footer from "./footer";
