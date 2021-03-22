@@ -1,7 +1,9 @@
 import React from "react";
 import { styled } from "frontity";
 
-const Primary = ({ children }) => <PrimaryButton>{children}</PrimaryButton>;
+const Primary = ({ children, ...props }) => (
+  <PrimaryButton>{children}</PrimaryButton>
+);
 const Secondary = ({ children, disabled }) => (
   <SecondaryButton disabled={disabled}>{children}</SecondaryButton>
 );

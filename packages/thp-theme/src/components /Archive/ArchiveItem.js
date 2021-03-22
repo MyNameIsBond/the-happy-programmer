@@ -58,9 +58,11 @@ const DateText = styled.p`
 
 const SubText = styled.p`
   max-width: 300px;
-  white-space: nowrap;
   overflow: hidden;
+  text-align: left;
+  text-decoration: none;
   text-overflow: ellipsis;
+  white-space: nowrap;
 
   a {
     display: none;
