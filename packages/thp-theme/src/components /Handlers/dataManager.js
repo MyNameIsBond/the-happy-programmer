@@ -39,6 +39,12 @@ export const getMediaAttributes = (state, id) => {
   };
 };
 
+export const getCategories = (state, post, type, types) => {
+  const all = state.source[type];
+  const allTypes = post[types] && post[types].map((itemId) => all[itemId]);
+  return allTypes ? allTypes.filter(Boolean) : [];
+};
+
 export const dataPost = (state, post) => {
   return {
     id: post.id,
@@ -46,6 +52,7 @@ export const dataPost = (state, post) => {
     title: post.title && post.title.rendered,
     link: post.link,
     content: post.content && post.content.rendered,
+    categories: getCategories(state, post, "category", "categories"),
     excerpt: post.excerpt && post.excerpt.rendered,
     author: getPostAuthor(state, post),
     img: getMediaAttributes(state, post.featured_media),

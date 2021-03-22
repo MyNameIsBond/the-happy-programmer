@@ -2,10 +2,15 @@ import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import { dataPost } from "../Handlers/dataManager";
+import { Category } from "./Category";
 
 const ArchiveItem = ({ item, state }) => {
-  const { link, title, img, excerpt, author, date } = dataPost(state, item);
+  const { link, title, img, excerpt, author, date, categories } = dataPost(
+    state,
+    item
+  );
   const dt = new Date(date);
+
   return (
     <>
       <img width="100%" src={img.src} alt={img.alt} />
@@ -15,7 +20,8 @@ const ArchiveItem = ({ item, state }) => {
           <Link link={link}>{title}</Link>
           <SubText dangerouslySetInnerHTML={{ __html: excerpt }} />
         </InfoContainer>
-        <Datee>{dt.toDateString()}</Datee>
+        <Category category={categories} />
+        <DateText>{dt.toDateString()}</DateText>
       </AvatarInfoContainer>
     </>
   );
@@ -29,7 +35,7 @@ const AuthorAvatar = styled.img`
 `;
 const InfoContainer = styled.div``;
 
-const Datee = styled.p`
+const DateText = styled.p`
   font-size: 0.9em;
 `;
 

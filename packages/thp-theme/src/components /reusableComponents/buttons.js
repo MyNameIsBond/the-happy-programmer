@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, styled, css } from "frontity";
+import { styled } from "frontity";
 
 const Primary = ({ children }) => <PrimaryButton>{children}</PrimaryButton>;
 const Secondary = ({ children, disabled }) => (
