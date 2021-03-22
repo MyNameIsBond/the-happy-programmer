@@ -1,5 +1,12 @@
 export const getPostAuthor = (state, post) => {
-  return state.source.author[post.author];
+  const author = state.source.author[post.author];
+  return {
+    id: author.id,
+    name: author.name,
+    link: author.link,
+    description: author.description,
+    avatar: author.avatar_urls["96"],
+  };
 };
 
 export const getSrcSet = (media) => {
@@ -35,7 +42,7 @@ export const getMediaAttributes = (state, id) => {
 export const dataPost = (state, post) => {
   return {
     id: post.id,
-    publishDate: post.date,
+    date: post.date,
     title: post.title && post.title.rendered,
     link: post.link,
     content: post.content && post.content.rendered,
