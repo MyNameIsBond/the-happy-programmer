@@ -4,7 +4,7 @@ import { globalStyles } from "./style/global-style";
 import Switch from "@frontity/components/switch";
 import Title from "./title";
 import Home from "./home";
-import SwiftUI from "./Archive/SwiftUI";
+import Archive from "./Archive/Archive";
 import Loading from "./Loading";
 import Nav from "./nav";
 import Footer from "./footer";
@@ -22,7 +22,7 @@ const Root = ({ state }) => {
       <Nav />
       <Switch>
         <Home when={data.isHome} />
-        <SwiftUI when={data.isCategory} />
+        <Archive when={data.isCategory} />
         <Loading when={data.isFetching} />
       </Switch>
       <Footer />
