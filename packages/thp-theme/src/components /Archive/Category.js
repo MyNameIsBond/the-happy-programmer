@@ -18,8 +18,10 @@ const Category = ({ category }) => {
 const CategoryContainer = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   button {
     margin-right: 1em;
+    margin-bottom: 1em;
   }
 
   button:hover {
