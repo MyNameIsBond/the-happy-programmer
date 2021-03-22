@@ -13,7 +13,7 @@ const ArchiveItem = ({ item, state }) => {
   const breakpoints = state.theme.breakpoints;
 
   return (
-    <>
+    <div>
       <img width="100%" src={img.src} alt={img.alt} />
       <AvatarInfoContainer breakpoints={breakpoints}>
         <AuthorAvatar src={author.avatar} />
@@ -24,7 +24,7 @@ const ArchiveItem = ({ item, state }) => {
           <DateText>{dt.toDateString()}</DateText>
         </InfoContainer>
       </AvatarInfoContainer>
-    </>
+    </div>
   );
 };
 
@@ -35,9 +35,6 @@ const AvatarInfoContainer = styled.div`
   flex-direction: row;
   p {
     margin-block-start: 0em;
-  }
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
-    display: grid;
   }
 `;
 const AuthorAvatar = styled.img`
@@ -61,7 +58,7 @@ const DateText = styled.p`
 `;
 
 const SubText = styled.p`
-  width: 350px;
+  max-width: 350px;
   p {
     overflow: hidden;
     text-overflow: normal;
