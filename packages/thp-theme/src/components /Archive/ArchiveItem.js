@@ -10,11 +10,12 @@ const ArchiveItem = ({ item, state }) => {
     item
   );
   const dt = new Date(date);
+  const breakpoints = state.theme.breakpoints;
 
   return (
     <>
       <img width="100%" src={img.src} alt={img.alt} />
-      <AvatarInfoContainer>
+      <AvatarInfoContainer breakpoints={breakpoints}>
         <AuthorAvatar src={author.avatar} />
         <InfoContainer>
           <Link link={link}>{title}</Link>
@@ -34,6 +35,9 @@ const AvatarInfoContainer = styled.div`
   flex-direction: row;
   p {
     margin-block-start: 0em;
+  }
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    display: grid;
   }
 `;
 const AuthorAvatar = styled.img`
@@ -57,13 +61,12 @@ const DateText = styled.p`
 `;
 
 const SubText = styled.p`
-  max-width: 300px;
-  overflow: hidden;
-  text-align: left;
-  text-decoration: none;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-
+  width: 350px;
+  p {
+    overflow: hidden;
+    text-overflow: normal;
+    white-space: nowrap;
+  }
   a {
     display: none;
   }
