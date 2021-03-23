@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "9f93fff37cea45f2c4cb",
+  "hash": "4f753b96f2fea60d711d",
   "publicPath": "/static/",
   "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
   "assetsByChunkName": {
     "the-happy-programmer": [
       "the-happy-programmer.module.js",
-      "the-happy-programmer.5ec246ff201f8d517e2a.hot-update.js"
+      "the-happy-programmer.9f93fff37cea45f2c4cb.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "5ec246ff201f8d517e2a.hot-update.json",
+      "name": "9f93fff37cea45f2c4cb.hot-update.json",
       "size": 62,
       "chunks": [],
       "chunkNames": [],
@@ -154,7 +154,7 @@
       "emitted": false
     },
     {
-      "name": "the-happy-programmer.5ec246ff201f8d517e2a.hot-update.js",
+      "name": "the-happy-programmer.9f93fff37cea45f2c4cb.hot-update.js",
       "size": 10968,
       "chunks": [
         "the-happy-programmer"
@@ -189,7 +189,7 @@
       ],
       "assets": [
         "the-happy-programmer.module.js",
-        "the-happy-programmer.5ec246ff201f8d517e2a.hot-update.js"
+        "the-happy-programmer.9f93fff37cea45f2c4cb.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -202,7 +202,7 @@
       ],
       "assets": [
         "the-happy-programmer.module.js",
-        "the-happy-programmer.5ec246ff201f8d517e2a.hot-update.js"
+        "the-happy-programmer.9f93fff37cea45f2c4cb.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -214,15 +214,15 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 1781858,
+      "size": 1781857,
       "names": [
         "the-happy-programmer"
       ],
       "files": [
         "the-happy-programmer.module.js",
-        "the-happy-programmer.5ec246ff201f8d517e2a.hot-update.js"
+        "the-happy-programmer.9f93fff37cea45f2c4cb.hot-update.js"
       ],
-      "hash": "a5c379935a8cabfd22c9",
+      "hash": "94a1f57ca0dc69e20653",
       "siblings": [],
       "parents": [],
       "children": [],

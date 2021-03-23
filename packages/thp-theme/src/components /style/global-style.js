@@ -95,7 +95,7 @@ const globalStyles = css`
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --secondary-text-colour: #969696;
+      --secondary-text-colour: #c1c1c1;
       --disabled-text: #a0a0a0;
       --hover-shadow: 0px 1px 1px black;
       --logo-Colour: #ffffff;
