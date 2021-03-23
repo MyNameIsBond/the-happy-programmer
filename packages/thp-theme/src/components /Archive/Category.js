@@ -1,15 +1,14 @@
 import React from "react";
-import Link from "@frontity/components/link";
 import { Primary, Secondary } from "../reusableComponents/buttons";
-import styled from "@emotion/styled";
+import { connect, styled } from "frontity";
 
-const Category = ({ category }) => {
+const Category = ({ category, actions }) => {
   return (
     <CategoryContainer>
       {category.map((item) => (
-        <Secondary key={item.id}>
-          <Link link={item.link}>{item.name}</Link>
-        </Secondary>
+        <Primary onClick={(e) => actions.router.set(item.link)} key={item.id}>
+          {item.name}
+        </Primary>
       ))}
     </CategoryContainer>
   );
@@ -20,13 +19,20 @@ const CategoryContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   button {
+    font-size: 12.36px;
     margin-right: 1em;
     margin-bottom: 1em;
+    margin-left: 0em;
+    font-weight: 300;
+    color: var(--text-colour);
+    background: var(--secondary-background-colour);
+    border: 1px solid var(--secondary-text-colour);
+    border-radius: 50px;
   }
 
   button:hover {
-    background: var(--accent-colour);
     color: white;
+    background-color: var(--accent-colour);
     border-color: var(--accent-colour);
   }
 
@@ -36,4 +42,4 @@ const CategoryContainer = styled.div`
   }
 `;
 
-export { Category };
+export default connect(Category);

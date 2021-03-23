@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "frontity";
 
 const Primary = ({ children, ...props }) => (
-  <PrimaryButton>{children}</PrimaryButton>
+  <PrimaryButton {...props}>{children}</PrimaryButton>
 );
 const Secondary = ({ children, disabled }) => (
   <SecondaryButton disabled={disabled}>{children}</SecondaryButton>
@@ -13,7 +13,7 @@ const PrimaryButton = styled.button`
   display: inline;
   box-sizing: border-box;
   padding: 10px 20px;
-  border-radius: 0.2em;
+  border-radius: var(--border-radius);
   text-transform: uppercase;
   font-size: 0.875rem;
   font-weight: 500;
@@ -32,7 +32,7 @@ const PrimaryButton = styled.button`
 const SecondaryButton = styled.button`
   box-sizing: border-box;
   padding: 10px 20px;
-  border-radius: 0.2em;
+  border-radius: var(--border-radius);
   text-transform: uppercase;
   font-size: 0.875rem;
   font-weight: 500;

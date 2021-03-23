@@ -72,10 +72,12 @@ const globalStyles = css`
     text-decoration: underline;
   }
   :root {
+    --border-radius: 0.2em;
     --background-colour: #f8f8f8;
     --text-colour: #030303;
     --accent-colour: #8241c7;
     --secondary-colour: #ff6584;
+    --secondary-text-colour: #5a5a5a;
     --secondary-background-colour: #f2f2f2;
     --disabled-components: #a0a0a0;
     --disabled-text: #777777;
@@ -93,6 +95,7 @@ const globalStyles = css`
 
   @media (prefers-color-scheme: dark) {
     :root {
+      --secondary-text-colour: #969696;
       --disabled-text: #a0a0a0;
       --hover-shadow: 0px 1px 1px black;
       --logo-Colour: #ffffff;

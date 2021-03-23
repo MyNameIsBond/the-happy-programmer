@@ -23,8 +23,11 @@ const Archive = ({ state }) => {
 
 const ArchiveContainer = styled.div`
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    padding: 0em 1em;
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2em;
   }
 `;
 
