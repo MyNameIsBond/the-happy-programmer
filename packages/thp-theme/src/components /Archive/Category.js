@@ -23,7 +23,7 @@ const CategoryContainer = styled.div`
     margin-right: 1em;
     margin-bottom: 1em;
     margin-left: 0em;
-    font-weight: 300;
+    font-weight: 400;
     color: var(--text-colour);
     background: var(--secondary-background-colour);
     border: 1px solid var(--secondary-text-colour);
