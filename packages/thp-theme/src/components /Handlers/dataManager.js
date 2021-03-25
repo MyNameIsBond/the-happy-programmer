@@ -9,6 +9,8 @@ export const getPostAuthor = (state, post) => {
   };
 };
 
+export const getData = (state) => state.source.get(state.router.link);
+
 export const getSrcSet = (media) => {
   const srcset =
     Object.values(media.media_details.sizes)

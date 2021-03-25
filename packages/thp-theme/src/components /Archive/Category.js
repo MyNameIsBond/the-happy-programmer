@@ -7,7 +7,7 @@ const Category = ({ category, actions }) => {
     <CategoryContainer>
       {category.map((item) => (
         <Primary onClick={(e) => actions.router.set(item.link)} key={item.id}>
-          {item.name}
+          <span>{item.name}</span>
         </Primary>
       ))}
     </CategoryContainer>
@@ -19,15 +19,18 @@ const CategoryContainer = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   button {
-    font-size: 12.36px;
+    padding: 0.7em;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    padding: 0 7px;
     margin-right: 1em;
     margin-bottom: 1em;
     margin-left: 0em;
-    font-weight: 400;
-    color: var(--text-colour);
+    color: var(--secondary-text-colour);
     background: var(--secondary-background-colour);
     border: 1px solid var(--secondary-text-colour);
-    border-radius: 50px;
+    border-radius: 2em;
   }
 
   button:hover {

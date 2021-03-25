@@ -4,11 +4,12 @@ import Link from "@frontity/components/link";
 import { dataPost } from "../Handlers/dataManager";
 import Category from "./Category";
 
-const ArchiveItem = ({ item, state, actions }) => {
+const ArchiveItem = ({ item, state, actions, libraries }) => {
   const { link, title, img, excerpt, author, date, categories } = dataPost(
     state,
     item
   );
+  const Html2React = libraries.html2react.Component;
   const dt = new Date(date);
   const breakpoints = state.theme.breakpoints;
 
@@ -27,7 +28,11 @@ const ArchiveItem = ({ item, state, actions }) => {
         />
         <InfoContainer>
           <Link link={link}>{title}</Link>
-          <SubText dangerouslySetInnerHTML={{ __html: excerpt }} />
+          {item.excerpt && (
+            <SubText>
+              <Html2React html={excerpt} />
+            </SubText>
+          )}
           <Category category={categories} />
           <DateText>{dt.toDateString()}</DateText>
         </InfoContainer>
@@ -52,7 +57,7 @@ const AvatarInfoContainer = styled.div`
   display: flex;
   flex-direction: row;
   p {
-    margin-block-start: 0em;
+    margin-block-start: 0.1em;
   }
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
     margin-left: 0em;
@@ -78,19 +83,24 @@ const InfoContainer = styled.div`
 const DateText = styled.p`
   font-size: 0.9em;
   margin: 1em 0em;
-  padding: 1em 0em;
+  padding: 0 0em;
   color: var(--secondary-text-colour);
+  font-weight: 400;
 `;
 
-const SubText = styled.p`
+const SubText = styled.div`
   max-width: 350px;
+
   p {
+    margin-block-end: 0.5em;
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: var(--secondary-text-colour);
   }
-  a {
+
+  p:nth-of-type(2) {
     display: none;
   }
 `;
