@@ -3,13 +3,15 @@ import { connect, styled } from "frontity";
 import ArchiveItem from "./ArchiveItem";
 import { MyInput } from "../reusableComponents/inputs";
 import { ContainerDiv } from "../reusableComponents/container";
+import { getData } from "../Handlers/dataManager";
 const Archive = ({ state }) => {
-  const data = state.source.get(state.router.link);
+  const data = getData(state);
   const breakpoints = state.theme.breakpoints;
   return (
     <ContainerDiv>
       <InputContainer>
         <MyInput />
+        {data.taxonomy && <p>{state.source[data.taxonomy][data.id].name}</p>}
       </InputContainer>
       <ArchiveContainer breakpoints={breakpoints}>
         {data.items.map(({ type, id }) => {
