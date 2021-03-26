@@ -26,7 +26,7 @@ const homeConstants = {
     [js, "JavaScript", "With React Native we will learn JS too"],
   ],
   coursesContainer: [
-    // icon , title , description , link , width of the icon-svg
+    // icon , title , description , link , width of the icon-svg, disabled,row-reverse.
     [
       swiftuiMobile,
       "SwiftUI Tutorials",

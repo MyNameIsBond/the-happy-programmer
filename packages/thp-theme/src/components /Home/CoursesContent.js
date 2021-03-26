@@ -47,16 +47,18 @@ const CoursesContainer = styled.div`
 
 const ButtonContainer = styled.div`
   justify-content: center;
+  flex-direction: column;
   padding-top: 3em;
   width: 100%;
   display: flex;
 
   button {
-    margin: 0em 1em;
+    margin: 1em 1em;
   }
 
   @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
     justify-content: flex-start;
+    flex-direction: row;
 
     button {
       margin: 0em 2em 0em 0em;
