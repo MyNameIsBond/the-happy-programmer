@@ -4,15 +4,20 @@ import ArchiveItem from "./ArchiveItem";
 import { MyInput } from "../reusableComponents/inputs";
 import { ContainerDiv } from "../reusableComponents/container";
 import { getData } from "../Handlers/dataManager";
+import { default as searchIcon } from "../constants/searchIcon.svg";
+import Category from "./Category";
 const Archive = ({ state }) => {
   const data = getData(state);
   const breakpoints = state.theme.breakpoints;
   return (
     <ContainerDiv>
       <InputContainer>
-        <MyInput />
+        <img src={searchIcon} />
+        <MyInput placeholder="Search" />
       </InputContainer>
-      {data.taxonomy && <p>{state.source[data.taxonomy][data.id].name}</p>}
+      {data.taxonomy && (
+        <CategoryText>{state.source[data.taxonomy][data.id].name}</CategoryText>
+      )}
       <ArchiveContainer breakpoints={breakpoints}>
         {data.items.map(({ type, id }) => {
           const item = state.source[type][id];
@@ -22,6 +27,10 @@ const Archive = ({ state }) => {
     </ContainerDiv>
   );
 };
+
+const CategoryText = styled.p`
+  padding: 0em 1em;
+`;
 
 const ArchiveContainer = styled.div`
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
@@ -34,15 +43,21 @@ const ArchiveContainer = styled.div`
 `;
 
 const InputContainer = styled.span`
+  padding-top: 5em;
+  display: flex;
   width: 100%;
-
-  background-color: yellow;
-  display: block;
+  img {
+    height: 1.8em;
+    position: relative;
+    left: 1.6em;
+    top: 2.65em;
+  }
   input {
+    flex-grow: 1;
     display: block;
     width: 100%;
-    padding: 1em;
-    margin: 0em 0em;
+    padding: 1em 1em 1em 3.5em;
+    margin: 2em 1em 1em -1em;
   }
 `;
 
