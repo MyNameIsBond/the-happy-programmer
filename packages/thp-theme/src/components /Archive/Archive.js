@@ -11,8 +11,8 @@ const Archive = ({ state }) => {
     <ContainerDiv>
       <InputContainer>
         <MyInput />
-        {data.taxonomy && <p>{state.source[data.taxonomy][data.id].name}</p>}
       </InputContainer>
+      {data.taxonomy && <p>{state.source[data.taxonomy][data.id].name}</p>}
       <ArchiveContainer breakpoints={breakpoints}>
         {data.items.map(({ type, id }) => {
           const item = state.source[type][id];
@@ -33,11 +33,16 @@ const ArchiveContainer = styled.div`
   }
 `;
 
-const InputContainer = styled.div`
+const InputContainer = styled.span`
+  width: 100%;
+
+  background-color: yellow;
+  display: block;
   input {
+    display: block;
     width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+    padding: 1em;
+    margin: 0em 0em;
   }
 `;
 
