@@ -1,3 +1,6 @@
+import image from "@frontity/html2react/processors/image";
+import iframe from "@frontity/html2react/processors/iframe";
+import link from "@frontity/html2react/processors/link";
 import Root from "./components ";
 
 export default {
@@ -19,5 +22,9 @@ export default {
   actions: {
     theme: {},
   },
-  libraries: {},
+  libraries: {
+    html2react: {
+      processors: [link, iframe, image],
+    },
+  },
 };

@@ -7,7 +7,6 @@ const Post = ({ state, libraries }) => {
   const post = state.source[data.type][data.id];
   const Html2React = libraries.html2react.Component;
   const { content } = dataPost(state, post);
-  console.log("content", content);
   return (
     <ContainerDiv>
       <Html2React html={content} />

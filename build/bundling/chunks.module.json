@@ -2,18 +2,18 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "4e9997d7b7fca20b5fdb",
+  "hash": "6eac8b197e9c0d66d575",
   "publicPath": "/static/",
   "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
   "assetsByChunkName": {
     "the-happy-programmer": [
       "the-happy-programmer.module.js",
-      "the-happy-programmer.96d969b1a88c98d89542.hot-update.js"
+      "the-happy-programmer.d93ac2396948020fbe18.hot-update.js"
     ]
   },
   "assets": [
     {
-      "name": "96d969b1a88c98d89542.hot-update.json",
+      "name": "d93ac2396948020fbe18.hot-update.json",
       "size": 62,
       "chunks": [],
       "chunkNames": [],
@@ -41,7 +41,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/facebookIcon.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/flutterIcon.svg",
@@ -51,7 +51,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/flutterIcon.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/flutterMobile.svg",
@@ -61,7 +61,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/flutterMobile.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/patreonIcon.svg",
@@ -71,7 +71,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/patreonIcon.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/reactNativeIcon.svg",
@@ -81,7 +81,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/reactNativeIcon.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/reactNativeMobile.svg",
@@ -91,7 +91,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/reactNativeMobile.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/searchIcon.svg",
@@ -101,7 +101,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/searchIcon.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/svgHome.svg",
@@ -111,7 +111,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/svgHome.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/swiftuiIcon.svg",
@@ -121,7 +121,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/swiftuiIcon.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/swiftuiMobile.svg",
@@ -131,7 +131,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/swiftuiMobile.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/twitterIcon.svg",
@@ -141,7 +141,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/twitterIcon.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/webIcon.svg",
@@ -151,7 +151,7 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/webIcon.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
       "name": "images/youtubeIcon.svg",
@@ -161,11 +161,11 @@
       "info": {
         "sourceFilename": "packages/thp-theme/src/components /constants/youtubeIcon.svg"
       },
-      "emitted": false
+      "emitted": true
     },
     {
-      "name": "the-happy-programmer.96d969b1a88c98d89542.hot-update.js",
-      "size": 4595,
+      "name": "the-happy-programmer.d93ac2396948020fbe18.hot-update.js",
+      "size": 4430,
       "chunks": [
         "the-happy-programmer"
       ],
@@ -180,7 +180,7 @@
     },
     {
       "name": "the-happy-programmer.module.js",
-      "size": 6660109,
+      "size": 6713491,
       "chunks": [
         "the-happy-programmer"
       ],
@@ -199,7 +199,7 @@
       ],
       "assets": [
         "the-happy-programmer.module.js",
-        "the-happy-programmer.96d969b1a88c98d89542.hot-update.js"
+        "the-happy-programmer.d93ac2396948020fbe18.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -212,7 +212,7 @@
       ],
       "assets": [
         "the-happy-programmer.module.js",
-        "the-happy-programmer.96d969b1a88c98d89542.hot-update.js"
+        "the-happy-programmer.d93ac2396948020fbe18.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -224,15 +224,15 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 1788130,
+      "size": 1803563,
       "names": [
         "the-happy-programmer"
       ],
       "files": [
         "the-happy-programmer.module.js",
-        "the-happy-programmer.96d969b1a88c98d89542.hot-update.js"
+        "the-happy-programmer.d93ac2396948020fbe18.hot-update.js"
       ],
-      "hash": "1176c5b3797dc0d85b71",
+      "hash": "f3fb1801cd4f95c550b9",
       "siblings": [],
       "parents": [],
       "children": [],
