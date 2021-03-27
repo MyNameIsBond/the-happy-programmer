@@ -7,6 +7,7 @@ import SearchInput from "../Search/SearchInput";
 
 const Archive = ({ state }) => {
   const data = getData(state);
+
   const breakpoints = state.theme.breakpoints;
   return (
     <ContainerDiv>
