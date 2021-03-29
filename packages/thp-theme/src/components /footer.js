@@ -4,10 +4,12 @@ import { connect, styled } from "frontity";
 import Logo from "./constants/logo";
 import SubscribeButton from "./reusableComponents/subscribe";
 import { ContainerDiv } from "./reusableComponents/container";
+import { getData } from "./Handlers/dataManager";
 
 const Footer = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
-
+  const dt = getData(state);
+  const fetching = dt.isFetching;
   return (
     <FooterContainerDiv>
       <ContainerDiv>
