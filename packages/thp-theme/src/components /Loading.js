@@ -3,7 +3,6 @@ import { connect, styled, keyframes } from "frontity";
 import { ContainerDiv } from "./reusableComponents/container";
 const Loading = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
-
   return (
     <ContainerDiv>
       <SpaceDiv />
@@ -51,7 +50,7 @@ const Sceleton = styled.div`
   height: ${(props) => props.height};
   width: ${(props) => props.width};
   margin-bottom: ${(props) => props.marginBottom};
-  background: var(--secondary-text-colour);
+  background: var(--loader-colour);
   position: relative;
   overflow: hidden;
   &::before {

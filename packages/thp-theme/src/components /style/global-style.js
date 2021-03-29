@@ -85,6 +85,7 @@ const globalStyles = css`
     --hover-shadow: 0px 1px 1px lightgray;
     --logo-Colour: black;
     --input-text-colour: #030303;
+    --loader-colour: #aaaaaa;
     // Footer Style
     --footer-background: #242424;
     --footer-text: #ffffff;
@@ -103,6 +104,7 @@ const globalStyles = css`
       --text-colour: #f8f8f8;
       --hover-nav-colour: #bcbcbc;
       --secondary-background-colour: #333333;
+      --loader-colour: #696969;
       // Footer Style
       --footer-logo-Colour: black;
       --footer-background: #e9e9e9;
