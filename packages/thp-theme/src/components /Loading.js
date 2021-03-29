@@ -7,7 +7,7 @@ const Loading = ({ state }) => {
   return (
     <ContainerDiv>
       <SpaceDiv />
-      <Sceleton boarderRadius="7px" height="4em" width="100%" />
+      <Sceleton boarderRadius="5px" height="4em" width="100%" />
 
       <LoadingContainer breakpoints={breakpoints}>
         {[...Array(8)].map((i) => (
@@ -65,7 +65,7 @@ const Sceleton = styled.div`
     background: linear-gradient(
       to right,
       transparent 0%,
-      #5c5c5c 50%,
+      #e3e3e3 50%,
       transparent 100%
     );
     animation: ${load} 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;

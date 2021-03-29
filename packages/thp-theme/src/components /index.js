@@ -9,6 +9,7 @@ import Loading from "./Loading";
 import Nav from "./nav";
 import Footer from "./footer";
 import Post from "./Post/Post";
+import Error404 from "./Error404";
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
   return (
@@ -26,6 +27,7 @@ const Root = ({ state }) => {
         <Archive when={data.isCategory} />
         <Loading when={data.isFetching} />
         <Post when={data.isPostType} />
+        <Error404 when={data.isError} />
       </Switch>
       <Footer />
     </>
