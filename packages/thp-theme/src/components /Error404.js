@@ -25,20 +25,35 @@ const CredentialsContainer = styled.div`
   }
 `;
 
-const Text404 = styled.p`
-  font-size: 20rem;
+const Text404 = styled.span`
+  font-size: 10em;
   font-weight: 500;
   color: var(--secondary-colour);
+  text-shadow: 0.05em 0.05em var(--accent-colour);
 `;
 
 const Container404 = styled.div`
-  padding: 0 2em;
+  padding: 10em 2em;
   height: 100%;
   display: flex;
   align-items: center;
   flex-direction: column-reverse;
   justify-content: space-between;
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    span {
+      font-size: 20rem;
+    }
     flex-direction: row;
+  }
+  @media screen and (min-width: ${(props) => props.breakpoints.smallMobile}) {
+    span {
+      font-size: 15rem;
+    }
+  }
+
+  @media screen and (min-width: ${(props) => props.breakpoints.web}) {
+    span {
+      font-size: 20rem;
+    }
   }
 `;
