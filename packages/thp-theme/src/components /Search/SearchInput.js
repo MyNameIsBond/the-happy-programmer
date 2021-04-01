@@ -4,7 +4,7 @@ import { getData } from "../Handlers/dataManager";
 import { default as searchIcon } from "../constants/searchIcon.svg";
 import { MyInput } from "../reusableComponents/inputs";
 
-export const SearchInput = ({ state }) => {
+export const SearchInput = ({ state, searchQuery }) => {
   const data = getData(state);
   const breakpoints = state.theme.breakpoints;
 
@@ -12,7 +12,7 @@ export const SearchInput = ({ state }) => {
     <>
       <InputContainer breakpoints={breakpoints}>
         <img src={searchIcon} />
-        <MyInput placeholder="Search" />
+        <MyInput placeholder="Search">{searchQuery}</MyInput>
       </InputContainer>
       {data.taxonomy && (
         <CategoryText>{state.source[data.taxonomy][data.id].name}</CategoryText>
