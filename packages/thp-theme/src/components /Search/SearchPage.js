@@ -9,7 +9,7 @@ const SearchPage = ({ state }) => {
   const { total, searchQuery } = data;
   return (
     <>
-      <Archive searchQuery={searchQuery} />
+      <Archive searchQuery={searchQuery} />x
     </>
   );
 };

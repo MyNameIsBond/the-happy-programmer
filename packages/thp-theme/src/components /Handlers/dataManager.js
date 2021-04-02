@@ -9,6 +9,8 @@ export const getPostAuthor = (state, post) => {
   };
 };
 
+export const urlToStg = (q) => q.replaceAll("+", " ");
+
 export const getData = (state) => state.source.get(state.router.link);
 
 export const getSrcSet = (media) => {

@@ -1,10 +1,8 @@
 import styled from "@emotion/styled";
 import React from "react";
 
-const MyInput = ({ children, placeholder, ...props }) => (
-  <InputStyle {...props} placeholder={placeholder}>
-    {children}
-  </InputStyle>
+const MyInput = ({ placeholder, ...props }) => (
+  <InputStyle {...props} placeholder={placeholder} />
 );
 
 const InputStyle = styled.input`

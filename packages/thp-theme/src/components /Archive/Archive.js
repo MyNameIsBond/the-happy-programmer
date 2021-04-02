@@ -5,13 +5,13 @@ import { ContainerDiv } from "../reusableComponents/container";
 import { getData } from "../Handlers/dataManager";
 import SearchInput from "../Search/SearchInput";
 
-const Archive = ({ state }) => {
+const Archive = ({ state, searchQuery }) => {
   const data = getData(state);
 
   const breakpoints = state.theme.breakpoints;
   return (
     <ContainerDiv>
-      <SearchInput />
+      <SearchInput searchQuery={searchQuery} />
       <ArchiveContainer breakpoints={breakpoints}>
         {data.items.map(({ type, id }) => {
           const item = state.source[type][id];
