@@ -3,9 +3,10 @@ import { connect, styled } from "frontity";
 import { getData, urlToStg } from "../Handlers/dataManager";
 import { default as searchIcon } from "../constants/searchIcon.svg";
 import { MyInput } from "../reusableComponents/inputs";
-
+import { Primary } from "../reusableComponents/buttons";
 export const SearchInput = ({ state, searchQuery, actions }) => {
   const data = getData(state);
+  const { total } = data;
   const breakpoints = state.theme.breakpoints;
   const searchQ = () => {
     const q = searchQuery ? urlToStg(searchQuery) : "";
@@ -34,17 +35,39 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
         />
       </InputContainer>
       {data.taxonomy && (
-        <CategoryText>{state.source[data.taxonomy][data.id].name}</CategoryText>
+        <SearchTag>
+          <CategoryText>
+            {state.source[data.taxonomy][data.id].name}
+          </CategoryText>
+        </SearchTag>
       )}
-      {data.isSearch && <CategoryText>{urlToStg(searchQuery)}</CategoryText>}
+      {data.isSearch && (
+        <SearchTag>
+          <CategoryText>{urlToStg(searchQuery)}</CategoryText>
+          <CategoryText>Results: {total}</CategoryText>
+        </SearchTag>
+      )}
     </>
   );
 };
 
 const CategoryText = styled.p`
-  padding: 0em 1em;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  padding: 0 7px;
+  border: 1px solid green;
+  margin-right: 1em;
+  text-transform: uppercase;
+  border-radius: 10em;
+  color: var(--text-colour);
+  background: var(--accent-colour);
+  border: 1px solid var(--accent-colour);
 `;
-
+const SearchTag = styled.div`
+  display: flex;
+  padding: 0.5em 1em;
+`;
 const InputContainer = styled.form`
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
     padding-top: 5em;

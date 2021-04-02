@@ -83,7 +83,7 @@ const NavContainer = styled.nav`
   @media screen and (max-width: 450px) {
     background: var(--secondary-background-colour);
   }
-  padding: 2em 1em 1em 2em;
+  padding: 2em 0em 1em 1em;
   height: 60px;
   display: flex;
   align-items: center;

@@ -106,10 +106,10 @@ const globalStyles = css`
       --secondary-background-colour: #333333;
       --loader-colour: #696969;
       // Footer Style
-      --footer-logo-Colour: black;
-      --footer-background: #e9e9e9;
-      --footer-text: #030303;
-      --footer-social: brightness(0) invert(0);
+      --footer-logo-Colour: white;
+      --footer-background: #080808;
+      --footer-text: #efefef;
+      --footer-social: brightness(5) invert(0);
     }
   }
 `;

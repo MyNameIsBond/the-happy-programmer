@@ -109,7 +109,7 @@ const NavContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     align-self: center;
-    padding: 4em 2em 0em 2em;
+    padding: 4em 2em 0em 1em;
 
     img {
       width: 50%;
