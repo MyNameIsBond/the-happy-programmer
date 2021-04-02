@@ -9,11 +9,11 @@ const InputStyle = styled.input`
   color: var(--input-text-colour);
   width: 40%;
   padding: 1em 1em;
+  background: var(--input-background-colour);
   border-radius: var(--border-radius);
   margin: 0em 0.5em;
-  border-style: none;
+  border: solid 1px #2f2f2f;
   font-size: 1rem;
-  box-shadow: var(--hover-shadow);
   &::placeholder {
     color: #989898;
     opacity: 1;

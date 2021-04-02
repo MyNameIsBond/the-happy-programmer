@@ -16,12 +16,12 @@ const SubscribeButton = ({ state }) => {
 const SubscribeContainer = styled.div`
   display: block;
   input {
-    box-shadow: var(--footer-shadow);
     min-width: 200px;
     width: inherit;
     margin-right: 0;
     box-sizing: border-box;
     border-radius: 0.2em 0 0 0.2em;
+    border-style: none;
     @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
       margin-left: 0;
       text-align: left;
@@ -30,7 +30,7 @@ const SubscribeContainer = styled.div`
 
   button {
     margin-left: 0;
-    padding: 1.1rem 1rem;
+    padding: 1.05rem 1rem;
     border-radius: 0 0.2em 0.2em 0;
   }
 `;
