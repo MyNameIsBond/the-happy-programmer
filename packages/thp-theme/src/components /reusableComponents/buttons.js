@@ -27,6 +27,11 @@ const PrimaryButton = styled.button`
     cursor: pointer;
     box-shadow: var(--hover-shadow);
   }
+  &:focus {
+    outline: none;
+    border-color: var(--secondary-colour);
+    box-shadow: 0 0 0 0.2rem rgba(255, 101, 132, 0.25);
+  }
 `;
 
 const SecondaryButton = styled.button`
@@ -52,6 +57,11 @@ const SecondaryButton = styled.button`
     border: 1px solid var(--disabled-components);
     box-shadow: none;
     color: var(--disabled-text);
+  }
+  &:focus {
+    outline: none;
+    border-color: var(--secondary-colour);
+    box-shadow: 0 0 0 0.2rem rgba(255, 101, 132, 0.25);
   }
 `;
 

@@ -3,16 +3,17 @@ import { connect, styled } from "frontity";
 import { getData, urlToStg } from "../Handlers/dataManager";
 import { default as searchIcon } from "../constants/searchIcon.svg";
 import { MyInput } from "../reusableComponents/inputs";
-import { Primary } from "../reusableComponents/buttons";
+
 export const SearchInput = ({ state, searchQuery, actions }) => {
   const data = getData(state);
   const { total } = data;
+
   const breakpoints = state.theme.breakpoints;
   const searchQ = () => {
     const q = searchQuery ? urlToStg(searchQuery) : "";
     return q;
   };
-
+  //hook
   const [search, setsearch] = useState(searchQ);
 
   const searchSubmit = (e) => {
@@ -39,12 +40,20 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
           <CategoryText>
             {state.source[data.taxonomy][data.id].name}
           </CategoryText>
+          <CategoryText>Results: {total}</CategoryText>
         </SearchTag>
       )}
       {data.isSearch && (
         <SearchTag>
           <CategoryText>{urlToStg(searchQuery)}</CategoryText>
           <CategoryText>Results: {total}</CategoryText>
+        </SearchTag>
+      )}
+
+      {data.isAuthor && (
+        <SearchTag>
+          <CategoryText>Author: Tony</CategoryText>
+          <CategoryText>Posts: {total}</CategoryText>
         </SearchTag>
       )}
     </>
@@ -60,7 +69,7 @@ const CategoryText = styled.p`
   margin-right: 1em;
   text-transform: uppercase;
   border-radius: 10em;
-  color: var(--text-colour);
+  color: white;
   background: var(--accent-colour);
   border: 1px solid var(--accent-colour);
 `;
@@ -79,7 +88,7 @@ const InputContainer = styled.form`
     height: 1.8em;
     position: relative;
     left: 2em;
-    top: 2.65em;
+    top: 2.75em;
   }
   input {
     flex-grow: 1;

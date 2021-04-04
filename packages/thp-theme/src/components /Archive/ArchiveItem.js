@@ -15,26 +15,29 @@ const ArchiveItem = ({ item, state, actions, libraries }) => {
 
   return (
     <div>
-      <ImgFuturedMedia
-        onClick={(e) => actions.router.set(link)}
-        breakpoints={breakpoints}
-        src={img.src}
-        alt={img.alt}
-      />
-      <AvatarInfoContainer breakpoints={breakpoints}>
-        <AuthorAvatar
-          onClick={(e) => actions.router.set(author.link)}
-          src={author.avatar}
+      <Link link={link}>
+        <ImgFuturedMedia
+          breakpoints={breakpoints}
+          src={img.src}
+          alt={img.alt}
         />
+      </Link>
+      <AvatarInfoContainer breakpoints={breakpoints}>
+        <Link link={author.link}>
+          <AuthorAvatar breakpoints={breakpoints} src={author.avatar} />
+        </Link>
         <InfoContainer>
           <Link link={link}>{title}</Link>
           {item.excerpt && (
-            <SubText>
+            <SubText breakpoints={breakpoints}>
               <Html2React html={excerpt} />
             </SubText>
           )}
           <Category category={categories} />
-          <DateText>{dt.toDateString()}</DateText>
+          <DateText>
+            {dt.toDateString()} •{" by "}
+            <Link link={author.link}>{author.name}</Link>
+          </DateText>
         </InfoContainer>
       </AvatarInfoContainer>
     </div>
@@ -52,28 +55,42 @@ const ImgFuturedMedia = styled.img`
 `;
 
 const AvatarInfoContainer = styled.div`
-  margin: 1em;
-  padding: 0em 1em;
+  margin: 1em 0em;
+  padding: 0em 0em;
   display: flex;
   flex-direction: row;
   p {
     margin-block-start: 0.1em;
   }
+  @media screen and (min-width: ${(props) => props.breakpoints.smallMobile}) {
+    padding: 0em 0.5em;
+  }
+
+  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+    padding: 0.5em 0.5em;
+  }
+
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
-    margin-left: 0em;
-    padding-left: 0em;
+    margin: 0.5em 0em;
+    padding: 0.5em 0.1em;
   }
 `;
 const AuthorAvatar = styled.img`
-  height: 4rem;
-  width: auto;
-  border-radius: 50%;
-  cursor: pointer;
+  display: none;
+  padding: 0em 1em;
+  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+    height: 4rem;
+    width: auto;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0em 0em;
+  }
 `;
 const InfoContainer = styled.div`
   margin-top: 0.5em;
   padding: 0em 1em;
-  a {
+  > a {
     color: var(--text-colour);
     font-size: 17px;
     font-weight: 500;
@@ -89,8 +106,10 @@ const DateText = styled.p`
 `;
 
 const SubText = styled.div`
-  max-width: 350px;
-
+  width: 22em;
+  word-break: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
   p {
     margin-block-end: 0.5em;
     font-weight: 400;
@@ -98,6 +117,8 @@ const SubText = styled.div`
     text-overflow: ellipsis;
     white-space: nowrap;
     color: var(--secondary-text-colour);
+    word-break: break-word;
+    word-wrap: break-word;
   }
 
   p:nth-of-type(2) {

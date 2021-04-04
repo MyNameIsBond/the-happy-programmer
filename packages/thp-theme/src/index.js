@@ -10,6 +10,7 @@ export default {
   },
   state: {
     theme: {
+      autoPrefetch: "hover",
       breakpoints: {
         smallMobile: "550px",
         mobile: "768px",

@@ -1,7 +1,10 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import { Primary } from "./reusableComponents/buttons";
+import Link from "@frontity/components/link";
+
 import { ContainerDiv } from "./reusableComponents/container";
+import { shouldFetchLink } from "@frontity/components/link/utils";
 const Error404 = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
   return (
@@ -10,7 +13,9 @@ const Error404 = ({ state }) => {
         <CredentialsContainer>
           <h1>It looks like you are lost</h1>
           <p>The page you are looking is not available</p>
-          <Primary>Go Home</Primary>
+          <Link link="/">
+            <Primary>Go Home</Primary>
+          </Link>
         </CredentialsContainer>
         <Text404>404</Text404>
       </Container404>
@@ -22,6 +27,9 @@ export default connect(Error404);
 const CredentialsContainer = styled.div`
   h1 {
     font-weight: 300;
+  }
+  a {
+    text-decoration: none;
   }
 `;
 

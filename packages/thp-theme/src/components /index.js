@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { connect, Global, styled, Head, css } from "frontity";
 import { globalStyles } from "./style/global-style";
 import Switch from "@frontity/components/switch";
@@ -11,7 +11,10 @@ import Footer from "./footer";
 import Post from "./Post/Post";
 import Error404 from "./Error404";
 import SearchPage from "./Search/SearchPage";
-const Root = ({ state }) => {
+import { loadable } from "frontity";
+const Arch = loadable(() => import("./Archive/Archive.js"));
+
+const Root = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
   return (
     <>
@@ -30,6 +33,7 @@ const Root = ({ state }) => {
         <Post when={data.isPostType} />
         <Error404 when={data.isError} />
         <SearchPage when={data.isSearch} />
+        <Arch when={data.isAuthor} />
       </Switch>
       <Footer />
     </>

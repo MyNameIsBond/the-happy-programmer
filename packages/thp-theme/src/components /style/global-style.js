@@ -86,7 +86,7 @@ const globalStyles = css`
     --logo-Colour: black;
     --input-text-colour: #030303;
     --loader-colour: #aaaaaa;
-
+    --border-input: #bcbcbc;
     --input-background-colour: white;
     // Footer Style
     --footer-background: #242424;
@@ -107,6 +107,8 @@ const globalStyles = css`
       --hover-nav-colour: #bcbcbc;
       --secondary-background-colour: #333333;
       --loader-colour: #696969;
+      --border-input: #2f2f2f;
+
       // Footer Style
       --input-background-colour: #1a1a1a;
       --footer-logo-Colour: white;
