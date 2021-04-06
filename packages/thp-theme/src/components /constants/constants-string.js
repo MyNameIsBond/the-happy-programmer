@@ -81,7 +81,7 @@ const homeConstants = {
   footer: {
     contact: "Contact us",
     country: "Coventry, UK",
-    email: "thehappyprogrammer1@gmail.com",
+    email: "info@thehappyprogrammer.com",
     subscribe:
       "Enter your email address to subscribe for free to this blog and receive notifications",
   },
