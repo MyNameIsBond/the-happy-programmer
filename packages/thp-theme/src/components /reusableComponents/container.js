@@ -23,6 +23,8 @@ const ContainerDiv = styled.div`
   margin-right: auto;
   margin-left: auto;
   max-width: 90em;
+  p {
+  }
 `;
 
 export { MainContainer, ContainerDiv };
