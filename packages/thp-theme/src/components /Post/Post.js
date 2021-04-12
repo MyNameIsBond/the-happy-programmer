@@ -20,6 +20,7 @@ const PostContainer = styled.div`
   margin-right: auto;
   margin-left: auto;
   max-width: 50em;
+  padding: 0em 1em;
   p {
     font-weight: 400;
   }
