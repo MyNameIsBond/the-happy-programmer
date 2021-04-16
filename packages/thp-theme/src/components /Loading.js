@@ -32,13 +32,16 @@ const Loading = ({ state }) => {
 };
 export default connect(Loading);
 
-const load = keyframes`
-from {
-  left: -150px;
-}
-to   {
-  left: 100%;
-}
+const color = keyframes`
+  0% {
+    background-color: var(--loader-colour);
+  }
+  50% {
+    background-color: lightgray;
+  }
+  100 {
+    background-color: var(--loader-colour);
+  }
 `;
 
 const SpaceDiv = styled.div`
@@ -53,22 +56,9 @@ const Sceleton = styled.div`
   background: var(--loader-colour);
   position: relative;
   overflow: hidden;
-  &::before {
-    content: "";
-    display: block;
-    position: absolute;
-    left: -150px;
-    top: 0;
-    height: 100%;
-    width: 150px;
-    background: linear-gradient(
-      to right,
-      transparent 0%,
-      #e3e3e3 50%,
-      transparent 100%
-    );
-    animation: ${load} 1s cubic-bezier(0.4, 0, 0.2, 1) infinite;
-  }
+  animation-name: ${color};
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 `;
 
 const LoadingContainer = styled.div`
