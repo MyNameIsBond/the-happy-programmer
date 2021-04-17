@@ -1,0 +1,260 @@
+{
+  "errors": [],
+  "warnings": [],
+  "version": "4.46.0",
+  "hash": "5c10812adcb94c40a48d",
+  "publicPath": "/static/",
+  "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
+  "assetsByChunkName": {
+    "the-happy-programmer": [
+      "the-happy-programmer.module.js",
+      "the-happy-programmer.c4a302e6f62e2c65a925.hot-update.js"
+    ]
+  },
+  "assets": [
+    {
+      "name": "c4a302e6f62e2c65a925.hot-update.json",
+      "size": 62,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/JSIcon.svg",
+      "size": 999,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/JSIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/facebookIcon.svg",
+      "size": 356,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/facebookIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/flutterIcon.svg",
+      "size": 353,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/flutterIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/flutterMobile.svg",
+      "size": 4189,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/flutterMobile.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/patreonIcon.svg",
+      "size": 267,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/patreonIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/reactNativeIcon.svg",
+      "size": 3433,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/reactNativeIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/reactNativeMobile.svg",
+      "size": 4236,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/reactNativeMobile.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/searchIcon.svg",
+      "size": 383,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/searchIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/svgHome.svg",
+      "size": 15638,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/svgHome.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/swiftuiIcon.svg",
+      "size": 791,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/swiftuiIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/swiftuiMobile.svg",
+      "size": 2221,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/swiftuiMobile.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/twitterIcon.svg",
+      "size": 705,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/twitterIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/webIcon.svg",
+      "size": 2264,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/webIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "images/youtubeIcon.svg",
+      "size": 554,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "sourceFilename": "packages/thp-theme/src/components /constants/youtubeIcon.svg"
+      },
+      "emitted": false
+    },
+    {
+      "name": "the-happy-programmer.c4a302e6f62e2c65a925.hot-update.js",
+      "size": 2582,
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "chunkNames": [
+        "the-happy-programmer"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
+      "name": "the-happy-programmer.module.js",
+      "size": 6801671,
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "chunkNames": [
+        "the-happy-programmer"
+      ],
+      "info": {},
+      "emitted": false
+    }
+  ],
+  "filteredAssets": 0,
+  "entrypoints": {
+    "the-happy-programmer": {
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "assets": [
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.c4a302e6f62e2c65a925.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "namedChunkGroups": {
+    "the-happy-programmer": {
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "assets": [
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.c4a302e6f62e2c65a925.hot-update.js"
+      ],
+      "children": {},
+      "childAssets": {}
+    },
+    "Archive-Archive": {
+      "chunks": [],
+      "assets": [],
+      "children": {},
+      "childAssets": {}
+    }
+  },
+  "chunks": [
+    {
+      "id": "the-happy-programmer",
+      "rendered": true,
+      "initial": true,
+      "entry": true,
+      "size": 1859184,
+      "names": [
+        "the-happy-programmer"
+      ],
+      "files": [
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.c4a302e6f62e2c65a925.hot-update.js"
+      ],
+      "hash": "8d1057be3168c438c3e3",
+      "siblings": [],
+      "parents": [],
+      "children": [],
+      "childrenByOrder": {},
+      "modules": [],
+      "filteredModules": 0,
+      "origins": []
+    }
+  ],
+  "logging": {
+    "webpack.buildChunkGraph.visitModules": {
+      "entries": [],
+      "filteredEntries": 5,
+      "debug": false
+    }
+  },
+  "children": [],
+  "generator": "loadable-components"
+}

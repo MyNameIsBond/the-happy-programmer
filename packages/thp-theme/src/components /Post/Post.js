@@ -36,9 +36,6 @@ const PostContainer = styled.div`
     font-weight: 300;
     font-size: 0.8rem;
   }
-  pre {
-    display: none;
-  }
 `;
 
 export default connect(Post);
