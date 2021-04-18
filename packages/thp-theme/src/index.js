@@ -11,6 +11,7 @@ export default {
   },
   state: {
     theme: {
+      darkTheme: true,
       autoPrefetch: "hover",
       breakpoints: {
         smallMobile: "550px",
@@ -22,7 +23,16 @@ export default {
     },
   },
   actions: {
-    theme: {},
+    theme: {
+      darkTheme: ({ state }) => {
+        const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
+        if (darkThemeMq.matches) {
+          return (state.theme.darkTheme = true);
+        } else {
+          return (state.theme.darkTheme = false);
+        }
+      },
+    },
   },
   libraries: {
     html2react: {
