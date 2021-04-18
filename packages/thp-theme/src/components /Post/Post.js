@@ -16,21 +16,29 @@ const Post = ({ state, libraries }) => {
   );
 };
 
+const Code = `
+  code {
+    font-family: "Roboto", sans-serif;
+    padding: 0.3em;
+    margin: 0em 0.3em;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--accent-colour);
+  }
+`;
+
 const PostContainer = styled.div`
   margin-right: auto;
   margin-left: auto;
   max-width: 50em;
   padding: 0em 1em;
+  ul {
+    color: var(--text-colour);
+    ${Code}
+  }
   p {
     font-weight: 400;
-    code {
-      font-family: "Roboto", sans-serif;
-      padding: 0.3em;
-      margin: 0em 0.3em;
-      font-weight: 500;
-      font-size: 1.1rem;
-      color: var(--accent-colour);
-    }
+    ${Code}
   }
   figure {
     margin-left: auto;
