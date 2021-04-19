@@ -45,6 +45,10 @@ const PostContainer = styled.div`
     max-width: 100%;
   }
 
+  img {
+    border-radius: var(--border-radius);
+  }
+
   margin-right: auto;
   margin-left: auto;
   max-width: 50em;

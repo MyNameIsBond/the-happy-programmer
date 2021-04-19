@@ -72,7 +72,7 @@ const globalStyles = css`
     text-decoration: underline;
   }
   :root {
-    --border-radius: 0.2em;
+    --border-radius: 0.3em;
     --background-colour: #f8f8f8;
     --text-colour: #030303;
     --accent-colour: #8241c7;

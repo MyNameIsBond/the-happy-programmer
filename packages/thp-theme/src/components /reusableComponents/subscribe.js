@@ -20,7 +20,7 @@ const SubscribeContainer = styled.div`
     width: inherit;
     margin-right: 0;
     box-sizing: border-box;
-    border-radius: 0.2em 0 0 0.2em;
+    border-radius: var(--border-radius) 0 0 var(--border-radius);
     border-style: none;
     @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
       margin-left: 0;

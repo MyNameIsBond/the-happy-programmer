@@ -7,10 +7,12 @@ import { connect, styled } from "frontity";
 import usePrefersColorScheme from "./usePrefersColorScheme";
 
 const Text = styled.div`
-  border-radius: 7px;
   code {
     font-family: "Roboto", sans-serif !important;
     letter-spacing: 0.01538em;
+  }
+  pre {
+    border-radius: var(--border-radius);
   }
 `;
 
