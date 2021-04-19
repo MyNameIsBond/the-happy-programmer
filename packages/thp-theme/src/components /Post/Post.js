@@ -6,15 +6,28 @@ const Post = ({ state, libraries }) => {
   const data = getData(state);
   const post = state.source[data.type][data.id];
   const Html2React = libraries.html2react.Component;
-  const { content } = dataPost(state, post);
+  const { content, date, img, title, excerpt, categories } = dataPost(
+    state,
+    post
+  );
   return (
-    <ContainerDiv>
-      <PostContainer>
-        <Html2React html={content} />
-      </PostContainer>
-    </ContainerDiv>
+    <>
+      <LandingContainer>
+        <TitleContainer></TitleContainer>
+        <CredentialContainer></CredentialContainer>
+      </LandingContainer>
+      <ContainerDiv>
+        <PostContainer>
+          <Html2React html={content} />
+        </PostContainer>
+      </ContainerDiv>
+    </>
   );
 };
+
+const LandingContainer = styled.div``;
+const CredentialContainer = styled.div``;
+const TitleContainer = styled.div``;
 
 const Code = `
   code {
@@ -28,6 +41,10 @@ const Code = `
 `;
 
 const PostContainer = styled.div`
+  * {
+    max-width: 100%;
+  }
+
   margin-right: auto;
   margin-left: auto;
   max-width: 50em;
@@ -41,6 +58,7 @@ const PostContainer = styled.div`
     ${Code}
   }
   figure {
+    width: 100% !important;
     margin-left: auto;
     margin-right: auto;
   }
