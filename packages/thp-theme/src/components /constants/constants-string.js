@@ -23,7 +23,7 @@ const homeConstants = {
     [swiftUI, "SwiftUI", "SwiftUI complete posts and tutorials"],
     [flutter, "Flutter", "Learn Flutter for every platform"],
     [reactNative, "React Native", "React Native for heros"],
-    [js, "JavaScript", "With React Native we will learn JS too"],
+    [js, "JavaScript", "React Native we will learn JS too"],
   ],
   coursesContainer: [
     // icon , title , description , link , width of the icon-svg, disabled,row-reverse.

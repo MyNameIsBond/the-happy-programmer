@@ -11,7 +11,7 @@ const Loading = ({ state }) => {
       <LoadingContainer breakpoints={breakpoints}>
         {[...Array(8)].map((i) => (
           <div>
-            <Sceleton boarderRadius="7px" height="25em" width="100%" />
+            <Sceleton boarderRadius="7px" height="20em" width="100%" />
             <SceletonLoaderContainer>
               <Sceleton boarderRadius="100%" height="4em" width="4em" />
               <TextSceletonContainer>

@@ -51,7 +51,7 @@ const PostContainer = styled.div`
 
   margin-right: auto;
   margin-left: auto;
-  max-width: 50em;
+  max-width: 65em;
   padding: 0em 1em;
   ul {
     color: var(--text-colour);
