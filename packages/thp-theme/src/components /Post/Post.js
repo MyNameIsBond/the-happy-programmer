@@ -3,16 +3,16 @@ import React from "react";
 import { getData, dataPost } from "../Handlers/dataManager";
 import { ContainerDiv } from "../reusableComponents/container";
 import Category from "../Archive/Category";
+import AuthorLink from "../Archive/AuthorLink";
 const Post = ({ state, libraries }) => {
   const data = getData(state);
   const post = state.source[data.type][data.id];
   const Html2React = libraries.html2react.Component;
-  const { content, date, img, title, excerpt, categories } = dataPost(
+  const { content, date, img, title, excerpt, categories, author } = dataPost(
     state,
     post
   );
 
-  console.log(img);
   return (
     <>
       <ContainerDiv>
@@ -20,6 +20,7 @@ const Post = ({ state, libraries }) => {
           <Thumbnail src={img.src} />
           <CatDateContainer>
             <Category category={categories} />
+            <AuthorLink date={date} author={author} />
           </CatDateContainer>
           <CredentialContainer>
             <h1>{title}</h1>
@@ -30,13 +31,20 @@ const Post = ({ state, libraries }) => {
           <Html2React html={content} />
         </PostContainer>
       </ContainerDiv>
+      <hr />
     </>
   );
 };
 
 const CatDateContainer = styled.div`
-  padding-top: 1.5em;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  padding-top: 1em;
   padding-bottom: 0.5em;
+  p {
+    margin-block-start: 0em;
+  }
 `;
 
 const Thumbnail = styled.img`
@@ -52,6 +60,9 @@ const CredentialContainer = styled.div`
     margin-block-start: 0;
     font-size: 2.5rem;
     font-weight: 400;
+  }
+  .link-more {
+    display: none;
   }
 `;
 

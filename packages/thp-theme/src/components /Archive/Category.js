@@ -1,10 +1,14 @@
 import React from "react";
-import { Primary, Secondary } from "../reusableComponents/buttons";
-import { connect, styled } from "frontity";
+import { Primary } from "../reusableComponents/buttons";
+import { connect } from "frontity";
 import { CategoryContainer } from "./CategoryStyle";
 import Link from "@frontity/components/link";
+import { getData } from "../Handlers/dataManager";
 
-const Category = ({ category, actions }) => {
+const Category = ({ category, state }) => {
+  const data = getData(state);
+  const { isPostType, isPost } = data;
+  console.log("isPostType", isPostType, isPost);
   return (
     <CategoryContainer>
       {category.map((item) => (
@@ -14,6 +18,11 @@ const Category = ({ category, actions }) => {
           </Primary>
         </Link>
       ))}
+      {(isPost && isPostType) ?? (
+        <Primary>
+          <span>be a Patreon</span>
+        </Primary>
+      )}
     </CategoryContainer>
   );
 };

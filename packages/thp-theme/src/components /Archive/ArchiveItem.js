@@ -35,10 +35,6 @@ const ArchiveItem = ({ item, state, actions, libraries }) => {
             </SubText>
           )}
           <Category category={categories} />
-          {/* <DateText>
-            {dt.toDateString()} •{" by "}
-            <Link link={author.link}>{author.name}</Link>
-          </DateText> */}
           <AuthorLink date={date} author={author} />
         </InfoContainer>
       </AvatarInfoContainer>
