@@ -20,7 +20,7 @@ const homeConstants = {
   header: "EVERYTHING ABOUT MOBILE AND WEB",
   subheader: "What you can learn here",
   lessonContainer: [
-    [swiftUI, "SwiftUI", "SwiftUI complete posts and tutorials"],
+    [swiftUI, "SwiftUI", "SwiftUI posts and tutorials"],
     [flutter, "Flutter", "Learn Flutter for every platform"],
     [reactNative, "React Native", "React Native for heros"],
     [js, "JavaScript", "React Native we will learn JS too"],

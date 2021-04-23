@@ -3,6 +3,7 @@ import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import { dataPost } from "../Handlers/dataManager";
 import Category from "./Category";
+import AuthorLink from "./AuthorLink";
 
 const ArchiveItem = ({ item, state, actions, libraries }) => {
   const { link, title, img, excerpt, author, date, categories } = dataPost(
@@ -34,10 +35,11 @@ const ArchiveItem = ({ item, state, actions, libraries }) => {
             </SubText>
           )}
           <Category category={categories} />
-          <DateText>
+          {/* <DateText>
             {dt.toDateString()} •{" by "}
             <Link link={author.link}>{author.name}</Link>
-          </DateText>
+          </DateText> */}
+          <AuthorLink date={date} author={author} />
         </InfoContainer>
       </AvatarInfoContainer>
     </div>

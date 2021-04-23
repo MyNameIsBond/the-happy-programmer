@@ -2,6 +2,7 @@ import { connect, styled } from "frontity";
 import React from "react";
 import { getData, dataPost } from "../Handlers/dataManager";
 import { ContainerDiv } from "../reusableComponents/container";
+import Category from "../Archive/Category";
 const Post = ({ state, libraries }) => {
   const data = getData(state);
   const post = state.source[data.type][data.id];
@@ -10,13 +11,21 @@ const Post = ({ state, libraries }) => {
     state,
     post
   );
+
+  console.log(img);
   return (
     <>
-      <LandingContainer>
-        <TitleContainer></TitleContainer>
-        <CredentialContainer></CredentialContainer>
-      </LandingContainer>
       <ContainerDiv>
+        <LandingContainer>
+          <Thumbnail src={img.src} />
+          <CatDateContainer>
+            <Category category={categories} />
+          </CatDateContainer>
+          <CredentialContainer>
+            <h1>{title}</h1>
+            <Html2React html={excerpt} />
+          </CredentialContainer>
+        </LandingContainer>
         <PostContainer>
           <Html2React html={content} />
         </PostContainer>
@@ -25,9 +34,26 @@ const Post = ({ state, libraries }) => {
   );
 };
 
-const LandingContainer = styled.div``;
-const CredentialContainer = styled.div``;
-const TitleContainer = styled.div``;
+const CatDateContainer = styled.div`
+  padding-top: 1.5em;
+  padding-bottom: 0.5em;
+`;
+
+const Thumbnail = styled.img`
+  width: 100%;
+  border-radius: var(--border-radius);
+`;
+
+const LandingContainer = styled.div`
+  padding: 2em 1em;
+`;
+const CredentialContainer = styled.div`
+  h1 {
+    margin-block-start: 0;
+    font-size: 2.5rem;
+    font-weight: 400;
+  }
+`;
 
 const Code = `
   code {
