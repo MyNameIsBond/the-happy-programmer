@@ -26,12 +26,12 @@ const Post = ({ state, libraries }) => {
             <h1>{title}</h1>
             <Html2React html={excerpt} />
           </CredentialContainer>
+          <hr />
         </LandingContainer>
         <PostContainer>
           <Html2React html={content} />
         </PostContainer>
       </ContainerDiv>
-      <hr />
     </>
   );
 };
@@ -54,6 +54,11 @@ const Thumbnail = styled.img`
 
 const LandingContainer = styled.div`
   padding: 2em 1em;
+  hr {
+    height: 0.1em;
+    background-color: var(--secondary-text-colour);
+    border: none;
+  }
 `;
 const CredentialContainer = styled.div`
   h1 {
