@@ -55,7 +55,7 @@ const Thumbnail = styled.img`
 const LandingContainer = styled.div`
   padding: 2em 1em;
   hr {
-    height: 0.1em;
+    height: 0.04em;
     background-color: var(--secondary-text-colour);
     border: none;
   }
@@ -85,6 +85,9 @@ const Code = `
 const PostContainer = styled.div`
   * {
     max-width: 100%;
+  }
+
+  .wp-block-image {
   }
 
   img {

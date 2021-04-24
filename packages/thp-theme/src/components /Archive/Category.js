@@ -5,10 +5,11 @@ import { CategoryContainer } from "./CategoryStyle";
 import Link from "@frontity/components/link";
 import { getData } from "../Handlers/dataManager";
 import { default as patreonIcon } from "../constants/patreonIcon.svg";
+import { homeConstants } from "../constants/constants-string";
 const Category = ({ category, state }) => {
+  const { socials } = homeConstants.AuthorInfo;
   const data = getData(state);
   const { isPostType, isPost } = data;
-  console.log("isPostType", isPostType, isPost);
   return (
     <CategoryContainer>
       {category.map((item) => (
@@ -18,16 +19,17 @@ const Category = ({ category, state }) => {
           </Primary>
         </Link>
       ))}
-      {isPostType && (
-        <Patreonbutton>
-          <Link link="https://www.patreon.com/thehappyprogrammer">
-            <Primary>
-              <PatreonImg src={patreonIcon} />
-              <span>Become a Patreon</span>
-            </Primary>
-          </Link>
-        </Patreonbutton>
-      )}
+      {isPostType &&
+        socials.map(([icon, link, desc, color]) => (
+          <Patreonbutton key={link} color={color}>
+            <Link link={link}>
+              <Primary>
+                <PatreonImg src={icon} />
+                <span>{desc}</span>
+              </Primary>
+            </Link>
+          </Patreonbutton>
+        ))}
     </CategoryContainer>
   );
 };
@@ -35,7 +37,7 @@ const Category = ({ category, state }) => {
 export default connect(Category);
 
 const PatreonImg = styled.img`
-  height: 0.9em;
+  height: 1em;
   width: auto;
   filter: brightness(0) invert(1);
   padding-right: 0.3em;
@@ -47,12 +49,12 @@ const Patreonbutton = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    background: #eb5354;
+    background: ${(props) => props.color};
     color: white;
-    border-color: #eb5354;
+    border-color: ${(props) => props.color};
   }
   button:hover {
-    border-color: #eb5354;
-    background: #eb5354;
+    border-color: ${(props) => props.color};
+    background: ${(props) => props.color};
   }
 `;

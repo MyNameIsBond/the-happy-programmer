@@ -69,13 +69,25 @@ const homeConstants = {
     description:
       "I have developed numerous of iOS and Android apps. I have participated in many open course projects. An experienced developer in web development, enterprise and mobile development. Enthusiastic about programming and technology.",
     socials: [
-      [patreonIcon, "https://www.patreon.com/thehappyprogrammer"],
+      [
+        patreonIcon,
+        "https://www.patreon.com/thehappyprogrammer",
+        "Become A Patreon",
+        "#eb5354",
+      ],
       [
         facebookIcon,
         "https://www.facebook.com/The-Happy-Programmer-106178104593013",
+        "FaceBook",
+        "#499BF0",
       ],
-      [twitterIcon, "https://twitter.com/happy_prog"],
-      [youtubeIcon, "https://www.youtube.com/channel/UC6iG4M34lttUcEFUdSVsGVA"],
+      [twitterIcon, "https://twitter.com/happy_prog", "Twitter", "#4EA0EB"],
+      [
+        youtubeIcon,
+        "https://www.youtube.com/channel/UC6iG4M34lttUcEFUdSVsGVA",
+        "YouTube",
+        "#EA3323",
+      ],
     ],
   },
   footer: {
