@@ -2,7 +2,7 @@ const settings = {
   name: "the-happy-programmer",
   state: {
     frontity: {
-      url: "https://thehappyprogrammer.com/",
+      url: "https://thehappyprogrammer.com",
       title: "The Happy Programmer",
       description: "Mobile and web free courses",
     },
