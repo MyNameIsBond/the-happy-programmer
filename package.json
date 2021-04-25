@@ -25,6 +25,7 @@
     "@frontity/wp-source": "^1.10.0",
     "@frontity/yoast": "^2.1.1",
     "frontity": "^1.14.1",
+    "frontity-contact-form-7": "^0.1.7",
     "global": "^4.4.0",
     "react-syntax-highlighter": "^15.4.3",
     "thp-theme": "file:packages/thp-theme"

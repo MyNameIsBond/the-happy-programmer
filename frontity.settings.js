@@ -10,6 +10,8 @@ const settings = {
       menu: [
         ["Home", "/"],
         ["SwiftUI", "/category/swiftui/"],
+        ["Donate", "/donate/"],
+        ["contact", "/contact/"],
       ],
     },
   },
@@ -25,6 +27,7 @@ const settings = {
         },
       },
     },
+    "frontity-contact-form-7",
     "@frontity/tiny-router",
     "@frontity/html2react",
     "@frontity/head-tags",
