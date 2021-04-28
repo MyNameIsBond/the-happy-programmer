@@ -23,20 +23,11 @@ export default {
     },
   },
   actions: {
-    theme: {
-      darkTheme: ({ state }) => {
-        const darkThemeMq = window.matchMedia("(prefers-color-scheme: dark)");
-        if (darkThemeMq.matches) {
-          return (state.theme.darkTheme = true);
-        } else {
-          return (state.theme.darkTheme = false);
-        }
-      },
-    },
+    theme: {},
   },
   libraries: {
     html2react: {
-      processors: [link, iframe, image, script, codeHighlighter],
+      processors: [link, iframe, codeHighlighter],
     },
   },
 };

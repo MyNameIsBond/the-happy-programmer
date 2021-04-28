@@ -83,6 +83,9 @@ const Code = `
 `;
 
 const PostContainer = styled.div`
+  max-width: 20em;
+  .wp-block-image {
+  }
   * {
     max-width: 100%;
   }
@@ -92,6 +95,8 @@ const PostContainer = styled.div`
 
   img {
     border-radius: var(--border-radius);
+    height: auto;
+    text-align: left;
   }
 
   margin-right: auto;
@@ -107,6 +112,7 @@ const PostContainer = styled.div`
     ${Code}
   }
   figure {
+    text-align: left;
     width: 100% !important;
     margin-left: auto;
     margin-right: auto;
@@ -114,7 +120,7 @@ const PostContainer = styled.div`
 
   figcaption {
     padding: 0.5em 0em;
-    text-align: center;
+    text-align: left;
     color: var(--secondary-text-colour);
     font-weight: 300;
     font-size: 0.8rem;

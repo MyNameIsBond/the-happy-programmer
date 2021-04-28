@@ -2,13 +2,27 @@
   "errors": [],
   "warnings": [],
   "version": "4.46.0",
-  "hash": "ab98292ff8aa23f3ee91",
+  "hash": "08ba1d37f84e83e65c65",
   "publicPath": "/static/",
   "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
   "assetsByChunkName": {
-    "the-happy-programmer": "the-happy-programmer.module.js"
+    "the-happy-programmer": [
+      "the-happy-programmer.module.js",
+      "the-happy-programmer.895ab4c408c0a98b1642.hot-update.js"
+    ]
   },
   "assets": [
+    {
+      "name": "895ab4c408c0a98b1642.hot-update.json",
+      "size": 62,
+      "chunks": [],
+      "chunkNames": [],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
     {
       "name": "images/JSIcon.svg",
       "size": 999,
@@ -150,8 +164,23 @@
       "emitted": false
     },
     {
+      "name": "the-happy-programmer.895ab4c408c0a98b1642.hot-update.js",
+      "size": 7519,
+      "chunks": [
+        "the-happy-programmer"
+      ],
+      "chunkNames": [
+        "the-happy-programmer"
+      ],
+      "info": {
+        "hotModuleReplacement": true,
+        "immutable": true
+      },
+      "emitted": false
+    },
+    {
       "name": "the-happy-programmer.module.js",
-      "size": 15258841,
+      "size": 15260808,
       "chunks": [
         "the-happy-programmer"
       ],
@@ -169,7 +198,8 @@
         "the-happy-programmer"
       ],
       "assets": [
-        "the-happy-programmer.module.js"
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.895ab4c408c0a98b1642.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -181,7 +211,8 @@
         "the-happy-programmer"
       ],
       "assets": [
-        "the-happy-programmer.module.js"
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.895ab4c408c0a98b1642.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -2761,14 +2792,15 @@
       "rendered": true,
       "initial": true,
       "entry": true,
-      "size": 4031738,
+      "size": 4032335,
       "names": [
         "the-happy-programmer"
       ],
       "files": [
-        "the-happy-programmer.module.js"
+        "the-happy-programmer.module.js",
+        "the-happy-programmer.895ab4c408c0a98b1642.hot-update.js"
       ],
-      "hash": "475db93473b592123179",
+      "hash": "bcca207bfff4c3d74889",
       "siblings": [],
       "parents": [],
       "children": [],

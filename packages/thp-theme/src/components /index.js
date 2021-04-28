@@ -12,10 +12,13 @@ import Post from "./Post/Post";
 import Error404 from "./Error404";
 import SearchPage from "./Search/SearchPage";
 import { loadable } from "frontity";
+import Contact from "./contact";
+
 const Arch = loadable(() => import("./Archive/Archive.js"));
 
 const Root = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
+  console.log(data);
   return (
     <>
       <Title />
@@ -30,10 +33,11 @@ const Root = ({ state, actions }) => {
         <Home when={data.isHome} />
         <Archive when={data.isCategory} />
         <Loading when={data.isFetching} />
-        <Post when={data.isPostType} />
+        <Post when={data.isPostType && data.isPost} />
         <Error404 when={data.isError} />
         <SearchPage when={data.isSearch} />
         <Arch when={data.isAuthor} />
+        <Contact when={data.link == "/contact/"} />
       </Switch>
       <Footer />
     </>
