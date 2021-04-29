@@ -27,7 +27,7 @@ export default {
   },
   libraries: {
     html2react: {
-      processors: [link, iframe, codeHighlighter],
+      processors: [link, iframe, script, codeHighlighter],
     },
   },
 };

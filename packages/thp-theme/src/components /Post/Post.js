@@ -91,17 +91,18 @@ const PostContainer = styled.div`
   }
 
   .wp-block-image {
+    text-align: center;
   }
 
   img {
     border-radius: var(--border-radius);
     height: auto;
-    text-align: left;
+    text-align: center;
   }
 
   margin-right: auto;
   margin-left: auto;
-  max-width: 65em;
+  max-width: 42rem;
   padding: 0em 1em;
   ul {
     color: var(--text-colour);
@@ -112,7 +113,7 @@ const PostContainer = styled.div`
     ${Code}
   }
   figure {
-    text-align: left;
+    text-align: center;
     width: 100% !important;
     margin-left: auto;
     margin-right: auto;
@@ -120,7 +121,7 @@ const PostContainer = styled.div`
 
   figcaption {
     padding: 0.5em 0em;
-    text-align: left;
+    text-align: center;
     color: var(--secondary-text-colour);
     font-weight: 300;
     font-size: 0.8rem;

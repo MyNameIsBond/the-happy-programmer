@@ -10,7 +10,7 @@ const settings = {
       menu: [
         ["Home", "/"],
         ["SwiftUI", "/category/swiftui/"],
-        ["contact", "/contact/"],
+        ["Contact", "/contact/"],
       ],
     },
   },
