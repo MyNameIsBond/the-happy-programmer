@@ -1,4 +1,3 @@
-import image from "@frontity/html2react/processors/image";
 import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 import script from "@frontity/html2react/processors/script";

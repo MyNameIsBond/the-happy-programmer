@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect, Global, styled, Head, css } from "frontity";
 import { globalStyles } from "./style/global-style";
 import Switch from "@frontity/components/switch";
@@ -18,7 +18,7 @@ const Arch = loadable(() => import("./Archive/Archive.js"));
 
 const Root = ({ state, actions }) => {
   const data = state.source.get(state.router.link);
-  console.log(data);
+
   return (
     <>
       <Title />

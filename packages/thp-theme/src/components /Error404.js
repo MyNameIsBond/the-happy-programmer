@@ -2,9 +2,8 @@ import React from "react";
 import { connect, styled } from "frontity";
 import { Primary } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
-
 import { ContainerDiv } from "./reusableComponents/container";
-import { shouldFetchLink } from "@frontity/components/link/utils";
+
 const Error404 = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
   return (
