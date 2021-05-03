@@ -16,7 +16,7 @@ import Contact from "./contact";
 
 const Arch = loadable(() => import("./Archive/Archive.js"));
 
-const Root = ({ state, actions }) => {
+const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
 
   return (
