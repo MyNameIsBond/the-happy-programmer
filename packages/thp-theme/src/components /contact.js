@@ -1,7 +1,12 @@
 import React from "react";
-
+import { styled } from "frontity";
 const contact = () => {
-  return <div>Contact</div>;
+  return <Background>Contact</Background>;
 };
+
+const Background = styled.div`
+  background: red;
+  height: 100%;
+`;
 
 export default contact;
