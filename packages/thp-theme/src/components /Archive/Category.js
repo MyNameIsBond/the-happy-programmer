@@ -4,8 +4,8 @@ import { connect, styled } from "frontity";
 import { CategoryContainer } from "./CategoryStyle";
 import Link from "@frontity/components/link";
 import { getData } from "../Handlers/dataManager";
-import { default as patreonIcon } from "../constants/patreonIcon.svg";
 import { homeConstants } from "../constants/constants-string";
+
 const Category = ({ category, state }) => {
   const { socials } = homeConstants.AuthorInfo;
   const data = getData(state);
@@ -24,7 +24,7 @@ const Category = ({ category, state }) => {
           <Patreonbutton key={link} color={color}>
             <Link link={link}>
               <Primary>
-                <PatreonImg src={icon} />
+                <PatreonImg loading="lazy" src={icon} />
                 <span>{desc}</span>
               </Primary>
             </Link>

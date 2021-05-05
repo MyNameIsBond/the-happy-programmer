@@ -17,7 +17,7 @@ const Post = ({ state, libraries }) => {
     <>
       <ContainerDiv>
         <LandingContainer>
-          <Thumbnail src={img.src} />
+          <Thumbnail loading="lazy" src={img.src} />
           <CatDateContainer>
             <Category category={categories} />
             <AuthorLink date={date} author={author} />
@@ -102,7 +102,7 @@ const PostContainer = styled.div`
 
   margin-right: auto;
   margin-left: auto;
-  max-width: 42rem;
+  max-width: 48rem;
   padding: 0em 1em;
   ul {
     color: var(--text-colour);

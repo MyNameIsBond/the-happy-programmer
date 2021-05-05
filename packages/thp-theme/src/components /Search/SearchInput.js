@@ -28,7 +28,7 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
   return (
     <>
       <InputContainer breakpoints={breakpoints} onSubmit={searchSubmit}>
-        <img src={searchIcon} />
+        <img loading="lazy" src={searchIcon} />
         <MyInput
           value={search}
           onChange={(e) => setsearch(e.target.value)}

@@ -5,19 +5,19 @@ import { dataPost } from "../Handlers/dataManager";
 import Category from "./Category";
 import AuthorLink from "./AuthorLink";
 
-const ArchiveItem = ({ item, state, actions, libraries }) => {
+const ArchiveItem = ({ item, state, libraries }) => {
   const { link, title, img, excerpt, author, date, categories } = dataPost(
     state,
     item
   );
   const Html2React = libraries.html2react.Component;
-  const dt = new Date(date);
   const breakpoints = state.theme.breakpoints;
 
   return (
     <div>
       <Link link={link}>
         <ImgFuturedMedia
+          loading="lazy"
           breakpoints={breakpoints}
           src={img.src}
           alt={img.alt}
@@ -25,7 +25,11 @@ const ArchiveItem = ({ item, state, actions, libraries }) => {
       </Link>
       <AvatarInfoContainer breakpoints={breakpoints}>
         <Link link={author.link}>
-          <AuthorAvatar breakpoints={breakpoints} src={author.avatar} />
+          <AuthorAvatar
+            loading="lazy"
+            breakpoints={breakpoints}
+            src={author.avatar}
+          />
         </Link>
         <InfoContainer>
           <Link link={link}>{title}</Link>

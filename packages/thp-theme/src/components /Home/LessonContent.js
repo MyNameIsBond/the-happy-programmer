@@ -1,7 +1,8 @@
-import { connect, styled } from "frontity";
 import React from "react";
+import { connect, styled } from "frontity";
 import { homeConstants } from "../constants/constants-string";
 import { ContainerDiv } from "../reusableComponents/container";
+
 const LessonContent = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
 
@@ -15,7 +16,7 @@ const LessonContent = ({ state }) => {
             <LessonContainerDiv breakpoints={breakpoints}>
               {homeConstants.lessonContainer.map(([icon, title, desc]) => (
                 <DescriptionPanel breakpoints={breakpoints} key={title}>
-                  <img src={icon} />
+                  <img loading="lazy" src={icon} />
                   <h4>{title}</h4>
                   <p>{desc}</p>
                 </DescriptionPanel>

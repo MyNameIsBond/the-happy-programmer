@@ -22,7 +22,11 @@ export default {
     },
   },
   actions: {
-    theme: {},
+    theme: {
+      beforeSSR: async ({ state, actions }) => {
+        await actions.source.fetch(state.router.link);
+      },
+    },
   },
   libraries: {
     html2react: {

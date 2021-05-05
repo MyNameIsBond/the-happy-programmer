@@ -26,8 +26,15 @@ const settings = {
         },
       },
     },
+    {
+      name: "@frontity/tiny-router",
+      state: {
+        router: {
+          autoFetch: true,
+        },
+      },
+    },
     "frontity-contact-form-7",
-    "@frontity/tiny-router",
     "@frontity/html2react",
     "@frontity/head-tags",
     "@frontity/yoast",

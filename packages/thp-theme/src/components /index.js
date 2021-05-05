@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, Global, styled, Head, css } from "frontity";
+import { connect, Global, Head } from "frontity";
 import { globalStyles } from "./style/global-style";
 import Switch from "@frontity/components/switch";
 import Title from "./title";
@@ -11,10 +11,8 @@ import Footer from "./footer";
 import Post from "./Post/Post";
 import Error404 from "./Error404";
 import SearchPage from "./Search/SearchPage";
-import { loadable } from "frontity";
 import Contact from "./contact";
-
-const Arch = loadable(() => import("./Archive/Archive.js"));
+import Arch from "./Archive/Archive.js";
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -26,7 +24,6 @@ const Root = ({ state }) => {
         <meta name="description" content={state.frontity.description} />
         <html lang="en" />
       </Head>
-
       <Global styles={globalStyles} />
       <Nav />
       <Switch>
