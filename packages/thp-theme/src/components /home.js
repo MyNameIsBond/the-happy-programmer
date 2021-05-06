@@ -1,4 +1,4 @@
-import React, { lazy } from "react";
+import React from "react";
 import { connect, styled } from "frontity";
 import { Primary, Secondary } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";

@@ -1,5 +1,5 @@
 import React from "react";
-import { connect, Global, Head } from "frontity";
+import { connect, Global, Head, loadable } from "frontity";
 import { globalStyles } from "./style/global-style";
 import Switch from "@frontity/components/switch";
 import Title from "./title";
@@ -13,6 +13,8 @@ import Error404 from "./Error404";
 import SearchPage from "./Search/SearchPage";
 import Contact from "./contact";
 import Arch from "./Archive/Archive.js";
+
+const OtherComponent = loadable(() => import("./Loading"));
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -29,7 +31,7 @@ const Root = ({ state }) => {
       <Switch>
         <Home when={data.isHome} />
         <Archive when={data.isCategory} />
-        <Loading when={data.isFetching} />
+        <OtherComponent when={data.isFetching} />
         <Post when={data.isPostType && data.isPost} />
         <Error404 when={data.isError} />
         <SearchPage when={data.isSearch} />
