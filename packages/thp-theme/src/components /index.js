@@ -5,7 +5,6 @@ import Switch from "@frontity/components/switch";
 import Title from "./title";
 import Home from "./home";
 import Archive from "./Archive/Archive";
-import Loading from "./Loading";
 import Nav from "./nav";
 import Footer from "./footer";
 import Post from "./Post/Post";
@@ -14,7 +13,7 @@ import SearchPage from "./Search/SearchPage";
 import Contact from "./contact";
 import Arch from "./Archive/Archive.js";
 
-const OtherComponent = loadable(() => import("./Loading"));
+const Loader = loadable(() => import("./Loading"));
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -24,6 +23,7 @@ const Root = ({ state }) => {
       <Title />
       <Head>
         <meta name="description" content={state.frontity.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <html lang="en" />
       </Head>
       <Global styles={globalStyles} />
@@ -31,7 +31,7 @@ const Root = ({ state }) => {
       <Switch>
         <Home when={data.isHome} />
         <Archive when={data.isCategory} />
-        <OtherComponent when={data.isFetching} />
+        <Loader when={data.isFetching} />
         <Post when={data.isPostType && data.isPost} />
         <Error404 when={data.isError} />
         <SearchPage when={data.isSearch} />

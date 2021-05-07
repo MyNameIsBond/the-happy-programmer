@@ -11,7 +11,7 @@ export default {
   state: {
     theme: {
       darkTheme: true,
-      autoPrefetch: "hover",
+      autoPrefetch: "in-view",
       breakpoints: {
         smallMobile: "550px",
         mobile: "768px",

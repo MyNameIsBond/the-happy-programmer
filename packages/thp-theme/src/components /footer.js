@@ -1,21 +1,21 @@
 import React from "react";
 import { homeConstants } from "./constants/constants-string";
+import Link from "@frontity/components/link";
 import { connect, styled } from "frontity";
 import Logo from "./constants/logo";
 import SubscribeButton from "./reusableComponents/subscribe";
 import { ContainerDiv } from "./reusableComponents/container";
-import { getData } from "./Handlers/dataManager";
 
 const Footer = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
-  const dt = getData(state);
-  const fetching = dt.isFetching;
   return (
     <FooterContainerDiv>
       <ContainerDiv>
         <FooterContainer breakpoints={breakpoints}>
           <LogoSocials breakpoints={breakpoints}>
-            <Logo />
+            <Link link={"/"}>
+              <Logo />
+            </Link>
             <Socials>
               {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
                 <a key={link} href={link} target="_blank">
@@ -109,7 +109,7 @@ const FooterContainer = styled.div`
   }
   svg {
     fill: var(--footer-logo-Colour);
-    circle:nth-child(2) {
+    circle:nth-of-type(2) {
       stroke: var(--footer-logo-Colour);
     }
   }

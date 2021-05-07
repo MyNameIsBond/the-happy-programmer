@@ -2,6 +2,7 @@ import React from "react";
 import { connect, styled } from "frontity";
 import { Primary, Secondary } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
+import Image from "@frontity/components/image";
 import { homeConstants } from "./constants/constants-string";
 import { MainContainer } from "./reusableComponents/container";
 import LessonContent from "./Home/LessonContent";
@@ -14,7 +15,7 @@ const Home = ({ state }) => {
     <>
       <MainContainer breakpoints={breakpoints}>
         <NavContainer breakpoints={breakpoints}>
-          <img loading="lazy" src={homeConstants.homeSvg} />
+          <Image loading="lazy" src={homeConstants.homeSvg} />
           <LandingCredentials breakpoints={breakpoints}>
             <HeaderDescription>{homeConstants.mainHeader}</HeaderDescription>
             <p>
@@ -35,14 +36,14 @@ const Home = ({ state }) => {
       <CoursesContent />
       <AuthorContainer>
         <AuthorAvatar>
-          <img loading="lazy" src={homeConstants.userImage} />
+          <Image loading="lazy" src={homeConstants.userImage} />
         </AuthorAvatar>
         <h2>{homeConstants.AuthorInfo.title}</h2>
         <p>{homeConstants.AuthorInfo.description}</p>
         <SocialContainer breakpoints={breakpoints}>
           {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
             <a href={link} key={link} target="_blank">
-              <img loading="lazy" src={icon} />
+              <Image loading="lazy" src={icon} />
             </a>
           ))}
         </SocialContainer>

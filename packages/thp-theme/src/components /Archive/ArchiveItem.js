@@ -1,6 +1,7 @@
 import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
+import Image from "@frontity/components/image";
 import { dataPost } from "../Handlers/dataManager";
 import Category from "./Category";
 import AuthorLink from "./AuthorLink";
@@ -16,12 +17,9 @@ const ArchiveItem = ({ item, state, libraries }) => {
   return (
     <div>
       <Link link={link}>
-        <ImgFuturedMedia
-          loading="lazy"
-          breakpoints={breakpoints}
-          src={img.src}
-          alt={img.alt}
-        />
+        <ImgFuturedMedia breakpoints={breakpoints}>
+          <Image loading="lazy" src={img.src} alt={img.alt} />
+        </ImgFuturedMedia>
       </Link>
       <AvatarInfoContainer breakpoints={breakpoints}>
         <Link link={author.link}>
@@ -46,13 +44,15 @@ const ArchiveItem = ({ item, state, libraries }) => {
   );
 };
 
-const ImgFuturedMedia = styled.img`
-  width: 100%;
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
-    border-radius: var(--border-radius);
-  }
-  &:hover {
-    cursor: pointer;
+const ImgFuturedMedia = styled.div`
+  img {
+    width: 100%;
+    @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+      border-radius: var(--border-radius);
+    }
+    &:hover {
+      cursor: pointer;
+    }
   }
 `;
 

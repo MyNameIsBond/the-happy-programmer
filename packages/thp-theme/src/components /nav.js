@@ -13,7 +13,9 @@ const Nav = ({ state, actions }) => {
               actions.router.set("/");
             }}
           >
-            <Logo />
+            <Link link={"/"}>
+              <Logo />
+            </Link>
           </LogoContainer>
           <MenuStyle>
             {state.theme.menu.map(([name, link]) => {
@@ -97,7 +99,7 @@ const NavContainer = styled.nav`
 
 const LogoContainer = styled.css`
   fill: var(--logo-Colour);
-  circle:nth-child(2) {
+  circle:nth-of-type(2) {
     stroke: var(--logo-Colour);
   }
 

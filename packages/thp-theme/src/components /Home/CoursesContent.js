@@ -3,6 +3,7 @@ import { homeConstants } from "../constants/constants-string";
 import { connect, styled } from "frontity";
 import { Primary, Secondary } from "../reusableComponents/buttons";
 import { ContainerDiv } from "../reusableComponents/container";
+import Image from "@frontity/components/image";
 
 const CoursesContent = ({ state }) => {
   const breakpoints = state.theme.breakpoints;
@@ -14,7 +15,7 @@ const CoursesContent = ({ state }) => {
           <CoursesContainer breakpoints={breakpoints} key={title}>
             <ContainerDiv>
               <CourseDiv breakpoints={breakpoints} row={row}>
-                <img loading="lazy" src={icon} width={width} />
+                <Image loading="lazy" src={icon} width={width} />
                 <CoursesCredentials breakpoints={breakpoints}>
                   <h2>{title}</h2>
                   <p>{desc}</p>

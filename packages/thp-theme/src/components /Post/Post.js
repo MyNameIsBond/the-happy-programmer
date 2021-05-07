@@ -4,6 +4,8 @@ import { getData, dataPost } from "../Handlers/dataManager";
 import { ContainerDiv } from "../reusableComponents/container";
 import Category from "../Archive/Category";
 import AuthorLink from "../Archive/AuthorLink";
+import Image from "@frontity/components/image";
+
 const Post = ({ state, libraries }) => {
   const data = getData(state);
   const post = state.source[data.type][data.id];
@@ -17,7 +19,9 @@ const Post = ({ state, libraries }) => {
     <>
       <ContainerDiv>
         <LandingContainer>
-          <Thumbnail loading="lazy" src={img.src} />
+          <Thumbnail>
+            <Image src={img.src} />
+          </Thumbnail>
           <CatDateContainer>
             <Category category={categories} />
             <AuthorLink date={date} author={author} />
@@ -47,9 +51,11 @@ const CatDateContainer = styled.div`
   }
 `;
 
-const Thumbnail = styled.img`
-  width: 100%;
-  border-radius: var(--border-radius);
+const Thumbnail = styled.div`
+  img {
+    width: 100%;
+    border-radius: var(--border-radius);
+  }
 `;
 
 const LandingContainer = styled.div`
