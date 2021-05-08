@@ -3,7 +3,7 @@ import {
   coldarkCold,
   coldarkDark,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { connect, styled } from "frontity";
+import { styled } from "frontity";
 import usePrefersColorScheme from "./usePrefersColorScheme";
 
 const Text = styled.div`
@@ -33,4 +33,4 @@ const codeHighlighter = {
   },
 };
 
-export default connect(codeHighlighter);
+export default codeHighlighter;

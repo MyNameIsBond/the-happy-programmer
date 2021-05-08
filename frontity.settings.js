@@ -34,7 +34,6 @@ const settings = {
         },
       },
     },
-    "frontity-contact-form-7",
     "@frontity/html2react",
     "@frontity/head-tags",
     "@frontity/yoast",
