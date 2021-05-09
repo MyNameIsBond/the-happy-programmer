@@ -10,6 +10,7 @@ const Post = ({ state, libraries }) => {
   const data = getData(state);
   const post = state.source[data.type][data.id];
   const Html2React = libraries.html2react.Component;
+  console.log("HTML2React", Html2React);
   const { content, date, img, title, excerpt, categories, author } = dataPost(
     state,
     post
@@ -20,7 +21,7 @@ const Post = ({ state, libraries }) => {
       <ContainerDiv>
         <LandingContainer>
           <Thumbnail>
-            <Image src={img.src} />
+            <Image loading="lazy" src={img.src} />
           </Thumbnail>
           <CatDateContainer>
             <Category category={categories} />
@@ -28,7 +29,6 @@ const Post = ({ state, libraries }) => {
           </CatDateContainer>
           <CredentialContainer>
             <h1>{title}</h1>
-            <Html2React html={excerpt} />
           </CredentialContainer>
           <hr />
         </LandingContainer>
