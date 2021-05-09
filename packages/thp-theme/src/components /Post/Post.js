@@ -1,16 +1,17 @@
-import { connect, styled } from "frontity";
 import React from "react";
+import { connect, styled, useConnect } from "frontity";
 import { getData, dataPost } from "../Handlers/dataManager";
 import { ContainerDiv } from "../reusableComponents/container";
 import Category from "../Archive/Category";
 import AuthorLink from "../Archive/AuthorLink";
 import Image from "@frontity/components/image";
 
-const Post = ({ state, libraries }) => {
+const Post = () => {
+  const { state, libraries } = useConnect();
   const data = getData(state);
   const post = state.source[data.type][data.id];
   const Html2React = libraries.html2react.Component;
-  console.log("HTML2React", Html2React);
+
   const { content, date, img, title, excerpt, categories, author } = dataPost(
     state,
     post
