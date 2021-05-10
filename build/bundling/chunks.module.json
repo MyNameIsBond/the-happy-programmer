@@ -1,26 +1,22 @@
 {
   "errors": [],
   "warnings": [],
-  "hash": "2e12dbda4b426d654d7a",
+  "hash": "452daff8fae6f9e48db3",
   "publicPath": "/static/",
   "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
   "assetsByChunkName": {
     "Loading": "Loading.module.js",
-    "the-happy-programmer": [
-      "the-happy-programmer.module.js",
-      "the-happy-programmer.250a6df5d44bfa12f3b2.hot-update.js"
-    ]
+    "the-happy-programmer": "the-happy-programmer.module.js"
   },
   "assets": [],
-  "filteredAssets": 13,
+  "filteredAssets": 11,
   "namedChunkGroups": {
     "the-happy-programmer": {
       "chunks": [
         "the-happy-programmer"
       ],
       "assets": [
-        "the-happy-programmer.module.js",
-        "the-happy-programmer.250a6df5d44bfa12f3b2.hot-update.js"
+        "the-happy-programmer.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -2609,8 +2605,7 @@
     {
       "id": "the-happy-programmer",
       "files": [
-        "the-happy-programmer.module.js",
-        "the-happy-programmer.250a6df5d44bfa12f3b2.hot-update.js"
+        "the-happy-programmer.module.js"
       ]
     }
   ]

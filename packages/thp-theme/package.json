@@ -10,7 +10,9 @@
   "dependencies": {
     "@frontity/components": "^1.7.1",
     "@frontity/head-tags": "^1.1.1",
+    "@frontity/html2react": "^1.6.2",
     "@frontity/yoast": "^2.1.1",
-    "frontity": "^1.15.0"
+    "frontity": "^1.15.0",
+    "global": "^4.4.0"
   }
 }
