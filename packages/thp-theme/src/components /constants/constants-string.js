@@ -1,12 +1,17 @@
-import { default as swiftUI } from "./swiftuiIcon.svg";
-import { default as flutter } from "./flutterIcon.svg";
-import { default as reactNative } from "./reactNativeIcon.svg";
-import { default as js } from "./JSIcon.svg";
 import { default as patreonIcon } from "./patreonIcon.svg";
 import { default as facebookIcon } from "./facebookIcon.svg";
 import { default as youtubeIcon } from "./youtubeIcon.svg";
 import { default as twitterIcon } from "./twitterIcon.svg";
 
+const lessonIcons = {
+  flutter:
+    "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-simple-flutter.svg",
+  swiftUI:
+    "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-simple-swift.svg",
+  js: "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-ionic-logo-javascript.svg",
+  reactNative:
+    "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-awesome-react.svg",
+};
 const homeConstants = {
   userImage:
     "https://thehappyprogrammer.com/wp-content/uploads/2021/03/IMG_0918-2-1.jpg",
@@ -16,10 +21,10 @@ const homeConstants = {
   header: "EVERYTHING ABOUT MOBILE AND WEB",
   subheader: "What you can learn here",
   lessonContainer: [
-    [swiftUI, "SwiftUI", "SwiftUI posts and tutorials"],
-    [flutter, "Flutter", "Learn Flutter for every platform"],
-    [reactNative, "React Native", "React Native for heros"],
-    [js, "JavaScript", "React Native we will learn JS too"],
+    [lessonIcons.swiftUI, "SwiftUI", "SwiftUI posts and tutorials"],
+    [lessonIcons.flutter, "Flutter", "Learn Flutter for every platform"],
+    [lessonIcons.reactNative, "React Native", "React Native for heros"],
+    [lessonIcons.js, "JavaScript", "React Native we will learn JS too"],
   ],
   coursesContainer: [
     // icon , title , description , link , width of the icon-svg, disabled,row-reverse.

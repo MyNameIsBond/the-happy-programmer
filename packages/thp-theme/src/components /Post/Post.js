@@ -16,6 +16,7 @@ const Post = () => {
     state,
     post
   );
+  console.log("Content:", content);
 
   return (
     <>
@@ -40,6 +41,8 @@ const Post = () => {
     </>
   );
 };
+
+export default connect(Post);
 
 const CatDateContainer = styled.div`
   justify-content: space-between;
@@ -134,5 +137,3 @@ const PostContainer = styled.div`
     font-size: 0.8rem;
   }
 `;
-
-export default connect(Post);
