@@ -1,5 +1,4 @@
-import React from "react";
-import { connect, Head, styled } from "frontity";
+import { connect, styled } from "frontity";
 import { Primary, Secondary } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
@@ -36,14 +35,14 @@ const Home = ({ state }) => {
       <CoursesContent />
       <AuthorContainer>
         <AuthorAvatar>
-          <Image loading="lazy" src={homeConstants.userImage} />
+          <Image src={homeConstants.userImage} />
         </AuthorAvatar>
         <h2>{homeConstants.AuthorInfo.title}</h2>
         <p>{homeConstants.AuthorInfo.description}</p>
         <SocialContainer breakpoints={breakpoints}>
           {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
             <a href={link} key={link} target="_blank">
-              <Image loading="lazy" src={icon} />
+              <Image src={icon} />
             </a>
           ))}
         </SocialContainer>
@@ -155,17 +154,12 @@ const HeaderDescription = styled.h1`
 // ------------------Author Container------------------
 
 const AuthorAvatar = styled.div`
-  height: 200px;
-  width: 200px;
-  border-radius: 100%;
-  overflow: hidden;
-
   img {
+    border-radius: 100%;
+    height: 200px;
+    width: 200px;
     position: relative;
     object-fit: cover;
-    left: -35px;
-    width: auto;
-    height: 100%;
   }
 `;
 

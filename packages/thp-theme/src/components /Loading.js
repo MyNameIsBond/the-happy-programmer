@@ -1,4 +1,3 @@
-import React from "react";
 import { connect, styled, keyframes } from "frontity";
 import { ContainerDiv } from "./reusableComponents/container";
 const Loading = ({ state }) => {

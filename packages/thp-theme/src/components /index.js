@@ -1,19 +1,18 @@
-import React from "react";
 import { connect, Global, Head, loadable } from "frontity";
 import { globalStyles } from "./style/global-style";
 import Switch from "@frontity/components/switch";
 import Title from "./title";
-import Home from "./home";
-import Archive from "./Archive/Archive";
+import Archive from "./archive";
 import Nav from "./nav";
 import Footer from "./footer";
 import Post from "./Post/Post";
-import Error404 from "./Error404";
-import SearchPage from "./Search/SearchPage";
-import Contact from "./contact";
-import Arch from "./Archive/Archive.js";
 
 const Loader = loadable(() => import("./Loading"));
+const Error404 = loadable(() => import("./Error404"));
+const Home = loadable(() => import("./home"));
+const Contact = loadable(() => import("./contact"));
+const Arch = loadable(() => import("./Archive/archive.js"));
+const SearchPage = loadable(() => import("./Search/SearchPage"));
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -25,30 +24,6 @@ const Root = ({ state }) => {
         <meta name="description" content={state.frontity.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <html lang="en" />
-        <link
-          ref="prefetch"
-          href="https://thehappyprogrammer.com/wp-content/uploads/2021/05/Group-76.svg"
-        />
-        <link
-          ref="prefetch"
-          href="http://localhost:3000/static/the-happy-programmer.module.js"
-        />
-        <link
-          ref="prefetch"
-          href="https://thehappyprogrammer.com/wp-content/uploads/2021/05/Group-27.svg"
-        />
-        <link
-          ref="prefetch"
-          href="https://thehappyprogrammer.com/wp-content/uploads/2021/05/svgReactNative.svg"
-        />
-        <link
-          ref="prefetch"
-          href="https://thehappyprogrammer.com/wp-content/uploads/2021/05/svgFlutterMobile.svg"
-        />
-        <link
-          ref="prefetch"
-          href="http://localhost:3000/static/the-happy-programmer.module.js"
-        />
       </Head>
       <Global styles={globalStyles} />
       <Nav />

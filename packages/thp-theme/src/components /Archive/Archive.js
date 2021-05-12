@@ -1,9 +1,8 @@
-import React from "react";
 import { connect, styled } from "frontity";
 import { ContainerDiv } from "../reusableComponents/container";
 import { getData } from "../Handlers/dataManager";
 import SearchInput from "../Search/SearchInput";
-import ArchiveItem from "./ArchiveItem";
+import ArchiveItem from "./archiveItem";
 const Archive = ({ state, searchQuery }) => {
   const data = getData(state);
 

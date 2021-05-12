@@ -1,8 +1,3 @@
-import { default as patreonIcon } from "./patreonIcon.svg";
-import { default as facebookIcon } from "./facebookIcon.svg";
-import { default as youtubeIcon } from "./youtubeIcon.svg";
-import { default as twitterIcon } from "./twitterIcon.svg";
-
 const lessonIcons = {
   flutter:
     "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-simple-flutter.svg",
@@ -12,6 +7,18 @@ const lessonIcons = {
   reactNative:
     "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-awesome-react.svg",
 };
+
+const socialIcons = {
+  patreonIcon:
+    "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-simple-patreon.svg",
+  faceBookIcon:
+    "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-zocial-facebook.svg",
+  twitterIcon:
+    "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-ionic-logo-twitter.svg",
+  youtubeIcon:
+    "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-simple-youtube.svg",
+};
+
 const homeConstants = {
   userImage:
     "https://thehappyprogrammer.com/wp-content/uploads/2021/03/IMG_0918-2-1.jpg",
@@ -71,20 +78,25 @@ const homeConstants = {
       "I have developed numerous of iOS and Android apps. I have participated in many open course projects. An experienced developer in web development, enterprise and mobile development. Enthusiastic about programming and technology.",
     socials: [
       [
-        patreonIcon,
+        socialIcons.patreonIcon,
         "https://www.patreon.com/thehappyprogrammer",
         "Become A Patreon",
         "#eb5354",
       ],
       [
-        facebookIcon,
+        socialIcons.faceBookIcon,
         "https://www.facebook.com/The-Happy-Programmer-106178104593013",
         "FaceBook",
         "#499BF0",
       ],
-      [twitterIcon, "https://twitter.com/happy_prog", "Twitter", "#4EA0EB"],
       [
-        youtubeIcon,
+        socialIcons.twitterIcon,
+        "https://twitter.com/happy_prog",
+        "Twitter",
+        "#4EA0EB",
+      ],
+      [
+        socialIcons.youtubeIcon,
         "https://www.youtube.com/channel/UC6iG4M34lttUcEFUdSVsGVA",
         "YouTube",
         "#EA3323",

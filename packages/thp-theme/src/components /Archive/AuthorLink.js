@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "@frontity/components/link";
 import { styled } from "frontity";
 

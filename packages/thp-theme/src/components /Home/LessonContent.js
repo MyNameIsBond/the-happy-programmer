@@ -1,4 +1,3 @@
-import React from "react";
 import { connect, styled } from "frontity";
 import { homeConstants } from "../constants/constants-string";
 import { ContainerDiv } from "../reusableComponents/container";

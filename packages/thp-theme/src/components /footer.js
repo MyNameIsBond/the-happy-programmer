@@ -1,6 +1,6 @@
-import React from "react";
 import { homeConstants } from "./constants/constants-string";
 import Link from "@frontity/components/link";
+import Image from "@frontity/components/image";
 import { connect, styled } from "frontity";
 import Logo from "./constants/logo";
 import SubscribeButton from "./reusableComponents/subscribe";
@@ -19,7 +19,7 @@ const Footer = ({ state }) => {
             <Socials>
               {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
                 <a key={link} href={link} target="_blank">
-                  <img loading="lazy" src={icon} />
+                  <Image src={icon} />
                 </a>
               ))}
             </Socials>

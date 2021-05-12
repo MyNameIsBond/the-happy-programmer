@@ -1,10 +1,9 @@
-import React from "react";
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
 import { dataPost } from "../Handlers/dataManager";
-import Category from "./Category";
-import AuthorLink from "./AuthorLink";
+import Category from "./category";
+import AuthorLink from "./authorLink";
 
 const ArchiveItem = ({ item, state, libraries }) => {
   const { link, title, img, excerpt, author, date, categories } = dataPost(

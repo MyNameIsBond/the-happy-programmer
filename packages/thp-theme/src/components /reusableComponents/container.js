@@ -1,4 +1,4 @@
-import { connect, styled } from "frontity";
+import { styled } from "frontity";
 
 const MainContainer = styled.div`
   margin-right: auto;

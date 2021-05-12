@@ -1,5 +1,4 @@
-import styled from "@emotion/styled";
-import React from "react";
+import { styled } from "frontity";
 
 const MyInput = ({ placeholder, ...props }) => (
   <InputStyle {...props} placeholder={placeholder} />

@@ -1,4 +1,3 @@
-import React from "react";
 import { homeConstants } from "../constants/constants-string";
 import { connect, styled } from "frontity";
 import { Primary, Secondary } from "../reusableComponents/buttons";

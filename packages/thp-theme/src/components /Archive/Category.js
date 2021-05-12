@@ -1,7 +1,6 @@
-import React from "react";
 import { Primary } from "../reusableComponents/buttons";
 import { connect, styled } from "frontity";
-import { CategoryContainer } from "./CategoryStyle";
+import { CategoryContainer } from "./categoryStyle";
 import Link from "@frontity/components/link";
 import { getData } from "../Handlers/dataManager";
 import { homeConstants } from "../constants/constants-string";

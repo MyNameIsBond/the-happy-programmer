@@ -1,4 +1,3 @@
-import React from "react";
 import { MyInput } from "./inputs";
 import { Primary } from "./buttons";
 import { styled, connect } from "frontity";

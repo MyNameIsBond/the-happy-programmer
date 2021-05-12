@@ -1,4 +1,3 @@
-import React from "react";
 import { connect, styled } from "frontity";
 import { Primary } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";

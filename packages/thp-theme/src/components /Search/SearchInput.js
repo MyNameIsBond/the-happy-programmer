@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { connect, styled } from "frontity";
 import { getData, urlToStg } from "../Handlers/dataManager";
-import { default as searchIcon } from "../constants/searchIcon.svg";
+import Image from "@frontity/components/image";
 import { MyInput } from "../reusableComponents/inputs";
 
 export const SearchInput = ({ state, searchQuery, actions }) => {
@@ -28,7 +28,11 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
   return (
     <>
       <InputContainer breakpoints={breakpoints} onSubmit={searchSubmit}>
-        <img loading="lazy" src={searchIcon} />
+        <Image
+          src={
+            "https://thehappyprogrammer.com/wp-content/uploads/2021/05/searchIcon.svg"
+          }
+        />
         <MyInput
           value={search}
           onChange={(e) => setsearch(e.target.value)}

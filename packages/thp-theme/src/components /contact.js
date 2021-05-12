@@ -1,4 +1,3 @@
-import React from "react";
 import { styled } from "frontity";
 const contact = () => {
   return <Background>Contact</Background>;
