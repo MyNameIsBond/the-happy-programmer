@@ -14,8 +14,6 @@ const Post = ({ state, libraries }) => {
     state,
     post
   );
-  console.log("Content:", content);
-
   return (
     <>
       <ContainerDiv>
