@@ -67,7 +67,7 @@ const homeConstants = {
       "Web Tutorials",
       "On the web, we will cover mostly ReactJS. We will clone websites and teach you how to go from zero to hero, how to understand crucial concepts, and deploy.",
       "",
-      "90%",
+      "100%",
       true,
       "row-reverse",
     ],
