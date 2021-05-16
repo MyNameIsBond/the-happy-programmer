@@ -2,6 +2,7 @@ import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 import script from "@frontity/html2react/processors/script";
 import Root from "./components ";
+import Image from "@frontity/html2react/processors/image";
 import codeHighlighter from "./Processor/Highlight";
 export default {
   name: "thp-theme",
@@ -21,16 +22,10 @@ export default {
       },
     },
   },
-  actions: {
-    theme: {
-      beforeSSR: async ({ state, actions }) => {
-        await actions.source.fetch(state.router.link);
-      },
-    },
-  },
+  actions: {},
   libraries: {
     html2react: {
-      processors: [link, iframe, script, codeHighlighter],
+      processors: [link, iframe, script, codeHighlighter, Image],
     },
   },
 };
