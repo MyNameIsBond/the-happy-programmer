@@ -74,6 +74,7 @@ const homeConstants = {
   ],
   AuthorInfo: {
     title: "My Name Is Tony",
+    link: "/about",
     description:
       "I have developed numerous of iOS and Android apps. I have participated in many open course projects. An experienced developer in web development, enterprise and mobile development. Enthusiastic about programming and technology.",
     socials: [

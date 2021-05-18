@@ -46,7 +46,9 @@ const Home = ({ state }) => {
             </a>
           ))}
         </SocialContainer>
-        <Secondary>Read More</Secondary>
+        <Link link={homeConstants.AuthorInfo.link}>
+          <Secondary>Read More</Secondary>
+        </Link>
       </AuthorContainer>
     </>
   );
@@ -191,6 +193,12 @@ const SocialContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
+  img {
+    filter: grayscale(0%);
+  }
+  img:hover {
+    filter: grayscale(100%);
+  }
   a {
     margin: 3em 2em;
     @media screen and (max-width: ${(props) => props.breakpoints.smallMobile}) {

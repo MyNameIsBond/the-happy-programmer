@@ -6,7 +6,7 @@ import Archive from "./archive";
 import Nav from "./nav";
 import Footer from "./footer";
 import Post from "./Post/Post";
-
+const About = loadable(() => import("./about"));
 const Loader = loadable(() => import("./Loading"));
 const Error404 = loadable(() => import("./Error404"));
 const Home = loadable(() => import("./home"));
@@ -37,6 +37,7 @@ const Root = ({ state }) => {
         <SearchPage when={data.isSearch} />
         <Arch when={data.isAuthor} />
         <Contact when={data.link == "/contact/"} />
+        <About when={data.link == "/about/"} />
       </Switch>
       <Footer />
     </>
