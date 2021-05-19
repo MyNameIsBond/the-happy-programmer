@@ -8,7 +8,6 @@ const settings = {
     },
     theme: {
       menu: [
-        ["Home", "/"],
         ["SwiftUI", "/category/swiftui/"],
         ["Contact", "/contact/"],
       ],
