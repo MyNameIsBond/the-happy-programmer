@@ -113,4 +113,11 @@ const homeConstants = {
   },
 };
 
+const about = {
+  title: "",
+  subTitle: "",
+  subText: "",
+  image: "",
+  whatIdo: {},
+};
 export { homeConstants };

@@ -16,7 +16,6 @@ const SearchPage = loadable(() => import("./Search/SearchPage"));
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
-  console.log("data:", data);
 
   return (
     <>
