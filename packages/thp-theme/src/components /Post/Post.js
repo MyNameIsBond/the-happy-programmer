@@ -31,7 +31,7 @@ const Post = ({ state, libraries }) => {
           <hr />
         </LandingContainer>
         <PostContainer>
-          <Html2React html={content} />
+          <Html2React html={content ? content : ""} />
         </PostContainer>
       </ContainerDiv>
     </>
