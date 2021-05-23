@@ -44,19 +44,19 @@ const globalStyles = css`
     letter-spacing: 0.00938rem;
   }
   h1 {
-    font-size: 3.052rem;
+    font-size: 2.488rem;
   }
   h2 {
-    font-size: 2.441rem;
+    font-size: 2.074rem;
   }
   h3 {
-    font-size: 1.953rem;
+    font-size: 1.728rem;
   }
   h4 {
-    font-size: 1.563rem;
+    font-size: 1.44rem;
   }
   h5 {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
   }
   caption {
     font-size: 0.8rem;
@@ -72,8 +72,8 @@ const globalStyles = css`
     text-decoration: underline;
   }
   :root {
-    --border-radius: 0.4em;
-    --background-colour: #f8f8f8;
+    --border-radius: 0.2em;
+    --background-colour: #f9f9f9;
     --text-colour: #202124;
     --accent-colour: #8241c7;
     --secondary-colour: #ff6584;
@@ -86,8 +86,8 @@ const globalStyles = css`
     --logo-Colour: black;
     --input-text-colour: #202124;
     --loader-colour: #aaaaaa;
-    --border-input: #bcbcbc;
-    --input-background-colour: white;
+    --border-input: #f1f3f4;
+    --input-background-colour: #f1f3f4;
     // Footer Style
     --footer-background: #242424;
     --footer-text: #ffffff;

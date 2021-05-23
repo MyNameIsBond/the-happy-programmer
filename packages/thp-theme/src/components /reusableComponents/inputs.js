@@ -11,11 +11,11 @@ const InputStyle = styled.input`
   background: var(--input-background-colour);
   border-radius: var(--border-radius);
   margin: 0em 0.5em;
-  border: solid 1px var(--border-input);
+  border: solid 1px var(--input-background-colour);
   font-size: 1rem;
   color: var(--text-colour);
   &::placeholder {
-    color: #989898;
+    color: var(--secondary-text-colour);
     opacity: 1;
     font-family: "Roboto", sans-serif;
     font-weight: 300;

@@ -5,7 +5,7 @@ import SearchInput from "../Search/SearchInput";
 import ArchiveItem from "./archiveItem";
 const Archive = ({ state, searchQuery }) => {
   const data = getData(state);
-
+  console.log("DATA:", state.source[data.taxonomy][data.id].name);
   const breakpoints = state.theme.breakpoints;
   return (
     <ContainerDiv>

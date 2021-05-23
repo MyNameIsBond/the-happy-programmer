@@ -80,7 +80,7 @@ const AuthorAvatar = styled.img`
   display: none;
   padding: 0em 1em;
   @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
-    height: 4rem;
+    height: 3rem;
     width: auto;
     border-radius: 50%;
     cursor: pointer;
@@ -89,7 +89,7 @@ const AuthorAvatar = styled.img`
   }
 `;
 const InfoContainer = styled.div`
-  margin-top: 0.5em;
+  margin-top: 0.2em;
   padding: 0em 1em;
   > a {
     color: var(--text-colour);

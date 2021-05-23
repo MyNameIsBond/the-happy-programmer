@@ -27,6 +27,19 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
 
   return (
     <>
+      {data.taxonomy && (
+        <ArchiveTitle breakpoints={breakpoints}>
+          {state.source[data.taxonomy][data.id].name}
+        </ArchiveTitle>
+      )}
+      {data.isSearch && (
+        <ArchiveTitle breakpoints={breakpoints}>
+          {urlToStg(searchQuery)}
+        </ArchiveTitle>
+      )}
+      {data.isAuthor && (
+        <ArchiveTitle breakpoints={breakpoints}>Tony</ArchiveTitle>
+      )}
       <InputContainer breakpoints={breakpoints} onSubmit={searchSubmit}>
         <Image
           src={
@@ -39,31 +52,48 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
           placeholder="Search"
         />
       </InputContainer>
-      {data.taxonomy && (
-        <SearchTag>
-          <CategoryText>
-            {state.source[data.taxonomy][data.id].name}
-          </CategoryText>
-          <CategoryText>Results: {total}</CategoryText>
-        </SearchTag>
-      )}
-      {data.isSearch && (
-        <SearchTag>
-          <CategoryText>{urlToStg(searchQuery)}</CategoryText>
-          <CategoryText>Results: {total}</CategoryText>
-        </SearchTag>
-      )}
-
-      {data.isAuthor && (
-        <SearchTag>
-          <CategoryText>Author: Tony</CategoryText>
-          <CategoryText>Posts: {total}</CategoryText>
-        </SearchTag>
-      )}
+      <SearchTag>
+        {data.taxonomy && (
+          <>
+            <CategoryText>
+              {state.source[data.taxonomy][data.id].name}
+            </CategoryText>
+            <CategoryText>Results: {total}</CategoryText>
+          </>
+        )}
+        {data.isSearch && (
+          <>
+            <CategoryText>{urlToStg(searchQuery)}</CategoryText>
+            <CategoryText>Results: {total}</CategoryText>
+          </>
+        )}
+        {data.isAuthor && (
+          <>
+            <CategoryText>Author: Tony</CategoryText>
+            <CategoryText>Posts: {total}</CategoryText>
+          </>
+        )}
+        <SupportPatreonText>
+          support me on <a>Patreon</a>
+        </SupportPatreonText>
+      </SearchTag>
     </>
   );
 };
 
+const SupportPatreonText = styled.p`
+  padding: 0em;
+  margin: 0em;
+  margin-left: auto;
+`;
+const ArchiveTitle = styled.h1`
+  padding: 0em 0.5em;
+  margin-bottom: 0em;
+  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    padding-top: 1em;
+  }
+  padding-top: 1em;
+`;
 const CategoryText = styled.p`
   font-size: 12px;
   font-weight: 500;
@@ -82,10 +112,6 @@ const SearchTag = styled.div`
   padding: 0.5em 1em;
 `;
 const InputContainer = styled.form`
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
-    padding-top: 5em;
-  }
-  padding-top: 2em;
   display: flex;
   width: 100%;
   img {
