@@ -74,7 +74,7 @@ const globalStyles = css`
   :root {
     --border-radius: 0.4em;
     --background-colour: #f8f8f8;
-    --text-colour: #030303;
+    --text-colour: #202124;
     --accent-colour: #8241c7;
     --secondary-colour: #ff6584;
     --secondary-text-colour: #5a5a5a;
@@ -84,7 +84,7 @@ const globalStyles = css`
     --hover-nav-colour: #1c1c1c;
     --hover-shadow: 0px 1px 1px lightgray;
     --logo-Colour: black;
-    --input-text-colour: #030303;
+    --input-text-colour: #202124;
     --loader-colour: #aaaaaa;
     --border-input: #bcbcbc;
     --input-background-colour: white;
