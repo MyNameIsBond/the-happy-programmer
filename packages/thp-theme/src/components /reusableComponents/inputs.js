@@ -11,7 +11,7 @@ const InputStyle = styled.input`
   background: var(--input-background-colour);
   border-radius: var(--border-radius);
   margin: 0em 0.5em;
-  border: solid 1px var(--input-background-colour);
+  border: solid 1px var(--border-input);
   font-size: 1rem;
   color: var(--text-colour);
   &::placeholder {
@@ -20,10 +20,13 @@ const InputStyle = styled.input`
     font-family: "Roboto", sans-serif;
     font-weight: 300;
   }
+  &:hover {
+    border: solid 1px var(--hover-border-input);
+  }
+
   &:focus {
     outline: none;
-    border-color: var(--secondary-colour);
-    box-shadow: 0 0 0 0.2rem rgba(255, 101, 132, 0.25);
+    border: solid 1px var(--secondary-colour);
   }
 `;
 

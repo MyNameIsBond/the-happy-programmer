@@ -1,4 +1,4 @@
-import { Primary } from "../reusableComponents/buttons";
+import { Primary, LinkButton } from "../reusableComponents/buttons";
 import { connect, styled } from "frontity";
 import { CategoryContainer } from "./categoryStyle";
 import Link from "@frontity/components/link";
@@ -12,21 +12,17 @@ const Category = ({ category, state }) => {
   return (
     <CategoryContainer>
       {category.map((item) => (
-        <Link link={item.link} key={item.id}>
-          <Primary>
-            <span>{item.name}</span>
-          </Primary>
-        </Link>
+        <LinkButton link={item.link} key={item.id}>
+          <span>{item.name}</span>
+        </LinkButton>
       ))}
       {isPostType &&
         socials.map(([icon, link, desc, color]) => (
           <Patreonbutton key={link} color={color}>
-            <Link link={link}>
-              <Primary>
-                <PatreonImg loading="lazy" src={icon} />
-                <span>{desc}</span>
-              </Primary>
-            </Link>
+            <LinkButton link={link}>
+              <PatreonImg loading="lazy" src={icon} />
+              <span>{desc}</span>
+            </LinkButton>
           </Patreonbutton>
         ))}
     </CategoryContainer>
@@ -44,6 +40,7 @@ const PatreonImg = styled.img`
 
 const Patreonbutton = styled.div`
   button {
+    box-shadow: none;
     text-transform: capitalize;
     display: flex;
     flex-direction: row;

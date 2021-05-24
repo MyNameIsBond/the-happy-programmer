@@ -10,6 +10,7 @@ const ArchiveItem = ({ item, state, libraries }) => {
     state,
     item
   );
+  console.log("Author:", author);
   const Html2React = libraries.html2react.Component;
   const breakpoints = state.theme.breakpoints;
 
@@ -17,17 +18,18 @@ const ArchiveItem = ({ item, state, libraries }) => {
     <div>
       <Link link={link}>
         <ImgFuturedMedia breakpoints={breakpoints}>
-          <Image loading="lazy" src={img.src} alt={img.alt} />
+          <Image src={img.src} alt={img.alt} />
         </ImgFuturedMedia>
       </Link>
       <AvatarInfoContainer breakpoints={breakpoints}>
-        <Link link={author.link}>
+        <Atag link={author.link}>
           <AuthorAvatar
-            loading="lazy"
+            height="50"
+            width="auto"
             breakpoints={breakpoints}
             src={author.avatar}
           />
-        </Link>
+        </Atag>
         <InfoContainer>
           <Link link={link}>{title}</Link>
           {item.excerpt && (
@@ -43,9 +45,15 @@ const ArchiveItem = ({ item, state, libraries }) => {
   );
 };
 
+const Atag = styled(Link)`
+  display: contents;
+`;
+
 const ImgFuturedMedia = styled.div`
   img {
     width: 100%;
+    height: 16em;
+    object-fit: cover;
     @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
       border-radius: var(--border-radius);
     }
@@ -76,12 +84,10 @@ const AvatarInfoContainer = styled.div`
     padding: 0.5em 0.1em;
   }
 `;
-const AuthorAvatar = styled.img`
+const AuthorAvatar = styled(Image)`
   display: none;
   padding: 0em 1em;
   @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
-    height: 3rem;
-    width: auto;
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;
@@ -98,28 +104,26 @@ const InfoContainer = styled.div`
   }
 `;
 
-const DateText = styled.p`
-  font-size: 0.9em;
-  margin: 1em 0em;
-  padding: 0 0em;
-  color: var(--secondary-text-colour);
-  font-weight: 400;
-`;
-
 const SubText = styled.div`
   width: 22em;
+  overflow: hidden;
+  text-overflow: ellipsis;
   word-break: break-word;
   word-wrap: break-word;
-  hyphens: auto;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
   p {
     margin-block-end: 0.5em;
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
     color: var(--secondary-text-colour);
     word-break: break-word;
     word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 
   p:nth-of-type(2) {

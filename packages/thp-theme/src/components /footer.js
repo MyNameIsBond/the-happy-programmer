@@ -18,7 +18,7 @@ const Footer = ({ state }) => {
             </Link>
             <Socials>
               {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
-                <a key={link} href={link} target="_blank">
+                <a rel="noreferrer" key={link} href={link} target="_blank">
                   <Image src={icon} />
                 </a>
               ))}

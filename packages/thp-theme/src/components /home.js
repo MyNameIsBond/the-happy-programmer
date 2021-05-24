@@ -14,7 +14,10 @@ const Home = ({ state }) => {
     <>
       <MainContainer breakpoints={breakpoints}>
         <NavContainer breakpoints={breakpoints}>
-          <Image loading="lazy" src={homeConstants.homeSvg} />
+          <MyImage
+            data-src={homeConstants.homeSvg}
+            src={homeConstants.homeSvg}
+          />
           <LandingCredentials breakpoints={breakpoints}>
             <HeaderDescription>{homeConstants.mainHeader}</HeaderDescription>
             <p>
@@ -46,15 +49,38 @@ const Home = ({ state }) => {
             </a>
           ))}
         </SocialContainer>
-        <Link link={homeConstants.AuthorInfo.link}>
+        <Atag link={homeConstants.AuthorInfo.link}>
           <Secondary>Read More</Secondary>
-        </Link>
+        </Atag>
       </AuthorContainer>
     </>
   );
 };
 
+const MyImage = styled(Image)`
+  &::before {
+    background-color: blue;
+  }
+
+  &::after {
+    content: "Click to Load Image";
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 8vw;
+    color: #fff;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+`;
+
 // ------------------Landing Page------------------
+
+const Atag = styled(Link)`
+  display: contents;
+`;
 
 const LandingCredentials = styled.div`
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {

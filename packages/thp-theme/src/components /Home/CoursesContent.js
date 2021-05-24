@@ -14,7 +14,7 @@ const CoursesContent = ({ state }) => {
           <CoursesContainer breakpoints={breakpoints} key={title}>
             <ContainerDiv>
               <CourseDiv breakpoints={breakpoints} row={row}>
-                <Image loading="lazy" src={icon} width={width} />
+                <Image src={icon} width={width} />
                 <CoursesCredentials breakpoints={breakpoints}>
                   <h2>{title}</h2>
                   <p>{desc}</p>

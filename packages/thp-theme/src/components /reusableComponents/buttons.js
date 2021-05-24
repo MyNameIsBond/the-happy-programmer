@@ -1,12 +1,34 @@
 import { styled } from "frontity";
-
+import Link from "@frontity/components/link";
 const Primary = ({ children, ...props }) => (
   <PrimaryButton {...props}>{children}</PrimaryButton>
 );
-const Secondary = ({ children, disabled }) => (
+const Secondary = ({ children, disabled, ...props }) => (
   <SecondaryButton disabled={disabled}>{children}</SecondaryButton>
 );
 
+const LinkButton = ({ children, ...props }) => (
+  <SecondaryButtonLink {...props}>{children}</SecondaryButtonLink>
+);
+const SecondaryButtonLink = styled(Link)`
+  box-sizing: border-box;
+  padding: 10px 20px;
+  border-radius: var(--border-radius);
+  text-transform: uppercase;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  color: var(--text-colour);
+  transition-duration: 0.4s;
+  -webkit-transition-duration: 0.4s;
+
+  &:hover {
+    cursor: pointer;
+    background: var(--secondary-button-hover);
+  }
+`;
 const PrimaryButton = styled.button`
   white-space: normal;
   display: inline;
@@ -22,14 +44,15 @@ const PrimaryButton = styled.button`
   margin-left: 0.3em;
   -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
+  box-shadow: var(--button-shadow);
   &:hover {
     cursor: pointer;
     box-shadow: var(--hover-shadow);
+    background: rgba(130, 65, 199, 0.8);
   }
   &:focus {
     outline: none;
     border-color: var(--secondary-colour);
-    box-shadow: 0 0 0 0.2rem rgba(255, 101, 132, 0.25);
   }
 `;
 
@@ -40,7 +63,7 @@ const SecondaryButton = styled.button`
   text-transform: uppercase;
   font-size: 0.875rem;
   font-weight: 500;
-  border: 1px solid var(--text-colour);
+  border: none;
   background: none;
   text-transform: uppercase;
   color: var(--text-colour);
@@ -49,7 +72,7 @@ const SecondaryButton = styled.button`
 
   &:hover {
     cursor: pointer;
-    box-shadow: var(--hover-shadow);
+    background: var(--secondary-button-hover);
   }
   &:disabled {
     cursor: default;
@@ -59,9 +82,7 @@ const SecondaryButton = styled.button`
   }
   &:focus {
     outline: none;
-    border-color: var(--secondary-colour);
-    box-shadow: 0 0 0 0.2rem rgba(255, 101, 132, 0.25);
   }
 `;
 
-export { Primary, Secondary };
+export { Primary, Secondary, LinkButton };

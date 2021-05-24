@@ -74,15 +74,18 @@ const globalStyles = css`
   :root {
     --border-radius: 0.2em;
     --background-colour: #f9f9f9;
-    --text-colour: #202124;
+    --text-colour: rgba(0, 0, 0, 0.87);
     --accent-colour: #8241c7;
     --secondary-colour: #ff6584;
-    --secondary-text-colour: #5a5a5a;
+    --secondary-text-colour: rgba(0, 0, 0, 0.54);
     --secondary-background-colour: #f2f2f2;
     --disabled-components: #a0a0a0;
     --disabled-text: #777777;
     --hover-nav-colour: #1c1c1c;
-    --hover-shadow: 0px 1px 1px lightgray;
+    --button-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
+      0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
+    --secondary-button-hover: rgba(0, 0, 0, 0.08);
+    --hover-shadow: 3px 2px 2px lightgray;
     --logo-Colour: black;
     --input-text-colour: #202124;
     --loader-colour: #aaaaaa;
@@ -94,23 +97,25 @@ const globalStyles = css`
     --footer-logo-Colour: #ffffff;
     --footer-shadow: 0px 1px 1px lightgray;
     --footer-social: brightness(0) invert(1);
+    --hover-border-input: black;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --secondary-text-colour: #c1c1c1;
+      --secondary-button-hover: rgba(255, 255, 255, 0.08);
+      --secondary-text-colour: rgba(255, 255, 255, 0.7);
       --disabled-text: #a0a0a0;
       --hover-shadow: 0px 1px 1px black;
       --logo-Colour: #ffffff;
-      --background-colour: #242424;
-      --text-colour: #f8f8f8;
+      --background-colour: #212121;
+      --text-colour: #ffffff;
       --hover-nav-colour: #bcbcbc;
-      --secondary-background-colour: #333333;
+      --secondary-background-colour: #333;
       --loader-colour: #696969;
-      --border-input: #2f2f2f;
-
+      --border-input: #3a3a3a;
+      --input-background-colour: #212121;
+      --hover-border-input: white;
       // Footer Style
-      --input-background-colour: #1a1a1a;
       --footer-logo-Colour: white;
       --footer-background: #080808;
       --footer-text: #efefef;
