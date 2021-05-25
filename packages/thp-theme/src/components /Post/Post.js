@@ -16,11 +16,11 @@ const Post = ({ state, libraries }) => {
   );
   return (
     <>
+      <Thumbnail>
+        <Image loading="lazy" src={img.src} />
+      </Thumbnail>
       <ContainerDiv>
         <LandingContainer>
-          <Thumbnail>
-            <Image loading="lazy" src={img.src} />
-          </Thumbnail>
           <CatDateContainer>
             <Category category={categories} />
             <AuthorLink date={date} author={author} />
@@ -52,8 +52,13 @@ const CatDateContainer = styled.div`
 `;
 
 const Thumbnail = styled.div`
+  max-width: 90em;
+  margin-right: auto;
+  margin-left: auto;
   img {
     width: 100%;
+    height: 30em;
+    object-fit: cover;
     border-radius: var(--border-radius);
   }
 `;

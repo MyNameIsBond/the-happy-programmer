@@ -102,7 +102,7 @@ const globalStyles = css`
 
   @media (prefers-color-scheme: dark) {
     :root {
-      --secondary-colour: #f48fb1;
+      --secondary-colour: #e91e63;
       --secondary-button-hover: rgba(255, 255, 255, 0.08);
       --secondary-text-colour: rgba(255, 255, 255, 0.7);
       --disabled-text: #a0a0a0;
