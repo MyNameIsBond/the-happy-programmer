@@ -1,7 +1,5 @@
-import { Primary, LinkButton } from "../reusableComponents/buttons";
 import { connect, styled } from "frontity";
-import { CategoryContainer } from "./categoryStyle";
-import Link from "@frontity/components/link";
+import { CategoryContainer, TagLink } from "./categoryStyle";
 import { getData } from "../Handlers/dataManager";
 import { homeConstants } from "../constants/constants-string";
 
@@ -12,17 +10,17 @@ const Category = ({ category, state }) => {
   return (
     <CategoryContainer>
       {category.map((item) => (
-        <LinkButton link={item.link} key={item.id}>
+        <TagLink link={item.link} key={item.id}>
           <span>{item.name}</span>
-        </LinkButton>
+        </TagLink>
       ))}
       {isPostType &&
         socials.map(([icon, link, desc, color]) => (
           <Patreonbutton key={link} color={color}>
-            <LinkButton link={link}>
+            <TagLink link={link}>
               <PatreonImg loading="lazy" src={icon} />
               <span>{desc}</span>
-            </LinkButton>
+            </TagLink>
           </Patreonbutton>
         ))}
     </CategoryContainer>
@@ -39,7 +37,7 @@ const PatreonImg = styled.img`
 `;
 
 const Patreonbutton = styled.div`
-  button {
+  a {
     box-shadow: none;
     text-transform: capitalize;
     display: flex;
@@ -49,7 +47,7 @@ const Patreonbutton = styled.div`
     color: white;
     border-color: ${(props) => props.color};
   }
-  button:hover {
+  a:hover {
     border-color: ${(props) => props.color};
     background: ${(props) => props.color};
   }

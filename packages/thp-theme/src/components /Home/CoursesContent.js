@@ -90,7 +90,7 @@ const CourseDiv = styled.div`
     margin-block-start: 1.5em;
   }
   p {
-    font-weight: 300;
+    font-weight: 400;
   }
   @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
     width: 100%;

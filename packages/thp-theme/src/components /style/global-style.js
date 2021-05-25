@@ -20,7 +20,7 @@ const globalStyles = css`
     font-size: 1rem;
     line-height: 2.024rem;
     letter-spacing: 0.00938em;
-    font-weight: 300;
+    font-weight: 400;
   }
   h1,
   h2,
@@ -38,11 +38,7 @@ const globalStyles = css`
     text-decoration: none;
     letter-spacing: 0.00938rem;
   }
-  a {
-    color: var(--secondary-colour);
-    text-decoration: none;
-    letter-spacing: 0.00938rem;
-  }
+
   h1 {
     font-size: 2.488rem;
   }
@@ -67,17 +63,21 @@ const globalStyles = css`
     letter-spacing: 0.02857rem;
     font-weight: 400;
   }
-
+  a {
+    color: var(--secondary-colour);
+    letter-spacing: 0.00938rem;
+    text-decoration: none;
+  }
   a:hover {
     text-decoration: underline;
   }
   :root {
     --border-radius: 0.2em;
-    --background-colour: #f9f9f9;
-    --text-colour: rgba(0, 0, 0, 0.87);
+    --background-colour: #ffffff;
+    --text-colour: #202124;
     --accent-colour: #8241c7;
-    --secondary-colour: #ff6584;
-    --secondary-text-colour: rgba(0, 0, 0, 0.54);
+    --secondary-colour: #e91e63;
+    --secondary-text-colour: #5f6368;
     --secondary-background-colour: #f2f2f2;
     --disabled-components: #a0a0a0;
     --disabled-text: #777777;
@@ -102,6 +102,7 @@ const globalStyles = css`
 
   @media (prefers-color-scheme: dark) {
     :root {
+      --secondary-colour: #f48fb1;
       --secondary-button-hover: rgba(255, 255, 255, 0.08);
       --secondary-text-colour: rgba(255, 255, 255, 0.7);
       --disabled-text: #a0a0a0;

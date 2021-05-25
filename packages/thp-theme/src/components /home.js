@@ -1,5 +1,5 @@
 import { connect, styled } from "frontity";
-import { Primary, Secondary } from "./reusableComponents/buttons";
+import { Primary, Secondary, LinkButton } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
 import { homeConstants } from "./constants/constants-string";
@@ -49,9 +49,7 @@ const Home = ({ state }) => {
             </a>
           ))}
         </SocialContainer>
-        <Atag link={homeConstants.AuthorInfo.link}>
-          <Secondary>Read More</Secondary>
-        </Atag>
+        <LinkButton link={homeConstants.AuthorInfo.link}>Read More</LinkButton>
       </AuthorContainer>
     </>
   );
@@ -146,7 +144,7 @@ const NavContainer = styled.div`
 
     p {
       text-align: left;
-      font-weight: 300;
+      font-weight: 400;
       padding: 0;
     }
 
@@ -200,7 +198,7 @@ const AuthorContainer = styled.div`
   background: var(--secondary-background-colour);
   p {
     text-align: center;
-    font-weight: 300;
+    font-weight: 400;
     max-width: 650px;
   }
   h2 {

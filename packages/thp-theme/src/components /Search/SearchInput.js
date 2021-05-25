@@ -108,6 +108,8 @@ const CategoryText = styled.p`
   border: 1px solid var(--accent-colour);
 `;
 const SearchTag = styled.div`
+  align-items: center;
+
   display: flex;
   padding: 0.5em 1em;
 `;

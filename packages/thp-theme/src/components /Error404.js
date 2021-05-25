@@ -24,7 +24,7 @@ export default connect(Error404);
 
 const CredentialsContainer = styled.div`
   h1 {
-    font-weight: 300;
+    font-weight: 400;
   }
   a {
     text-decoration: none;

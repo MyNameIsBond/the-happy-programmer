@@ -90,7 +90,7 @@ const DescriptionPanel = styled.div`
   width: 30%;
   text-align: center;
   p {
-    font-weight: 300;
+    font-weight: 400;
   }
   h4 {
     margin-block-end: 0em;

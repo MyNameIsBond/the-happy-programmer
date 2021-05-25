@@ -23,8 +23,8 @@ const SecondaryButtonLink = styled(Link)`
   color: var(--text-colour);
   transition-duration: 0.4s;
   -webkit-transition-duration: 0.4s;
-
   &:hover {
+    text-decoration: none;
     cursor: pointer;
     background: var(--secondary-button-hover);
   }
