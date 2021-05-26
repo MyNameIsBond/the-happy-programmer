@@ -10,7 +10,7 @@ const ArchiveItem = ({ item, state, libraries }) => {
     state,
     item
   );
-  console.log("Author:", author);
+  console.log("Author:", img);
   const Html2React = libraries.html2react.Component;
   const breakpoints = state.theme.breakpoints;
 
@@ -18,7 +18,7 @@ const ArchiveItem = ({ item, state, libraries }) => {
     <div>
       <Link link={link}>
         <ImgFuturedMedia breakpoints={breakpoints}>
-          <Image src={img.src} alt={img.alt} />
+          <Image src={img.src} alt={img.alt} srcset={img.srcSet} />
         </ImgFuturedMedia>
       </Link>
       <AvatarInfoContainer breakpoints={breakpoints}>

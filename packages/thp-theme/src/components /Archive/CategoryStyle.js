@@ -17,7 +17,7 @@ const TagLink = styled(Link)`
   margin-bottom: 1em;
   margin-left: 0em;
   color: var(--text-colour);
-  background: var(--secondary-background-colour);
+  background: none;
   border: 1px solid rgba(32, 33, 36, 0.16);
   border-radius: 2em;
 
