@@ -52,7 +52,7 @@ const Atag = styled(Link)`
 const ImgFuturedMedia = styled.div`
   img {
     width: 100%;
-    height: 16em;
+    height: 19em;
     object-fit: cover;
     @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
       border-radius: var(--border-radius);
