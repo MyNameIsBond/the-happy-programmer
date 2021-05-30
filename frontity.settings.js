@@ -11,6 +11,7 @@ const settings = {
         ["SwiftUI", "/category/swiftui/"],
         ["Contact", "/contact/"],
       ],
+      authorAvatar: false,
     },
   },
   packages: [

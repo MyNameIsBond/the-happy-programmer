@@ -1,11 +1,10 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from "frontity";
 import window from "global";
 const query = ([mode]) => `(prefers-color-scheme: ${mode})`;
 
 const usePrefersColorScheme = () => {
-  const [preferredColorSchema, setPreferredColorSchema] = useState(
-    "no-preference"
-  );
+  const [preferredColorSchema, setPreferredColorSchema] =
+    useState("no-preference");
 
   if (typeof window.matchMedia !== "function") {
     return preferredColorSchema;

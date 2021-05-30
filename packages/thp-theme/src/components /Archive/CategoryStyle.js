@@ -8,7 +8,6 @@ const CategoryContainer = styled.div`
 `;
 
 const TagLink = styled(Link)`
-  padding: 0.7em;
   font-size: 12px;
   font-weight: 500;
   line-height: 18px;
@@ -16,9 +15,9 @@ const TagLink = styled(Link)`
   margin-right: 1em;
   margin-bottom: 1em;
   margin-left: 0em;
-  color: var(--text-colour);
+  color: var(--secondary-text-colour);
   background: none;
-  border: 1px solid rgba(32, 33, 36, 0.16);
+  border: 1px solid var(--category-border);
   border-radius: 2em;
 
   &:hover {

@@ -10,7 +10,7 @@ const ArchiveItem = ({ item, state, libraries }) => {
     state,
     item
   );
-
+  const { authorAvatar } = state.theme;
   const Html2React = libraries.html2react.Component;
   const breakpoints = state.theme.breakpoints;
 
@@ -22,22 +22,26 @@ const ArchiveItem = ({ item, state, libraries }) => {
         </ImgFuturedMedia>
       </Link>
       <AvatarInfoContainer breakpoints={breakpoints}>
-        <Atag link={author.link}>
-          <AuthorAvatar
-            height="50"
-            width="auto"
-            breakpoints={breakpoints}
-            src={author.avatar}
-          />
-        </Atag>
-        <InfoContainer>
+        {authorAvatar && (
+          <Atag link={author.link}>
+            <AuthorAvatar
+              height="50"
+              width="auto"
+              breakpoints={breakpoints}
+              src={author.avatar}
+            />
+          </Atag>
+        )}
+
+        <InfoContainer authorAvatar={authorAvatar}>
+          {authorAvatar || <Category category={categories} />}
           <Link link={link}>{title}</Link>
           {item.excerpt && (
             <SubText breakpoints={breakpoints}>
               <Html2React html={excerpt} />
             </SubText>
           )}
-          <Category category={categories} />
+          {authorAvatar && <Category category={categories} />}
           <AuthorLink date={date} author={author} />
         </InfoContainer>
       </AvatarInfoContainer>
@@ -96,7 +100,7 @@ const AuthorAvatar = styled(Image)`
 `;
 const InfoContainer = styled.div`
   margin-top: 0.2em;
-  padding: 0em 1em;
+  padding: 0em ${(props) => (props.authorAvatar ? "1em" : "0em")};
   > a {
     color: var(--text-colour);
     font-size: 17px;

@@ -91,6 +91,7 @@ const globalStyles = css`
     --loader-colour: #aaaaaa;
     --border-input: #f1f3f4;
     --input-background-colour: #f1f3f4;
+    --category-border: rgba(32, 33, 36, 0.16);
     // Footer Style
     --footer-background: #242424;
     --footer-text: #ffffff;
@@ -102,6 +103,7 @@ const globalStyles = css`
 
   @media (prefers-color-scheme: dark) {
     :root {
+      --category-border: rgba(183, 183, 183, 0.16);
       --secondary-colour: #e91e63;
       --secondary-button-hover: rgba(255, 255, 255, 0.08);
       --secondary-text-colour: rgba(255, 255, 255, 0.7);

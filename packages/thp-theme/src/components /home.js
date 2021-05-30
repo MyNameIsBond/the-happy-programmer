@@ -1,5 +1,5 @@
 import { connect, styled } from "frontity";
-import { Primary, Secondary, LinkButton } from "./reusableComponents/buttons";
+import { Primary, LinkButton } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
 import { homeConstants } from "./constants/constants-string";
