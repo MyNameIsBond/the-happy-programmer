@@ -24,7 +24,7 @@ export default connect(Error404);
 
 const CredentialsContainer = styled.div`
   h1 {
-    font-weight: 400;
+    font-weight: var(--font-weight-text);
   }
   a {
     text-decoration: none;
@@ -33,7 +33,8 @@ const CredentialsContainer = styled.div`
 
 const Text404 = styled.span`
   font-size: 10em;
-  font-weight: 500;
+  font-weight: var(--font-weight-title);
+
   color: var(--secondary-colour);
   text-shadow: 0.05em 0.05em var(--accent-colour);
 `;

@@ -1,33 +1,31 @@
 import { css } from "frontity";
 
 const globalStyles = css`
-  @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
-
   * {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
   html {
-    font-family: -apple-system-body;
   }
   body {
     margin: 0;
     background: var(--background-colour);
   }
-
   p {
     color: var(--text-colour);
     font-size: 1rem;
     line-height: 2.024rem;
     letter-spacing: 0.00938em;
-    font-weight: 400;
+    font-weight: var(--font-weight-text);
+    font-family: var(--font-text);
   }
   h1,
   h2,
   h3,
   h4 {
-    font-weight: 500;
+    font-weight: var(--font-weight-title);
     display: block;
+    font-family: var(--font-title);
   }
 
   h1,
@@ -59,9 +57,9 @@ const globalStyles = css`
   }
 
   button {
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
     letter-spacing: 0.02857rem;
-    font-weight: 400;
+    font-weight:var( --font-weight-text);
+    
   }
   a {
     color: var(--secondary-colour);
@@ -72,13 +70,19 @@ const globalStyles = css`
     text-decoration: underline;
   }
   :root {
+    --font-titles: font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+      "Arial", sans-serif;
+    --font-text: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
+      "Arial", sans-serif;
+    --font-weight-title: 600;
+    --font-weight-text: 400;
     --border-radius: 0.2em;
     --background-colour: #ffffff;
-    --text-colour: #202124;
+    --text-colour: #1d1d1f;
     --accent-colour: #8241c7;
     --secondary-colour: #e91e63;
-    --secondary-text-colour: #5f6368;
-    --secondary-background-colour: #f2f2f2;
+    --secondary-text-colour: rgba(51, 51, 51, 0.6);
+    --secondary-background-colour: #f5f5f5;
     --disabled-components: #a0a0a0;
     --disabled-text: #777777;
     --hover-nav-colour: #1c1c1c;

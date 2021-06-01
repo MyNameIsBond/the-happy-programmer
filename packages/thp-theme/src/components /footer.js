@@ -123,7 +123,7 @@ const FooterContainer = styled.div`
 `;
 
 const HighlightedText = styled.p`
-  font-weight: 500;
+  font-weight: var(--font-weight-title);
 `;
 
 const LogoSocials = styled.div`

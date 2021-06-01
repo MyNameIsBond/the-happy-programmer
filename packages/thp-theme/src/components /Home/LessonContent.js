@@ -42,7 +42,7 @@ const ParagraphLesson = styled.p`
   text-transform: uppercase;
   text-align: center;
   font-size: 0.8em;
-  font-weight: 500;
+  font-weight: var(--font-weight-title);
   margin-block-end: 0em;
 `;
 
@@ -90,7 +90,7 @@ const DescriptionPanel = styled.div`
   width: 30%;
   text-align: center;
   p {
-    font-weight: 400;
+    font-weight: var(--font-weight-text);
   }
   h4 {
     margin-block-end: 0em;

@@ -51,7 +51,7 @@ const MenuStyle = styled.div`
     color: var(--text-colour);
     margin: 0em 1.5em;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: var(--font-weight-title);
     position: relative;
     transition: 0.3s;
   }

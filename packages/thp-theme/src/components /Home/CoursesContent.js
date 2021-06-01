@@ -41,7 +41,7 @@ const CoursesContainer = styled.div`
 
   @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
     background-color: var(--secondary-background-colour);
-    margin: 8em 0em;
+    margin: 1em 0em;
   }
 `;
 
@@ -90,7 +90,7 @@ const CourseDiv = styled.div`
     margin-block-start: 1.5em;
   }
   p {
-    font-weight: 400;
+    font-weight: var(--font-weight-text);
   }
   @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
     width: 100%;

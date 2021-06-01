@@ -105,7 +105,7 @@ const InfoContainer = styled.div`
     margin-block-start: 1em;
     color: var(--text-colour);
     font-size: 17px;
-    font-weight: 500;
+    font-weight: var(--font-weight-title);
   }
 `;
 
@@ -121,10 +121,10 @@ const SubText = styled.div`
   p {
     margin-block-end: 1em;
     margin-block-start: 1em;
-    font-weight: 400;
+    font-weight: var(--font-weight-text);
     overflow: hidden;
     text-overflow: ellipsis;
-    color: var(--secondary-text-colour);
+    color: var(--text-colour);
     word-break: break-word;
     word-wrap: break-word;
     display: -webkit-box;

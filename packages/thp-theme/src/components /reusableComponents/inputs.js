@@ -14,11 +14,11 @@ const InputStyle = styled.input`
   border: solid 1px var(--border-input);
   font-size: 1rem;
   color: var(--text-colour);
+  transition: all 0.2s ease;
   &::placeholder {
     color: var(--secondary-text-colour);
     opacity: 1;
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
+    font-weight: 400;
   }
   &:hover {
     border: solid 1px var(--hover-border-input);
@@ -26,6 +26,7 @@ const InputStyle = styled.input`
 
   &:focus {
     outline: none;
+    box-shadow: 0 0 0 4px #e91e6326;
     border: solid 1px var(--secondary-colour);
   }
 `;

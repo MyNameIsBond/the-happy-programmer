@@ -16,7 +16,7 @@ const SecondaryButtonLink = styled(Link)`
   border-radius: var(--border-radius);
   text-transform: uppercase;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-title);
   border: none;
   background: none;
   text-transform: uppercase;
@@ -37,7 +37,8 @@ const PrimaryButton = styled.button`
   border-radius: var(--border-radius);
   text-transform: uppercase;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-title);
+
   background: var(--accent-colour);
   color: white;
   border-style: none;
@@ -62,7 +63,7 @@ const SecondaryButton = styled.button`
   border-radius: var(--border-radius);
   text-transform: uppercase;
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: var(--font-weight-title);
   border: none;
   background: none;
   text-transform: uppercase;

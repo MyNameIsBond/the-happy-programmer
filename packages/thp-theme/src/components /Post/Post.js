@@ -75,7 +75,7 @@ const CredentialContainer = styled.div`
   h1 {
     margin-block-start: 0;
     font-size: 2.5rem;
-    font-weight: 400;
+    font-weight: var(--font-weight-text);
   }
   .link-more {
     display: none;
@@ -87,7 +87,8 @@ const Code = `
     font-family: "Roboto", sans-serif;
     padding: 0.3em;
     margin: 0em 0.3em;
-    font-weight: 500;
+    font-weight: var(--font-weight-title);
+
     font-size: 1.1rem;
     color: var(--accent-colour);
   }
@@ -120,7 +121,7 @@ const PostContainer = styled.div`
     ${Code}
   }
   p {
-    font-weight: 400;
+    font-weight: var(--font-weight-text);
     ${Code}
   }
   figure {

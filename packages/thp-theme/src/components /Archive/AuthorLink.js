@@ -17,6 +17,6 @@ const DateText = styled.p`
   font-size: 0.9em;
   margin: 1em 0em;
   padding: 0 0em;
-  color: var(--secondary-text-colour);
-  font-weight: 400;
+  color: var(--text-colour);
+  font-weight: var(--font-weight-text);
 `;

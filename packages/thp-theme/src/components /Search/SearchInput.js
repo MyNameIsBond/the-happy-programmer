@@ -96,16 +96,13 @@ const ArchiveTitle = styled.h1`
 `;
 const CategoryText = styled.p`
   font-size: 12px;
-  font-weight: 500;
+  font-weight: var(--font-weight-title);
   line-height: 18px;
-  padding: 0 7px;
-  border: 1px solid green;
+  padding: 3px 10px;
   margin-right: 1em;
-  text-transform: uppercase;
   border-radius: 10em;
-  color: white;
-  background: var(--accent-colour);
-  border: 1px solid var(--accent-colour);
+  color: var(--text-colour);
+  border: 1px solid var(--category-border);
 `;
 const SearchTag = styled.div`
   align-items: center;
@@ -121,6 +118,7 @@ const InputContainer = styled.form`
     position: relative;
     left: 2em;
     top: 2.75em;
+    filter: grayscale(1);
   }
   input {
     flex-grow: 1;

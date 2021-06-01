@@ -138,13 +138,13 @@ const NavContainer = styled.div`
     padding: 4em 2em 0em 1em;
 
     img {
-      width: 50%;
+      width: 40%;
       height: auto;
     }
 
     p {
       text-align: left;
-      font-weight: 400;
+      font-weight: var(--font-weight-text);
       padding: 0;
     }
 
@@ -156,14 +156,14 @@ const NavContainer = styled.div`
     @media screen and (min-width: ${(props) => props.breakpoints.web}) {
       overflow-x: initial;
       img {
-        width: 50%;
+        width: 40%;
       }
     }
 
     @media screen and (min-width: ${(props) => props.breakpoints.bigWeb}) {
       img {
         position: relative;
-        width: 50%;
+        width: 40%;
         right: -6em;
       }
     }
@@ -198,7 +198,7 @@ const AuthorContainer = styled.div`
   background: var(--secondary-background-colour);
   p {
     text-align: center;
-    font-weight: 400;
+    font-weight: var(--font-weight-text);
     max-width: 650px;
   }
   h2 {
