@@ -8,7 +8,7 @@ const globalStyles = css`
     -moz-osx-font-smoothing: grayscale;
   }
   html {
-    font-family: "Roboto", sans-serif;
+    font-family: -apple-system-body;
   }
   body {
     margin: 0;

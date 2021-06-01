@@ -102,6 +102,7 @@ const InfoContainer = styled.div`
   margin-top: 0.2em;
   padding: 0em ${(props) => (props.authorAvatar ? "1em" : "0em")};
   > a {
+    margin-block-start: 1em;
     color: var(--text-colour);
     font-size: 17px;
     font-weight: 500;
@@ -118,7 +119,8 @@ const SubText = styled.div`
   -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   p {
-    margin-block-end: 0.5em;
+    margin-block-end: 1em;
+    margin-block-start: 1em;
     font-weight: 400;
     overflow: hidden;
     text-overflow: ellipsis;
