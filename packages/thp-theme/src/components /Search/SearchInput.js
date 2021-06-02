@@ -102,7 +102,7 @@ const CategoryText = styled.p`
   margin-right: 1em;
   border-radius: 10em;
   color: var(--text-colour);
-  border: 1px solid var(--category-border);
+  border: 1px solid var(--accent-colour);
 `;
 const SearchTag = styled.div`
   align-items: center;

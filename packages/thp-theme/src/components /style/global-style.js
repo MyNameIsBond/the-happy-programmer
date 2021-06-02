@@ -23,9 +23,8 @@ const globalStyles = css`
   h2,
   h3,
   h4 {
-    font-weight: var(--font-weight-title);
     display: block;
-    font-family: var(--font-title);
+    font-family: var(--font-titles);
   }
 
   h1,
@@ -58,8 +57,7 @@ const globalStyles = css`
 
   button {
     letter-spacing: 0.02857rem;
-    font-weight:var( --font-weight-text);
-    
+    font-weight: var(--font-weight-text);
   }
   a {
     color: var(--secondary-colour);
@@ -70,8 +68,8 @@ const globalStyles = css`
     text-decoration: underline;
   }
   :root {
-    --font-titles: font-family: "SF Pro Display", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-      "Arial", sans-serif;
+    --font-titles: "SF Pro Display", "SF Pro Icons", "Helvetica Neue",
+      "Helvetica", "Arial", sans-serif;
     --font-text: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
       "Arial", sans-serif;
     --font-weight-title: 600;

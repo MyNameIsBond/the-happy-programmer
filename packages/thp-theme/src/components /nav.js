@@ -12,9 +12,9 @@ const Nav = ({ state, actions }) => {
               actions.router.set("/");
             }}
           >
-            <Link link={"/"}>
+            <LogoLink link={"/"}>
               <Logo />
-            </Link>
+            </LogoLink>
           </LogoContainer>
           <MenuStyle>
             {state.theme.menu.map(([name, link]) => {
@@ -37,6 +37,13 @@ const Nav = ({ state, actions }) => {
 };
 
 export default connect(Nav);
+
+const LogoLink = styled(Link)`
+  fill: red;
+  &:hover {
+    text-decoration: none;
+  }
+`;
 
 const MenuStyle = styled.div`
   @media screen and (max-width: 450px) {
@@ -97,15 +104,14 @@ const NavContainer = styled.nav`
 `;
 
 const LogoContainer = styled.css`
-  fill: var(--logo-Colour);
+  text {
+    font-family: var(--font-titles);
+    fill: var(--logo-Colour);
+  }
   circle:nth-of-type(2) {
     stroke: var(--logo-Colour);
   }
-
   svg:hover {
-    fill: var(--accent-colour);
-    text-decoration: none !important;
-    font-family: SF Pro Text;
     cursor: pointer;
   }
 `;

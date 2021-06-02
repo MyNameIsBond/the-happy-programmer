@@ -113,12 +113,9 @@ const FooterContainer = styled.div`
       stroke: var(--footer-logo-Colour);
     }
   }
-
-  svg:hover {
-    fill: var(--accent-colour);
-    text-decoration: none !important;
-    font-family: SF Pro Text;
-    cursor: pointer;
+  text {
+    font-family: var(--font-titles);
+    fill: var(--footer-logo-Colour);
   }
 `;
 
@@ -127,6 +124,9 @@ const HighlightedText = styled.p`
 `;
 
 const LogoSocials = styled.div`
+  a:hover {
+    text-decoration: none;
+  }
   display: flex;
   flex-direction: column;
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
