@@ -19,7 +19,7 @@ const Footer = ({ state }) => {
             <Socials>
               {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
                 <a rel="noreferrer" key={link} href={link} target="_blank">
-                  <Image src={icon} />
+                  <Image height="20" width="auto" src={icon} />
                 </a>
               ))}
             </Socials>
@@ -65,8 +65,6 @@ const Socials = styled.div`
   text-align: center;
   img {
     filter: var(--footer-social);
-    height: 20px;
-    width: auto;
   }
   a {
     margin: 2em 1em;

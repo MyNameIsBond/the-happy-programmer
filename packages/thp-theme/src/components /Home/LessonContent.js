@@ -15,9 +15,10 @@ const LessonContent = ({ state }) => {
             <LessonContainerDiv breakpoints={breakpoints}>
               {homeConstants.lessonContainer.map(([icon, title, desc]) => (
                 <DescriptionPanel breakpoints={breakpoints} key={title}>
-                  <Image src={icon} />
+                  <Image height="60" width="auto" src={icon} />
                   <h4>{title}</h4>
                   <p>{desc}</p>
+                  <a>Read More</a>
                 </DescriptionPanel>
               ))}
             </LessonContainerDiv>

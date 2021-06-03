@@ -5,8 +5,6 @@ const globalStyles = css`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-  html {
-  }
   body {
     margin: 0;
     background: var(--background-colour);
@@ -25,17 +23,10 @@ const globalStyles = css`
   h4 {
     display: block;
     font-family: var(--font-titles);
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
     color: var(--text-colour);
     text-decoration: none;
     letter-spacing: 0.00938rem;
   }
-
   h1 {
     font-size: 2.488rem;
   }
@@ -60,6 +51,7 @@ const globalStyles = css`
     font-weight: var(--font-weight-text);
   }
   a {
+    font-family: var(--font-titles);
     color: var(--secondary-colour);
     letter-spacing: 0.00938rem;
     text-decoration: none;

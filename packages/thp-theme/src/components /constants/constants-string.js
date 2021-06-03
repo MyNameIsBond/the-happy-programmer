@@ -40,7 +40,7 @@ const homeConstants = {
       "SwiftUI Tutorials",
       "SwiftUI is being examined in depth to teach you how you can create stunning designs and teach you how to create professional and clean code. SwiftUI tutorials will cover macOS, iPadOS, watchOS and iOS.",
       "/category/swiftui/",
-      "40%",
+      "400",
       false,
       "row",
     ],

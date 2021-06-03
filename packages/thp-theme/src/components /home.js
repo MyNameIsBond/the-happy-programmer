@@ -56,6 +56,7 @@ const Home = ({ state }) => {
 };
 
 const MyImage = styled(Image)`
+  transform: scale(1);
   &::before {
     background-color: blue;
   }
