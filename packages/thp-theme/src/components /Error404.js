@@ -1,13 +1,12 @@
-import { connect, styled } from "frontity";
+import { styled } from "frontity";
 import { Primary } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
 import { ContainerDiv } from "./reusableComponents/container";
-
-const Error404 = ({ state }) => {
-  const breakpoints = state.theme.breakpoints;
+import { breakpoints } from "./constants/constants-string";
+export default () => {
   return (
     <ContainerDiv>
-      <Container404 breakpoints={breakpoints}>
+      <Container404>
         <CredentialsContainer>
           <h1>It looks like you are lost</h1>
           <p>The page you are looking is not available</p>
@@ -20,7 +19,6 @@ const Error404 = ({ state }) => {
     </ContainerDiv>
   );
 };
-export default connect(Error404);
 
 const CredentialsContainer = styled.div`
   h1 {
@@ -46,19 +44,19 @@ const Container404 = styled.div`
   align-items: center;
   flex-direction: column-reverse;
   justify-content: space-between;
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+  @media screen and (min-width: ${breakpoints.tablet}) {
     span {
       font-size: 20rem;
     }
     flex-direction: row;
   }
-  @media screen and (min-width: ${(props) => props.breakpoints.smallMobile}) {
+  @media screen and (min-width: ${breakpoints.smallMobile}) {
     span {
       font-size: 15rem;
     }
   }
 
-  @media screen and (min-width: ${(props) => props.breakpoints.web}) {
+  @media screen and (min-width: ${breakpoints.web}) {
     span {
       font-size: 20rem;
     }

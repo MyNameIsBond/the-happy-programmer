@@ -3,7 +3,8 @@ import { ContainerDiv } from "../reusableComponents/container";
 import { getData } from "../Handlers/dataManager";
 import SearchInput from "../Search/SearchInput";
 import ArchiveItem from "./archiveItem";
-const Archive = ({ state, searchQuery }) => {
+
+export default connect(({ state, searchQuery }) => {
   const data = getData(state);
   const breakpoints = state.theme.breakpoints;
   return (
@@ -17,7 +18,7 @@ const Archive = ({ state, searchQuery }) => {
       </ArchiveContainer>
     </ContainerDiv>
   );
-};
+});
 
 const ArchiveContainer = styled.div`
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
@@ -27,5 +28,3 @@ const ArchiveContainer = styled.div`
     grid-column-gap: 2em;
   }
 `;
-
-export default connect(Archive);

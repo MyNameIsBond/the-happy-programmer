@@ -1,8 +1,8 @@
 import { styled } from "frontity";
 
-const MyInput = ({ placeholder, ...props }) => (
-  <InputStyle {...props} placeholder={placeholder} />
-);
+const MyInput = ({ placeholder, ...props }) => {
+  <InputStyle {...props} placeholder={placeholder} />;
+};
 
 const InputStyle = styled.input`
   color: var(--input-text-colour);
@@ -30,5 +30,3 @@ const InputStyle = styled.input`
     border: solid 1px var(--secondary-colour);
   }
 `;
-
-export { MyInput };

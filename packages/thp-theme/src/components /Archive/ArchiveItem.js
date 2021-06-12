@@ -5,7 +5,7 @@ import { dataPost } from "../Handlers/dataManager";
 import Category from "./category";
 import AuthorLink from "./authorLink";
 
-const ArchiveItem = ({ item, state, libraries }) => {
+export default connect(({ item, state, libraries }) => {
   const { link, title, img, excerpt, author, date, categories } = dataPost(
     state,
     item
@@ -53,7 +53,7 @@ const ArchiveItem = ({ item, state, libraries }) => {
       </AvatarInfoContainer>
     </div>
   );
-};
+});
 
 const Atag = styled(Link)`
   display: contents;
@@ -140,5 +140,3 @@ const SubText = styled.div`
     display: none;
   }
 `;
-
-export default connect(ArchiveItem);

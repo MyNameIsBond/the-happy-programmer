@@ -1,24 +1,23 @@
-import { connect, styled } from "frontity";
+import { styled } from "frontity";
 import { Primary, LinkButton } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
-import { homeConstants } from "./constants/constants-string";
+import { homeConstants, breakpoints } from "./constants/constants-string";
 import { MainContainer } from "./reusableComponents/container";
 import LessonContent from "./Home/LessonContent";
 import CoursesContent from "./Home/CoursesContent";
-import { MyInput } from "./reusableComponents/inputs";
+import MyInput from "./reusableComponents/inputs";
 
-const Home = ({ state }) => {
-  const breakpoints = state.theme.breakpoints;
+export default () => {
   return (
     <>
-      <MainContainer breakpoints={breakpoints}>
-        <NavContainer breakpoints={breakpoints}>
+      <MainContainer>
+        <NavContainer>
           <MyImage
             data-src={homeConstants.homeSvg}
             src={homeConstants.homeSvg}
           />
-          <LandingCredentials breakpoints={breakpoints}>
+          <LandingCredentials>
             <HeaderDescription>{homeConstants.mainHeader}</HeaderDescription>
             <p>
               Programming blog focused on{" "}
@@ -27,7 +26,7 @@ const Home = ({ state }) => {
               Clones of famous websites and Apps. Subscribe to get notified for
               new content.
             </p>
-            <Subcribe breakpoints={breakpoints}>
+            <Subcribe>
               <MyInput placeholder={"example@email.com"} />
               <Primary>Subscribe</Primary>
             </Subcribe>
@@ -42,7 +41,7 @@ const Home = ({ state }) => {
         </AuthorAvatar>
         <h2>{homeConstants.AuthorInfo.title}</h2>
         <p>{homeConstants.AuthorInfo.description}</p>
-        <SocialContainer breakpoints={breakpoints}>
+        <SocialContainer>
           {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
             <a href={link} key={link} target="_blank">
               <Image src={icon} />
@@ -77,12 +76,8 @@ const MyImage = styled(Image)`
 
 // ------------------Landing Page------------------
 
-const Atag = styled(Link)`
-  display: contents;
-`;
-
 const LandingCredentials = styled.div`
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+  @media screen and (min-width: ${breakpoints.tablet}) {
     p {
       max-width: 410px;
     }
@@ -101,7 +96,7 @@ const Subcribe = styled.div`
     padding: 1rem 1rem;
   }
 
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+  @media screen and (min-width: ${breakpoints.tablet}) {
     align-items: flex-start;
     justify-content: flex-start;
     align-content: flex-start;
@@ -130,7 +125,7 @@ const NavContainer = styled.div`
     font-weight: 300;
   }
 
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+  @media screen and (min-width: ${breakpoints.tablet}) {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -154,14 +149,14 @@ const NavContainer = styled.div`
       padding-top: 0;
     }
 
-    @media screen and (min-width: ${(props) => props.breakpoints.web}) {
+    @media screen and (min-width: ${breakpoints.web}) {
       overflow-x: initial;
       img {
         width: 40%;
       }
     }
 
-    @media screen and (min-width: ${(props) => props.breakpoints.bigWeb}) {
+    @media screen and (min-width: ${breakpoints.bigWeb}) {
       img {
         position: relative;
         width: 40%;
@@ -226,10 +221,8 @@ const SocialContainer = styled.div`
   }
   a {
     margin: 3em 2em;
-    @media screen and (max-width: ${(props) => props.breakpoints.smallMobile}) {
+    @media screen and (max-width: ${breakpoints.smallMobile}) {
       margin: 3em 1em;
     }
   }
 `;
-
-export default connect(Home);

@@ -19,7 +19,7 @@ const socialIcons = {
     "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-simple-youtube.svg",
 };
 
-const homeConstants = {
+export const homeConstants = {
   userImage:
     "https://thehappyprogrammer.com/wp-content/uploads/2021/03/IMG_0918-2-1.jpg",
   homeSvg:
@@ -120,4 +120,11 @@ const about = {
   image: "",
   whatIdo: {},
 };
-export { homeConstants };
+
+export const breakpoints = {
+  smallMobile: "550px",
+  mobile: "768px",
+  tablet: "992px",
+  web: "1200px",
+  bigWeb: "1570px",
+};

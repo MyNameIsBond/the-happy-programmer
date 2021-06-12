@@ -1,7 +1,7 @@
 import Link from "@frontity/components/link";
 import { styled } from "frontity";
 
-const AuthorLink = ({ date, author }) => {
+export default ({ date, author }) => {
   const dt = new Date(date);
   return (
     <DateText>
@@ -10,8 +10,6 @@ const AuthorLink = ({ date, author }) => {
     </DateText>
   );
 };
-
-export default AuthorLink;
 
 const DateText = styled.p`
   font-size: 0.9em;

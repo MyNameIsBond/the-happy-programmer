@@ -1,5 +1,5 @@
 import { styled } from "frontity";
-const contact = () => {
+export default () => {
   return <Background>Contact</Background>;
 };
 
@@ -7,5 +7,3 @@ const Background = styled.div`
   background: red;
   height: 100%;
 `;
-
-export default contact;

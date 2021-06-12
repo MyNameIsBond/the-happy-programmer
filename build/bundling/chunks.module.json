@@ -1,20 +1,23 @@
 {
   "errors": [],
   "warnings": [
+    "./packages/thp-theme/src/components /Search/SearchInput.js 2:729-736\n\"export 'MyInput' was not found in '../reusableComponents/inputs'",
+    "./packages/thp-theme/src/components /reusableComponents/subscribe.js 1:352-359\n\"export 'MyInput' was not found in './inputs'",
+    "./packages/thp-theme/src/components /home.js 1:1637-1644\n\"export 'default' (imported as 'MyInput') was not found in './reusableComponents/inputs'",
     "./packages/thp-theme/src/components /Archive/archive.js\nThere are multiple modules with names that only differ in casing.\nThis can lead to unexpected behavior when compiling on a filesystem with other case-semantic.\nUse equal casing. Compare these module identifiers:\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Archive/archive.js\n    Used by 4 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /index.js\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/archive.js\n    Used by 2 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/index.js",
     "./packages/thp-theme/src/components /Archive/archiveItem.js\nThere are multiple modules with names that only differ in casing.\nThis can lead to unexpected behavior when compiling on a filesystem with other case-semantic.\nUse equal casing. Compare these module identifiers:\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Archive/archiveItem.js\n    Used by 2 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Archive/archive.js\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/archiveItem.js\n    Used by 2 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/archive.js",
     "./packages/thp-theme/src/components /Archive/authorLink.js\nThere are multiple modules with names that only differ in casing.\nThis can lead to unexpected behavior when compiling on a filesystem with other case-semantic.\nUse equal casing. Compare these module identifiers:\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Archive/authorLink.js\n    Used by 4 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Post/Post.js\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/authorLink.js\n    Used by 2 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/archiveItem.js",
     "./packages/thp-theme/src/components /Archive/category.js\nThere are multiple modules with names that only differ in casing.\nThis can lead to unexpected behavior when compiling on a filesystem with other case-semantic.\nUse equal casing. Compare these module identifiers:\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Archive/category.js\n    Used by 5 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Post/Post.js\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/category.js\n    Used by 3 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/archiveItem.js",
     "./packages/thp-theme/src/components /Archive/categoryStyle.js\nThere are multiple modules with names that only differ in casing.\nThis can lead to unexpected behavior when compiling on a filesystem with other case-semantic.\nUse equal casing. Compare these module identifiers:\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Archive/categoryStyle.js\n    Used by 4 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Archive/category.js\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/categoryStyle.js\n    Used by 4 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/category.js"
   ],
-  "hash": "f43fd37e03736a7b6fd7",
+  "hash": "5359c7f04cc696b55db0",
   "publicPath": "/static/",
   "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
   "assetsByChunkName": {
     "archive": "archive.module.js",
     "the-happy-programmer": [
       "the-happy-programmer.module.js",
-      "the-happy-programmer.803c39c11afdd30f31f9.hot-update.js"
+      "the-happy-programmer.b95fda9b3564fc71cb34.hot-update.js"
     ]
   },
   "assets": [],
@@ -26,7 +29,7 @@
       ],
       "assets": [
         "the-happy-programmer.module.js",
-        "the-happy-programmer.803c39c11afdd30f31f9.hot-update.js"
+        "the-happy-programmer.b95fda9b3564fc71cb34.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -2616,7 +2619,7 @@
       "id": "the-happy-programmer",
       "files": [
         "the-happy-programmer.module.js",
-        "the-happy-programmer.803c39c11afdd30f31f9.hot-update.js"
+        "the-happy-programmer.b95fda9b3564fc71cb34.hot-update.js"
       ]
     }
   ]
