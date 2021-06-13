@@ -3,14 +3,13 @@ import { ContainerDiv } from "../reusableComponents/container";
 import { getData } from "../Handlers/dataManager";
 import SearchInput from "../Search/SearchInput";
 import ArchiveItem from "./archiveItem";
-
+import { breakpoints } from "../constants/constants-string";
 export default connect(({ state, searchQuery }) => {
   const data = getData(state);
-  const breakpoints = state.theme.breakpoints;
   return (
     <ContainerDiv>
       <SearchInput searchQuery={searchQuery} />
-      <ArchiveContainer breakpoints={breakpoints}>
+      <ArchiveContainer>
         {data.items.map(({ type, id }) => {
           const item = state.source[type][id];
           return <ArchiveItem key={item.id} item={item} />;
@@ -21,7 +20,7 @@ export default connect(({ state, searchQuery }) => {
 });
 
 const ArchiveContainer = styled.div`
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     padding: 0em 1em;
     display: grid;
     grid-template-columns: 1fr 1fr;

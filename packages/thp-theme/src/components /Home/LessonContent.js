@@ -1,20 +1,18 @@
 import { connect, styled } from "frontity";
-import { homeConstants } from "../constants/constants-string";
+import { homeConstants, breakpoints } from "../constants/constants-string";
 import { ContainerDiv } from "../reusableComponents/container";
 import Image from "@frontity/components/image";
-const LessonContent = ({ state }) => {
-  const breakpoints = state.theme.breakpoints;
-
+const LessonContent = () => {
   return (
     <LessonBackgroundContainer>
       <ContainerDiv>
         <ContainerDiv>
-          <LessonContainer breakpoints={breakpoints}>
+          <LessonContainer>
             <ParagraphLesson>{homeConstants.header}</ParagraphLesson>
             <HeadingLesson>{homeConstants.subheader}</HeadingLesson>
-            <LessonContainerDiv breakpoints={breakpoints}>
+            <LessonContainerDiv>
               {homeConstants.lessonContainer.map(([icon, title, desc]) => (
-                <DescriptionPanel breakpoints={breakpoints} key={title}>
+                <DescriptionPanel key={title}>
                   <Image height="60" width="auto" src={icon} />
                   <h4>{title}</h4>
                   <p>{desc}</p>
@@ -29,7 +27,7 @@ const LessonContent = ({ state }) => {
   );
 };
 
-export default connect(LessonContent);
+export default LessonContent;
 
 const LessonContainer = styled.div`
   margin-top: 15%;
@@ -64,7 +62,7 @@ const LessonContainerDiv = styled.div`
   align-items: center;
   width: 100%;
   padding: 2em 0em;
-  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+  ${breakpoints.mobile} {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
@@ -72,14 +70,14 @@ const LessonContainerDiv = styled.div`
     align-items: center;
   }
 
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
   }
 
-  @media screen and (min-width: ${(props) => props.breakpoints.web}) {
+  ${breakpoints.web} {
     width: 100%;
     flex-direction: row;
     justify-content: space-between;
@@ -96,16 +94,16 @@ const DescriptionPanel = styled.div`
   h4 {
     margin-block-end: 0em;
   }
-  @media screen and (min-width: ${(props) => props.breakpoints.smallMobile}) {
+  ${breakpoints.smallMobile} {
     width: 30%;
   }
-  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+  ${breakpoints.mobile} {
     width: 60%;
   }
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     width: 13%;
   }
-  @media screen and (min-width: ${(props) => props.breakpoints.web}) {
+  ${breakpoints.web} {
     width: 60%;
   }
 `;

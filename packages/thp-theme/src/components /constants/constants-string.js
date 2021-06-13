@@ -120,11 +120,16 @@ const about = {
   image: "",
   whatIdo: {},
 };
+// export const smallMobile =
+// export const mobile =
+// export const tablet =
+// export const web =
+// export const bigWeb =
 
 export const breakpoints = {
-  smallMobile: "550px",
-  mobile: "768px",
-  tablet: "992px",
-  web: "1200px",
-  bigWeb: "1570px",
+  smallMobile: `@media screen and (min-width: 550px)`,
+  mobile: `@media screen and (min-width: 768px)`,
+  tablet: `@media screen and (min-width: 992px)`,
+  web: `@media screen and (min-width: 1200px)`,
+  bigWeb: `@media screen and (min-width: 1570px)`,
 };

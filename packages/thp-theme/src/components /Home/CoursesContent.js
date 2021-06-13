@@ -1,24 +1,22 @@
-import { homeConstants } from "../constants/constants-string";
-import { connect, styled } from "frontity";
+import { homeConstants, breakpoints } from "../constants/constants-string";
+import { styled } from "frontity";
 import { Primary, Secondary } from "../reusableComponents/buttons";
 import { ContainerDiv } from "../reusableComponents/container";
 import Image from "@frontity/components/image";
 
-const CoursesContent = ({ state }) => {
-  const breakpoints = state.theme.breakpoints;
-
+const CoursesContent = () => {
   return (
     <>
       {homeConstants.coursesContainer.map(
         ([icon, title, desc, link, width, disabled, row]) => (
-          <CoursesContainer breakpoints={breakpoints} key={title}>
+          <CoursesContainer key={title}>
             <ContainerDiv>
-              <CourseDiv breakpoints={breakpoints} row={row}>
+              <CourseDiv row={row}>
                 <Image src={icon} width={width} />
-                <CoursesCredentials breakpoints={breakpoints}>
+                <CoursesCredentials>
                   <h2>{title}</h2>
                   <p>{desc}</p>
-                  <ButtonContainer breakpoints={breakpoints}>
+                  <ButtonContainer>
                     <Primary>Subcribe</Primary>
                     <Secondary disabled={disabled}>
                       {disabled ? "Coming Soon..." : "Read More"}
@@ -39,7 +37,7 @@ const CoursesContainer = styled.div`
   display: flex;
   margin: 3em 0em;
 
-  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+  ${breakpoints.mobile} {
     background-color: var(--secondary-background-colour);
     margin: 1em 0em;
   }
@@ -56,7 +54,7 @@ const ButtonContainer = styled.div`
     margin: 1em 1em;
   }
 
-  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+  ${breakpoints.mobile} {
     justify-content: flex-start;
     flex-direction: row;
 
@@ -70,7 +68,7 @@ const CoursesCredentials = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+  ${breakpoints.mobile} {
     align-items: flex-start;
   }
 `;
@@ -92,7 +90,7 @@ const CourseDiv = styled.div`
   p {
     font-weight: var(--font-weight-text);
   }
-  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+  ${breakpoints.mobile} {
     width: 100%;
     flex-direction: ${(props) => props.row};
     justify-content: space-between;
@@ -110,4 +108,4 @@ const CourseDiv = styled.div`
   }
 `;
 
-export default connect(CoursesContent);
+export default CoursesContent;

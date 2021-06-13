@@ -1,11 +1,11 @@
 import { MyInput } from "./inputs";
 import { Primary } from "./buttons";
-import { styled, connect } from "frontity";
+import { styled } from "frontity";
+import { breakpoints } from "../constants/constants-string";
 
-const SubscribeButton = ({ state }) => {
-  const breakpoints = state.theme.breakpoints;
+const SubscribeButton = () => {
   return (
-    <SubscribeContainer breakpoints={breakpoints}>
+    <SubscribeContainer>
       <MyInput placeholder={"example@email.com"}></MyInput>
       <Primary>Subscribe</Primary>
     </SubscribeContainer>
@@ -21,7 +21,7 @@ const SubscribeContainer = styled.div`
     box-sizing: border-box;
     border-radius: var(--border-radius) 0 0 var(--border-radius);
     border-style: none;
-    @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    ${breakpoints.tablet} {
       margin-left: 0;
       text-align: left;
     }
@@ -33,4 +33,4 @@ const SubscribeContainer = styled.div`
     border-radius: 0 0.2em 0.2em 0;
   }
 `;
-export default connect(SubscribeButton);
+export default SubscribeButton;

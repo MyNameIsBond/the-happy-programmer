@@ -6,7 +6,7 @@ import Logo from "./constants/logo";
 import SubscribeButton from "./reusableComponents/subscribe";
 import { ContainerDiv } from "./reusableComponents/container";
 
-export default () => {
+export const Footer = () => {
   return (
     <FooterContainerDiv>
       <ContainerDiv>
@@ -51,7 +51,7 @@ const SubscribeText = styled.p`
   word-wrap: break-word;
   max-width: 320px;
 
-  @media screen and (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     max-width: 300px;
   }
 `;
@@ -70,7 +70,7 @@ const Socials = styled.div`
 const Credentials = styled.div`
   padding: 4.5em 0em;
   text-align: center;
-  @media screen and (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     padding: 0em;
     text-align: left;
   }
@@ -81,7 +81,7 @@ const Subscribe = styled.div`
     overflow-wrap: break-word;
   }
 
-  @media screen and (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     text-align: left;
   }
 `;
@@ -94,7 +94,7 @@ const FooterContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  @media screen and (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -124,7 +124,7 @@ const LogoSocials = styled.div`
   }
   display: flex;
   flex-direction: column;
-  @media screen and (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     padding-top: 1em;
     display: flex;
     flex-direction: column;

@@ -8,9 +8,9 @@ import Footer from "./footer";
 import Post from "./Post/Post";
 import About from "./about";
 import Loader from "./Loading";
-import Error404 from "./Error404";
+import { Error404 } from "./Error404";
 import Home from "./home";
-import Contact from "./contact";
+import { Contact } from "./contact";
 import Arch from "./Archive/archive.js";
 import SearchPage from "./Search/SearchPage";
 const Root = ({ state }) => {

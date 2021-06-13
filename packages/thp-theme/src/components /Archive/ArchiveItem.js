@@ -2,6 +2,7 @@ import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
 import { dataPost } from "../Handlers/dataManager";
+import { breakpoints } from "../constants/constants-string";
 import Category from "./category";
 import AuthorLink from "./authorLink";
 
@@ -12,12 +13,11 @@ export default connect(({ item, state, libraries }) => {
   );
   const { authorAvatar } = state.theme;
   const Html2React = libraries.html2react.Component;
-  const breakpoints = state.theme.breakpoints;
 
   return (
     <div>
       <Link link={link}>
-        <ImgFuturedMedia breakpoints={breakpoints}>
+        <ImgFuturedMedia>
           <Image
             width="auto"
             height="304"
@@ -27,15 +27,10 @@ export default connect(({ item, state, libraries }) => {
           />
         </ImgFuturedMedia>
       </Link>
-      <AvatarInfoContainer breakpoints={breakpoints}>
+      <AvatarInfoContainer>
         {authorAvatar && (
           <Atag link={author.link}>
-            <AuthorAvatar
-              height="50"
-              width="auto"
-              breakpoints={breakpoints}
-              src={author.avatar}
-            />
+            <AuthorAvatar height="50" width="auto" src={author.avatar} />
           </Atag>
         )}
 
@@ -43,7 +38,7 @@ export default connect(({ item, state, libraries }) => {
           {authorAvatar || <Category category={categories} />}
           <Link link={link}>{title}</Link>
           {item.excerpt && (
-            <SubText breakpoints={breakpoints}>
+            <SubText>
               <Html2React html={excerpt} />
             </SubText>
           )}
@@ -62,7 +57,7 @@ const Atag = styled(Link)`
 const ImgFuturedMedia = styled.div`
   img {
     object-fit: cover;
-    @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+    ${breakpoints.tablet} {
       border-radius: var(--border-radius);
     }
     &:hover {
@@ -79,15 +74,15 @@ const AvatarInfoContainer = styled.div`
   p {
     margin-block-start: 0.1em;
   }
-  @media screen and (min-width: ${(props) => props.breakpoints.smallMobile}) {
+  ${breakpoints.smallMobile} {
     padding: 0em 0.5em;
   }
 
-  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+  ${breakpoints.mobile} {
     padding: 0.5em 0.5em;
   }
 
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     margin: 0.5em 0em;
     padding: 0.5em 0.1em;
   }
@@ -95,7 +90,7 @@ const AvatarInfoContainer = styled.div`
 const AuthorAvatar = styled(Image)`
   display: none;
   padding: 0em 1em;
-  @media screen and (min-width: ${(props) => props.breakpoints.mobile}) {
+  ${breakpoints.mobile} {
     border-radius: 50%;
     cursor: pointer;
     display: inline-block;

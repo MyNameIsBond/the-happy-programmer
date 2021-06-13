@@ -1,13 +1,13 @@
-import { connect, styled, keyframes } from "frontity";
+import { styled, keyframes } from "frontity";
+import { breakpoints } from "./constants/constants-string";
 import { ContainerDiv } from "./reusableComponents/container";
-const Loading = ({ state }) => {
-  const breakpoints = state.theme.breakpoints;
+export const Loading = () => {
   return (
     <ContainerDiv>
       <SpaceDiv />
       <Sceleton boarderRadius="5px" height="4em" width="100%" />
 
-      <LoadingContainer breakpoints={breakpoints}>
+      <LoadingContainer>
         {[...Array(8)].map((i) => (
           <div>
             <Sceleton boarderRadius="7px" height="20em" width="100%" />
@@ -29,7 +29,6 @@ const Loading = ({ state }) => {
     </ContainerDiv>
   );
 };
-export default connect(Loading);
 
 const color = keyframes`
   0% {
@@ -68,7 +67,7 @@ const LoadingContainer = styled.div`
   grid-column-gap: 2em;
   grid-row-gap: 2em;
 
-  @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     grid-template-columns: 1fr 1fr;
   }
 `;

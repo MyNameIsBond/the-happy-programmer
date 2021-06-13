@@ -3,7 +3,7 @@ import { Primary } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
 import { ContainerDiv } from "./reusableComponents/container";
 import { breakpoints } from "./constants/constants-string";
-export default () => {
+export const Error404 = () => {
   return (
     <ContainerDiv>
       <Container404>
@@ -44,19 +44,19 @@ const Container404 = styled.div`
   align-items: center;
   flex-direction: column-reverse;
   justify-content: space-between;
-  @media screen and (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     span {
       font-size: 20rem;
     }
     flex-direction: row;
   }
-  @media screen and (min-width: ${breakpoints.smallMobile}) {
+  ${breakpoints.smallMobile} {
     span {
       font-size: 15rem;
     }
   }
 
-  @media screen and (min-width: ${breakpoints.web}) {
+  ${breakpoints.web} {
     span {
       font-size: 20rem;
     }
