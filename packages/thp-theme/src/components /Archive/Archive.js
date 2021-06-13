@@ -4,7 +4,7 @@ import { getData } from "../Handlers/dataManager";
 import SearchInput from "../Search/SearchInput";
 import ArchiveItem from "./archiveItem";
 import { breakpoints } from "../constants/constants-string";
-export default connect(({ state, searchQuery }) => {
+const Archive = connect(({ state, searchQuery }) => {
   const data = getData(state);
   return (
     <ContainerDiv>
@@ -18,6 +18,8 @@ export default connect(({ state, searchQuery }) => {
     </ContainerDiv>
   );
 });
+
+export default Archive;
 
 const ArchiveContainer = styled.div`
   ${breakpoints.tablet} {

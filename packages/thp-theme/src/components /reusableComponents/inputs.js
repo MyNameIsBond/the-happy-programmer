@@ -1,8 +1,8 @@
 import { styled } from "frontity";
 
-const MyInput = ({ placeholder, ...props }) => {
-  <InputStyle {...props} placeholder={placeholder} />;
-};
+export const MyInput = ({ placeholder, ...props }) => (
+  <InputStyle {...props} placeholder={placeholder} />
+);
 
 const InputStyle = styled.input`
   color: var(--input-text-colour);

@@ -3,14 +3,14 @@ import { Primary } from "./buttons";
 import { styled } from "frontity";
 import { breakpoints } from "../constants/constants-string";
 
-const SubscribeButton = () => {
-  return (
-    <SubscribeContainer>
-      <MyInput placeholder={"example@email.com"}></MyInput>
-      <Primary>Subscribe</Primary>
-    </SubscribeContainer>
-  );
-};
+const SubscribeButton = () => (
+  <SubscribeContainer>
+    <MyInput placeholder={"example@email.com"}></MyInput>
+    <Primary>Subscribe</Primary>
+  </SubscribeContainer>
+);
+
+export { SubscribeButton };
 
 const SubscribeContainer = styled.div`
   display: block;
@@ -33,4 +33,3 @@ const SubscribeContainer = styled.div`
     border-radius: 0 0.2em 0.2em 0;
   }
 `;
-export default SubscribeButton;

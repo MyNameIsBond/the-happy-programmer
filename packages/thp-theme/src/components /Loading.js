@@ -1,34 +1,33 @@
 import { styled, keyframes } from "frontity";
 import { breakpoints } from "./constants/constants-string";
 import { ContainerDiv } from "./reusableComponents/container";
-export const Loading = () => {
-  return (
-    <ContainerDiv>
-      <SpaceDiv />
-      <Sceleton boarderRadius="5px" height="4em" width="100%" />
+const Loading = () => (
+  <ContainerDiv>
+    <SpaceDiv />
+    <Sceleton boarderRadius="5px" height="4em" width="100%" />
 
-      <LoadingContainer>
-        {[...Array(8)].map((i) => (
-          <div>
-            <Sceleton boarderRadius="7px" height="20em" width="100%" />
-            <SceletonLoaderContainer>
-              <Sceleton boarderRadius="100%" height="4em" width="4em" />
-              <TextSceletonContainer>
-                <Sceleton
-                  marginBottom="1em"
-                  boarderRadius="2px"
-                  height="1em"
-                  width="300px"
-                />
-                <Sceleton boarderRadius="2px" height=".5em" width="250px" />
-              </TextSceletonContainer>
-            </SceletonLoaderContainer>
-          </div>
-        ))}
-      </LoadingContainer>
-    </ContainerDiv>
-  );
-};
+    <LoadingContainer>
+      {[...Array(8)].map((i) => (
+        <div>
+          <Sceleton boarderRadius="7px" height="20em" width="100%" />
+          <SceletonLoaderContainer>
+            <Sceleton boarderRadius="100%" height="4em" width="4em" />
+            <TextSceletonContainer>
+              <Sceleton
+                marginBottom="1em"
+                boarderRadius="2px"
+                height="1em"
+                width="300px"
+              />
+              <Sceleton boarderRadius="2px" height=".5em" width="250px" />
+            </TextSceletonContainer>
+          </SceletonLoaderContainer>
+        </div>
+      ))}
+    </LoadingContainer>
+  </ContainerDiv>
+);
+export default Loading;
 
 const color = keyframes`
   0% {

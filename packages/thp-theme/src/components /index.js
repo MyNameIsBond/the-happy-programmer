@@ -1,18 +1,18 @@
-import { connect, Global, Head } from "frontity";
+import { connect, Global, Head, loadable } from "frontity";
 import { globalStyles } from "./style/global-style";
 import Switch from "@frontity/components/switch";
 import Title from "./title";
 import Archive from "./archive";
 import Nav from "./nav";
-import Footer from "./footer";
 import Post from "./Post/Post";
 import About from "./about";
-import Loader from "./Loading";
 import { Error404 } from "./Error404";
 import Home from "./home";
 import { Contact } from "./contact";
 import Arch from "./Archive/archive.js";
 import SearchPage from "./Search/SearchPage";
+const Loader = loadable(() => import("./Loading"));
+const Footer = loadable(() => import("./footer"));
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
 

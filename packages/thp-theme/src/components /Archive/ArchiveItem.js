@@ -6,7 +6,7 @@ import { breakpoints } from "../constants/constants-string";
 import Category from "./category";
 import AuthorLink from "./authorLink";
 
-export default connect(({ item, state, libraries }) => {
+const ArchiveItem = connect(({ item, state, libraries }) => {
   const { link, title, img, excerpt, author, date, categories } = dataPost(
     state,
     item
@@ -49,6 +49,8 @@ export default connect(({ item, state, libraries }) => {
     </div>
   );
 });
+
+export default ArchiveItem;
 
 const Atag = styled(Link)`
   display: contents;

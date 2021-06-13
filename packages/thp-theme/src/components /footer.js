@@ -3,10 +3,10 @@ import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
 import { styled } from "frontity";
 import Logo from "./constants/logo";
-import SubscribeButton from "./reusableComponents/subscribe";
+import { SubscribeButton } from "./reusableComponents/subscribe";
 import { ContainerDiv } from "./reusableComponents/container";
 
-export const Footer = () => {
+const Footer = () => {
   return (
     <FooterContainerDiv>
       <ContainerDiv>
@@ -40,6 +40,8 @@ export const Footer = () => {
     </FooterContainerDiv>
   );
 };
+
+export default Footer;
 
 const FooterContainerDiv = styled.div`
   background-color: var(--footer-background);

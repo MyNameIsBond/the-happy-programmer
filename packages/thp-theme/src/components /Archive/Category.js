@@ -3,7 +3,7 @@ import { CategoryContainer, TagLink } from "./categoryStyle";
 import { getData } from "../Handlers/dataManager";
 import { homeConstants } from "../constants/constants-string";
 
-const Category = ({ category, state }) => {
+const Category = connect(({ category, state }) => {
   const { socials } = homeConstants.AuthorInfo;
   const data = getData(state);
   const { isPostType, isPost } = data;
@@ -25,9 +25,9 @@ const Category = ({ category, state }) => {
         ))}
     </CategoryContainer>
   );
-};
+});
 
-export default connect(Category);
+export default Category;
 
 const PatreonImg = styled.img`
   height: 1em;

@@ -19,7 +19,7 @@ const socialIcons = {
     "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-simple-youtube.svg",
 };
 
-export const homeConstants = {
+const homeConstants = {
   userImage:
     "https://thehappyprogrammer.com/wp-content/uploads/2021/03/IMG_0918-2-1.jpg",
   homeSvg:
@@ -126,10 +126,12 @@ const about = {
 // export const web =
 // export const bigWeb =
 
-export const breakpoints = {
+const breakpoints = {
   smallMobile: `@media screen and (min-width: 550px)`,
   mobile: `@media screen and (min-width: 768px)`,
   tablet: `@media screen and (min-width: 992px)`,
   web: `@media screen and (min-width: 1200px)`,
   bigWeb: `@media screen and (min-width: 1570px)`,
 };
+
+export { homeConstants, breakpoints };

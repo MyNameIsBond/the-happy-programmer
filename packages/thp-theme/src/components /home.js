@@ -6,7 +6,7 @@ import { homeConstants, breakpoints } from "./constants/constants-string";
 import { MainContainer } from "./reusableComponents/container";
 import LessonContent from "./Home/LessonContent";
 import CoursesContent from "./Home/CoursesContent";
-import MyInput from "./reusableComponents/inputs";
+import { MyInput } from "./reusableComponents/inputs";
 
 export default () => {
   return (
@@ -77,7 +77,7 @@ const MyImage = styled(Image)`
 // ------------------Landing Page------------------
 
 const LandingCredentials = styled.div`
-  @media screen and (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     p {
       max-width: 410px;
     }
@@ -96,7 +96,7 @@ const Subcribe = styled.div`
     padding: 1rem 1rem;
   }
 
-  @media screen and (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     align-items: flex-start;
     justify-content: flex-start;
     align-content: flex-start;
@@ -125,7 +125,7 @@ const NavContainer = styled.div`
     font-weight: 300;
   }
 
-  @media screen and (min-width: ${breakpoints.tablet}) {
+  ${breakpoints.tablet} {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -149,14 +149,14 @@ const NavContainer = styled.div`
       padding-top: 0;
     }
 
-    @media screen and (min-width: ${breakpoints.web}) {
+    ${breakpoints.web} {
       overflow-x: initial;
       img {
         width: 40%;
       }
     }
 
-    @media screen and (min-width: ${breakpoints.bigWeb}) {
+    ${breakpoints.bigWeb} {
       img {
         position: relative;
         width: 40%;
@@ -221,7 +221,7 @@ const SocialContainer = styled.div`
   }
   a {
     margin: 3em 2em;
-    @media screen and (max-width: ${breakpoints.smallMobile}) {
+    ${breakpoints.smallMobile} {
       margin: 3em 1em;
     }
   }

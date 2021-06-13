@@ -1,5 +1,6 @@
 import { styled } from "frontity";
 import { breakpoints } from "../constants/constants-string";
+
 const MainContainer = styled.div`
   margin-right: auto;
   margin-left: auto;
@@ -23,5 +24,4 @@ const ContainerDiv = styled.div`
   margin-left: auto;
   max-width: 65em;
 `;
-
 export { MainContainer, ContainerDiv };
