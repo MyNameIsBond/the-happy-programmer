@@ -12,6 +12,7 @@ const settings = {
         ["Contact", "/contact/"],
       ],
       authorAvatar: false,
+      autoPrefetch: "in-view",
     },
   },
   packages: [

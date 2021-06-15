@@ -4,6 +4,7 @@ import script from "@frontity/html2react/processors/script";
 import Root from "./components ";
 import Image from "@frontity/html2react/processors/image";
 import codeHighlighter from "./Processor/Highlight";
+
 export default {
   name: "thp-theme",
   roots: {
