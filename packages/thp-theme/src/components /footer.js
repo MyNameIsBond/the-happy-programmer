@@ -17,9 +17,11 @@ const Footer = () => {
             </Link>
             <Socials>
               {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
-                <a rel="noreferrer" key={link} href={link} target="_blank">
-                  <Image height="20" width="auto" src={icon} />
-                </a>
+                <SocialContainer key={link}>
+                  <a rel="noreferrer" href={link} target="_blank">
+                    <Image height="20" width="auto" src={icon} />
+                  </a>
+                </SocialContainer>
               ))}
             </Socials>
           </LogoSocials>
@@ -59,9 +61,13 @@ const SubscribeText = styled.p`
 `;
 
 const Socials = styled.div`
+  padding-top: 1.5em;
   display: flex;
   flex-direction: row;
   text-align: center;
+  ${breakpoints.tablet} {
+    justify-content: start;
+  }
   img {
     filter: var(--footer-social);
   }
@@ -90,7 +96,7 @@ const Subscribe = styled.div`
 
 const FooterContainer = styled.div`
   width: auto;
-  padding: 4.5em 2em;
+  padding: 4.5em 0em;
   background-color: var(--footer-background);
   display: flex;
   flex-direction: column;
@@ -127,10 +133,14 @@ const LogoSocials = styled.div`
   display: flex;
   flex-direction: column;
   ${breakpoints.tablet} {
-    padding-top: 1em;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-end;
   }
+`;
+
+const SocialContainer = styled.div`
+  height: 30px;
+  width: 3.4em;
 `;
