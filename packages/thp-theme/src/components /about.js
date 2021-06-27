@@ -23,7 +23,7 @@ const About = ({ state }) => {
         <ImageContainer>
           <Image
             src={
-              "https://thehappyprogrammer.com/wp-content/uploads/2021/06/IMG_0487.jpeg"
+              "https://thehappyprogrammer.com/wp-content/uploads/2021/06/IMG_0487-1-1839829635-1624717729242.jpg"
             }
           />
         </ImageContainer>
