@@ -1,3 +1,7 @@
+import { default as web } from "../svg/web.svg";
+import { default as youtube } from "../svg/youtube.svg";
+import { default as blog } from "../svg/blog.svg";
+
 const lessonIcons = {
   flutter:
     "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-simple-flutter.svg",
@@ -133,5 +137,37 @@ const breakpoints = {
   web: `@media screen and (min-width: 1200px)`,
   bigWeb: `@media screen and (min-width: 1570px)`,
 };
+// About Page
+const aboutConst = {
+  title: "My name is Tony",
+  subtitle: "Software Developer",
+  text: `I have developed numerous of iOS and Android apps. I have participated in many open sourse 
+  projects. An experienced developer in web development, 
+  enterprise and mobile development. 
+  Enthusiastic about programming and technology`,
+  image:
+    "https://thehappyprogrammer.com/wp-content/uploads/2021/06/IMG_0487-1-1839829635-1624717729242.jpg",
+};
 
-export { homeConstants, breakpoints };
+const aboutExplain = {
+  h2: "What Do I Do",
+  explain: [
+    [
+      "Web & Mobile",
+      "Web and mobile are my main strengths as a developer.",
+      web,
+    ],
+    [
+      "Courses",
+      "I am planning to create in-depth courses on each modern technology I believe is worth learning",
+      blog,
+    ],
+    [
+      "YouTube",
+      "YouTube will be a big part on The Happy Programmer and I will try to give quality content",
+      youtube,
+    ],
+  ],
+};
+
+export { homeConstants, breakpoints, aboutConst, aboutExplain };

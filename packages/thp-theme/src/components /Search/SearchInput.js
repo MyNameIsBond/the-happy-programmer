@@ -42,8 +42,6 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
       )}
       <InputContainer breakpoints={breakpoints} onSubmit={searchSubmit}>
         <Image
-          height="29"
-          windth="auto"
           src={
             "https://thehappyprogrammer.com/wp-content/uploads/2021/05/searchIcon.svg"
           }
@@ -116,6 +114,8 @@ const InputContainer = styled.form`
   display: flex;
   width: 100%;
   img {
+    height: 1.75em;
+    width: 1.75em;
     position: relative;
     transform: translate(2em, 2.75em);
     filter: grayscale(1);

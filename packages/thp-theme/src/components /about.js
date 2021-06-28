@@ -2,9 +2,13 @@ import { connect, styled } from "frontity";
 import Image from "@frontity/components/image";
 import ParagraphDisplay from "./reusableComponents/ParagraphDisplay";
 import { MainContainer } from "./reusableComponents/container";
-import { homeConstants, breakpoints } from "./constants/constants-string";
+import {
+  homeConstants,
+  breakpoints,
+  aboutConst,
+  aboutExplain,
+} from "./constants/constants-string";
 import Link from "@frontity/components/link";
-
 const SocialsMap = () => (
   <>
     {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
@@ -21,20 +25,13 @@ const About = ({ state }) => {
     <MainContainer>
       <AboutMeContainer>
         <ImageContainer>
-          <Image
-            src={
-              "https://thehappyprogrammer.com/wp-content/uploads/2021/06/IMG_0487-1-1839829635-1624717729242.jpg"
-            }
-          />
+          <Image src={aboutConst.image} />
         </ImageContainer>
         <InformationContainer>
           <ParagraphDisplay
-            subtitle="Software Developer"
-            title="My name is Tony"
-            subtext="I have developed numerous of iOS and Android apps. I have participated in many open sourse 
-          projects. An experienced developer in web development, 
-          enterprise and mobile development. 
-          Enthusiastic about programming and technology"
+            subtitle={aboutConst.subtitle}
+            title={aboutConst.title}
+            subtext={aboutConst.text}
           >
             <Socials>
               <SocialsMap />
@@ -44,8 +41,16 @@ const About = ({ state }) => {
       </AboutMeContainer>
       <WhatIdoContainer>
         <WhatIdoDiv>
-          <WhatIDoTitle></WhatIDoTitle>
-          <WhatIDoDesc></WhatIDoDesc>
+          <WhatIDoTitle>{aboutExplain.h2}</WhatIDoTitle>
+          <WhatIDoDesc>
+            {aboutExplain.explain.map(([title, subtitle, icon]) => (
+              <div>
+                <Image src={icon} />
+                <h4>{title}</h4>
+                <p>{subtitle}</p>
+              </div>
+            ))}
+          </WhatIDoDesc>
         </WhatIdoDiv>
       </WhatIdoContainer>
     </MainContainer>
@@ -104,8 +109,35 @@ const ImageContainer = styled.div`
 `;
 // What do I do
 const WhatIdoContainer = styled.div``;
-const WhatIDoTitle = styled.h3``;
-const WhatIDoDesc = styled.p``;
-const WhatIdoDiv = styled.div``;
+const WhatIDoTitle = styled.h2``;
+const WhatIDoDesc = styled.div`
+  padding: 3em 0em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  ${breakpoints.tablet} {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  justify-content: space-between;
+  div {
+    padding-bottom: 3em;
+    width: 40%;
+    ${breakpoints.tablet} {
+      width: 20%;
+    }
+  }
+  img {
+    height: 2em;
+  }
+`;
+const WhatIdoDiv = styled.div`
+  padding: 1em;
+  text-align: center;
+  ${breakpoints.tablet} {
+    text-align: left;
+  }
+`;
 
 export default connect(About);
