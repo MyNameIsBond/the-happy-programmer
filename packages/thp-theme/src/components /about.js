@@ -13,14 +13,13 @@ const SocialsMap = () => (
   <>
     {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
       <Link link={link} key={link}>
-        <Image height="25px" src={icon} />
+        {icon}
       </Link>
     ))}
   </>
 );
 
 const About = ({ state }) => {
-  const data = state.source.get(state.router.link);
   return (
     <MainContainer>
       <AboutMeContainer>
@@ -45,7 +44,7 @@ const About = ({ state }) => {
           <WhatIDoDesc>
             {aboutExplain.explain.map(([title, subtitle, icon]) => (
               <div>
-                <Image src={icon} />
+                {icon}
                 <h4>{title}</h4>
                 <p>{subtitle}</p>
               </div>
@@ -74,6 +73,7 @@ const AboutMeContainer = styled.div`
     justify-content: space-between;
   }
 `;
+
 const Socials = styled.div`
   padding-top: 1em;
   display: flex;
@@ -82,8 +82,10 @@ const Socials = styled.div`
   ${breakpoints.tablet} {
     justify-content: flex-start;
   }
-  img {
+  svg {
     padding: 1em 2em 0em 0em;
+    fill: var(--secondary-colour);
+    height: 1.5em;
   }
 `;
 const ImageContainer = styled.div`
@@ -128,8 +130,9 @@ const WhatIDoDesc = styled.div`
       width: 20%;
     }
   }
-  img {
+  svg {
     height: 2em;
+    fill: var(--primary-colour);
   }
 `;
 const WhatIdoDiv = styled.div`

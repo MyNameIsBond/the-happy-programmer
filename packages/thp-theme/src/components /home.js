@@ -13,10 +13,7 @@ export default () => {
     <>
       <MainContainer>
         <NavContainer>
-          <MyImage
-            data-src={homeConstants.homeSvg}
-            src={homeConstants.homeSvg}
-          />
+          {homeConstants.homeSvg}
           <LandingCredentials>
             <HeaderDescription>{homeConstants.mainHeader}</HeaderDescription>
             <p>
@@ -44,7 +41,7 @@ export default () => {
         <SocialContainer>
           {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
             <a href={link} key={link} target="_blank">
-              <Image src={icon} />
+              {icon}
             </a>
           ))}
         </SocialContainer>
@@ -100,7 +97,7 @@ const Subcribe = styled.div`
     align-items: flex-start;
     justify-content: flex-start;
     align-content: flex-start;
-    text-aligh: left;
+    text-align: left;
     padding-left: 0;
   }
   input {
@@ -114,8 +111,8 @@ const NavContainer = styled.div`
   align-items: center;
   padding-top: 4em;
   margin: auto;
-  img {
-    width: 80%;
+  svg {
+    width: 50%;
     height: auto;
   }
   p {
@@ -213,11 +210,12 @@ const SocialContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
-  img {
-    filter: grayscale(0%);
+  svg {
+    height: 1.8em;
+    fill: var(--secondary-colour);
   }
-  img:hover {
-    filter: grayscale(100%);
+  svg:hover {
+    fill: gray;
   }
   a {
     margin: 3em 2em;

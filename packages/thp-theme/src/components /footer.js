@@ -19,7 +19,7 @@ const Footer = () => {
               {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
                 <SocialContainer key={link}>
                   <a rel="noreferrer" href={link} target="_blank">
-                    <Image height="20" width="auto" src={icon} />
+                    {icon}
                   </a>
                 </SocialContainer>
               ))}
@@ -143,4 +143,8 @@ const LogoSocials = styled.div`
 const SocialContainer = styled.div`
   height: 30px;
   width: 3.4em;
+  svg {
+    fill: var(--footer-logo-Colour);
+    height: 1.3em;
+  }
 `;

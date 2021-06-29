@@ -13,7 +13,7 @@ const LessonContent = () => {
             <LessonContainerDiv>
               {homeConstants.lessonContainer.map(([icon, title, desc]) => (
                 <DescriptionPanel key={title}>
-                  <Image height="60" width="auto" src={icon} />
+                  {icon}
                   <h4>{title}</h4>
                   <p>{desc}</p>
                   <a>Read More</a>
@@ -88,6 +88,9 @@ const DescriptionPanel = styled.div`
   padding: 1em 0em;
   width: 30%;
   text-align: center;
+  svg {
+    fill: var(--accent-colour);
+  }
   p {
     font-weight: var(--font-weight-text);
   }
