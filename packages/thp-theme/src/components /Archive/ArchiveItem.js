@@ -18,13 +18,7 @@ const ArchiveItem = connect(({ item, state, libraries }) => {
     <div>
       <Link link={link}>
         <ImgFuturedMedia>
-          <Image
-            width="auto"
-            height="304"
-            srcSet={img.srcSet}
-            src={img.src}
-            alt={img.alt}
-          />
+          <Image srcSet={img.srcSet} src={img.src} alt={img.alt} />
         </ImgFuturedMedia>
       </Link>
       <AvatarInfoContainer>
@@ -57,7 +51,13 @@ const Atag = styled(Link)`
 `;
 
 const ImgFuturedMedia = styled.div`
+  height: 15em;
+  ${breakpoints.tablet} {
+    height: 19em;
+  }
   img {
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     ${breakpoints.tablet} {
       border-radius: var(--border-radius);

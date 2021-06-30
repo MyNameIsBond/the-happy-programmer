@@ -41,6 +41,7 @@ const globalStyles = css`
   }
   h5 {
     font-size: 1.2rem;
+    font-family: var(--font-titles);
   }
   caption {
     font-size: 0.8rem;

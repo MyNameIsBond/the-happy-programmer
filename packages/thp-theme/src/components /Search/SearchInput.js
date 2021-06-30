@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { connect, styled } from "frontity";
 import { getData, urlToStg } from "../Handlers/dataManager";
-import Image from "@frontity/components/image";
 import { MyInput } from "../reusableComponents/inputs";
+import SearchSvg from "../svg/searchSvg";
 
 export const SearchInput = ({ state, searchQuery, actions }) => {
   const data = getData(state);
@@ -41,11 +41,7 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
         <ArchiveTitle breakpoints={breakpoints}>Tony</ArchiveTitle>
       )}
       <InputContainer breakpoints={breakpoints} onSubmit={searchSubmit}>
-        <Image
-          src={
-            "https://thehappyprogrammer.com/wp-content/uploads/2021/05/searchIcon.svg"
-          }
-        />
+        <SearchSvg />
         <MyInput
           value={search}
           onChange={(e) => setsearch(e.target.value)}
@@ -106,23 +102,22 @@ const CategoryText = styled.p`
 `;
 const SearchTag = styled.div`
   align-items: center;
-
   display: flex;
   padding: 0.5em 1em;
 `;
 const InputContainer = styled.form`
   display: flex;
   width: 100%;
-  img {
-    height: 1.75em;
-    width: 1.75em;
+  justify-content: center;
+  svg {
+    height: 1.7em;
+    width: auto;
     position: relative;
-    transform: translate(2em, 2.75em);
-    filter: grayscale(1);
+    left: 1.9em;
+    top: 2.8em;
+    stroke: var(--secondary-text-colour);
   }
   input {
-    flex-grow: 1;
-    display: block;
     width: 100%;
     padding: 1em 1em 1em 3.5em;
     margin: 2em 1em 1em -0.6em;
