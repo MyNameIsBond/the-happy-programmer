@@ -13,9 +13,7 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
     const q = searchQuery ? urlToStg(searchQuery) : "";
     return q;
   };
-  //hook
   const [search, setsearch] = useState(searchQ);
-
   const searchSubmit = (e) => {
     e.preventDefault();
     if (search.trim().length > 0) {

@@ -11,7 +11,7 @@ import Home from "./home";
 import { Contact } from "./contact";
 import Arch from "./Archive/archive.js";
 import SearchPage from "./Search/SearchPage";
-const Loader = loadable(() => import("./Loading"));
+// const Loader = loadable(() => import("./Loading"));
 const Footer = loadable(() => import("./footer"));
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
@@ -29,7 +29,7 @@ const Root = ({ state }) => {
       <Switch>
         <Home when={data.isHome} />
         <Archive when={data.isCategory} />
-        <Loader when={data.isFetching} />
+        {/* <Loader when={data.isFetching} /> */}
         <Post when={data.isPostType && data.isPost} />
         <Error404 when={data.isError} />
         <SearchPage when={data.isSearch} />
