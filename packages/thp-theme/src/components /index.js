@@ -34,7 +34,7 @@ const Root = ({ state }) => {
         <Error404 when={data.isError} />
         <SearchPage when={data.isSearch} />
         <Arch when={data.isAuthor} />
-        <Contact when={data.link == "/contact/"} />
+        <Contact when={data.link == "/contact/"} loading={data.isFetching} />
         <About when={data.link == "/about/"} />
       </Switch>
       <Footer />
