@@ -1,6 +1,7 @@
-import { styled } from "frontity";
+import { connect, styled } from "frontity";
 import { homeConstants, breakpoints } from "../constants/constants-string";
 import { ContainerDiv } from "../reusableComponents/container";
+import Image from "@frontity/components/image";
 const LessonContent = () => {
   return (
     <LessonBackgroundContainer>
