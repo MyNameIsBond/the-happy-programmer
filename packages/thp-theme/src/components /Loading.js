@@ -27,7 +27,7 @@ const Loading = () => (
     </LoadingContainer>
   </ContainerDiv>
 );
-export default Loading;
+export { Loading, Sceleton };
 
 const color = keyframes`
   0% {
