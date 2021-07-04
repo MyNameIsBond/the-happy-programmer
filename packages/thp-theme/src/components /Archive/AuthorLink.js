@@ -13,8 +13,9 @@ export default ({ date, author }) => {
 
 const DateText = styled.p`
   font-size: 0.9em;
-  margin: 1em 0em;
   padding: 0 0em;
-  color: var(--text-colour);
+  color: var(--secondary-text-colour);
+  margin-block-start: auto;
+  margin-bottom: 0em;
   font-weight: var(--font-weight-text);
 `;

@@ -22,10 +22,22 @@ const Archive = connect(({ state, searchQuery }) => {
 export default Archive;
 
 const ArchiveContainer = styled.div`
-  ${breakpoints.tablet} {
-    padding: 0em 1em;
-    display: grid;
+  display: grid;
+  margin-bottom: 1em;
+  grid-template-columns: 1fr;
+  padding: 0em 1em;
+  grid-gap: 1em;
+
+  ${breakpoints.smallMobile} {
     grid-template-columns: 1fr 1fr;
-    grid-column-gap: 2em;
+  }
+  ${breakpoints.mobile} {
+    grid-template-columns: 1fr 1fr;
+  }
+  ${breakpoints.tablet} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  ${breakpoints.web} {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;

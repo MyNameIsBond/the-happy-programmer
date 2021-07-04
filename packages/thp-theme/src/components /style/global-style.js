@@ -67,13 +67,13 @@ const globalStyles = css`
       "Arial", sans-serif;
     --font-weight-title: 600;
     --font-weight-text: 400;
-    --border-radius: 0.2em;
-    --background-colour: #ffffff;
+    --border-radius: 0.4em;
+    --background-colour: #f9f9f9;
     --text-colour: #1d1d1f;
     --accent-colour: #8241c7;
     --secondary-colour: #e91e63;
     --secondary-text-colour: rgba(51, 51, 51, 0.6);
-    --secondary-background-colour: #f5f5f5;
+    --secondary-background-colour: #f5f5f7;
     --disabled-components: #a0a0a0;
     --disabled-text: #777777;
     --hover-nav-colour: #1c1c1c;
@@ -94,10 +94,13 @@ const globalStyles = css`
     --footer-shadow: 0px 1px 1px lightgray;
     --footer-social: brightness(0) invert(1);
     --hover-border-input: black;
+    --card-background-color: #ffffff;
+    --card-shadow: #e1e1e1;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
+      --card-background-color: #333;
       --category-border: rgba(183, 183, 183, 0.16);
       --secondary-colour: #ff7cdc;
       --secondary-button-hover: rgba(255, 255, 255, 0.08);
@@ -118,6 +121,7 @@ const globalStyles = css`
       --footer-background: #080808;
       --footer-text: #efefef;
       --footer-social: brightness(5) invert(0);
+      --card-shadow: #171717;
     }
   }
 `;

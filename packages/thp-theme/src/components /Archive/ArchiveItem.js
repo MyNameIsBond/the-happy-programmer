@@ -15,7 +15,7 @@ const ArchiveItem = connect(({ item, state, libraries }) => {
   const Html2React = libraries.html2react.Component;
 
   return (
-    <div>
+    <ArchiveItemContainer>
       <Link link={link}>
         <ImgFuturedMedia>
           <Image srcSet={img.srcSet} src={img.src} alt={img.alt} />
@@ -30,7 +30,9 @@ const ArchiveItem = connect(({ item, state, libraries }) => {
 
         <InfoContainer authorAvatar={authorAvatar}>
           {authorAvatar || <Category category={categories} />}
-          <Link link={link}>{title}</Link>
+          <Link link={link}>
+            <h5>{title}</h5>
+          </Link>
           {item.excerpt && (
             <SubText>
               <Html2React html={excerpt} />
@@ -40,11 +42,25 @@ const ArchiveItem = connect(({ item, state, libraries }) => {
           <AuthorLink date={date} author={author} />
         </InfoContainer>
       </AvatarInfoContainer>
-    </div>
+    </ArchiveItemContainer>
   );
 });
 
 export default ArchiveItem;
+
+const ArchiveItemContainer = styled.div`
+  display: grid;
+  grid-template-rows: min-content;
+  border-radius: var(--border-radius);
+  background-color: var(--card-background-color);
+  box-shadow: none;
+  transition: box-shadow, transform 0.16s ease-out;
+  will-change: box-shadow, transform;
+  &:hover {
+    box-shadow: 2px 3px 20px var(--card-shadow);
+    transform: scale(1.007);
+  }
+`;
 
 const Atag = styled(Link)`
   display: contents;
@@ -52,16 +68,19 @@ const Atag = styled(Link)`
 
 const ImgFuturedMedia = styled.div`
   height: 15em;
+  width: 100%;
   ${breakpoints.tablet} {
-    height: 19em;
+    height: 15em;
+  }
+  ${breakpoints.web} {
+    height: 15em;
   }
   img {
     height: 100%;
     width: 100%;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
     object-fit: cover;
-    ${breakpoints.tablet} {
-      border-radius: var(--border-radius);
-    }
     &:hover {
       cursor: pointer;
     }
@@ -71,23 +90,6 @@ const ImgFuturedMedia = styled.div`
 const AvatarInfoContainer = styled.div`
   margin: 1em 0em;
   padding: 0em 0em;
-  display: flex;
-  flex-direction: row;
-  p {
-    margin-block-start: 0.1em;
-  }
-  ${breakpoints.smallMobile} {
-    padding: 0em 0.5em;
-  }
-
-  ${breakpoints.mobile} {
-    padding: 0.5em 0.5em;
-  }
-
-  ${breakpoints.tablet} {
-    margin: 0.5em 0em;
-    padding: 0.5em 0.1em;
-  }
 `;
 const AuthorAvatar = styled(Image)`
   display: none;
@@ -100,24 +102,38 @@ const AuthorAvatar = styled(Image)`
   }
 `;
 const InfoContainer = styled.div`
-  margin-top: 0.2em;
+  margin: 0.2em 1em auto 1em;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   padding: 0em ${(props) => (props.authorAvatar ? "1em" : "0em")};
   > a {
-    margin-block-start: 1em;
     color: var(--text-colour);
-    font-size: 17px;
     font-weight: var(--font-weight-title);
+  }
+
+  h5 {
+    margin: 0;
+    text-overflow: ellipsis;
+    color: var(--text-colour);
+    word-break: break-word;
+    overflow: hidden;
+
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
   }
 `;
 
 const SubText = styled.div`
-  width: 22em;
+  max-width: 22em;
   overflow: hidden;
   text-overflow: ellipsis;
   word-break: break-word;
   word-wrap: break-word;
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   p {
     margin-block-end: 1em;
@@ -129,7 +145,7 @@ const SubText = styled.div`
     word-break: break-word;
     word-wrap: break-word;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
   }
 

@@ -3,15 +3,15 @@ import { breakpoints } from "./constants/constants-string";
 import { ContainerDiv } from "./reusableComponents/container";
 const Loading = () => (
   <ContainerDiv>
-    <SpaceDiv />
-    <Sceleton boarderRadius="5px" height="4em" width="100%" />
+    <SpaceDiv>
+      <Sceleton boarderRadius="5px" height="3.5em" width="100%" />
+    </SpaceDiv>
 
     <LoadingContainer>
-      {[...Array(8)].map((i) => (
+      {[...Array(9)].map((i) => (
         <div>
           <Sceleton boarderRadius="7px" height="20em" width="100%" />
           <SceletonLoaderContainer>
-            <Sceleton boarderRadius="100%" height="4em" width="4em" />
             <TextSceletonContainer>
               <Sceleton
                 marginBottom="1em"
@@ -27,22 +27,22 @@ const Loading = () => (
     </LoadingContainer>
   </ContainerDiv>
 );
-export { Loading, Sceleton };
+export default Loading;
 
 const color = keyframes`
   0% {
-    background-color: var(--loader-colour);
+    background-color: var(--input-background-colour);
   }
   50% {
     background-color: lightgray;
   }
   100 {
-    background-color: var(--loader-colour);
+    background-color: var(--input-background-colour);
   }
 `;
 
 const SpaceDiv = styled.div`
-  padding: 4em;
+  padding: 9em 1.5em 0em 1.5em;
 `;
 
 const Sceleton = styled.div`
@@ -50,7 +50,7 @@ const Sceleton = styled.div`
   height: ${(props) => props.height};
   width: ${(props) => props.width};
   margin-bottom: ${(props) => props.marginBottom};
-  background: var(--loader-colour);
+  background: var(--secondary-text-colour);
   position: relative;
   overflow: hidden;
   animation-name: ${color};
@@ -60,25 +60,33 @@ const Sceleton = styled.div`
 
 const LoadingContainer = styled.div`
   padding-top: 10em;
-  padding: 5em 0em 0em 0em;
+  padding: 5em 2em 0em 2em;
   display: grid;
   grid-template-columns: 1fr;
-  grid-column-gap: 2em;
-  grid-row-gap: 2em;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
 
-  ${breakpoints.tablet} {
+  ${breakpoints.smallMobile} {
     grid-template-columns: 1fr 1fr;
+  }
+  ${breakpoints.mobile} {
+    grid-template-columns: 1fr 1fr;
+  }
+  ${breakpoints.tablet} {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  ${breakpoints.web} {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 `;
 
 const TextSceletonContainer = styled.div`
   display: flex;
   flex-direction: column;
-  padding: 1em;
+  padding: 1em 0em 1em 0em;
 `;
 
 const SceletonLoaderContainer = styled.div`
-  padding-top: 1em;
-  padding-left: 0.5em;
+  padding: 1em 0em 2em 0em;
   display: flex;
 `;
