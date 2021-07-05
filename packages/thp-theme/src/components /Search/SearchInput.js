@@ -3,6 +3,7 @@ import { connect, styled } from "frontity";
 import { getData, urlToStg } from "../Handlers/dataManager";
 import { MyInput } from "../reusableComponents/inputs";
 import SearchSvg from "../svg/searchSvg";
+import { breakpoints } from "../constants/constants-string";
 
 export const SearchInput = ({ state, searchQuery, actions }) => {
   const data = getData(state);
@@ -68,7 +69,14 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
           </>
         )}
         <SupportPatreonText>
-          support me on <a>Patreon</a>
+          support me on{" "}
+          <a
+            rel="noreferrer"
+            href="https://www.patreon.com/thehappyprogrammer"
+            target="_blank"
+          >
+            Patreon
+          </a>
         </SupportPatreonText>
       </SearchTag>
     </>
@@ -78,7 +86,11 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
 const SupportPatreonText = styled.p`
   padding: 0em;
   margin: 0em;
-  margin-left: auto;
+  margin-right: auto;
+  ${breakpoints.smallMobile} {
+    margin-left: auto;
+    margin-right: 0;
+  }
 `;
 const ArchiveTitle = styled.h1`
   padding: 0em 0.5em;
@@ -102,6 +114,14 @@ const SearchTag = styled.div`
   align-items: center;
   display: flex;
   padding: 0.5em 1em;
+  flex-direction: column;
+  align-items: flex-start;
+  ${breakpoints.smallMobile} {
+    flex-direction: row;
+  }
+  ${breakpoints.mobile} {
+    flex-direction: row;
+  }
 `;
 const InputContainer = styled.form`
   display: flex;
