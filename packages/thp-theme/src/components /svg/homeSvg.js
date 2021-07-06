@@ -48,7 +48,7 @@ const HomeSvg = () => (
           data-name="Path 475"
           d="M93.37,56.1v3.156H0v-2.57A30.691,30.691,0,0,0,20.007,29.049,30.692,30.692,0,0,0,2.112,0H92.755a30.711,30.711,0,0,0,.616,56.1Z"
           transform="translate(106.936 226.34)"
-          fill="#c8cad7"
+          fill="var(--sceleton-colour)"
         />
         <path
           id="Path_476"
@@ -62,7 +62,7 @@ const HomeSvg = () => (
           data-name="Path 477"
           d="M0,0V17.727c0,9.789,7.165,17.727,16,17.727H290.767c8.839,0,16-7.938,16-17.727V0Z"
           transform="translate(0 210.258)"
-          fill="#c8cad7"
+          fill="var(--sceleton-colour)"
         />
         <path
           id="Path_478"
@@ -78,14 +78,14 @@ const HomeSvg = () => (
           height="9.356"
           rx="4.678"
           transform="translate(76.077 280.18)"
-          fill="#c8cad7"
+          fill="var(--sceleton-colour)"
         />
         <path
           id="Path_479"
           data-name="Path 479"
           d="M306.77,16a16,16,0,0,0-16-16H16A16,16,0,0,0,0,16V213.7H306.77Z"
           transform="translate(0 0)"
-          fill="#474157"
+          fill="var(--text-colour)"
         />
         <rect
           id="Rectangle_270"
@@ -94,7 +94,7 @@ const HomeSvg = () => (
           height="185.638"
           rx="10"
           transform="translate(8.371 15.265)"
-          fill="#ededf4"
+          fill="var(--background-colour)"
         />
         <circle
           id="Ellipse_76"
@@ -103,14 +103,14 @@ const HomeSvg = () => (
           cy="9.11"
           r="9.11"
           transform="translate(144.275 219.614)"
-          fill="#fff"
+          fill="var(--background-colour)"
         />
         <path
           id="Path_480"
           data-name="Path 480"
           d="M290.028,7.879H0A7.879,7.879,0,0,1,7.879,0H282.15A7.879,7.879,0,0,1,290.028,7.879Z"
           transform="translate(8.371 15.265)"
-          fill="#c8cad7"
+          fill="var(--sceleton-colour)"
         />
         <circle
           id="Ellipse_77"
@@ -160,7 +160,7 @@ const HomeSvg = () => (
           width="137.874"
           height="4.432"
           transform="translate(19.204 169.142)"
-          fill="#b7b7b7"
+          fill="var(--sceleton-colour)"
           opacity="0.2"
         />
         <rect
@@ -169,7 +169,7 @@ const HomeSvg = () => (
           width="137.874"
           height="4.432"
           transform="translate(19.204 175.548)"
-          fill="#b7b7b7"
+          fill="var(--sceleton-colour)"
           opacity="0.2"
         />
         <rect
@@ -178,7 +178,7 @@ const HomeSvg = () => (
           width="137.874"
           height="4.432"
           transform="translate(19.204 181.949)"
-          fill="#b7b7b7"
+          fill="var(--sceleton-colour)"
           opacity="0.2"
         />
         <rect
@@ -187,7 +187,7 @@ const HomeSvg = () => (
           width="136.889"
           height="74.354"
           transform="translate(19.204 41.608)"
-          fill="#b7b7b7"
+          fill="var(--sceleton-colour)"
           opacity="0.2"
         />
         <rect
@@ -196,7 +196,7 @@ const HomeSvg = () => (
           width="32.006"
           height="29.544"
           transform="translate(20.681 122.856)"
-          fill="var(--accent-colour)"
+          fill="var(--sceleton-colour)"
           opacity="0.2"
         />
         <rect
@@ -205,7 +205,7 @@ const HomeSvg = () => (
           width="32.006"
           height="29.544"
           transform="translate(124.087 122.856)"
-          fill="#b7b7b7"
+          fill="var(--sceleton-colour)"
           opacity="0.2"
         />
         <rect
@@ -214,7 +214,7 @@ const HomeSvg = () => (
           width="32.006"
           height="29.544"
           transform="translate(71.645 122.856)"
-          fill="#b7b7b7"
+          fill="var(--sceleton-colour)"
           opacity="0.2"
         />
         <rect
@@ -223,7 +223,7 @@ const HomeSvg = () => (
           width="94.212"
           height="69.346"
           transform="translate(185.313 63.235)"
-          fill="#b7b7b7"
+          fill="var(--sceleton-colour)"
           opacity="0.2"
         />
         <rect
@@ -232,7 +232,7 @@ const HomeSvg = () => (
           width="74.354"
           height="4.432"
           transform="translate(195.24 77.308)"
-          fill="#ededf4"
+          fill="var(--sceleton-colour)"
         />
         <rect
           id="Rectangle_282"
@@ -240,7 +240,7 @@ const HomeSvg = () => (
           width="74.354"
           height="4.432"
           transform="translate(195.24 86.501)"
-          fill="#ededf4"
+          fill="var(--sceleton-colour)"
         />
         <rect
           id="Rectangle_283"
@@ -248,7 +248,7 @@ const HomeSvg = () => (
           width="74.354"
           height="4.432"
           transform="translate(195.24 95.694)"
-          fill="#ededf4"
+          fill="var(--sceleton-colour)"
         />
         <rect
           id="Rectangle_284"
@@ -256,7 +256,7 @@ const HomeSvg = () => (
           width="74.354"
           height="4.432"
           transform="translate(195.24 104.883)"
-          fill="#ededf4"
+          fill="var(--sceleton-colour)"
         />
         <rect
           id="Rectangle_285"
@@ -264,7 +264,7 @@ const HomeSvg = () => (
           width="74.354"
           height="4.432"
           transform="translate(195.24 114.076)"
-          fill="#ededf4"
+          fill="var(--sceleton-colour)"
         />
         <rect
           id="Rectangle_286"
@@ -280,7 +280,7 @@ const HomeSvg = () => (
           width="47.768"
           height="8.366"
           transform="translate(192.994 182.018)"
-          fill="#b7b7b7"
+          fill="var(--sceleton-colour)"
         />
         <path
           id="Path_506"
@@ -327,21 +327,21 @@ const HomeSvg = () => (
           id="Path_420"
           data-name="Path 420"
           d="M116.606,55.573h-1.285v-35.2A20.373,20.373,0,0,0,94.948,0H20.373A20.373,20.373,0,0,0,0,20.373V213.482a20.373,20.373,0,0,0,20.373,20.373H94.948a20.373,20.373,0,0,0,20.373-20.373V80.628h1.285Z"
-          fill="#535353"
+          fill="var(--text-colour)"
         />
         <path
           id="Path_421"
           data-name="Path 421"
           d="M105.363,15.215V208.04a15.215,15.215,0,0,1-15.215,15.215H15.215A15.215,15.215,0,0,1,0,208.04V15.215A15.215,15.215,0,0,1,15.214,0h9.091A7.232,7.232,0,0,0,31,9.958H73.722A7.232,7.232,0,0,0,80.415,0h9.733a15.215,15.215,0,0,1,15.215,15.215Z"
           transform="translate(5.622 5.3)"
-          fill="#fff"
+          fill="var(--background-colour)"
         />
         <path
           id="Path_423"
           data-name="Path 423"
           d="M56.553,5.141H2.571A2.571,2.571,0,0,1,2.571,0H56.553a2.571,2.571,0,1,1,0,5.141Z"
           transform="translate(42.934 37.001)"
-          fill="#e6e6e6"
+          fill="var(--sceleton-colour)"
         />
         <path
           id="Path_424"
@@ -355,7 +355,7 @@ const HomeSvg = () => (
           data-name="Path 426"
           d="M56.553,5.141H2.571A2.571,2.571,0,0,1,2.571,0H56.553a2.571,2.571,0,1,1,0,5.141Z"
           transform="translate(42.934 80.059)"
-          fill="#e6e6e6"
+          fill="var(--sceleton-colour)"
         />
         <path
           id="Path_427"
@@ -369,7 +369,7 @@ const HomeSvg = () => (
           data-name="Path 429"
           d="M56.553,5.141H2.571A2.571,2.571,0,0,1,2.571,0H56.553a2.571,2.571,0,1,1,0,5.141Z"
           transform="translate(42.934 166.175)"
-          fill="#e6e6e6"
+          fill="var(--sceleton-colour)"
         />
         <path
           id="Path_430"
@@ -383,7 +383,7 @@ const HomeSvg = () => (
           data-name="Path 432"
           d="M56.553,5.141H2.571A2.571,2.571,0,0,1,2.571,0H56.553a2.571,2.571,0,1,1,0,5.141Z"
           transform="translate(42.934 209.232)"
-          fill="#e6e6e6"
+          fill="var(--sceleton-colour)"
         />
         <path
           id="Path_433"
@@ -397,7 +397,7 @@ const HomeSvg = () => (
           data-name="Path 435"
           d="M10.282,20.565A10.282,10.282,0,1,1,20.565,10.283,10.282,10.282,0,0,1,10.282,20.565Zm0-20.115a9.833,9.833,0,1,0,9.833,9.833A9.833,9.833,0,0,0,10.282.45Z"
           transform="translate(14.549 152.357)"
-          fill="#3f3d56"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_53"
@@ -407,7 +407,7 @@ const HomeSvg = () => (
           rx="4.195"
           ry="4.195"
           transform="translate(20.455 159.254)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_54"
@@ -417,7 +417,7 @@ const HomeSvg = () => (
           rx="1.736"
           ry="1.302"
           transform="translate(18.307 160.574) rotate(-45)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_55"
@@ -427,7 +427,7 @@ const HomeSvg = () => (
           rx="1.302"
           ry="1.736"
           transform="translate(25.318 159.689) rotate(-66.869)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_56"
@@ -444,14 +444,14 @@ const HomeSvg = () => (
           data-name="Path 439"
           d="M0,1.906a4.842,4.842,0,0,0,2.767.855,2.967,2.967,0,0,1-1.176.484,9.764,9.764,0,0,0,3.988.022,2.582,2.582,0,0,0,.835-.287,1.057,1.057,0,0,0,.515-.689,1.424,1.424,0,0,0-.707-1.26A5.213,5.213,0,0,0,1.842.156,2.4,2.4,0,0,0,.544.89a1.182,1.182,0,0,0-.109,1.4Z"
           transform="translate(21.042 160.305)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <path
           id="Path_440"
           data-name="Path 440"
           d="M10.282,20.565A10.282,10.282,0,1,1,20.565,10.283,10.282,10.282,0,0,1,10.282,20.565Zm0-20.115a9.833,9.833,0,1,0,9.833,9.833A9.833,9.833,0,0,0,10.282.45Z"
           transform="translate(14.549 195.415)"
-          fill="#3f3d56"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_57"
@@ -461,7 +461,7 @@ const HomeSvg = () => (
           rx="4.195"
           ry="4.195"
           transform="translate(20.454 202.312)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_58"
@@ -471,7 +471,7 @@ const HomeSvg = () => (
           rx="1.736"
           ry="1.302"
           transform="translate(18.307 203.631) rotate(-45)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_59"
@@ -481,7 +481,7 @@ const HomeSvg = () => (
           rx="1.302"
           ry="1.736"
           transform="translate(25.318 202.747) rotate(-66.869)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_60"
@@ -498,14 +498,14 @@ const HomeSvg = () => (
           data-name="Path 441"
           d="M0,1.906a4.842,4.842,0,0,0,2.767.855,2.967,2.967,0,0,1-1.176.484,9.764,9.764,0,0,0,3.988.022,2.582,2.582,0,0,0,.835-.287,1.057,1.057,0,0,0,.515-.689,1.424,1.424,0,0,0-.707-1.26A5.213,5.213,0,0,0,1.842.156,2.4,2.4,0,0,0,.544.89a1.182,1.182,0,0,0-.109,1.4Z"
           transform="translate(21.042 203.363)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <path
           id="Path_442"
           data-name="Path 442"
           d="M10.282,20.565A10.282,10.282,0,1,1,20.565,10.283,10.282,10.282,0,0,1,10.282,20.565Zm0-20.115a9.833,9.833,0,1,0,9.833,9.833A9.833,9.833,0,0,0,10.282.45Z"
           transform="translate(14.549 106.729)"
-          fill="#3f3d56"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_61"
@@ -515,7 +515,7 @@ const HomeSvg = () => (
           rx="4.195"
           ry="4.195"
           transform="translate(20.454 113.626)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_62"
@@ -525,7 +525,7 @@ const HomeSvg = () => (
           rx="1.736"
           ry="1.302"
           transform="translate(18.307 114.945) rotate(-45)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_63"
@@ -535,7 +535,7 @@ const HomeSvg = () => (
           rx="1.302"
           ry="1.736"
           transform="translate(25.318 114.061) rotate(-66.869)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_64"
@@ -552,14 +552,14 @@ const HomeSvg = () => (
           data-name="Path 443"
           d="M0,1.906a4.842,4.842,0,0,0,2.767.855,2.967,2.967,0,0,1-1.176.484,9.764,9.764,0,0,0,3.988.022,2.582,2.582,0,0,0,.835-.287,1.057,1.057,0,0,0,.515-.689,1.424,1.424,0,0,0-.707-1.26A5.213,5.213,0,0,0,1.842.156,2.4,2.4,0,0,0,.544.89a1.182,1.182,0,0,0-.109,1.4Z"
           transform="translate(21.042 114.676)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <path
           id="Path_444"
           data-name="Path 444"
           d="M10.282,20.565A10.282,10.282,0,1,1,20.565,10.283,10.282,10.282,0,0,1,10.282,20.565Zm0-20.115a9.833,9.833,0,1,0,9.833,9.833A9.833,9.833,0,0,0,10.282.45Z"
           transform="translate(14.549 65.921)"
-          fill="#3f3d56"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_65"
@@ -569,7 +569,7 @@ const HomeSvg = () => (
           rx="4.195"
           ry="4.195"
           transform="translate(20.454 72.817)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_66"
@@ -579,7 +579,7 @@ const HomeSvg = () => (
           rx="1.736"
           ry="1.302"
           transform="translate(18.307 74.137) rotate(-45)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_67"
@@ -589,7 +589,7 @@ const HomeSvg = () => (
           rx="1.302"
           ry="1.736"
           transform="translate(25.318 73.253) rotate(-66.869)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_68"
@@ -606,14 +606,14 @@ const HomeSvg = () => (
           data-name="Path 445"
           d="M0,1.906a4.842,4.842,0,0,0,2.767.855,2.967,2.967,0,0,1-1.176.484,9.764,9.764,0,0,0,3.988.022,2.582,2.582,0,0,0,.835-.287,1.057,1.057,0,0,0,.515-.689,1.424,1.424,0,0,0-.707-1.26A5.213,5.213,0,0,0,1.842.156,2.4,2.4,0,0,0,.544.89a1.182,1.182,0,0,0-.109,1.4Z"
           transform="translate(21.042 73.868)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <path
           id="Path_446"
           data-name="Path 446"
           d="M10.282,20.565A10.282,10.282,0,1,1,20.565,10.283,10.282,10.282,0,0,1,10.282,20.565Zm0-20.115a9.833,9.833,0,1,0,9.833,9.833A9.833,9.833,0,0,0,10.282.45Z"
           transform="translate(14.549 23.184)"
-          fill="#3f3d56"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_69"
@@ -623,7 +623,7 @@ const HomeSvg = () => (
           rx="4.195"
           ry="4.195"
           transform="translate(20.454 30.081)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_70"
@@ -633,7 +633,7 @@ const HomeSvg = () => (
           rx="1.736"
           ry="1.302"
           transform="translate(18.307 31.4) rotate(-45)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_71"
@@ -643,7 +643,7 @@ const HomeSvg = () => (
           rx="1.302"
           ry="1.736"
           transform="translate(25.318 30.516) rotate(-66.869)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <ellipse
           id="Ellipse_72"
@@ -660,14 +660,14 @@ const HomeSvg = () => (
           data-name="Path 447"
           d="M0,1.906a4.842,4.842,0,0,0,2.767.855,2.967,2.967,0,0,1-1.176.484,9.764,9.764,0,0,0,3.988.022,2.582,2.582,0,0,0,.835-.287,1.057,1.057,0,0,0,.515-.689,1.424,1.424,0,0,0-.707-1.26A5.213,5.213,0,0,0,1.842.156,2.4,2.4,0,0,0,.544.89a1.182,1.182,0,0,0-.109,1.4Z"
           transform="translate(21.042 31.131)"
-          fill="#2f2e41"
+          fill="var(--text-colour)"
         />
         <path
           id="Path_448"
           data-name="Path 448"
           d="M56.553,5.141H2.571A2.571,2.571,0,0,1,2.571,0H56.553a2.571,2.571,0,1,1,0,5.141Z"
           transform="translate(42.934 120.868)"
-          fill="#e6e6e6"
+          fill="var(--sceleton-colour)"
         />
         <path
           id="Path_449"
@@ -687,28 +687,28 @@ const HomeSvg = () => (
           data-name="Path 408"
           d="M552.917,372.617s-31.867-15.934-27.315-60.7,3.035-40.213,3.035-40.213,7.587-25.039,21.245-34.143c0,0-32.626-33.385-58.423,27.315,0,0-6.829,36.42-1.517,60.7a159.069,159.069,0,0,0,17.451,44.007s11.381,11.381,24.28,11.381A32.291,32.291,0,0,0,552.917,372.617Z"
           transform="translate(-486.967 -219.08)"
-          fill="#ccc"
+          fill="var(--secondary-background-colour)"
         />
         <path
           id="Path_409"
           data-name="Path 409"
           d="M603.82,439.878s-18.21,48.559-75.115,39.454-41.731-107.741-41.731-107.741-6.359,73.58,26.912,95.219c9.219,6,21.26,6.049,30.066-.538,5.835-4.365,10.835-11.979,10.171-25.257Z"
           transform="translate(-485.138 -313.277)"
-          fill="#e6e6e6"
+          fill="var(--sceleton-colour)"
         />
         <path
           id="Path_410"
           data-name="Path 410"
           d="M602.835,235.374s-25.92-46.842-82.067-30.908c-34.8,14.829-34.156,53.01-34.156,53.01-4.2,63.306,40.972,62.284,51.607-5.209,1.867-11.851-1.9-18.589-1.9-18.589s-5.311,15.934-21.624,19.348c-16.338,3.42-19.132-2.02-18.589-10.243q.008-.123.017-.245a31.018,31.018,0,0,1,7.369-18.074c9.353-10.89,29.739-26.792,51.417,6.559l1.518,3.753S583.23,242,602.835,235.374Z"
           transform="translate(-485.927 -201.16)"
-          fill="#e6e6e6"
+          fill="var(--sceleton-colour)"
         />
         <path
           id="Path_411"
           data-name="Path 411"
           d="M676.04,297.3a14.8,14.8,0,0,0-14.788,14.788v69.591a15.413,15.413,0,0,0,15.4,15.4h36.614a18.575,18.575,0,0,0,18.554-18.554V316a18.719,18.719,0,0,0-18.7-18.7Z"
           transform="translate(-600.993 -264.408)"
-          fill="#3f3d56"
+          fill="var(--text-colour)"
         />
         <path
           id="Path_412"
@@ -722,7 +722,7 @@ const HomeSvg = () => (
           data-name="Path 413"
           d="M705.9,307.448a7.844,7.844,0,0,0-3.161,6.286V392.1a7.868,7.868,0,0,0,7.859,7.859h34.819a15.667,15.667,0,0,0,3.913-.512,15.634,15.634,0,0,1-7.707,2.03H706.809a7.868,7.868,0,0,1-7.859-7.859V315.251A7.868,7.868,0,0,1,705.9,307.448Z"
           transform="translate(-625.792 -271.081)"
-          fill="#523f3f"
+          fill="var(--secondray-colour)"
           opacity="0.2"
         />
         <ellipse

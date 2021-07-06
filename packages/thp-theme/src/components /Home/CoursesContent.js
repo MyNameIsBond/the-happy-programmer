@@ -12,7 +12,7 @@ const CoursesContent = () => {
           <CoursesContainer key={title}>
             <ContainerDiv>
               <CourseDiv row={row}>
-                <Image src={icon} width={width} />
+                {icon}
                 <CoursesCredentials>
                   <h2>{title}</h2>
                   <p>{desc}</p>

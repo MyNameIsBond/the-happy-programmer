@@ -10,6 +10,14 @@ import JavascriptSvg from "../svg/javascriptSvg.js";
 import ReactNativeSvg from "../svg/reactNativeSvg.js";
 import SwiftuiSvg from "../svg/swiftuiSvg.js";
 import HomeSvg from "../svg/homeSvg";
+
+// course SVGs
+
+import FlutterCourse from "../svg/flutter-course";
+import WebCourse from "../svg/web-course";
+import SwiftUICourse from "../svg/swiftui-course";
+import ReactnativeCourse from "../svg/reactnative-course";
+
 const lessonIcons = {
   flutter:
     "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Icon-simple-flutter.svg",
@@ -47,7 +55,7 @@ const homeConstants = {
   coursesContainer: [
     // icon , title , description , link , width of the icon-svg, disabled,row-reverse.
     [
-      "https://thehappyprogrammer.com/wp-content/uploads/2021/05/Group-27.svg",
+      <SwiftUICourse />,
       "SwiftUI Tutorials",
       "SwiftUI is being examined in depth to teach you how you can create stunning designs and teach you how to create professional and clean code. SwiftUI tutorials will cover macOS, iPadOS, watchOS and iOS.",
       "/category/swiftui/",
@@ -56,7 +64,7 @@ const homeConstants = {
       "row",
     ],
     [
-      "https://thehappyprogrammer.com/wp-content/uploads/2021/05/svgReactNative.svg",
+      <ReactnativeCourse />,
       "React Native Tutorials",
       "React has great capabilities is a very known cross-platform framework in JavaScrip. React Native can cover both mobile environments. Hot animation tutorials coming up. Also, clones from big famous Apps made in React Native.",
       "",
@@ -65,7 +73,7 @@ const homeConstants = {
       "row-reverse",
     ],
     [
-      "https://thehappyprogrammer.com/wp-content/uploads/2021/05/svgFlutterMobile.svg",
+      <FlutterCourse />,
       "Flutter Tutorials",
       "Flutter is a cross-platform framework, with a single codebase you can create apps for Android, iOS, macOS, Windows, and Web. In Flutter we will cover the whole range Flutter provides and teach you the key components of Flutter and Dart.",
       "",
@@ -74,7 +82,7 @@ const homeConstants = {
       "row",
     ],
     [
-      "https://thehappyprogrammer.com/wp-content/uploads/2021/05/svgWeb.svg",
+      <WebCourse />,
       "Web Tutorials",
       "On the web, we will cover mostly ReactJS. We will clone websites and teach you how to go from zero to hero, how to understand crucial concepts, and deploy.",
       "",
