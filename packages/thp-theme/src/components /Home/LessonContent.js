@@ -15,7 +15,6 @@ const LessonContent = () => {
                   {icon}
                   <h4>{title}</h4>
                   <p>{desc}</p>
-                  <a>Read More</a>
                 </DescriptionPanel>
               ))}
             </LessonContainerDiv>

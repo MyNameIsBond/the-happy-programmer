@@ -49,13 +49,15 @@ const ArchiveItem = connect(({ item, state, libraries }) => {
 export default ArchiveItem;
 
 const ArchiveItemContainer = styled.div`
+  background-color: var(--card-background-color);
   display: grid;
   grid-template-rows: min-content;
   border-radius: var(--border-radius);
-  background-color: var(--card-background-color);
   box-shadow: none;
   transition: box-shadow, transform 0.16s ease-out;
   will-change: box-shadow, transform;
+  transform: scale(1);
+
   &:hover {
     box-shadow: 2px 3px 20px var(--card-shadow);
     transform: scale(1.007);
@@ -67,8 +69,13 @@ const Atag = styled(Link)`
 `;
 
 const ImgFuturedMedia = styled.div`
-  height: 15em;
+  height: 11em;
   width: 100%;
+  ${breakpoints.smallMobile} {
+  }
+  ${breakpoints.mobile} {
+    height: 14em;
+  }
   ${breakpoints.tablet} {
     height: 15em;
   }
@@ -113,12 +120,11 @@ const InfoContainer = styled.div`
   }
 
   h5 {
-    margin: 0;
-    text-overflow: ellipsis;
+    margin: auto;
     color: var(--text-colour);
+    text-overflow: ellipsis;
     word-break: break-word;
     overflow: hidden;
-
     word-wrap: break-word;
     display: -webkit-box;
     -webkit-line-clamp: 1;
@@ -136,8 +142,8 @@ const SubText = styled.div`
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   p {
-    margin-block-end: 1em;
-    margin-block-start: 1em;
+    margin-block-end: 1.5em;
+    margin-block-start: 0.5em;
     font-weight: var(--font-weight-text);
     overflow: hidden;
     text-overflow: ellipsis;

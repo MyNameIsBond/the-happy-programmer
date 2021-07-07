@@ -4,12 +4,37 @@ const Primary = ({ children, ...props }) => (
   <PrimaryButton {...props}>{children}</PrimaryButton>
 );
 const Secondary = ({ children, disabled, ...props }) => (
-  <SecondaryButton disabled={disabled}>{children}</SecondaryButton>
+  <SecondaryButton {...props} disabled={disabled}>
+    {children}
+  </SecondaryButton>
 );
 
 const LinkButton = ({ children, ...props }) => (
   <SecondaryButtonLink {...props}>{children}</SecondaryButtonLink>
 );
+
+const DecorationLink = ({ children, ...props }) => (
+  <DecLink {...props}>
+    {children}
+    <svg viewBox="0 0 13.503 23.619">
+      <path
+        d="M15.321,18l8.937-8.93a1.688,1.688,0,0,0-2.391-2.384L11.742,16.8a1.685,1.685,0,0,0-.049,2.327L21.86,29.32a1.688,1.688,0,0,0,2.391-2.384Z"
+        transform="translate(24.754 29.813) rotate(180)"
+      />
+    </svg>
+  </DecLink>
+);
+
+const DecLink = styled(Link)`
+  svg {
+    padding-top: 0em;
+    height: 0.7em;
+    width: 0.7em;
+    fill: var(--secondary-colour);
+    padding-left: 0.4em;
+  }
+`;
+
 const SecondaryButtonLink = styled(Link)`
   box-sizing: border-box;
   padding: 10px 20px;
@@ -29,6 +54,7 @@ const SecondaryButtonLink = styled(Link)`
     background: var(--secondary-button-hover);
   }
 `;
+
 const PrimaryButton = styled.button`
   white-space: normal;
   display: inline;
@@ -77,7 +103,6 @@ const SecondaryButton = styled.button`
   }
   &:disabled {
     cursor: default;
-    border: 1px solid var(--disabled-components);
     box-shadow: none;
     color: var(--disabled-text);
   }
@@ -86,4 +111,4 @@ const SecondaryButton = styled.button`
   }
 `;
 
-export { Primary, Secondary, LinkButton };
+export { Primary, Secondary, LinkButton, DecorationLink };

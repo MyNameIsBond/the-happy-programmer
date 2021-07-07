@@ -7,17 +7,17 @@
     "./packages/thp-theme/src/components /Archive/category.js\nThere are multiple modules with names that only differ in casing.\nThis can lead to unexpected behavior when compiling on a filesystem with other case-semantic.\nUse equal casing. Compare these module identifiers:\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Archive/category.js\n    Used by 5 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Post/Post.js\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/category.js\n    Used by 3 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/archiveItem.js",
     "./packages/thp-theme/src/components /Archive/categoryStyle.js\nThere are multiple modules with names that only differ in casing.\nThis can lead to unexpected behavior when compiling on a filesystem with other case-semantic.\nUse equal casing. Compare these module identifiers:\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Archive/categoryStyle.js\n    Used by 4 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /Archive/category.js\n* /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/categoryStyle.js\n    Used by 4 module(s), i. e.\n    /Users/tony/Documents/the-happy-programmer/node_modules/babel-loader/lib/index.js??ref--4!/Users/tony/Documents/the-happy-programmer/packages/thp-theme/src/components /archive/category.js"
   ],
-  "hash": "f1d1aef2a85159fbb862",
+  "hash": "ca54c427d1d36f2d37f4",
   "publicPath": "/static/",
   "outputPath": "/Users/tony/Documents/the-happy-programmer/build/static",
   "assetsByChunkName": {
     "Loading": "Loading.module.js",
-    "archive": "archive.module.js",
+    "archive": [
+      "archive.module.js",
+      "archive.b52d01b8a292243278ef.hot-update.js"
+    ],
     "footer": "footer.module.js",
-    "the-happy-programmer": [
-      "the-happy-programmer.module.js",
-      "the-happy-programmer.bfd3b64b4fc273e5f7b3.hot-update.js"
-    ]
+    "the-happy-programmer": "the-happy-programmer.module.js"
   },
   "assets": [],
   "filteredAssets": 6,
@@ -27,8 +27,7 @@
         "the-happy-programmer"
       ],
       "assets": [
-        "the-happy-programmer.module.js",
-        "the-happy-programmer.bfd3b64b4fc273e5f7b3.hot-update.js"
+        "the-happy-programmer.module.js"
       ],
       "children": {},
       "childAssets": {}
@@ -58,7 +57,8 @@
         "archive"
       ],
       "assets": [
-        "archive.module.js"
+        "archive.module.js",
+        "archive.b52d01b8a292243278ef.hot-update.js"
       ],
       "children": {},
       "childAssets": {}
@@ -2637,7 +2637,8 @@
     {
       "id": "archive",
       "files": [
-        "archive.module.js"
+        "archive.module.js",
+        "archive.b52d01b8a292243278ef.hot-update.js"
       ]
     },
     {
@@ -2649,8 +2650,7 @@
     {
       "id": "the-happy-programmer",
       "files": [
-        "the-happy-programmer.module.js",
-        "the-happy-programmer.bfd3b64b4fc273e5f7b3.hot-update.js"
+        "the-happy-programmer.module.js"
       ]
     }
   ]

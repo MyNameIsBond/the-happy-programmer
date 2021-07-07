@@ -1,10 +1,5 @@
 const WebCourse = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="462.45"
-    height="356.275"
-    viewBox="0 0 462.45 356.275"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 462.45 356.275">
     <g
       id="Group_217"
       data-name="Group 217"

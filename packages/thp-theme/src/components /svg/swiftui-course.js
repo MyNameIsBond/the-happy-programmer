@@ -2,8 +2,6 @@ const SwiftIUCourse = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
-    width="177.651"
-    height="356.275"
     viewBox="0 0 177.651 356.275"
   >
     <defs>

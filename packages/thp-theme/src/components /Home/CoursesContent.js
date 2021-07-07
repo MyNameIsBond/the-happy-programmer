@@ -1,8 +1,6 @@
 import { homeConstants, breakpoints } from "../constants/constants-string";
 import { styled } from "frontity";
-import { Primary, Secondary } from "../reusableComponents/buttons";
-import { ContainerDiv } from "../reusableComponents/container";
-import Image from "@frontity/components/image";
+import { Secondary, DecorationLink } from "../reusableComponents/buttons";
 
 const CoursesContent = () => {
   return (
@@ -10,21 +8,17 @@ const CoursesContent = () => {
       {homeConstants.coursesContainer.map(
         ([icon, title, desc, link, width, disabled, row]) => (
           <CoursesContainer key={title}>
-            <ContainerDiv>
-              <CourseDiv row={row}>
-                {icon}
-                <CoursesCredentials>
-                  <h2>{title}</h2>
-                  <p>{desc}</p>
-                  <ButtonContainer>
-                    <Primary>Subcribe</Primary>
-                    <Secondary disabled={disabled}>
-                      {disabled ? "Coming Soon..." : "Read More"}
-                    </Secondary>
-                  </ButtonContainer>
-                </CoursesCredentials>
-              </CourseDiv>
-            </ContainerDiv>
+            <CourseDiv>
+              <h2>{title}</h2>
+              <p>{desc}</p>
+              {disabled ? (
+                <Secondary disabled={true}>Coming Soon...</Secondary>
+              ) : (
+                <DecorationLink link={link}>Read More</DecorationLink>
+              )}
+
+              {icon}
+            </CourseDiv>
           </CoursesContainer>
         )
       )}
@@ -33,43 +27,27 @@ const CoursesContent = () => {
 };
 
 const CoursesContainer = styled.div`
-  width: 100%;
-  display: flex;
-  margin: 3em 0em;
-
-  ${breakpoints.mobile} {
-    background-color: var(--secondary-background-colour);
-    margin: 1em 0em;
-  }
-`;
-
-const ButtonContainer = styled.div`
-  justify-content: center;
-  flex-direction: column;
-  padding-top: 3em;
-  width: 100%;
-  display: flex;
-
-  button {
-    margin: 1em 1em;
-  }
-
-  ${breakpoints.mobile} {
-    justify-content: flex-start;
-    flex-direction: row;
-
-    button {
-      margin: 0em 2em 0em 0em;
-    }
-  }
-`;
-
-const CoursesCredentials = styled.div`
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  ${breakpoints.mobile} {
-    align-items: flex-start;
+  justify-content: space-between;
+  background-color: var(--secondary-background-colour);
+  svg {
+    max-height: 20em;
+    width: auto;
+    padding-top: 4em;
+  }
+  p,
+  h2 {
+    text-align: center;
+    text-overflow: ellipsis;
+    word-break: break-word;
+    overflow: hidden;
+    word-wrap: break-word;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
   }
 `;
 
@@ -77,10 +55,12 @@ const CourseDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 3em 3em 4em 3em;
+  justify-content: space-between;
+  text-align: center;
+  margin: auto;
+  padding: 3em;
   h2,
   p {
-    text-align: center;
     max-width: 25em;
   }
   h2 {
@@ -91,19 +71,8 @@ const CourseDiv = styled.div`
     font-weight: var(--font-weight-text);
   }
   ${breakpoints.mobile} {
-    width: 100%;
-    flex-direction: ${(props) => props.row};
-    justify-content: space-between;
-    align-items: center;
     h2 {
       margin-block-start: 0em;
-    }
-    h2,
-    p {
-      text-align: left;
-    }
-    img {
-      max-width: 200px;
     }
   }
 `;

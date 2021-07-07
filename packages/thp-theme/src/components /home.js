@@ -1,5 +1,5 @@
 import { styled } from "frontity";
-import { Primary, LinkButton } from "./reusableComponents/buttons";
+import { Primary, DecorationLink } from "./reusableComponents/buttons";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
 import { homeConstants, breakpoints } from "./constants/constants-string";
@@ -31,7 +31,9 @@ export default () => {
         </NavContainer>
       </MainContainer>
       <LessonContent />
-      <CoursesContent />
+      <GridCourses>
+        <CoursesContent />
+      </GridCourses>
       <AuthorContainer>
         <AuthorAvatar>
           <Image src={homeConstants.userImage} />
@@ -45,32 +47,13 @@ export default () => {
             </a>
           ))}
         </SocialContainer>
-        <LinkButton link={homeConstants.AuthorInfo.link}>Read More</LinkButton>
+        <DecorationLink link={homeConstants.AuthorInfo.link}>
+          Read More
+        </DecorationLink>
       </AuthorContainer>
     </>
   );
 };
-
-const MyImage = styled(Image)`
-  transform: scale(1);
-  &::before {
-    background-color: blue;
-  }
-
-  &::after {
-    content: "Click to Load Image";
-    width: 100%;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 8vw;
-    color: #fff;
-    transform: translate(-50%, -50%);
-    text-align: center;
-  }
-`;
-
 // ------------------Landing Page------------------
 
 const LandingCredentials = styled.div`
@@ -170,6 +153,19 @@ const HeaderDescription = styled.h1`
 
 // ------------------Courses Container------------------
 
+const GridCourses = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-gap: 1em;
+  margin: 1em;
+
+  ${breakpoints.mobile} {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+`;
+
 // ------------------Author Container------------------
 
 const AuthorAvatar = styled.div`
@@ -212,10 +208,10 @@ const SocialContainer = styled.div`
   align-items: baseline;
   svg {
     height: 1.8em;
-    fill: var(--secondary-colour);
+    fill: var(--secondary-text-colour);
   }
   svg:hover {
-    fill: gray;
+    fill: var(--text-colour);
   }
   a {
     margin: 3em 2em;

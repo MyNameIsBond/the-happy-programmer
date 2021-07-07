@@ -9,7 +9,7 @@ const settings = {
     theme: {
       menu: [
         ["SwiftUI", "/category/swiftui/"],
-        ["Contact", "/contact/"],
+        ["About", "/about/"],
       ],
       authorAvatar: false,
       autoPrefetch: "in-view",
