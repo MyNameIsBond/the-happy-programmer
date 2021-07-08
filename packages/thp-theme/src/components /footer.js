@@ -11,9 +11,7 @@ const Footer = () => {
       <ContainerDiv>
         <FooterContainer>
           <LogoSocials>
-            <Link link={"/"}>
-              <Logo />
-            </Link>
+            <HighlightedText>Socials</HighlightedText>
             <Socials>
               {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
                 <SocialContainer key={link}>
@@ -26,7 +24,7 @@ const Footer = () => {
           </LogoSocials>
           <Credentials>
             <HighlightedText>{homeConstants.footer.contact}</HighlightedText>
-            <p>{homeConstants.footer.country}</p>
+            <SubscribeText>{homeConstants.footer.country}</SubscribeText>
             <a href={`mailto:${homeConstants.footer.email}`}>
               {homeConstants.footer.email}
             </a>
@@ -45,33 +43,26 @@ const Footer = () => {
 export default Footer;
 
 const FooterContainerDiv = styled.div`
-  background-color: var(--footer-background);
   width: 100%;
 `;
 
 const SubscribeText = styled.p`
+  font-size: 0.8em;
   overflow-wrap: break-word;
   word-wrap: break-word;
+  color: var(--secondary-text-colour);
   max-width: 320px;
-
   ${breakpoints.tablet} {
     max-width: 300px;
   }
 `;
 
 const Socials = styled.div`
-  padding-top: 1.5em;
   display: flex;
   flex-direction: row;
   text-align: center;
   ${breakpoints.tablet} {
-    justify-content: start;
-  }
-  img {
-    filter: var(--footer-social);
-  }
-  a {
-    margin: 2em 1em;
+    justify-content: flex-start;
   }
 `;
 const Credentials = styled.div`
@@ -81,13 +72,12 @@ const Credentials = styled.div`
     padding: 0em;
     text-align: left;
   }
+  a {
+    font-size: 0.8em;
+  }
 `;
 const Subscribe = styled.div`
   text-align: center;
-  p {
-    overflow-wrap: break-word;
-  }
-
   ${breakpoints.tablet} {
     text-align: left;
   }
@@ -95,8 +85,7 @@ const Subscribe = styled.div`
 
 const FooterContainer = styled.div`
   width: auto;
-  padding: 4.5em 0em;
-  background-color: var(--footer-background);
+  padding: 4em 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,23 +95,20 @@ const FooterContainer = styled.div`
     align-items: flex-start;
     justify-content: space-between;
   }
-  p {
-    color: var(--footer-text);
-  }
-  svg {
-    fill: var(--footer-logo-Colour);
-    circle:nth-of-type(2) {
-      stroke: var(--footer-logo-Colour);
-    }
-  }
-  text {
-    font-family: var(--font-titles);
-    fill: var(--footer-logo-Colour);
-  }
 `;
 
 const HighlightedText = styled.p`
   font-weight: var(--font-weight-title);
+  font-size: 0.8em;
+  color: var(--text-colour);
+  text-align: center;
+
+  ${breakpoints.mobile} {
+    text-align: center;
+  }
+  ${breakpoints.tablet} {
+    text-align: left;
+  }
 `;
 
 const LogoSocials = styled.div`
@@ -134,16 +120,21 @@ const LogoSocials = styled.div`
   ${breakpoints.tablet} {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     justify-content: flex-end;
   }
 `;
 
 const SocialContainer = styled.div`
-  height: 30px;
-  width: 3.4em;
+  a {
+    padding: 0em 1em 0em 0em;
+  }
   svg {
-    fill: var(--footer-logo-Colour);
-    height: 1.3em;
+    fill: var(--secondary-text-colour);
+    height: 0.8em;
+    width: auto;
+  }
+  svg:hover {
+    fill: var(--text-colour);
   }
 `;

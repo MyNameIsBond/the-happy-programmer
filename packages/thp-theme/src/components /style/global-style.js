@@ -81,7 +81,7 @@ const globalStyles = css`
       0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
     --secondary-button-hover: rgba(0, 0, 0, 0.08);
     --hover-shadow: 3px 2px 2px lightgray;
-    --logo-Colour: black;
+    --logo-colour: black;
     --input-text-colour: #202124;
     --loader-colour: #aaaaaa;
     --border-input: #f1f3f4;
@@ -109,7 +109,7 @@ const globalStyles = css`
       --secondary-text-colour: rgba(255, 255, 255, 0.7);
       --disabled-text: #a0a0a0;
       --hover-shadow: 0px 1px 1px black;
-      --logo-Colour: #ffffff;
+      --logo-colour: #ffffff;
       --background-colour: #212121;
       --text-colour: #ffffff;
       --hover-nav-colour: #bcbcbc;

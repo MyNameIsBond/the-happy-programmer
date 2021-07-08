@@ -107,10 +107,10 @@ const NavContainer = styled.nav`
 const LogoContainer = styled.css`
   text {
     font-family: var(--font-titles);
-    fill: var(--logo-Colour);
+    fill: var(--logo-colour);
   }
   circle:nth-of-type(2) {
-    stroke: var(--logo-Colour);
+    stroke: var(--logo-colour);
   }
   svg:hover {
     cursor: pointer;
