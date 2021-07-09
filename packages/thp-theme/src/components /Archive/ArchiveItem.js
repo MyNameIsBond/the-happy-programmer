@@ -49,7 +49,7 @@ const ArchiveItem = connect(({ item, state, libraries }) => {
 export default ArchiveItem;
 
 const ArchiveItemContainer = styled.div`
-  background-color: var(--card-background-color);
+  background-color: var(--secondary-background-colour);
   display: grid;
   grid-template-rows: min-content;
   border-radius: var(--border-radius);

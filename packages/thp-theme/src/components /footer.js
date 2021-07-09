@@ -1,7 +1,5 @@
 import { homeConstants, breakpoints } from "./constants/constants-string";
-import Link from "@frontity/components/link";
 import { styled } from "frontity";
-import Logo from "./constants/logo";
 import { SubscribeButton } from "./reusableComponents/subscribe";
 import { ContainerDiv } from "./reusableComponents/container";
 

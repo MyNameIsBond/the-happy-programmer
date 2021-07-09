@@ -108,12 +108,12 @@ const globalStyles = css`
       --secondary-button-hover: rgba(255, 255, 255, 0.08);
       --secondary-text-colour: rgba(255, 255, 255, 0.7);
       --disabled-text: #a0a0a0;
-      --hover-shadow: 0px 1px 1px black;
+      --hover-shadow: 0px 1px 1px rgba(255, 255, 255, 0.04);
       --logo-colour: #ffffff;
       --background-colour: #212121;
+      --secondary-background-colour: #000;
       --text-colour: #ffffff;
       --hover-nav-colour: #bcbcbc;
-      --secondary-background-colour: #333;
       --loader-colour: #696969;
       --border-input: #3a3a3a;
       --input-background-colour: #212121;
@@ -123,7 +123,7 @@ const globalStyles = css`
       --footer-background: #080808;
       --footer-text: #efefef;
       --footer-social: brightness(5) invert(0);
-      --card-shadow: #171717;
+      --card-shadow: rgba(255, 255, 255, 0.04);
       // Home SVGs
       --sceleton-colour: #484848;
     }

@@ -85,7 +85,7 @@ const Socials = styled.div`
   svg {
     padding: 1em 2em 0em 0em;
     fill: var(--secondary-colour);
-    height: 1.5em;
+    height: 1.2em;
   }
 `;
 const ImageContainer = styled.div`
