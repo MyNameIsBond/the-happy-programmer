@@ -41,6 +41,7 @@ const Footer = () => {
 export default Footer;
 
 const FooterContainerDiv = styled.div`
+  border-top: 1px solid var(--light-border);
   width: 100%;
 `;
 

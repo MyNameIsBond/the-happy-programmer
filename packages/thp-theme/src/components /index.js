@@ -8,7 +8,6 @@ import Post from "./Post/Post";
 import About from "./about";
 import { Error404 } from "./Error404";
 import Home from "./home";
-import { Contact } from "./contact";
 import Arch from "./Archive/archive.js";
 import SearchPage from "./Search/SearchPage";
 const Loader = loadable(() => import("./Loading"));
@@ -33,7 +32,6 @@ const Root = ({ state }) => {
         <Error404 when={data.isError} />
         <SearchPage when={data.isSearch} />
         <Arch when={data.isAuthor} />
-        <Contact when={data.link == "/contact/"} loading={data.isFetching} />
         <About when={data.link == "/about/"} />
       </Switch>
       <Footer />

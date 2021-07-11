@@ -67,6 +67,7 @@ const globalStyles = css`
       "Arial", sans-serif;
     --font-weight-title: 600;
     --font-weight-text: 400;
+    --light-border: #dbdbdb;
     --border-radius: 0.4em;
     --background-colour: #f9f9f9;
     --text-colour: #1d1d1f;
@@ -76,7 +77,6 @@ const globalStyles = css`
     --secondary-background-colour: #ffffff;
     --disabled-components: #a0a0a0;
     --disabled-text: #777777;
-    --hover-nav-colour: #1c1c1c;
     --button-shadow: 0px 3px 1px -2px rgb(0 0 0 / 20%),
       0px 2px 2px 0px rgb(0 0 0 / 14%), 0px 1px 5px 0px rgb(0 0 0 / 12%);
     --secondary-button-hover: rgba(0, 0, 0, 0.08);
@@ -113,8 +113,8 @@ const globalStyles = css`
       --background-colour: #212121;
       --secondary-background-colour: #000;
       --text-colour: #ffffff;
-      --hover-nav-colour: #bcbcbc;
       --loader-colour: #696969;
+      --light-border: #595959;
       --border-input: #3a3a3a;
       --input-background-colour: #212121;
       --hover-border-input: white;

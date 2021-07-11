@@ -1,7 +1,9 @@
+import { styled, keyframes } from "frontity";
+
 export default () => {
   return (
     <>
-      <svg
+      <LogoStyle
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
         width="205"
@@ -74,7 +76,35 @@ export default () => {
             </g>
           </g>
         </g>
-      </svg>
+      </LogoStyle>
     </>
   );
 };
+
+const wiggleWiggle = keyframes`
+  20%,
+  100% {
+    transform: translate(0, 2px); 
+  }
+
+  0% {
+    transform: translate(0, 0px); 
+  }
+  10% {
+    transform: translate(0, 2px); 
+  }
+`;
+
+const LogoStyle = styled.svg`
+  text {
+    fill: var(--background-colour);
+  }
+  &:hover {
+    text {
+      transition: all 0.4s ease;
+
+      display: block;
+      fill: var(--text-colour);
+    }
+  }
+`;
