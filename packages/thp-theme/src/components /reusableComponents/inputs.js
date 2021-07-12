@@ -11,7 +11,7 @@ const InputStyle = styled.input`
   background: var(--input-background-colour);
   border-radius: var(--border-radius);
   margin: 0em 0.5em;
-  border: solid 1px var(--border-input);
+  border: solid 1px var(--light-border);
   font-size: 1rem;
   color: var(--text-colour);
   transition: all 0.2s ease;

@@ -57,7 +57,6 @@ const ArchiveItemContainer = styled.div`
   transition: box-shadow, transform 0.16s ease-out;
   will-change: box-shadow, transform;
   transform: scale(1);
-
   &:hover {
     box-shadow: 2px 3px 20px var(--card-shadow);
     transform: scale(1.007);
