@@ -142,7 +142,7 @@ const SubText = styled.div`
   -webkit-box-orient: vertical;
   p {
     margin-block-end: 1.5em;
-    margin-block-start: 0.5em;
+    margin-block-start: 0.3em;
     font-weight: var(--font-weight-text);
     overflow: hidden;
     text-overflow: ellipsis;

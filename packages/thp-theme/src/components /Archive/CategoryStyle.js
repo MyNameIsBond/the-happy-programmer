@@ -5,7 +5,7 @@ const CategoryContainer = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding-bottom: 0.5em;
+  padding-bottom: 0.3em;
 `;
 
 const TagLink = styled(Link)`
