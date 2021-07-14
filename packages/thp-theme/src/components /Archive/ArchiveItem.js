@@ -79,7 +79,7 @@ const ImgFuturedMedia = styled.div`
     height: 15em;
   }
   ${breakpoints.web} {
-    height: 15em;
+    height: 12em;
   }
   img {
     height: 100%;

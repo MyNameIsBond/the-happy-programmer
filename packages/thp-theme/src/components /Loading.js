@@ -8,7 +8,7 @@ const Loading = () => (
     </SpaceDiv>
 
     <LoadingContainer>
-      {[...Array(9)].map((i) => (
+      {[...Array(12)].map((i) => (
         <div>
           <Sceleton boarderRadius="7px" height="20em" width="100%" />
           <SceletonLoaderContainer>
@@ -31,10 +31,10 @@ export default Loading;
 
 const color = keyframes`
   0% {
-    background-color: var(--input-background-colour);
+    background-color: var(--secondary-background-colour);
   }
   50% {
-    background-color: lightgray;
+    background-color: var(--background-colour);
   }
   100 {
     background-color: var(--input-background-colour);
@@ -42,7 +42,7 @@ const color = keyframes`
 `;
 
 const SpaceDiv = styled.div`
-  padding: 9em 1.5em 0em 1.5em;
+  padding: 9em 0em 0em 0em;
 `;
 
 const Sceleton = styled.div`
@@ -50,7 +50,7 @@ const Sceleton = styled.div`
   height: ${(props) => props.height};
   width: ${(props) => props.width};
   margin-bottom: ${(props) => props.marginBottom};
-  background: var(--secondary-text-colour);
+  background: var(--secondary-background-colour);
   position: relative;
   overflow: hidden;
   animation-name: ${color};
@@ -60,7 +60,7 @@ const Sceleton = styled.div`
 
 const LoadingContainer = styled.div`
   padding-top: 10em;
-  padding: 5em 2em 0em 2em;
+  padding: 5em 0em 0em 0em;
   display: grid;
   grid-template-columns: 1fr;
   grid-column-gap: 1em;
@@ -76,7 +76,7 @@ const LoadingContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
   }
   ${breakpoints.web} {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;
 

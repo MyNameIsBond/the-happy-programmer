@@ -16,9 +16,6 @@ const Post = ({ state, libraries }) => {
   );
   return (
     <>
-      <Thumbnail>
-        <Image loading="lazy" src={img.src} />
-      </Thumbnail>
       <ContainerDiv>
         <LandingContainer>
           <CatDateContainer>
@@ -48,18 +45,6 @@ const CatDateContainer = styled.div`
   padding-bottom: 0.5em;
   p {
     margin-block-start: 0em;
-  }
-`;
-
-const Thumbnail = styled.div`
-  max-width: 90em;
-  margin-right: auto;
-  margin-left: auto;
-  img {
-    width: 100%;
-    height: 30em;
-    object-fit: cover;
-    border-radius: var(--border-radius);
   }
 `;
 

@@ -38,6 +38,6 @@ const ArchiveContainer = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
   }
   ${breakpoints.web} {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;

@@ -65,7 +65,7 @@ const globalStyles = css`
       "Helvetica", "Arial", sans-serif;
     --font-text: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
       "Arial", sans-serif;
-    --font-weight-title: 600;
+    --font-weight-title: 500;
     --font-weight-text: 400;
     --light-border: #dbdbdb;
     --border-radius: 0.4em;
