@@ -208,7 +208,7 @@ const SocialContainer = styled.div`
   align-items: baseline;
   svg {
     height: 1.2em;
-    fill: var(--secondary-text-colour);
+    fill: var(--text-colour);
   }
   svg:hover {
     fill: var(--text-colour);

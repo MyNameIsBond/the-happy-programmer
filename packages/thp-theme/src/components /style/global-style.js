@@ -45,6 +45,7 @@ const globalStyles = css`
   }
   caption {
     font-size: 0.8rem;
+    color: var(--text-colour);
   }
 
   button {
@@ -70,10 +71,11 @@ const globalStyles = css`
     --light-border: #dbdbdb;
     --border-radius: 0.4em;
     --background-colour: #f9f9f9;
-    --text-colour: #1d1d1f;
+    --text-colour: #000;
     --accent-colour: #8241c7;
     --secondary-colour: #e91e63;
     --secondary-text-colour: rgba(51, 51, 51, 0.6);
+    --third-text-colour: #aeaeae;
     --secondary-background-colour: #ffffff;
     --disabled-components: #a0a0a0;
     --disabled-text: #777777;
@@ -110,12 +112,14 @@ const globalStyles = css`
       --disabled-text: #a0a0a0;
       --hover-shadow: 0px 1px 1px rgba(255, 255, 255, 0.04);
       --logo-colour: #ffffff;
-      --background-colour: #212121;
-      --secondary-background-colour: #000;
+      --background-colour: #000;
+      --secondary-background-colour: #212121;
       --text-colour: #ffffff;
       --loader-colour: #696969;
       --light-border: #595959;
       --border-input: #3a3a3a;
+      --third-text-colour: #a6a6a6;
+
       --input-background-colour: #212121;
       --hover-border-input: white;
       // Footer Style

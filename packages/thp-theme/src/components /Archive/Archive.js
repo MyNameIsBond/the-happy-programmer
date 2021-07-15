@@ -7,15 +7,17 @@ import { breakpoints } from "../constants/constants-string";
 const Archive = connect(({ state, searchQuery }) => {
   const data = getData(state);
   return (
-    <ContainerDiv>
+    <>
       <SearchInput searchQuery={searchQuery} />
-      <ArchiveContainer>
-        {data.items.map(({ type, id }) => {
-          const item = state.source[type][id];
-          return <ArchiveItem key={item.id} item={item} />;
-        })}
-      </ArchiveContainer>
-    </ContainerDiv>
+      <ContainerDiv>
+        <ArchiveContainer>
+          {data.items.map(({ type, id }) => {
+            const item = state.source[type][id];
+            return <ArchiveItem key={item.id} item={item} />;
+          })}
+        </ArchiveContainer>
+      </ContainerDiv>
+    </>
   );
 });
 

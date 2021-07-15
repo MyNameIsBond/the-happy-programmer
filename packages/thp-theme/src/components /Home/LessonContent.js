@@ -38,12 +38,11 @@ const LessonContainer = styled.div`
 const ParagraphLesson = styled.p`
   text-transform: uppercase;
   text-align: center;
-  font-size: 0.8em;
   font-weight: var(--font-weight-title);
   margin-block-end: 0em;
 `;
 
-const HeadingLesson = styled.h3`
+const HeadingLesson = styled.h2`
   text-align: center;
   margin-block-start: 0em;
 `;
