@@ -29,19 +29,24 @@ const globalStyles = css`
   }
   h1 {
     font-size: 2.488rem;
+    font-weight: var(--font-weight-title);
   }
   h2 {
     font-size: 2.074rem;
+    font-weight: var(--font-weight-title);
   }
   h3 {
     font-size: 1.728rem;
+    font-weight: var(--font-weight-title);
   }
   h4 {
     font-size: 1.44rem;
+    font-weight: var(--font-weight-title);
   }
   h5 {
     font-size: 1.2rem;
     font-family: var(--font-titles);
+    font-weight: var(--font-weight-title);
   }
   caption {
     font-size: 0.8rem;
