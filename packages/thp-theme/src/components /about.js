@@ -8,13 +8,12 @@ import {
   aboutConst,
   aboutExplain,
 } from "./constants/constants-string";
-import Link from "@frontity/components/link";
 const SocialsMap = () => (
   <>
-    {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
-      <Link link={link} key={link}>
+    {homeConstants.AuthorInfo.socials.map(([icon, link, label]) => (
+      <a rel="noreferrer" href={link} aria-label={label} key={link}>
         {icon}
-      </Link>
+      </a>
     ))}
   </>
 );
@@ -24,7 +23,7 @@ const About = ({ state }) => {
     <MainContainer>
       <AboutMeContainer>
         <ImageContainer>
-          <Image src={aboutConst.image} />
+          <Image src={aboutConst.image} alt={aboutConst.alt} />
         </ImageContainer>
         <InformationContainer>
           <ParagraphDisplay
@@ -45,7 +44,7 @@ const About = ({ state }) => {
             {aboutExplain.explain.map(([title, subtitle, icon]) => (
               <div>
                 {icon}
-                <h4>{title}</h4>
+                <h3>{title}</h3>
                 <p>{subtitle}</p>
               </div>
             ))}
@@ -75,7 +74,7 @@ const AboutMeContainer = styled.div`
 `;
 
 const Socials = styled.div`
-  padding-top: 1em;
+  margin-top: 1em;
   display: flex;
   width: 100%;
   justify-content: center;
@@ -83,9 +82,14 @@ const Socials = styled.div`
     justify-content: flex-start;
   }
   svg {
-    padding: 1em 2em 0em 0em;
-    fill: var(--secondary-colour);
+    fill: var(--text-colour);
     height: 1.2em;
+  }
+  svg:hover {
+    fill: var(--accent-colour);
+  }
+  a {
+    margin: 1em 2em 0em 0em;
   }
 `;
 const ImageContainer = styled.div`
@@ -97,7 +101,7 @@ const ImageContainer = styled.div`
   background: linear-gradient(
     to right,
     var(--accent-colour),
-    var(--secondary-colour)
+    var(--decoration-colour)
   );
   justify-content: center;
   align-items: center;

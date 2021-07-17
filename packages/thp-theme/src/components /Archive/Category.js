@@ -9,32 +9,24 @@ const Category = connect(({ category, state }) => {
   const { isPostType, isPost } = data;
   return (
     <CategoryContainer>
-      {category.map((item) => (
-        <TagLink link={item.link} key={item.id}>
-          <span>{item.name}</span>
-        </TagLink>
-      ))}
+      {isPostType ||
+        category.map((item) => (
+          <TagLink link={item.link} key={item.id} rel="noreferrer">
+            <span>{item.name}</span>
+          </TagLink>
+        ))}
+
       {isPostType &&
         socials.map(([icon, link, desc, color]) => (
-          <Patreonbutton key={link} color={color}>
-            <TagLink link={link}>
-              <PatreonImg loading="lazy" src={icon} />
-              <span>{desc}</span>
-            </TagLink>
-          </Patreonbutton>
+          <TagLink link={link} target="_blank">
+            <span>{desc}</span>
+          </TagLink>
         ))}
     </CategoryContainer>
   );
 });
 
 export default Category;
-
-const PatreonImg = styled.img`
-  height: 1em;
-  width: auto;
-  filter: brightness(0) invert(1);
-  padding-right: 0.3em;
-`;
 
 const Patreonbutton = styled.div`
   a {

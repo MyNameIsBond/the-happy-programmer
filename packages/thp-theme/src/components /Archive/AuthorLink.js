@@ -5,8 +5,7 @@ export default ({ date, author }) => {
   const dt = new Date(date);
   return (
     <DateText>
-      {dt.toDateString()} •{" by "}
-      <Link link={author.link}>{author.name}</Link>
+      <Link link={author.link}>{author.name}</Link> • {dt.toDateString()}
     </DateText>
   );
 };

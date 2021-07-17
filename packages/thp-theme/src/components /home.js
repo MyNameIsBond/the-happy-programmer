@@ -36,19 +36,25 @@ export default () => {
       </GridCourses>
       <AuthorContainer>
         <AuthorAvatar>
-          <Image src={homeConstants.userImage} />
+          <Image src={homeConstants.userImage} alt={homeConstants.alt} />
         </AuthorAvatar>
         <h2>{homeConstants.AuthorInfo.title}</h2>
         <p>{homeConstants.AuthorInfo.description}</p>
         <SocialContainer>
-          {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
-            <a href={link} key={link} target="_blank">
+          {homeConstants.AuthorInfo.socials.map(([icon, link, label]) => (
+            <a
+              href={link}
+              key={link}
+              rel="noreferrer"
+              target="_blank"
+              aria-label={label}
+            >
               {icon}
             </a>
           ))}
         </SocialContainer>
         <DecorationLink link={homeConstants.AuthorInfo.link}>
-          Read More
+          About Me
         </DecorationLink>
       </AuthorContainer>
     </>
@@ -98,6 +104,7 @@ const NavContainer = styled.div`
     width: 50%;
     height: auto;
   }
+
   p {
     margin-block-start: 0em;
     padding: 0em 1em;
@@ -211,7 +218,7 @@ const SocialContainer = styled.div`
     fill: var(--text-colour);
   }
   svg:hover {
-    fill: var(--text-colour);
+    fill: var(--accent-colour);
   }
   a {
     margin: 3em 2em;

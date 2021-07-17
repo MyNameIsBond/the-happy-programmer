@@ -3,7 +3,8 @@ import { getData, dataPost } from "../Handlers/dataManager";
 import { ContainerDiv } from "../reusableComponents/container";
 import Category from "../Archive/category";
 import AuthorLink from "../Archive/authorLink";
-import Image from "@frontity/components/image";
+import ArrowSvg from "../svg/arrow-svg";
+import Link from "@frontity/components/link";
 
 const Post = ({ state, libraries }) => {
   const data = getData(state);
@@ -15,27 +16,63 @@ const Post = ({ state, libraries }) => {
     post
   );
   return (
-    <>
+    <InfiniteBorder>
       <ContainerDiv>
-        <LandingContainer>
-          <CatDateContainer>
-            <Category category={categories} />
+        <PostHeaderContainer>
+          <BackArrow>
+            <ArrowSvg />
+            <Link link={"/category/swiftui"}>Back to posts</Link>
+          </BackArrow>
+          <h1>{title}</h1>
+          <PostCred>
             <AuthorLink date={date} author={author} />
-          </CatDateContainer>
-          <CredentialContainer>
-            <h1>{title}</h1>
-          </CredentialContainer>
-          <hr />
-        </LandingContainer>
-        <PostContainer>
-          {/* <Html2React html={content ? content : ""} /> */}
-        </PostContainer>
+            <Category category={categories} />
+          </PostCred>
+        </PostHeaderContainer>
       </ContainerDiv>
-    </>
+    </InfiniteBorder>
   );
 };
 
 export default connect(Post);
+
+// ------------------------------------------
+
+const InfiniteBorder = styled.div`
+  border-bottom: 1px solid var(--light-border);
+`;
+
+const PostCred = styled.div``;
+
+const BackArrow = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  a {
+    margin-block-start: auto;
+    margin-block-end: auto;
+    padding: 0em 0.8em;
+    color: var(--secondary-text-colour);
+  }
+  a:hover {
+    text-decoration: none;
+    color: var(--text-colour);
+  }
+  svg {
+    height: 0.9em;
+    width: auto;
+    fill: var(--secondary-text-colour);
+  }
+`;
+const PostHeaderContainer = styled.div`
+  padding: 1em 1em 1em 1em;
+  h1 {
+    padding-top: 0.7em;
+    padding-bottom: 0.1em;
+    margin-left: 0em;
+  }
+`;
 
 const CatDateContainer = styled.div`
   justify-content: space-between;
@@ -124,3 +161,24 @@ const PostContainer = styled.div`
     font-size: 0.8rem;
   }
 `;
+
+// BEFORE
+// return (
+//   <>
+//     <ContainerDiv>
+//       <LandingContainer>
+//         <CatDateContainer>
+//           <Category category={categories} />
+//           <AuthorLink date={date} author={author} />
+//         </CatDateContainer>
+//         <CredentialContainer>
+//           <h1>{title}</h1>
+//         </CredentialContainer>
+//         <hr />
+//       </LandingContainer>
+//       <PostContainer>
+//         {/* <Html2React html={content ? content : ""} /> */}
+//       </PostContainer>
+//     </ContainerDiv>
+//   </>
+// );

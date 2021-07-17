@@ -78,8 +78,10 @@ const globalStyles = css`
     --background-colour: #f9f9f9;
     --text-colour: #000;
     --accent-colour: #8241c7;
-    --secondary-colour: #e91e63;
-    --secondary-text-colour: rgba(51, 51, 51, 0.6);
+    --secondary-colour: #0046ca;
+    --decoration-colour: #c379ea;
+    --decoration-neutral-colour: #9c9c9c;
+    --secondary-text-colour: #545454;
     --third-text-colour: #aeaeae;
     --secondary-background-colour: #ffffff;
     --disabled-components: #a0a0a0;

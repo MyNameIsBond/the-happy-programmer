@@ -29,27 +29,29 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
     <>
       <InfiniteBoarder>
         <ContainerDiv>
-          {data.taxonomy && (
-            <ArchiveTitle breakpoints={breakpoints}>
-              {state.source[data.taxonomy][data.id].name}
-            </ArchiveTitle>
-          )}
-          {data.isSearch && (
-            <ArchiveTitle breakpoints={breakpoints}>
-              {urlToStg(searchQuery)}
-            </ArchiveTitle>
-          )}
-          {data.isAuthor && (
-            <ArchiveTitle breakpoints={breakpoints}>Tony</ArchiveTitle>
-          )}
-          <InputContainer breakpoints={breakpoints} onSubmit={searchSubmit}>
-            <SearchSvg />
-            <MyInput
-              value={search}
-              onChange={(e) => setsearch(e.target.value)}
-              placeholder="Search posts..."
-            />
-          </InputContainer>
+          <PadContainer>
+            {data.taxonomy && (
+              <ArchiveTitle breakpoints={breakpoints}>
+                {state.source[data.taxonomy][data.id].name}
+              </ArchiveTitle>
+            )}
+            {data.isSearch && (
+              <ArchiveTitle breakpoints={breakpoints}>
+                {urlToStg(searchQuery)}
+              </ArchiveTitle>
+            )}
+            {data.isAuthor && (
+              <ArchiveTitle breakpoints={breakpoints}>Tony</ArchiveTitle>
+            )}
+            <InputContainer breakpoints={breakpoints} onSubmit={searchSubmit}>
+              <MyInput
+                value={search}
+                onChange={(e) => setsearch(e.target.value)}
+                placeholder="Search posts..."
+              />
+              <SearchSvg />
+            </InputContainer>
+          </PadContainer>
         </ContainerDiv>
       </InfiniteBoarder>
 
@@ -91,6 +93,10 @@ export const SearchInput = ({ state, searchQuery, actions }) => {
   );
 };
 
+const PadContainer = styled.div`
+  padding: 0em 1em;
+`;
+
 const InfiniteBoarder = styled.div`
   border-bottom: 1px solid var(--light-border);
   padding: 1.5em 0em;
@@ -107,7 +113,7 @@ const SupportPatreonText = styled.p`
   }
 `;
 const ArchiveTitle = styled.h1`
-  padding: 0em 0.3em;
+  padding: 0em;
   margin-bottom: 0em;
   @media screen and (min-width: ${(props) => props.breakpoints.tablet}) {
     padding-top: 1em;
@@ -139,21 +145,19 @@ const SearchTag = styled.div`
   }
 `;
 const InputContainer = styled.form`
-  display: flex;
-  width: 100%;
-  justify-content: flex-start;
+  width: auto;
   svg {
     height: 1em;
     width: auto;
     position: relative;
-    left: 1.8em;
-    top: 2.65em;
-    stroke: var(--secondary-text-colour);
+    right: 12.6em;
+    top: 0.2em;
+    stroke: var(--decoration-neutral-colour);
   }
   input {
     width: auto;
     padding: 0.5em 0.5em 0.5em 2.5em;
-    margin: 2em 1em 1em 0em;
+    margin: 2em auto 1em 0em;
   }
 `;
 

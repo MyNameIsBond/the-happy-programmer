@@ -13,7 +13,7 @@ const LessonContent = () => {
               {homeConstants.lessonContainer.map(([icon, title, desc]) => (
                 <DescriptionPanel key={title}>
                   {icon}
-                  <h4>{title}</h4>
+                  <h3>{title}</h3>
                   <p>{desc}</p>
                 </DescriptionPanel>
               ))}

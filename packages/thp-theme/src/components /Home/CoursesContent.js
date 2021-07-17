@@ -6,7 +6,7 @@ const CoursesContent = () => {
   return (
     <>
       {homeConstants.coursesContainer.map(
-        ([icon, title, desc, link, width, disabled, row]) => (
+        ([icon, title, desc, link, width, disabled, name]) => (
           <CoursesContainer key={title}>
             <CourseDiv>
               <h2>{title}</h2>
@@ -14,7 +14,7 @@ const CoursesContent = () => {
               {disabled ? (
                 <Secondary disabled={true}>Coming Soon...</Secondary>
               ) : (
-                <DecorationLink link={link}>Read More</DecorationLink>
+                <DecorationLink link={link}>{name}</DecorationLink>
               )}
 
               {icon}

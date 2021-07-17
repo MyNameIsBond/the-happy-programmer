@@ -13,8 +13,8 @@ const SwiftIUCourse = () => (
         y2="0.965"
         gradientUnits="objectBoundingBox"
       >
-        <stop offset="0" stop-color="#06f0f5" />
-        <stop offset="1" stop-color="#010c8f" />
+        <stop offset="0" stopColor="#06f0f5" />
+        <stop offset="1" stopColor="#010c8f" />
       </linearGradient>
       <linearGradient
         id="slinear-gradient-2"
@@ -24,8 +24,8 @@ const SwiftIUCourse = () => (
         y2="0.91"
         gradientUnits="objectBoundingBox"
       >
-        <stop offset="0" stop-color="#06d5fb" stop-opacity="0" />
-        <stop offset="1" stop-color="#06d5fb" />
+        <stop offset="0" stopColor="#06d5fb" stop-opacity="0" />
+        <stop offset="1" stopColor="#06d5fb" />
       </linearGradient>
     </defs>
     <g

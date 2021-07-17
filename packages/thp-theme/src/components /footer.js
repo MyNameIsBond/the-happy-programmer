@@ -11,9 +11,14 @@ const Footer = () => {
           <LogoSocials>
             <HighlightedText>Socials</HighlightedText>
             <Socials>
-              {homeConstants.AuthorInfo.socials.map(([icon, link]) => (
+              {homeConstants.AuthorInfo.socials.map(([icon, link, label]) => (
                 <SocialContainer key={link}>
-                  <a rel="noreferrer" href={link} target="_blank">
+                  <a
+                    rel="noreferrer"
+                    href={link}
+                    target="_blank"
+                    aria-label={label}
+                  >
                     {icon}
                   </a>
                 </SocialContainer>
@@ -23,7 +28,7 @@ const Footer = () => {
           <Credentials>
             <HighlightedText>{homeConstants.footer.contact}</HighlightedText>
             <SubscribeText>{homeConstants.footer.country}</SubscribeText>
-            <a href={`mailto:${homeConstants.footer.email}`}>
+            <a rel="noreferrer" href={`mailto:${homeConstants.footer.email}`}>
               {homeConstants.footer.email}
             </a>
           </Credentials>
@@ -126,10 +131,10 @@ const LogoSocials = styled.div`
 
 const SocialContainer = styled.div`
   a {
-    padding: 0em 1em 0em 0em;
+    margin: 0em 1em 0em 0em;
   }
   svg {
-    fill: var(--secondary-text-colour);
+    fill: var(--decoration-neutral-colour);
     height: 0.8em;
     width: auto;
   }
