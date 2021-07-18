@@ -155,7 +155,7 @@ const InputContainer = styled.form`
     stroke: var(--decoration-neutral-colour);
   }
   input {
-    width: auto;
+    width: 10.5em;
     padding: 0.5em 0.5em 0.5em 2.5em;
     margin: 2em auto 1em 0em;
   }

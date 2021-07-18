@@ -113,7 +113,7 @@ const globalStyles = css`
     :root {
       --card-background-color: #333;
       --category-border: rgba(183, 183, 183, 0.16);
-      --secondary-colour: #ff7cdc;
+      --secondary-colour: #3e97ff;
       --secondary-button-hover: rgba(255, 255, 255, 0.08);
       --secondary-text-colour: rgba(255, 255, 255, 0.7);
       --disabled-text: #a0a0a0;
