@@ -18,7 +18,7 @@ const InputStyle = styled.input`
   &::placeholder {
     color: var(--third-text-colour);
     opacity: 1;
-    font-weight: 400;
+    font-weight: var(--font-weight-text);
   }
   &:hover {
     border: solid 1px var(--hover-border-input);
