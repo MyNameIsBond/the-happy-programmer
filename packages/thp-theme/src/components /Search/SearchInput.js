@@ -128,7 +128,7 @@ const CategoryText = styled.p`
   margin-right: 1em;
   border-radius: 10em;
   color: var(--text-colour);
-  border: 1px solid var(--accent-colour);
+  border: 1px solid var(--light-border);
 `;
 const SearchTag = styled.div`
   align-items: center;
@@ -147,17 +147,21 @@ const SearchTag = styled.div`
 const InputContainer = styled.form`
   width: auto;
   svg {
-    height: 1em;
-    width: auto;
+    height: inherit;
+    width: 0.9em;
     position: relative;
-    right: 12.6em;
-    top: 0.2em;
+    right: 12.75em;
+    top: 0.15em;
     stroke: var(--decoration-neutral-colour);
   }
+
   input {
     width: 10.5em;
     padding: 0.5em 0.5em 0.5em 2.5em;
     margin: 2em auto 1em 0em;
+  }
+  input:focus + svg {
+    stroke: var(--secondary-text-colour) !important;
   }
 `;
 

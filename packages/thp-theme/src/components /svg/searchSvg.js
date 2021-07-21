@@ -1,10 +1,5 @@
 const SearchSvg = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="33.5"
-    height="36.5"
-    viewBox="0 0 33.5 36.5"
-  >
+  <svg viewBox="0 0 33.5 36.5">
     <path
       id="Union_1"
       data-name="Union 1"
@@ -13,7 +8,7 @@ const SearchSvg = () => (
       fill="none"
       stroke-linecap="round"
       stroke-linejoin="round"
-      stroke-width="4"
+      stroke-width="3"
     />
   </svg>
 );
