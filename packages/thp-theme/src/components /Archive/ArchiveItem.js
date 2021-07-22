@@ -18,7 +18,10 @@ const ArchiveItem = connect(({ item, state, libraries }) => {
     <ArchiveItemContainer>
       <Link link={link}>
         <ImgFuturedMedia>
-          <Image srcSet={img.srcSet} src={img.src} alt={img.alt} />
+          <picture>
+            <source srcset={img.srcSet} />
+            <Image srcSet={img.srcSet} src={img.src} alt={img.alt} />
+          </picture>
         </ImgFuturedMedia>
       </Link>
       <AvatarInfoContainer>

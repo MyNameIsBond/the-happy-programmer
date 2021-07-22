@@ -86,7 +86,7 @@ const Socials = styled.div`
     height: 1.2em;
   }
   svg:hover {
-    fill: var(--accent-colour);
+    fill: var(--decoration-colour);
   }
   a {
     margin: 1em 2em 0em 0em;
@@ -98,11 +98,7 @@ const ImageContainer = styled.div`
   width: 330px;
   border-radius: 100%;
   display: flex;
-  background: linear-gradient(
-    to right,
-    var(--accent-colour),
-    var(--decoration-colour)
-  );
+  background-color: var(--secondary-background-colour);
   justify-content: center;
   align-items: center;
   img {
@@ -136,7 +132,15 @@ const WhatIDoDesc = styled.div`
   }
   svg {
     height: 2em;
-    fill: var(--primary-colour);
+    fill: var(--secondary-text-colour);
+  }
+  h3 {
+    font-size: 1.5em;
+    margin-block-end: 0em;
+    margin-block-start: 1em;
+  }
+  p {
+    margin-block-start: 0.7em;
   }
 `;
 const WhatIdoDiv = styled.div`

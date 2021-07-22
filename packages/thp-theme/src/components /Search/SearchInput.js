@@ -150,8 +150,8 @@ const InputContainer = styled.form`
     height: inherit;
     width: 0.9em;
     position: relative;
-    right: 12.75em;
-    top: 0.15em;
+    right: 12.75rem;
+    top: 0.15rem;
     stroke: var(--decoration-neutral-colour);
   }
 

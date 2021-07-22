@@ -77,9 +77,9 @@ const globalStyles = css`
     --border-radius: 0.4em;
     --background-colour: #f9f9f9;
     --text-colour: #000;
-    --accent-colour: #8241c7;
+    --accent-colour: #000000;
     --secondary-colour: #0046ca;
-    --decoration-colour: #c379ea;
+    --decoration-colour: #8511bf;
     --decoration-neutral-colour: #9c9c9c;
     --secondary-text-colour: #545454;
     --third-text-colour: #aeaeae;
@@ -111,6 +111,7 @@ const globalStyles = css`
 
   @media (prefers-color-scheme: dark) {
     :root {
+      --accent-colour: #e6e6e6;
       --card-background-color: #333;
       --category-border: rgba(183, 183, 183, 0.16);
       --secondary-colour: #3e97ff;

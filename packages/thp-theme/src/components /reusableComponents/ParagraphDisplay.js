@@ -16,7 +16,7 @@ const ParagraphContainer = styled.div`
 const Subtitle = styled.h5`
   text-align: center;
   margin: 0.1em 0em;
-  color: var(--accent-colour);
+  color: var(--secondary-text-colour);
   font-weight: var(--font-weight-text);
   ${breakpoints.tablet} {
     text-align: left;

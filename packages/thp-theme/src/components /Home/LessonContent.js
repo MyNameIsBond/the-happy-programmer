@@ -86,13 +86,17 @@ const DescriptionPanel = styled.div`
   width: 30%;
   text-align: center;
   svg {
-    fill: var(--accent-colour);
+    height: 2em;
+    fill: var(--secondary-text-colour);
   }
   p {
     font-weight: var(--font-weight-text);
+    margin-block-start: 0em;
   }
-  h4 {
+  h3 {
+    font-size: 1.5em;
     margin-block-end: 0em;
+    margin-block-start: 0.7em;
   }
   ${breakpoints.smallMobile} {
     width: 30%;

@@ -56,26 +56,25 @@ const SecondaryButtonLink = styled(Link)`
 `;
 
 const PrimaryButton = styled.button`
+  padding: 0.9rem;
   white-space: normal;
   display: inline;
-  box-sizing: border-box;
-  padding: 10px 20px;
   border-radius: var(--border-radius);
   text-transform: uppercase;
   font-size: 0.875rem;
   font-weight: var(--font-weight-title);
 
   background: var(--accent-colour);
-  color: white;
-  border-style: none;
-  margin-left: 0.3em;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  box-shadow: var(--button-shadow);
+  color: var(--background-colour);
+  -webkit-transition-duration: 0.2s;
+  transition-duration: 0.2s;
+  border: 1px solid transparent;
+
   &:hover {
     cursor: pointer;
-    box-shadow: var(--hover-shadow);
-    background: rgba(130, 65, 199, 0.8);
+    border: 1px solid var(--accent-colour);
+    color: var(--text-colour);
+    background-color: var(--background-colour);
   }
   &:focus {
     outline: none;

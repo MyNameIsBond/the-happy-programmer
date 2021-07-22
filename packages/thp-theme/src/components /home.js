@@ -78,10 +78,6 @@ const Subcribe = styled.div`
   align-content: center;
   width: 90%;
   padding: 1.5em 1em 0em 1em;
-  button {
-    padding: 1rem 1rem;
-  }
-
   ${breakpoints.tablet} {
     align-items: flex-start;
     justify-content: flex-start;
@@ -109,7 +105,6 @@ const NavContainer = styled.div`
     margin-block-start: 0em;
     padding: 0em 1em;
     text-align: center;
-    font-weight: 300;
   }
 
   ${breakpoints.tablet} {
@@ -218,7 +213,7 @@ const SocialContainer = styled.div`
     fill: var(--text-colour);
   }
   svg:hover {
-    fill: var(--accent-colour);
+    fill: var(--decoration-colour);
   }
   a {
     margin: 3em 2em;

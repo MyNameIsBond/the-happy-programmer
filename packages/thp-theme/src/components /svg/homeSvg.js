@@ -318,6 +318,7 @@ const HomeSvg = () => (
           opacity="0.1"
         />
       </g>
+      {/* iPhone SVG */}
       <g
         id="Group_70"
         data-name="Group 70"
@@ -677,6 +678,7 @@ const HomeSvg = () => (
           fill="var(--accent-colour)"
         />
       </g>
+      {/* Apple Watch */}
       <g
         id="Group_69"
         data-name="Group 69"
