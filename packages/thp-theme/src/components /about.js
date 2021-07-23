@@ -82,7 +82,7 @@ const Socials = styled.div`
     justify-content: flex-start;
   }
   svg {
-    fill: var(--text-colour);
+    fill: var(--secondary-text-colour);
     height: 1.2em;
   }
   svg:hover {
@@ -103,7 +103,6 @@ const ImageContainer = styled.div`
   align-items: center;
   img {
     object-fit: cover;
-
     height: 300px;
     width: 300px;
     border-radius: 100%;
