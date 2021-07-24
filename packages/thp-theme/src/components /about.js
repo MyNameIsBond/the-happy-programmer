@@ -112,7 +112,7 @@ const ImageContainer = styled.div`
 const WhatIdoContainer = styled.div``;
 const WhatIDoTitle = styled.h2``;
 const WhatIDoDesc = styled.div`
-  padding: 3em 0em;
+  padding: 1em 0em;
   display: flex;
   flex-direction: column;
   align-items: center;
