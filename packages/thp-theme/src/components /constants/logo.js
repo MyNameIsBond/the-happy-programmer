@@ -70,7 +70,6 @@ export default () => {
                   data-name="Path 52"
                   d="M72,0l72,125H0Z"
                   transform="translate(574 593)"
-                  fill="url(#linear-gradient)"
                 />
               </g>
             </g>
@@ -96,6 +95,9 @@ const wiggleWiggle = keyframes`
 `;
 
 const LogoStyle = styled.svg`
+  path {
+    fill: var(--text-colour);
+  }
   text {
     fill: var(--background-colour);
   }
