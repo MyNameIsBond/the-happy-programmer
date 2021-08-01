@@ -11,7 +11,7 @@ const Post = ({ state, libraries }) => {
   const post = state.source[data.type][data.id];
   const Html2React = libraries.html2react.Component;
 
-  const { content, date, title, excerpt, categories, author } = dataPost(
+  const { content, date, img, title, excerpt, categories, author } = dataPost(
     state,
     post
   );
