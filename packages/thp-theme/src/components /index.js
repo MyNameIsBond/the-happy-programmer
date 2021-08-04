@@ -6,12 +6,12 @@ import Archive from "./archive";
 import Nav from "./nav";
 import Post from "./Post/Post";
 import About from "./about";
-import { Error404 } from "./Error404";
+import { Error404 } from "./error404";
 import Home from "./home";
 import Arch from "./Archive/archive.js";
-import SearchPage from "./Search/SearchPage";
 const Loader = loadable(() => import("./Loading"));
 const Footer = loadable(() => import("./footer"));
+const SearchPage = loadable(() => import("./Search/SearchPage"));
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
   return (

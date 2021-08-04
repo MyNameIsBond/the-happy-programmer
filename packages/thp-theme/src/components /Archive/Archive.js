@@ -1,4 +1,5 @@
 import { connect, styled } from "frontity";
+import { Fragment } from "react";
 import { ContainerDiv } from "../reusableComponents/container";
 import { getData } from "../Handlers/dataManager";
 import SearchInput from "../Search/SearchInput";
@@ -13,7 +14,11 @@ const Archive = connect(({ state, searchQuery }) => {
         <ArchiveContainer>
           {data.items.map(({ type, id }) => {
             const item = state.source[type][id];
-            return <ArchiveItem key={item.id} item={item} />;
+            return (
+              <Fragment key={item.id}>
+                <ArchiveItem item={item} />
+              </Fragment>
+            );
           })}
         </ArchiveContainer>
       </ContainerDiv>

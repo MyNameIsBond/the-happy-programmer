@@ -26,6 +26,8 @@ const CoursesContent = () => {
   );
 };
 
+export default CoursesContent;
+
 const CoursesContainer = styled.div`
   width: auto;
   display: flex;
@@ -76,5 +78,3 @@ const CourseDiv = styled.div`
     }
   }
 `;
-
-export default CoursesContent;

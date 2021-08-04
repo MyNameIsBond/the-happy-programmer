@@ -29,6 +29,7 @@ const Post = ({ state, libraries }) => {
             <Category category={categories} />
           </PostCred>
         </PostHeaderContainer>
+        <Html2React html={post.content.rendered} />
       </ContainerDiv>
     </InfiniteBorder>
   );

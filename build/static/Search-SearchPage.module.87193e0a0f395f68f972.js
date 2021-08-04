@@ -1,0 +1,1 @@
+(window.__LOADABLE_LOADED_CHUNKS__=window.__LOADABLE_LOADED_CHUNKS__||[]).push([[1],{218:function(e,t,c){"use strict";c.r(t);var _=c(1),r=c(30),n=c(193),s=c(0);t.default=Object(_.connect)(({state:e})=>{const t=Object(r.b)(e),{searchQuery:c}=t;return Object(s.jsx)(s.Fragment,{children:Object(s.jsx)(n.a,{searchQuery:c})})})}}]);
