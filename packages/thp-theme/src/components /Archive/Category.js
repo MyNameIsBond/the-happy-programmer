@@ -1,6 +1,6 @@
 import { connect, styled } from "frontity";
-import { CategoryContainer, TagLink } from "./categoryStyle";
-import { getData } from "../Handlers/dataManager";
+import { CategoryContainer, TagLink } from "./category-style";
+import { getData } from "../handlers/data-manager";
 import { homeConstants } from "../constants/constants-string";
 
 const Category = connect(({ category, state }) => {

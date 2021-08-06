@@ -1,7 +1,7 @@
 import { homeConstants, breakpoints } from "./constants/constants-string";
 import { styled } from "frontity";
-import { SubscribeButton } from "./reusableComponents/subscribe";
-import { ContainerDiv } from "./reusableComponents/container";
+import { SubscribeButton } from "./reusable-components/subscribe";
+import { ContainerDiv } from "./reusable-components/container";
 
 const Footer = () => {
   return (

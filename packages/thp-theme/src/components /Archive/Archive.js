@@ -1,11 +1,11 @@
 import { connect, styled } from "frontity";
 import { Fragment } from "react";
-import { ContainerDiv } from "../reusableComponents/container";
-import { getData } from "../Handlers/dataManager";
-import SearchInput from "../Search/SearchInput";
-import ArchiveItem from "./archiveItem";
+import { ContainerDiv } from "../reusable-components/container";
+import { getData } from "../handlers/data-manager";
+import SearchInput from "../search/search-input";
+import ArchiveItem from "./archive-item";
 import { breakpoints } from "../constants/constants-string";
-const Archive = connect(({ state, searchQuery }) => {
+const Archive = ({ state, searchQuery }) => {
   const data = getData(state);
   return (
     <>
@@ -24,9 +24,9 @@ const Archive = connect(({ state, searchQuery }) => {
       </ContainerDiv>
     </>
   );
-});
+};
 
-export default Archive;
+export default connect(Archive);
 
 const ArchiveContainer = styled.div`
   display: grid;

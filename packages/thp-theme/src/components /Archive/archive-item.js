@@ -1,12 +1,12 @@
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
-import { dataPost } from "../Handlers/dataManager";
+import { dataPost } from "../handlers/data-manager";
 import { breakpoints } from "../constants/constants-string";
 import Category from "./category";
-import AuthorLink from "./authorLink";
+import AuthorLink from "./author-link";
 
-const ArchiveItem = connect(({ item, state, libraries }) => {
+const ArchiveItem = ({ item, state, libraries }) => {
   const { link, title, img, excerpt, author, date, categories } = dataPost(
     state,
     item
@@ -30,7 +30,6 @@ const ArchiveItem = connect(({ item, state, libraries }) => {
             <AuthorAvatar height="50" width="auto" src={author.avatar} />
           </Atag>
         )}
-
         <InfoContainer authorAvatar={authorAvatar}>
           {authorAvatar || <Category category={categories} />}
           <Link link={link}>
@@ -47,9 +46,9 @@ const ArchiveItem = connect(({ item, state, libraries }) => {
       </AvatarInfoContainer>
     </ArchiveItemContainer>
   );
-});
+};
 
-export default ArchiveItem;
+export default connect(ArchiveItem);
 
 const ArchiveItemContainer = styled.div`
   background-color: var(--secondary-background-colour);

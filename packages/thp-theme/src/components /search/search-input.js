@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { connect, styled } from "frontity";
-import { getData, urlToStg } from "../Handlers/dataManager";
-import { MyInput } from "../reusableComponents/inputs";
+import { getData, urlToStg } from "../handlers/data-manager";
+import { MyInput } from "../reusable-components/inputs";
 import SearchSvg from "../svg/searchSvg";
 import { breakpoints } from "../constants/constants-string";
-import { ContainerDiv } from "../reusableComponents/container";
+import { ContainerDiv } from "../reusable-components/container";
 
 export const SearchInput = ({ state, searchQuery, actions }) => {
   const data = getData(state);

@@ -1,6 +1,6 @@
 import { homeConstants, breakpoints } from "../constants/constants-string";
 import { styled } from "frontity";
-import { Secondary, DecorationLink } from "../reusableComponents/buttons";
+import { Secondary, DecorationLink } from "../reusable-components/buttons";
 
 const CoursesContent = () => {
   return (

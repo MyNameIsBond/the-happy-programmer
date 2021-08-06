@@ -1,9 +1,9 @@
 import { styled } from "frontity";
-import { Primary } from "./reusableComponents/buttons";
+import { Primary } from "./reusable-components/buttons";
 import Link from "@frontity/components/link";
-import { ContainerDiv } from "./reusableComponents/container";
+import { ContainerDiv } from "./reusable-components/container";
 import { breakpoints } from "./constants/constants-string";
-export const Error404 = () => {
+const Error404 = () => {
   return (
     <ContainerDiv>
       <Container404>
@@ -19,6 +19,8 @@ export const Error404 = () => {
     </ContainerDiv>
   );
 };
+
+export default Error404;
 
 const CredentialsContainer = styled.div`
   h1 {

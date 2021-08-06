@@ -1,6 +1,6 @@
 import { connect } from "frontity";
-import { getData } from "../Handlers/dataManager";
-import Archive from "../Archive/archive";
+import { getData } from "../handlers/data-manager";
+import Archive from "../archive/archive";
 
 const SearchPage = ({ state }) => {
   const data = getData(state);

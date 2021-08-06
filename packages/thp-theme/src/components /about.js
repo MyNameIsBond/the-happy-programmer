@@ -1,7 +1,7 @@
 import { connect, styled } from "frontity";
 import Image from "@frontity/components/image";
-import ParagraphDisplay from "./reusableComponents/ParagraphDisplay";
-import { MainContainer } from "./reusableComponents/container";
+import ParagraphDisplay from "./reusable-components/paragraph-display";
+import { MainContainer } from "./reusable-components/container";
 import {
   homeConstants,
   breakpoints,
@@ -18,7 +18,7 @@ const SocialsMap = () => (
   </>
 );
 
-const About = ({ state }) => {
+const About = () => {
   return (
     <MainContainer>
       <AboutMeContainer>
@@ -54,6 +54,9 @@ const About = ({ state }) => {
     </MainContainer>
   );
 };
+
+export default About;
+
 // About me Landing
 const InformationContainer = styled.div`
   width: 100%;
@@ -149,5 +152,3 @@ const WhatIdoDiv = styled.div`
     text-align: left;
   }
 `;
-
-export default connect(About);

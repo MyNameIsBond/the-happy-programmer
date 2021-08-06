@@ -4,14 +4,14 @@ import Switch from "@frontity/components/switch";
 import Title from "./title";
 import Archive from "./archive";
 import Nav from "./nav";
-import Post from "./Post/Post";
+import Post from "./post/post";
 import About from "./about";
-import { Error404 } from "./error404";
+import Error404 from "./error404";
 import Home from "./home";
 import Arch from "./Archive/archive.js";
-const Loader = loadable(() => import("./Loading"));
+const Loader = loadable(() => import("./loading"));
 const Footer = loadable(() => import("./footer"));
-const SearchPage = loadable(() => import("./Search/SearchPage"));
+const SearchPage = loadable(() => import("./search/search-page"));
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
   return (

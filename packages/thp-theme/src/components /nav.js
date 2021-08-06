@@ -1,7 +1,7 @@
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import Logo from "./constants/logo";
-import { ContainerDiv } from "./reusableComponents/container";
+import { ContainerDiv } from "./reusable-components/container";
 
 const Nav = ({ state, actions }) => {
   return (

@@ -1,12 +1,12 @@
 import { styled } from "frontity";
-import { Primary, DecorationLink } from "./reusableComponents/buttons";
+import { Primary, DecorationLink } from "./reusable-components/buttons";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
 import { homeConstants, breakpoints } from "./constants/constants-string";
-import { MainContainer } from "./reusableComponents/container";
-import LessonContent from "./Home/LessonContent";
-import CoursesContent from "./Home/CoursesContent";
-import { MyInput } from "./reusableComponents/inputs";
+import { MainContainer } from "./reusable-components/container";
+import LessonContent from "./Home/lesson-content";
+import CoursesContent from "./Home/courses-content";
+import { MyInput } from "./reusable-components/inputs";
 
 export default () => {
   return (

@@ -4,7 +4,7 @@ import {
   coldarkDark,
 } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { styled } from "frontity";
-import usePrefersColorScheme from "./usePrefersColorScheme";
+import usePrefersColorScheme from "./use-prefers-color-scheme";
 
 const Text = styled.div`
   pre {

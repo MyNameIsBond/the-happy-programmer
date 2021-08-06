@@ -1,6 +1,6 @@
 import { styled } from "frontity";
 import { homeConstants, breakpoints } from "../constants/constants-string";
-import { ContainerDiv } from "../reusableComponents/container";
+import { ContainerDiv } from "../reusable-components/container";
 const LessonContent = () => {
   return (
     <LessonBackgroundContainer>

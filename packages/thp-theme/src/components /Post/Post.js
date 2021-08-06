@@ -1,8 +1,8 @@
 import { connect, styled } from "frontity";
-import { getData, dataPost } from "../Handlers/dataManager";
-import { ContainerDiv } from "../reusableComponents/container";
-import Category from "../Archive/category";
-import AuthorLink from "../Archive/authorLink";
+import { getData, dataPost } from "../handlers/data-manager";
+import { ContainerDiv } from "../reusable-components/container";
+import Category from "../archive/category";
+import AuthorLink from "../archive/author-link";
 import ArrowSvg from "../svg/arrow-svg";
 import Link from "@frontity/components/link";
 
@@ -43,8 +43,6 @@ const InfiniteBorder = styled.div`
   border-bottom: 1px solid var(--light-border);
 `;
 
-const PostCred = styled.div``;
-
 const BackArrow = styled.div`
   display: flex;
   flex-direction: row;
@@ -72,36 +70,6 @@ const PostHeaderContainer = styled.div`
     padding-top: 0.7em;
     padding-bottom: 0.1em;
     margin-left: 0em;
-  }
-`;
-
-const CatDateContainer = styled.div`
-  justify-content: space-between;
-  align-items: center;
-  display: flex;
-  padding-top: 1em;
-  padding-bottom: 0.5em;
-  p {
-    margin-block-start: 0em;
-  }
-`;
-
-const LandingContainer = styled.div`
-  padding: 2em 1em;
-  hr {
-    height: 0.04em;
-    background-color: var(--secondary-text-colour);
-    border: none;
-  }
-`;
-const CredentialContainer = styled.div`
-  h1 {
-    margin-block-start: 0;
-    font-size: 2.5rem;
-    font-weight: var(--font-weight-text);
-  }
-  .link-more {
-    display: none;
   }
 `;
 
@@ -162,24 +130,3 @@ const PostContainer = styled.div`
     font-size: 0.8rem;
   }
 `;
-
-// BEFORE
-// return (
-//   <>
-//     <ContainerDiv>
-//       <LandingContainer>
-//         <CatDateContainer>
-//           <Category category={categories} />
-//           <AuthorLink date={date} author={author} />
-//         </CatDateContainer>
-//         <CredentialContainer>
-//           <h1>{title}</h1>
-//         </CredentialContainer>
-//         <hr />
-//       </LandingContainer>
-//       <PostContainer>
-//         {/* <Html2React html={content ? content : ""} /> */}
-//       </PostContainer>
-//     </ContainerDiv>
-//   </>
-// );
