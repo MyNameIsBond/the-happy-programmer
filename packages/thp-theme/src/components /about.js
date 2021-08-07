@@ -3,22 +3,13 @@ import Image from "@frontity/components/image";
 import ParagraphDisplay from "./reusable-components/paragraph-display";
 import { MainContainer } from "./reusable-components/container";
 import {
-  homeConstants,
   breakpoints,
   aboutConst,
   aboutExplain,
 } from "./constants/constants-string";
-const SocialsMap = () => (
-  <>
-    {homeConstants.AuthorInfo.socials.map(([icon, link, label]) => (
-      <a rel="noreferrer" href={link} aria-label={label} key={link}>
-        {icon}
-      </a>
-    ))}
-  </>
-);
+import Socials from "./constants/socials";
 
-const About = () => {
+const About = ({ state }) => {
   return (
     <MainContainer>
       <AboutMeContainer>
@@ -31,9 +22,9 @@ const About = () => {
             title={aboutConst.title}
             subtext={aboutConst.text}
           >
-            <Socials>
-              <SocialsMap />
-            </Socials>
+            <SocialsCon>
+              <Socials />
+            </SocialsCon>
           </ParagraphDisplay>
         </InformationContainer>
       </AboutMeContainer>
@@ -55,7 +46,7 @@ const About = () => {
   );
 };
 
-export default About;
+export default connect(About);
 
 // About me Landing
 const InformationContainer = styled.div`
@@ -76,7 +67,7 @@ const AboutMeContainer = styled.div`
   }
 `;
 
-const Socials = styled.div`
+const SocialsCon = styled.div`
   margin-top: 1em;
   display: flex;
   width: 100%;
