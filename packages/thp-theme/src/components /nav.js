@@ -1,7 +1,7 @@
-import { connect, styled, loadable } from "frontity";
+import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import ContainerDiv from "./reusable-components/container";
-const Logo = loadable(() => import("./constants/logo"));
+import Logo from "./constants/logo";
 
 const Nav = ({ state }) => {
   return (
@@ -45,6 +45,21 @@ const BottomBorder = styled.div`
 const LogoLink = styled(Link)`
   &:hover {
     text-decoration: none;
+  }
+
+  path {
+    fill: var(--text-colour);
+  }
+  text {
+    fill: var(--background-colour);
+  }
+  &:hover {
+    text {
+      transition: all 0.4s ease;
+
+      display: block;
+      fill: var(--text-colour);
+    }
   }
 `;
 

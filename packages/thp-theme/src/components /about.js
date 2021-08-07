@@ -31,7 +31,7 @@ const About = () => {
           <WhatIDoTitle>{aboutExplain.h2}</WhatIDoTitle>
           <WhatIDoDesc>
             {aboutExplain.explain.map(([title, subtitle, icon]) => (
-              <div>
+              <div key={title}>
                 {icon}
                 <h3>{title}</h3>
                 <p>{subtitle}</p>

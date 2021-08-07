@@ -13,8 +13,8 @@ const FlutterCourse = () => (
         y2="0.457"
         gradientUnits="objectBoundingBox"
       >
-        <stop offset="0" stopColor="#1a237e" stop-opacity="0.4" />
-        <stop offset="1" stopColor="#1a237e" stop-opacity="0" />
+        <stop offset="0" stopColor="#1a237e" stopOpacity="0.4" />
+        <stop offset="1" stopColor="#1a237e" stopOpacity="0" />
       </linearGradient>
     </defs>
     <g

@@ -1,50 +1,42 @@
 import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
-import { dataPost } from "../handlers/data-manager";
 import breakpoints from "../constants/constants-string";
 import Category from "./category";
 import AuthorLink from "./author-link";
 
-const ArchiveItem = ({ item, state, libraries }) => {
-  const { link, title, img, excerpt, author, date, categories } = dataPost(
-    state,
-    item
-  );
-  const { authorAvatar } = state.theme;
+const ArchiveItem = ({ item, authorAvatar, libraries }) => {
+  const { img, link, categories, excerpt, date, author, title } = item;
   const Html2React = libraries.html2react.Component;
 
   return (
-    <ArchiveItemContainer>
-      <Link link={link}>
-        <ImgFuturedMedia>
-          <picture>
-            <source srcset={img.srcSet} />
-            <Image srcSet={img.srcSet} src={img.src} alt={img.alt} />
-          </picture>
-        </ImgFuturedMedia>
-      </Link>
-      <AvatarInfoContainer>
-        {authorAvatar && (
-          <Atag link={author.link}>
-            <AuthorAvatar height="50" width="auto" src={author.avatar} />
-          </Atag>
-        )}
-        <InfoContainer authorAvatar={authorAvatar}>
-          {authorAvatar || <Category category={categories} />}
-          <Link link={link}>
-            <h5>{title}</h5>
-          </Link>
-          {item.excerpt && (
-            <SubText>
-              <Html2React html={excerpt} />
-            </SubText>
-          )}
-          {authorAvatar && <Category category={categories} />}
-          <AuthorLink date={date} author={author} />
-        </InfoContainer>
-      </AvatarInfoContainer>
-    </ArchiveItemContainer>
+    <>
+      <ArchiveItemContainer>
+        <Link link={link}>
+          <ImgFuturedMedia>
+            <picture>
+              <source srcset={img.srcSet} />
+              <Image srcSet={img.srcSet} src={img.src} alt={img.alt} />
+            </picture>
+          </ImgFuturedMedia>
+        </Link>
+        <AvatarInfoContainer>
+          <InfoContainer authorAvatar={authorAvatar}>
+            {authorAvatar || <Category category={categories} />}
+            <Link link={link}>
+              <h5>{title}</h5>
+            </Link>
+            {item.excerpt && (
+              <SubText>
+                <Html2React html={excerpt} />
+              </SubText>
+            )}
+            {authorAvatar && <Category category={categories} />}
+            <AuthorLink date={date} author={author} />
+          </InfoContainer>
+        </AvatarInfoContainer>
+      </ArchiveItemContainer>
+    </>
   );
 };
 

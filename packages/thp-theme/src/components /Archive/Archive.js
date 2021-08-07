@@ -1,26 +1,27 @@
 import { connect, styled } from "frontity";
-import { Fragment } from "react";
 import ContainerDiv from "../reusable-components/container";
-import { getData } from "../handlers/data-manager";
+import { getData, dataPost } from "../handlers/data-manager";
 import SearchInput from "../search/search-input";
 import ArchiveItem from "./archive-item";
 import breakpoints from "../constants/constants-string";
+import { Fragment } from "react";
 
 const Archive = ({ state, searchQuery }) => {
   const data = getData(state);
+  const { authorAvatar } = state.theme;
+  const items = data.items.map(({ type, id }) =>
+    dataPost(state, state.source[type][id])
+  );
   return (
     <>
       <SearchInput searchQuery={searchQuery} />
       <ContainerDiv>
         <ArchiveContainer>
-          {data.items.map(({ type, id }) => {
-            const item = state.source[type][id];
-            return (
-              <Fragment key={item.id}>
-                <ArchiveItem item={item} />
-              </Fragment>
-            );
-          })}
+          {items.map((item) => (
+            <Fragment key={item.id}>
+              <ArchiveItem item={item} authorAvatar={authorAvatar} />
+            </Fragment>
+          ))}
         </ArchiveContainer>
       </ContainerDiv>
     </>

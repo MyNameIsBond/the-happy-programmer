@@ -59,7 +59,7 @@ const ReactnativeCourse = () => (
         id="Repeat_Grid_10"
         data-name="Repeat Grid 10"
         transform="translate(437.033 1791.458)"
-        clip-path="url(#clip-path)"
+        clipPath="url(#clip-path)"
       >
         <g
           id="Group_222"

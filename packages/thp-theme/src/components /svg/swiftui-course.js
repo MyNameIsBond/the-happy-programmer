@@ -24,7 +24,7 @@ const SwiftIUCourse = () => (
         y2="0.91"
         gradientUnits="objectBoundingBox"
       >
-        <stop offset="0" stopColor="#06d5fb" stop-opacity="0" />
+        <stop offset="0" stopColor="#06d5fb" stopOpacity="0" />
         <stop offset="1" stopColor="#06d5fb" />
       </linearGradient>
     </defs>
