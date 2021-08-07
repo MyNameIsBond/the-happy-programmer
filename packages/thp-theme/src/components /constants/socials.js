@@ -1,7 +1,7 @@
-import FacebookSvg from "../svg/facebookSvg";
-import PatreonSvg from "../svg/patreonSvg";
-import TwitterSvg from "../svg/twitterSvg";
-import YoutubeIconSvg from "../svg/youtubeiconSvg";
+import FacebookSvg from "../svg/facebook-svg";
+import PatreonSvg from "../svg/patreon-svg";
+import TwitterSvg from "../svg/twitter-svg";
+import YoutubeIconSvg from "../svg/youtube-icon-svg";
 
 const socials = [
   [<PatreonSvg />, "https://www.patreon.com/thehappyprogrammer", "Patreon"],
@@ -18,14 +18,11 @@ const socials = [
   ],
 ];
 
-const Socials = () => {
-  {
-    socials.map(([Icon, link, label]) => (
-      <a rel="noreferrer" href={link} aria-label={label} key={link}>
-        <Icon />
-      </a>
-    ));
-  }
-};
+const Socials = () =>
+  socials.map(([icon, link, label]) => (
+    <a rel="noreferrer" href={link} aria-label={label} key={link}>
+      {icon}
+    </a>
+  ));
 
 export default Socials;

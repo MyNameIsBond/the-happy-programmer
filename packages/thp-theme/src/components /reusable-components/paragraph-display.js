@@ -1,5 +1,5 @@
 import { styled } from "frontity";
-import { breakpoints } from "../constants/constants-string";
+import breakpoints from "../constants/constants-string";
 
 const ParagraphDisplay = ({ subtitle, title, subtext, children }) => (
   <ParagraphContainer>

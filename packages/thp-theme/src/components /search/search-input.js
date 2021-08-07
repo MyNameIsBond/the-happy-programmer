@@ -2,8 +2,8 @@ import { useState } from "react";
 import { connect, styled } from "frontity";
 import { getData, urlToStg } from "../handlers/data-manager";
 import { MyInput } from "../reusable-components/inputs";
-import SearchSvg from "../svg/searchSvg";
-import { breakpoints } from "../constants/constants-string";
+import SearchSvg from "../svg/search-svg";
+import breakpoints from "../constants/constants-string";
 import { ContainerDiv } from "../reusable-components/container";
 
 export const SearchInput = ({ state, searchQuery, actions }) => {

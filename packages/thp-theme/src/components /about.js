@@ -2,14 +2,12 @@ import { connect, styled } from "frontity";
 import Image from "@frontity/components/image";
 import ParagraphDisplay from "./reusable-components/paragraph-display";
 import { MainContainer } from "./reusable-components/container";
-import {
-  breakpoints,
-  aboutConst,
-  aboutExplain,
-} from "./constants/constants-string";
+import breakpoints from "./constants/constants-string";
+import aboutExplain from "./constants/about-explain";
+import aboutConst from "./constants/about-const";
 import Socials from "./constants/socials";
 
-const About = ({ state }) => {
+const About = () => {
   return (
     <MainContainer>
       <AboutMeContainer>

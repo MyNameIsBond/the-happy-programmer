@@ -1,8 +1,9 @@
-import { homeConstants, breakpoints } from "./constants/constants-string";
+import breakpoints from "./constants/constants-string";
 import { styled } from "frontity";
 import { SubscribeButton } from "./reusable-components/subscribe";
 import { ContainerDiv } from "./reusable-components/container";
-
+import Socials from "./constants/socials";
+import footerconst from "./constants/footer-const";
 const Footer = () => {
   return (
     <FooterContainerDiv>
@@ -10,31 +11,22 @@ const Footer = () => {
         <FooterContainer>
           <LogoSocials>
             <HighlightedText>Socials</HighlightedText>
-            <Socials>
-              {homeConstants.AuthorInfo.socials.map(([icon, link, label]) => (
-                <SocialContainer key={link}>
-                  <a
-                    rel="noreferrer"
-                    href={link}
-                    target="_blank"
-                    aria-label={label}
-                  >
-                    {icon}
-                  </a>
-                </SocialContainer>
-              ))}
-            </Socials>
+            <SocialDiv>
+              <SocialContainer>
+                <Socials />
+              </SocialContainer>
+            </SocialDiv>
           </LogoSocials>
           <Credentials>
-            <HighlightedText>{homeConstants.footer.contact}</HighlightedText>
-            <SubscribeText>{homeConstants.footer.country}</SubscribeText>
-            <a rel="noreferrer" href={`mailto:${homeConstants.footer.email}`}>
-              {homeConstants.footer.email}
+            <HighlightedText>{footerconst.contact}</HighlightedText>
+            <SubscribeText>{footerconst.country}</SubscribeText>
+            <a rel="noreferrer" href={`mailto:${footerconst.email}`}>
+              {footerconst.email}
             </a>
           </Credentials>
           <Subscribe>
             <HighlightedText>Subscribe</HighlightedText>
-            <SubscribeText>{homeConstants.footer.subscribe}</SubscribeText>
+            <SubscribeText>{footerconst.subscribe}</SubscribeText>
             <SubscribeButton />
           </Subscribe>
         </FooterContainer>
@@ -61,7 +53,7 @@ const SubscribeText = styled.p`
   }
 `;
 
-const Socials = styled.div`
+const SocialDiv = styled.div`
   display: flex;
   flex-direction: row;
   text-align: center;

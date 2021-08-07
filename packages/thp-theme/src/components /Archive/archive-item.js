@@ -2,7 +2,7 @@ import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
 import { dataPost } from "../handlers/data-manager";
-import { breakpoints } from "../constants/constants-string";
+import breakpoints from "../constants/constants-string";
 import Category from "./category";
 import AuthorLink from "./author-link";
 

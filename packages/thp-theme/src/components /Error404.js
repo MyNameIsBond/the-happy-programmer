@@ -2,7 +2,7 @@ import { styled } from "frontity";
 import { Primary } from "./reusable-components/buttons";
 import Link from "@frontity/components/link";
 import { ContainerDiv } from "./reusable-components/container";
-import { breakpoints } from "./constants/constants-string";
+import breakpoints from "./constants/constants-string";
 const Error404 = () => {
   return (
     <ContainerDiv>

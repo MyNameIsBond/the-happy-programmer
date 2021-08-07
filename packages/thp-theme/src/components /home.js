@@ -2,11 +2,13 @@ import { styled } from "frontity";
 import { Primary, DecorationLink } from "./reusable-components/buttons";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
-import { homeConstants, breakpoints } from "./constants/constants-string";
+import breakpoints from "./constants/constants-string";
+import homeConstants from "./constants/home-const";
 import { MainContainer } from "./reusable-components/container";
 import LessonContent from "./Home/lesson-content";
 import CoursesContent from "./Home/courses-content";
 import { MyInput } from "./reusable-components/inputs";
+import Socials from "./constants/socials";
 
 export default () => {
   return (
@@ -41,17 +43,7 @@ export default () => {
         <h2>{homeConstants.AuthorInfo.title}</h2>
         <p>{homeConstants.AuthorInfo.description}</p>
         <SocialContainer>
-          {homeConstants.AuthorInfo.socials.map(([icon, link, label]) => (
-            <a
-              href={link}
-              key={link}
-              rel="noreferrer"
-              target="_blank"
-              aria-label={label}
-            >
-              {icon}
-            </a>
-          ))}
+          <Socials />
         </SocialContainer>
         <DecorationLink link={homeConstants.AuthorInfo.link}>
           About Me

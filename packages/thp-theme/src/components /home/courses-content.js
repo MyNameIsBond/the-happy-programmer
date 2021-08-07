@@ -1,27 +1,26 @@
-import { homeConstants, breakpoints } from "../constants/constants-string";
+import breakpoints from "../constants/constants-string";
 import { styled } from "frontity";
 import { Secondary, DecorationLink } from "../reusable-components/buttons";
+import courses from "../constants/courses-const";
 
 const CoursesContent = () => {
   return (
     <>
-      {homeConstants.coursesContainer.map(
-        ([icon, title, desc, link, width, disabled, name]) => (
-          <CoursesContainer key={title}>
-            <CourseDiv>
-              <h2>{title}</h2>
-              <p>{desc}</p>
-              {disabled ? (
-                <Secondary disabled={true}>Coming Soon...</Secondary>
-              ) : (
-                <DecorationLink link={link}>{name}</DecorationLink>
-              )}
+      {courses.map(([icon, title, desc, link, width, disabled, name]) => (
+        <CoursesContainer key={title}>
+          <CourseDiv>
+            <h2>{title}</h2>
+            <p>{desc}</p>
+            {disabled ? (
+              <Secondary disabled={true}>Coming Soon...</Secondary>
+            ) : (
+              <DecorationLink link={link}>{name}</DecorationLink>
+            )}
 
-              {icon}
-            </CourseDiv>
-          </CoursesContainer>
-        )
-      )}
+            {icon}
+          </CourseDiv>
+        </CoursesContainer>
+      ))}
     </>
   );
 };

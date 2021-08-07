@@ -4,7 +4,7 @@ import { ContainerDiv } from "../reusable-components/container";
 import { getData } from "../handlers/data-manager";
 import SearchInput from "../search/search-input";
 import ArchiveItem from "./archive-item";
-import { breakpoints } from "../constants/constants-string";
+import breakpoints from "../constants/constants-string";
 const Archive = ({ state, searchQuery }) => {
   const data = getData(state);
   return (

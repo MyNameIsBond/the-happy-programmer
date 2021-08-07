@@ -1,7 +1,7 @@
 import { MyInput } from "./inputs";
 import { Primary } from "./buttons";
 import { styled } from "frontity";
-import { breakpoints } from "../constants/constants-string";
+import breakpoints from "../constants/constants-string";
 
 const SubscribeButton = () => (
   <SubscribeContainer>

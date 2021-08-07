@@ -1,16 +1,18 @@
 import { styled } from "frontity";
-import { homeConstants, breakpoints } from "../constants/constants-string";
+import breakpoints from "../constants/constants-string";
+import lesson from "../constants/lesson-const";
 import { ContainerDiv } from "../reusable-components/container";
+
 const LessonContent = () => {
   return (
     <LessonBackgroundContainer>
       <ContainerDiv>
         <ContainerDiv>
           <LessonContainer>
-            <ParagraphLesson>{homeConstants.header}</ParagraphLesson>
-            <HeadingLesson>{homeConstants.subheader}</HeadingLesson>
+            <ParagraphLesson>EVERYTHING ABOUT MOBILE AND WEB</ParagraphLesson>
+            <HeadingLesson>What you can learn here</HeadingLesson>
             <LessonContainerDiv>
-              {homeConstants.lessonContainer.map(([icon, title, desc]) => (
+              {lesson.map(([icon, title, desc]) => (
                 <DescriptionPanel key={title}>
                   {icon}
                   <h3>{title}</h3>

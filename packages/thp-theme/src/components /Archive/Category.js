@@ -1,10 +1,9 @@
 import { connect, styled } from "frontity";
 import { CategoryContainer, TagLink } from "./category-style";
 import { getData } from "../handlers/data-manager";
-import { homeConstants } from "../constants/constants-string";
+import socials from "../constants/socials";
 
 const Category = connect(({ category, state }) => {
-  const { socials } = homeConstants.AuthorInfo;
   const data = getData(state);
   const { isPostType, isPost } = data;
   return (
