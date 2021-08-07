@@ -1,7 +1,7 @@
 import { connect, styled } from "frontity";
 import Image from "@frontity/components/image";
 import ParagraphDisplay from "./reusable-components/paragraph-display";
-import { MainContainer } from "./reusable-components/container";
+import MainContainer from "./reusable-components/main-container";
 import breakpoints from "./constants/constants-string";
 import aboutExplain from "./constants/about-explain";
 import aboutConst from "./constants/about-const";

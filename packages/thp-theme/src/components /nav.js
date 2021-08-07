@@ -1,19 +1,15 @@
-import { connect, styled } from "frontity";
+import { connect, styled, loadable } from "frontity";
 import Link from "@frontity/components/link";
-import Logo from "./constants/logo";
-import { ContainerDiv } from "./reusable-components/container";
+import ContainerDiv from "./reusable-components/container";
+const Logo = loadable(() => import("./constants/logo"));
 
-const Nav = ({ state, actions }) => {
+const Nav = ({ state }) => {
   return (
     <>
-      <Dolores>
+      <BottomBorder>
         <ContainerDiv>
           <NavContainer>
-            <LogoContainer
-              onClick={(e) => {
-                actions.router.set("/");
-              }}
-            >
+            <LogoContainer>
               <LogoLink link={"/"}>
                 <Logo />
               </LogoLink>
@@ -34,14 +30,14 @@ const Nav = ({ state, actions }) => {
             </MenuStyle>
           </NavContainer>
         </ContainerDiv>
-      </Dolores>
+      </BottomBorder>
     </>
   );
 };
 
 export default connect(Nav);
 
-const Dolores = styled.div`
+const BottomBorder = styled.div`
   height: auto;
   border-bottom: 1px solid var(--light-border);
 `;
@@ -90,7 +86,7 @@ const NavContainer = styled.nav`
   }
 `;
 
-const LogoContainer = styled.css`
+const LogoContainer = styled.div`
   svg {
     height: 2em;
     width: auto;

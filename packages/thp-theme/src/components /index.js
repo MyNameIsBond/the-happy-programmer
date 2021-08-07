@@ -1,4 +1,4 @@
-import { connect, Global, Head, loadable } from "frontity";
+import { connect, Global, Head } from "frontity";
 import { globalStyles } from "./style/global-style";
 import Switch from "@frontity/components/switch";
 import Title from "./title";
@@ -9,9 +9,9 @@ import About from "./about";
 import Error404 from "./error404";
 import Home from "./home";
 import Arch from "./Archive/archive.js";
-const Loader = loadable(() => import("./loading"));
-const Footer = loadable(() => import("./footer"));
-const SearchPage = loadable(() => import("./search/search-page"));
+import Loading from "./loading";
+import Footer from "./footer";
+import SearchPage from "./search/search-page";
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
   return (
@@ -27,7 +27,7 @@ const Root = ({ state }) => {
       <Switch>
         <Home when={data.isHome} />
         <Archive when={data.isCategory} />
-        <Loader when={data.isFetching} />
+        <Loading when={data.isFetching} />
         <Post when={data.isPostType && data.isPost} />
         <Error404 when={data.isError} />
         <SearchPage when={data.isSearch} />

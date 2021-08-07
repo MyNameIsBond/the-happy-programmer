@@ -4,11 +4,12 @@ import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
 import breakpoints from "./constants/constants-string";
 import homeConstants from "./constants/home-const";
-import { MainContainer } from "./reusable-components/container";
-import LessonContent from "./Home/lesson-content";
-import CoursesContent from "./Home/courses-content";
+import MainContainer from "./reusable-components/container";
 import { MyInput } from "./reusable-components/inputs";
 import Socials from "./constants/socials";
+
+import LessonContent from "./Home/lesson-content";
+import CoursesContent from "./Home/courses-content";
 
 export default () => {
   return (

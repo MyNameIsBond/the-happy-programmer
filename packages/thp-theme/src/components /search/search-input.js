@@ -4,7 +4,7 @@ import { getData, urlToStg } from "../handlers/data-manager";
 import { MyInput } from "../reusable-components/inputs";
 import SearchSvg from "../svg/search-svg";
 import breakpoints from "../constants/constants-string";
-import { ContainerDiv } from "../reusable-components/container";
+import ContainerDiv from "../reusable-components/container";
 
 export const SearchInput = ({ state, searchQuery, actions }) => {
   const data = getData(state);

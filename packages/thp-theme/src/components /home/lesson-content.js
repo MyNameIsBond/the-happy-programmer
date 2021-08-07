@@ -1,7 +1,7 @@
 import { styled } from "frontity";
 import breakpoints from "../constants/constants-string";
 import lesson from "../constants/lesson-const";
-import { ContainerDiv } from "../reusable-components/container";
+import ContainerDiv from "../reusable-components/container";
 
 const LessonContent = () => {
   return (

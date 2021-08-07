@@ -1,10 +1,5 @@
 const HomeSvg = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="537.399"
-    height="415"
-    viewBox="0 0 537.399 415"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 537.399 415">
     <g
       id="Group_76"
       data-name="Group 76"
