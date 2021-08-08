@@ -2,10 +2,10 @@ import Link from "@frontity/components/link";
 import { styled } from "frontity";
 
 export default ({ date, author }) => {
-  const dt = new Date(date);
+  const dt = new Date(date).toDateString();
   return (
     <DateText>
-      <Link link={author.link}>{author.name}</Link> • {dt.toDateString()}
+      <Link link={author.link}>{author.name}</Link> • {dt}
     </DateText>
   );
 };

@@ -64,7 +64,7 @@ const LogoLink = styled(Link)`
 `;
 
 const MenuStyle = styled.div`
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 550px) {
     padding: 1em 0em;
     margin: 0.5em 0em;
     width: auto;
@@ -94,7 +94,7 @@ const NavContainer = styled.nav`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  @media screen and (max-width: 450px) {
+  @media screen and (max-width: 550px) {
     display: flex;
     flex-direction: column;
     padding: 1em 0em;

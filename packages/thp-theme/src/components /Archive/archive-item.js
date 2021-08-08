@@ -2,7 +2,7 @@ import { connect, styled } from "frontity";
 import Link from "@frontity/components/link";
 import Image from "@frontity/components/image";
 import breakpoints from "../constants/constants-string";
-import Category from "./category";
+import Category from "./categories";
 import AuthorLink from "./author-link";
 
 const ArchiveItem = ({ item, authorAvatar, libraries }) => {
@@ -14,10 +14,7 @@ const ArchiveItem = ({ item, authorAvatar, libraries }) => {
       <ArchiveItemContainer>
         <Link link={link}>
           <ImgFuturedMedia>
-            <picture>
-              <source srcset={img.srcSet} />
-              <Image srcSet={img.srcSet} src={img.src} alt={img.alt} />
-            </picture>
+            <Image srcSet={img.srcSet} src={img.src} alt={img.alt} />
           </ImgFuturedMedia>
         </Link>
         <AvatarInfoContainer>
@@ -57,14 +54,12 @@ const ArchiveItemContainer = styled.div`
   }
 `;
 
-const Atag = styled(Link)`
-  display: contents;
-`;
-
 const ImgFuturedMedia = styled.div`
+  display: none;
   height: 11em;
   width: 100%;
   ${breakpoints.smallMobile} {
+    display: block;
   }
   ${breakpoints.mobile} {
     height: 14em;

@@ -1,3 +1,3 @@
 import { loadable } from "frontity";
 
-export default loadable(() => import("./archive.js"));
+export default loadable(() => import("./archive-list.js"));

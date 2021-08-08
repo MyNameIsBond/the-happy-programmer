@@ -8,7 +8,6 @@ import Post from "./post/post";
 import About from "./about";
 import Error404 from "./error404";
 import Home from "./home";
-import Arch from "./Archive/archive.js";
 import Loading from "./loading";
 import Footer from "./footer";
 import SearchPage from "./search/search-page";
@@ -26,12 +25,11 @@ const Root = ({ state }) => {
       <Nav />
       <Switch>
         <Home when={data.isHome} />
-        <Archive when={data.isCategory} />
+        <Archive when={data.isCategory || data.isAuthor} />
         <Loading when={data.isFetching} />
         <Post when={data.isPostType && data.isPost} />
         <Error404 when={data.isError} />
         <SearchPage when={data.isSearch} />
-        <Arch when={data.isAuthor} />
         <About when={data.link == "/about/"} />
       </Switch>
       <Footer />

@@ -1,7 +1,7 @@
 import { connect, styled } from "frontity";
 import { getData, dataPost } from "../handlers/data-manager";
 import ContainerDiv from "../reusable-components/container";
-import Category from "../archive/category";
+import Category from "../archive/categories";
 import AuthorLink from "../archive/author-link";
 import ArrowSvg from "../svg/arrow-svg";
 import Link from "@frontity/components/link";

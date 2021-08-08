@@ -8,19 +8,6 @@ export default () => {
         height="55"
         viewBox="0 0 1184 317"
       >
-        <defs>
-          <linearGradient
-            id="linear-gradient"
-            x1="0.5"
-            y1="-0.208"
-            x2="0.5"
-            y2="1.331"
-            gradientUnits="objectBoundingBox"
-          >
-            <stop offset="0" stopColor="#c668e6" />
-            <stop offset="1" stopColor="#7e2be7" />
-          </linearGradient>
-        </defs>
         <g id="Group_56" data-name="Group 56" transform="translate(-316 -352)">
           <g id="Group_47" data-name="Group 47" transform="translate(17 -2)">
             <text

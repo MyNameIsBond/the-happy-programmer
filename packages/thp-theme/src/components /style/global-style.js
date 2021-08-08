@@ -1,10 +1,6 @@
 import { css } from "frontity";
 
 const globalStyles = css`
-  * {
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
   body {
     margin: 0;
     background: var(--background-colour);
