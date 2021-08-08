@@ -2,7 +2,6 @@ import iframe from "@frontity/html2react/processors/iframe";
 import link from "@frontity/html2react/processors/link";
 import Root from "./components ";
 import Image from "@frontity/html2react/processors/image";
-import codeHighlighter from "./Processor/Highlight";
 
 export default {
   name: "thp-theme",
@@ -30,7 +29,7 @@ export default {
   },
   libraries: {
     html2react: {
-      processors: [link, iframe, codeHighlighter, Image],
+      processors: [link, iframe, Image],
     },
   },
 };

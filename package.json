@@ -17,15 +17,18 @@
   },
   "prettier": {},
   "dependencies": {
-    "@frontity/core": "^1.14.0",
+    "@frontity/components": "^1.8.1",
+    "@frontity/core": "^1.14.3",
     "@frontity/head-tags": "^1.1.1",
-    "@frontity/html2react": "^1.6.2",
-    "@frontity/tiny-router": "^1.4.2",
-    "@frontity/wp-source": "^1.11.4",
+    "@frontity/html2react": "^1.7.0",
+    "@frontity/tiny-router": "^1.4.4",
+    "@frontity/wp-source": "^1.11.5",
     "@frontity/yoast": "^2.1.1",
-    "frontity": "^1.15.0",
+    "frontity": "^1.17.0",
     "global": "^4.4.0",
-    "react-syntax-highlighter": "^15.4.3",
     "thp-theme": "file:packages/thp-theme"
+  },
+  "devDependencies": {
+    "webpack-bundle-analyzer": "^4.4.2"
   }
 }
