@@ -1,6 +1,8 @@
-import WebSvg from "../svg/web-svg.js";
-import YoutubeSvg from "../svg/youtube-svg.js";
-import BlogSvg from "../svg/blog-svg.js";
+import { loadable } from "frontity";
+const WebSvg = loadable(() => import("../svg/web-svg.js"));
+// import WebSvg from "../svg/web-svg.js";
+const YoutubeSvg = loadable(() => import("../svg/youtube-svg.js"));
+const BlogSvg = loadable(() => import("../svg/blog-svg.js"));
 const aboutExplain = {
   h2: "What Do I Do",
   explain: [

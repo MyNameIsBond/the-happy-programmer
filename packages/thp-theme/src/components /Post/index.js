@@ -1,2 +1,2 @@
 import { loadable } from "frontity";
-export default loadable(() => import("./archive-list.js"));
+export default loadable(() => import("./post.js"));

@@ -1,5 +1,6 @@
-import HomeSvg from "../svg/home-svg";
-
+import { loadable } from "frontity";
+// import HomeSvg from "../svg/home-svg";
+const HomeSvg = loadable(() => import("../svg/home-svg"));
 const homeConstants = {
   userImage:
     "https://thehappyprogrammer.com/wp-content/uploads/2021/03/IMG_0918-2-1.jpg",
