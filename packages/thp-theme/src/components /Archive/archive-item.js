@@ -9,6 +9,8 @@ const ArchiveItem = ({ item, authorAvatar, libraries }) => {
   const { img, link, categories, excerpt, date, author, title } = item;
   const Html2React = libraries.html2react.Component;
 
+  const categoryRender = () => <Category category={categories} />;
+
   return (
     <>
       <ArchiveItemContainer>
@@ -19,7 +21,7 @@ const ArchiveItem = ({ item, authorAvatar, libraries }) => {
         </Link>
         <AvatarInfoContainer>
           <InfoContainer authorAvatar={authorAvatar}>
-            {authorAvatar || <Category category={categories} />}
+            {authorAvatar || categoryRender()}
             <Link link={link}>
               <h5>{title}</h5>
             </Link>
@@ -28,7 +30,7 @@ const ArchiveItem = ({ item, authorAvatar, libraries }) => {
                 <Html2React html={excerpt} />
               </SubText>
             )}
-            {authorAvatar && <Category category={categories} />}
+            {authorAvatar && categoryRender()}
             <AuthorLink date={date} author={author} />
           </InfoContainer>
         </AvatarInfoContainer>

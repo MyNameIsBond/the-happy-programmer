@@ -100,7 +100,6 @@ const ImageContainer = styled.div`
     border-radius: 100%;
   }
 `;
-// What do I do
 const WhatIdoContainer = styled.div``;
 const WhatIDoTitle = styled.h2``;
 const WhatIDoDesc = styled.div`

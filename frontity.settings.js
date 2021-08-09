@@ -12,7 +12,6 @@ const settings = {
         ["About", "/about/"],
       ],
       authorAvatar: false,
-      autoPrefetch: "in-view",
     },
   },
   packages: [

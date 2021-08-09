@@ -8,9 +8,10 @@ import Post from "./post/post";
 import About from "./about";
 import Error404 from "./error404";
 import Home from "./home";
-import Loading from "./loading";
 import Footer from "./footer";
 import SearchPage from "./search/search-page";
+import Loading from "./loading";
+
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
   return (

@@ -5,6 +5,10 @@ const globalStyles = css`
     margin: 0;
     background: var(--background-colour);
   }
+  * {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+  }
   p {
     color: var(--text-colour);
     font-size: 1rem;
