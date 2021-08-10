@@ -5,9 +5,8 @@ import breakpoints from "../constants/constants-string";
 import Category from "./categories";
 import AuthorLink from "./author-link";
 
-const ArchiveItem = ({ item, authorAvatar, libraries }) => {
+const ArchiveItem = ({ item, authorAvatar }) => {
   const { img, link, categories, excerpt, date, author, title } = item;
-  const Html2React = libraries.html2react.Component;
 
   const categoryRender = () => <Category category={categories} />;
 
@@ -27,7 +26,7 @@ const ArchiveItem = ({ item, authorAvatar, libraries }) => {
             </Link>
             {item.excerpt && (
               <SubText>
-                <Html2React html={excerpt} />
+                <div dangerouslySetInnerHTML={{ __html: excerpt }} />
               </SubText>
             )}
             {authorAvatar && categoryRender()}

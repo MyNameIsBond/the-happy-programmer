@@ -16,7 +16,6 @@ const CoursesContent = () => {
             ) : (
               <DecorationLink link={link}>{name}</DecorationLink>
             )}
-
             {icon}
           </CourseDiv>
         </CoursesContainer>

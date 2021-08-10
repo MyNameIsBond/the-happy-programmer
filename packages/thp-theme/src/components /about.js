@@ -93,6 +93,7 @@ const ImageContainer = styled.div`
   background-color: var(--secondary-background-colour);
   justify-content: center;
   align-items: center;
+
   img {
     object-fit: cover;
     height: 300px;

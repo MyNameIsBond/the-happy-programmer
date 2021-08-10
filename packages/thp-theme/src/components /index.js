@@ -6,18 +6,11 @@ import Archive from "./archive";
 import Nav from "./nav";
 import About from "./about";
 import Post from "./post";
-// const About = loadable(() => import("./about"));
-// const Error404 = loadable(() => import("./error404"));
-// const Home = loadable(() => import("./home"));
 import Error404 from "./error404";
 import Home from "./home";
 import Footer from "./footer";
 import SearchPage from "./search/search-page";
 import Loading from "./loading";
-// const Loading = loadable(() => import("./loading"));
-// const Nav = loadable(() => import("./nav"));
-// const Footer = loadable(() => import("./footer"));
-// const SearchPage = loadable(() => import("./search/search-page"));
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);

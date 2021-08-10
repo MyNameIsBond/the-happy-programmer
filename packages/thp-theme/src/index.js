@@ -1,7 +1,7 @@
-import iframe from "@frontity/html2react/processors/iframe";
-import link from "@frontity/html2react/processors/link";
+// import iframe from "@frontity/html2react/processors/iframe";
+// import link from "@frontity/html2react/processors/link";
 import Root from "./components ";
-import Image from "@frontity/html2react/processors/image";
+// import Image from "@frontity/html2react/processors/image";
 
 export default {
   name: "thp-theme",
@@ -28,8 +28,8 @@ export default {
     },
   },
   libraries: {
-    html2react: {
-      processors: [link, iframe, Image],
-    },
+    // html2react: {
+    //   processors: [link, iframe, Image],
+    // },
   },
 };

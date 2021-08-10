@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import { connect, styled } from "frontity";
 import { getData, dataPost } from "../handlers/data-manager";
 import ContainerDiv from "../reusable-components/container";
@@ -14,9 +13,9 @@ const Archive = ({ state, searchQuery }) => {
   );
 
   const archiveItems = items.map((item) => (
-    <Fragment key={item.id}>
+    <div key={item.id}>
       <ArchiveItem item={item} authorAvatar={authorAvatar} />
-    </Fragment>
+    </div>
   ));
 
   return (
