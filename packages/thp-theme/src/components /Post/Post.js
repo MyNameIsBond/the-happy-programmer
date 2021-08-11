@@ -24,10 +24,10 @@ const Post = ({ state, libraries }) => {
             <Link link={"/category/swiftui"}>Back to posts</Link>
           </BackArrow>
           <h1>{title}</h1>
-          <PostCred>
+          <div>
             <AuthorLink date={date} author={author} />
             <Category category={categories} />
-          </PostCred>
+          </div>
         </PostHeaderContainer>
         <Html2React html={post.content.rendered} />
       </ContainerDiv>
