@@ -3,14 +3,14 @@ import { globalStyles } from "./style/global-style";
 import Switch from "@frontity/components/switch";
 import Title from "./title";
 import Archive from "./archive";
-import Nav from "./nav";
-import About from "./about";
+import Nav from "./nav.jsx";
+import About from "./about.jsx";
 import Post from "./post";
-import Error404 from "./error404";
-import Home from "./home";
-import Footer from "./footer";
+import Error404 from "./error404.jsx";
+import Home from "./home.jsx";
+import Footer from "./footer.jsx";
 import SearchPage from "./search/search-page";
-import Loading from "./loading";
+import Loading from "./loading.jsx";
 
 const Root = ({ state }) => {
   const data = state.source.get(state.router.link);
