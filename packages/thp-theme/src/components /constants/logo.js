@@ -4,8 +4,6 @@ export default () => {
       <svg
         xmlns="http://www.w3.org/2000/svg"
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        width="205"
-        height="55"
         viewBox="0 0 1184 317"
       >
         <g id="Group_56" data-name="Group 56" transform="translate(-316 -352)">
